@@ -1,3 +1,23 @@
+
+.clock {
+    border: 2px solid black;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    font-size: xx-large;
+    font-weight: bold;
+}
+
+.clock div {
+    margin: 0 5px;
+}
+
+.clock label {
+    display: block;
+    text-align: center;
+}
+
 #dashboardSlideshow {
     border: 2px solid black;
 }
