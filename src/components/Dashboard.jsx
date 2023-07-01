@@ -2,12 +2,17 @@ import React, { useEffect, useState } from 'react';
 import './dashboard.css';
 import 'react-slideshow-image/dist/styles.css';
 import { Fade } from 'react-slideshow-image';
+import cashApp from '../assets/cashApp.jpg';
 import img1 from '../assets/imgA.jpg';
 import img2 from '../assets/imgB.jpg';
 import img3 from '../assets/imgC.jpg';
+import { BrowserRouter, Route } from "react-router-dom";
+import Gallery from './Gallery';
+import { Link } from 'react-router-dom';
 
 const CountdownTimer = ({ targetDate }) => {
   const [timer, setTimer] = useState({ days: 0, hours: 0, mins: 0, secs: 0 });
+
 
   useEffect(() => {
     const interval = setInterval(() => {
@@ -30,6 +35,11 @@ const CountdownTimer = ({ targetDate }) => {
   };
 
   return (
+    <>
+    <div className="cashAppContainer">
+      <img src={cashApp} alt="cashApp" />
+    </div>
+
     <div className="clock">
       <div className="timeContainer">
       <label htmlFor="days">Days</label>
@@ -54,6 +64,7 @@ const CountdownTimer = ({ targetDate }) => {
       <div data-value="seconds">{formatNumber(timer.secs)}</div>
     </div>
     </div>
+    </>
   );
 };
 
@@ -105,6 +116,20 @@ const Dashboard = () => {
             ))}
           </Fade>
         </div>
+      </div>
+
+      <div className="buttonContainer">
+       <Link to="/gallery">
+        <button>Go to Gallery</button>
+       </Link>
+
+       <Link to="/rsvp">
+        <button>RSVP</button>
+       </Link>
+
+       <Link to="/schedule">
+        <button>Go to Schedule</button>
+       </Link>
       </div>
     </>
   );

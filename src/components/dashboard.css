@@ -21,3 +21,9 @@
 #dashboardSlideshow {
     border: 2px solid black;
 }
+
+.cashAppContainer > img {
+    border: 2px solid red;
+    height: 25rem;
+    
+}
