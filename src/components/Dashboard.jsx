@@ -6,8 +6,6 @@ import cashApp from '../assets/cashApp.jpg';
 import img1 from '../assets/imgA.jpg';
 import img2 from '../assets/imgB.jpg';
 import img3 from '../assets/imgC.jpg';
-import { BrowserRouter, Route } from "react-router-dom";
-import Gallery from './Gallery';
 import { Link } from 'react-router-dom';
 
 const CountdownTimer = ({ targetDate }) => {
