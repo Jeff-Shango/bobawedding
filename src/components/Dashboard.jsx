@@ -16,10 +16,10 @@ import { Chrono } from 'react-chrono';
 
 const items = [
   {
-  title: "April 22, 2023",
-  cardTitle: "The Proposal",
-  cardSubtitle:"Proposing at a community event, Jeff asked a student, who is a photographer, to pose as a worker for the community event. The photographer stumbled onto Jeff and Ashley where he offered a free photoshoot. They walked to an open field, where the photographer instructed Ashley to be in front of Jeff, where he dropped to one knee and waited for Ashley to turn and be surprised.",
-  cardDetailedText: "Proposing at Community Event in Baltimore!",
+  title: "April 20, 2020",
+  cardTitle: "Initial Contact",
+  cardSubtitle:"Jeff slid into Ashley's DMs on OK Cupid!",
+  cardDetailedText: "",
   media: {
     type: "IMAGE",
     source: {
@@ -28,11 +28,10 @@ const items = [
   }
 },
 {
-  title: "April 1, 2020",
-  cardTitle: "jesus",
-  url: "http://www.history.com",
-  cardSubtitle:"lroifj oeipjf jiopfwej ofpiwejihndfjnioe jfwoeifkioweif ifj jiwej",
-  cardDetailedText: "Men of the British Expeditionary Force (BEF) wade out to..",
+  title: "May 31, 2020",
+  cardTitle: "Initial Sight",
+  cardSubtitle:"We first saw each other in person",
+  cardDetailedText: "Hung out around Parkville, MD ",
   media: {
     type: "IMAGE",
     source: {
@@ -41,11 +40,10 @@ const items = [
   }
 },
 {
-  title: "May 2005",
-  cardTitle: "jesus",
-  url: "http://www.history.com",
-  cardSubtitle:"lroifj oeipjf jiopfwej ofpiwejihndfjnioe jfwoeifkioweif ifj jiwej",
-  cardDetailedText: "Men of the British Expeditionary Force (BEF) wade out to..",
+  title: "November 4-6, 2020",
+  cardTitle: "First Bae-cation",
+  cardSubtitle:"Front Royal, VA",
+  cardDetailedText: "Both felt the need for a vacation from life, and both decided to go together!",
   media: {
     type: "IMAGE",
     source: {
@@ -54,11 +52,10 @@ const items = [
   }
 },
 {
-  title: "May 2010",
-  cardTitle: "jesus",
-  url: "http://www.history.com",
-  cardSubtitle:"lroifj oeipjf jiopfwej ofpiwejihndfjnioe jfwoeifkioweif ifj jiwej",
-  cardDetailedText: "Men of the British Expeditionary Force (BEF) wade out to..",
+  title: "November 13, 2020",
+  cardTitle: "Become an official couple",
+  cardSubtitle:"Decide to stop playing games and make it official as a couple.",
+  cardDetailedText: "Wanting to make a pact that we were going to be each other's boyfriend and girlfriend.",
   media: {
     type: "IMAGE",
     source: {
@@ -67,11 +64,46 @@ const items = [
   }
 },
 {
-  title: "May 2023",
-  cardTitle: "jesus",
-  url: "http://www.history.com",
-  cardSubtitle:"lroifj oeipjf jiopfwej ofpiwejihndfjnioe jfwoeifkioweif ifj jiwej",
-  cardDetailedText: "Men of the British Expeditionary Force (BEF) wade out to..",
+  title: "April 17-18, 2021",
+  cardTitle: "Myrtle Beach, South Carolina",
+  cardSubtitle:"Weekend trip to Myrtle Beach, South Carolina.",
+  cardDetailedText: "This trip was where Jeff and Ashley almost talked each other into eloping and marrying then and there.",
+  media: {
+    type: "IMAGE",
+    source: {
+      url: "http://someurl/image.jpg"
+    }
+  }
+},
+{
+  title: "August 9-15, 2021",
+  cardTitle: "Miami, Florida",
+  cardSubtitle:"Baecation to Florida.",
+  cardDetailedText: "Celebrating Ashley's birthday!",
+  media: {
+    type: "IMAGE",
+    source: {
+      url: "http://someurl/image.jpg"
+    }
+  }
+},
+{
+  title: "July 8-15, 2022",
+  cardTitle: "Montego Bay, Jamaica",
+  cardSubtitle:"Weekend trip to Myrtle Beach, South Carolina.",
+  cardDetailedText: "This trip was where Jeff and Ashley almost talked each other into eloping and marrying then and there.",
+  media: {
+    type: "IMAGE",
+    source: {
+      url: "http://someurl/image.jpg"
+    }
+  }
+},
+{
+  title: "April 21, 2023",
+  cardTitle: "Jeff proposes!",
+  cardSubtitle:"Jeff surprises Ashley by popping the question!",
+  cardDetailedText: "Having a student from Jeff's boxing classes, he had the person pose as a photographer at the community event they were going to at Carrol Park. As the photographer told us he wanted to give us a photoshoot, he prompted Ashley and Jeff to a spot where he proceeded to do a photoshoot. Instructing Ashley to step in front of Jeff, Jeff prepared himself by getting down on one knee and waiting for the photographer to tell Ashley to look at Jeff.",
   media: {
     type: "IMAGE",
     source: {
@@ -164,7 +196,7 @@ const Dashboard = () => {
       <label htmlFor="time">Time:</label>
       <h1 id="dashboardTitle">6:30pm - 11:30pm</h1>
 
-      <CountdownTimer targetDate={targetDate} />
+      <CountdownTimer targetDate={targetDate} className="countdownTime" />
 
       {/* events coming up/highlighted */}
       <div className="dashEventContainer">
@@ -172,7 +204,7 @@ const Dashboard = () => {
         
         <div className="dashEvents">
           
-          <div className="timelineSection" style={{ width: "30rem", height: "fit-content", border: "2px solid black", margin: "auto", backgroundColor: "darkgray", fontSize: "20px", color: "red" }}>
+          <div className="timelineSection" >
             <Chrono scrollable={{ scrollbar: true }} items={items}/>
           </div>
         </div>

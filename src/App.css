@@ -1,5 +1,30 @@
+:root {
+  --container-width-sm: 90%;
+  --container-width-md: 86%;
+  --container-width-lg: 90%;
+}
+
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+
+
 .App {
   text-align: center;
+  border: 2px solid blue;
+  /* height: fit-content; */
+  /* max-height: 100vh; */
+  /* overflow-y: scroll; */
 }
 
 .App-logo {
@@ -82,4 +107,30 @@
 .husbandPic, .wifePic, .mcPic, .bridesmaidPic, .partyPlannerPic {
   height: 30rem;
   width: 30rem;
+}
+
+.timelineSection {
+  width: 30rem;
+  height: fit-content;
+  margin: auto;
+  font-size: 20px;
+}
+
+/* small devices */
+@media screen and (max-width: 600px) {
+  .App {
+    width: var(--container-width-sm);
+    font-size: 12px;
+  }
+
+  .countdownTime {
+    font-size: 12px;
+  }
+
+  .timelineSection {
+    width: fit-content;
+    height: fit-content;
+    margin: auto;
+    /* style={{ width: "30rem", height: "fit-content", border: "2px solid black", margin: "auto", backgroundColor: "darkgray", fontSize: "20px", color: "red" }} */
+  }
 }
