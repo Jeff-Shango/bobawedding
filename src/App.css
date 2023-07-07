@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Oswald&family=Poppins:wght@300&family=Source+Sans+3&display=swap');
+
 :root {
   --container-width-sm: 90%;
   --container-width-md: 86%;
@@ -21,7 +23,6 @@ code {
 
 .App {
   text-align: center;
-  border: 2px solid blue;
   /* height: fit-content; */
   /* max-height: 100vh; */
   /* overflow-y: scroll; */
@@ -35,7 +36,8 @@ code {
 @media (prefers-reduced-motion: no-preference) {
   .App-logo {
     animation: App-logo-spin infinite 20s linear;
-  }
+    -webkit-animation: App-logo-spin infinite 20s linear;
+}
 }
 
 .App-header {
@@ -99,7 +101,6 @@ code {
 }
 
 #enlargedImg {
-  border: 2px solid blue;
   height: 100%;
   max-width: 100%;
 }
@@ -118,14 +119,44 @@ code {
 
 /* small devices */
 @media screen and (max-width: 600px) {
+  #dashboardTitle {
+    width: fit-content;
+    margin: auto;
+    font-weight: bolder;
+  }
+
+  .husWifContainer,
+  .mcSection,
+  .bridesmaidSection,
+  .partyPlannerSection {
+    grid-column: span 2;
+  }
+
+  .wedTeamContainer {
+    border: 2px solid pink;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+    justify-content: center;
+    align-items: center;
+  }
+
   .App {
     width: var(--container-width-sm);
     font-size: 12px;
+    margin: auto;
   }
 
-  .countdownTime {
-    font-size: 12px;
+  /* .timeContainer div[data-value]{
+    font-size: 1px;
+    border: 2px solid purple;
+    color: blue;
+  } */
+
+  .timeContainer {
+    font-size: 25px;
   }
+
 
   .timelineSection {
     width: fit-content;
@@ -133,4 +164,25 @@ code {
     margin: auto;
     /* style={{ width: "30rem", height: "fit-content", border: "2px solid black", margin: "auto", backgroundColor: "darkgray", fontSize: "20px", color: "red" }} */
   }
+
+  .husbandPic, .wifePic, .mcPic, .bridesmaidPic, .partyPlannerPic {
+    height: 200px;
+    width: 200px;
+    object-fit: cover;
+  }
+  
+  .mainDashboard {
+    height: 100vh;
+    overflow-y: scroll;
+    background: url("./assets/imgB.jpg");
+    background-size: cover;
+    color: white;
+  }
+
+  .mainComp {
+    background-color: rgb(80, 80, 80, 0.5);
+    border: 1px solid black;
+    margin-bottom: 1rem;
+  }
+
 }

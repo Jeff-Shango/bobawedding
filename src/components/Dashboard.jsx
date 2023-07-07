@@ -137,7 +137,7 @@ const CountdownTimer = ({ targetDate }) => {
   };
 
   return (
-    <>
+    <div>
 
     <div className="clock">
       <div className="timeContainer">
@@ -163,7 +163,7 @@ const CountdownTimer = ({ targetDate }) => {
       <div data-value="seconds">{formatNumber(timer.secs)}</div>
     </div>
     </div>
-    </>
+    </div>
   );
 };
 
@@ -186,21 +186,21 @@ const Dashboard = () => {
   ];
 
   return (
-    <>
-      <h1 id="dashboardTitle">SAVE THE DATE</h1>
+    <div className='mainDashboard'>
+      <h1 className='mainComp' id="dashboardTitle">SAVE THE DATE</h1>
 
 
-      <label htmlFor="date">When:</label>
-      <h1 id="dashboardTitle">May 31, 2024</h1>
+      <label htmlFor="date" className='mainComp'>When:</label>
+      <h1 id="dashboardTitle" className='mainComp'>May 31, 2024</h1>
 
-      <label htmlFor="time">Time:</label>
-      <h1 id="dashboardTitle">6:30pm - 11:30pm</h1>
+      <label htmlFor="time" className='mainComp'>Time:</label>
+      <h1 id="dashboardTitle" className='mainComp'>6:30pm - 11:30pm</h1>
 
-      <CountdownTimer targetDate={targetDate} className="countdownTime" />
+      <CountdownTimer targetDate={targetDate} />
 
       {/* events coming up/highlighted */}
       <div className="dashEventContainer">
-        <h3 className="dashEventTitle">Events Coming Up</h3>
+        <h3 className="mainComp" id='dashboardTitle'>Events Coming Up</h3>
         
         <div className="dashEvents">
           
@@ -208,6 +208,12 @@ const Dashboard = () => {
             <Chrono scrollable={{ scrollbar: true }} items={items}/>
           </div>
         </div>
+        <Link to="/schedule">
+          <button className="dashTimelineButton btn btn-primary">
+            Expanded Timeline
+          </button>
+        </Link>
+
       </div>
 
       {/* end of events  */}
@@ -223,7 +229,7 @@ const Dashboard = () => {
         <div id="dashboardSlideshow">
           <Fade>
             {fadeImages.map((fadeImage, index) => (
-              <div key={index} style={{ border: '2px solid blue' }}>
+              <div key={index}>
                 <img
                   style={{ height: '30rem', width: '30rem' }}
                   src={fadeImage.img}
@@ -244,55 +250,43 @@ const Dashboard = () => {
               {/* husband and Wife Section  */}
               {/* Husband section */}
           <div className="husWifContainer">
-            <label htmlFor="husSection" className="husSection">Husband<br/>Jeff Bozier, Jr</label>
+            <label htmlFor="husSection" className="husSection mainComp">Husband<br/>Jeff Bozier, Jr</label>
 
             <img className='husbandPic' src={husband} alt="husband" />
-
-            <article className='husArticle'>
-              <p className="husDescrpt">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Voluptas quod assumenda libero itaque facilis recusandae magnam, at voluptate ab ex, ipsam odio. Quo est architecto porro cupiditate quia harum repellendus distinctio et inventore placeat necessitatibus, ab doloribus sunt id sint.</p>
-            </article>
+          </div>
           {/* end of husband section */}
           
           {/* Wife Section */}
-            <label htmlFor="WifeSection" className="wifeSection">Wife<br/>Ashley Cherie Barney</label>
+          <div className="wifeContainer">
+            <label htmlFor="WifeSection" className="wifeSection mainComp">Wife<br/>Ashley Cherie Barney</label>
 
             <img className='wifePic' src={wife} alt="wife" />
-
-            <article className='wifeArticle'>
-              <p className="wifeDescrpt">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Voluptas quod assumenda libero itaque facilis recusandae magnam, at voluptate ab ex, ipsam odio. Quo est architecto porro cupiditate quia harum repellendus distinctio et inventore placeat necessitatibus, ab doloribus sunt id sint.</p>
-            </article>
           </div>
           {/* end of wife section */}
           {/* end of wife and husband section */}
 
           {/* Master of Ceremony section */}
-          <label htmlFor="mcSection" className="mcSection">Master of Ceremonies<br/>Derek Gillaspie</label>
+          <div className="mcContainer">
+            <label htmlFor="mcSection" className="mcSection mainComp">Master of Ceremonies<br/>Derek Gillaspie</label>
 
-          <img className='mcPic' src={mc} alt="mc" />
-                      
-          <article className='mcArticle'>
-            <p className="mcDescrpt">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Voluptas quod assumenda libero itaque facilis recusandae magnam, at voluptate ab ex, ipsam odio. Quo est architecto porro cupiditate quia harum repellendus distinctio et inventore placeat necessitatibus, ab doloribus sunt id sint.</p>
-          </article>
+            <img className='mcPic' src={mc} alt="mc" />
+          </div>
           {/* end of MC section */}
 
           {/* Bridesmaid section */}
-          <label htmlFor="bridesmaidSection" className="bridesmaidSection">Bridesmaid<br/>Nia Hockaday</label>
+          <div className="bridemaidContainer">
+          <label htmlFor="bridesmaidSection" className="bridesmaidSection mainComp">Bridesmaid<br/>Nia Hockaday</label>
 
           <img className='bridesmaidPic' src={bridesmaid} alt="bridesmaid" />
-                      
-          <article className='bridesmaidArticle'>
-            <p className="bridesmaidDescrpt">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Voluptas quod assumenda libero itaque facilis recusandae magnam, at voluptate ab ex, ipsam odio. Quo est architecto porro cupiditate quia harum repellendus distinctio et inventore placeat necessitatibus, ab doloribus sunt id sint.</p>
-          </article>
+          </div>
           {/* end of bridesmaid section */}
 
           {/* Party Planner section */}
-          <label htmlFor="partyPlannerSection" className="partyPlannerSection">Party Planner<br/>Eevee</label>
+          <div className="partyPlannerContainer">
+            <label htmlFor="partyPlannerSection" className="partyPlannerSection mainComp">Party Planner<br/>Eevee</label>
 
-          <img className='partyPlannerPic' src={partyPlanner} alt="partyPlanner" />
-                      
-          <article className='partyPlannerArticle'>
-            <p className="partyPlannerDescrpt">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Voluptas quod assumenda libero itaque facilis recusandae magnam, at voluptate ab ex, ipsam odio. Quo est architecto porro cupiditate quia harum repellendus distinctio et inventore placeat necessitatibus, ab doloribus sunt id sint.</p>
-          </article>
+            <img className='partyPlannerPic' src={partyPlanner} alt="partyPlanner" />
+          </div>
           {/* end of partyPlanner section */}
         </div>
         {/* End of Wedding Team Section */}
@@ -310,19 +304,19 @@ const Dashboard = () => {
         {/* container for other features  */}
       <div className="buttonContainer">
        <Link to="/gallery">
-        <button>Go to Gallery</button>
+        <button className='btn btn-primary'>Go to Gallery</button>
        </Link>
 
        <Link to="/rsvp">
-        <button>RSVP</button>
+        <button className='btn btn-primary'>RSVP</button>
        </Link>
 
        <Link to="/schedule">
-        <button>Go to Schedule</button>
+        <button className='btn btn-primary'>Go to Schedule</button>
        </Link>
       </div>
       {/* end of feature container */}
-    </>
+    </div>
   );
 };
 
