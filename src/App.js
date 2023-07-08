@@ -1,6 +1,6 @@
 import React from "react"
 import './App.css';
-import Dashboard from './components/Dashboard';
+import Dashboard from './components/Dashboard.jsx';
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Gallery from "./components/Gallery.jsx";
 import Registry from "./components/Registry.jsx";

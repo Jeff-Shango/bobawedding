@@ -235,10 +235,13 @@ const Dashboard = () => {
                   src={fadeImage.img}
                   alt="slideshow"
                 />
-                <h2>{fadeImage.caption}</h2>
+                <h2 className='slideshowCaption'>{fadeImage.caption}</h2>
               </div>
             ))}
           </Fade>
+          <Link to="/gallery">
+        <button className='btn btn-primary'>Go to Gallery</button>
+       </Link>
         </div>
       </div>
         {/* end of slideshow */}
@@ -265,14 +268,6 @@ const Dashboard = () => {
           {/* end of wife section */}
           {/* end of wife and husband section */}
 
-          {/* Master of Ceremony section */}
-          <div className="mcContainer">
-            <label htmlFor="mcSection" className="mcSection mainComp">Master of Ceremonies<br/>Derek Gillaspie</label>
-
-            <img className='mcPic' src={mc} alt="mc" />
-          </div>
-          {/* end of MC section */}
-
           {/* Bridesmaid section */}
           <div className="bridemaidContainer">
           <label htmlFor="bridesmaidSection" className="bridesmaidSection mainComp">Bridesmaid<br/>Nia Hockaday</label>
@@ -280,6 +275,15 @@ const Dashboard = () => {
           <img className='bridesmaidPic' src={bridesmaid} alt="bridesmaid" />
           </div>
           {/* end of bridesmaid section */}
+
+
+          {/* Master of Ceremony section */}
+          <div className="mcContainer">
+            <label htmlFor="mcSection" className="mcSection mainComp">Master of Ceremonies<br/>Derek Gillaspie</label>
+
+            <img className='mcPic' src={mc} alt="mc" />
+          </div>
+          {/* end of MC section */}
 
           {/* Party Planner section */}
           <div className="partyPlannerContainer">
@@ -303,9 +307,6 @@ const Dashboard = () => {
         {/* End of Registry Portion */}
         {/* container for other features  */}
       <div className="buttonContainer">
-       <Link to="/gallery">
-        <button className='btn btn-primary'>Go to Gallery</button>
-       </Link>
 
        <Link to="/rsvp">
         <button className='btn btn-primary'>RSVP</button>

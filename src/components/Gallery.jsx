@@ -3,10 +3,32 @@ import img1 from '../assets/imgA.jpg';
 import img2 from '../assets/imgB.jpg';
 import img3 from '../assets/imgC.jpg';
 import "../App.css";
+import { Link } from 'react-router-dom';
+import axios from "axios";
+
 
 const Gallery = () => {
   const imgContainer = [img1, img2, img3];
   const [enlargedImage, setEnlargedImage] = useState(null);
+  const [comments, setComments] = useState({
+    photo_comments: "",
+    commentator: ""
+  });
+
+  const handleChange = (e) => {
+    setComments(prev =>({...prev, [e.target.name]: e.target.value}))
+  };
+
+  const postComment = async e => {
+    e.preventDefault()
+    try{
+      await axios.post("/gallery", comments)
+    }catch(err){
+      console.log(err)
+    }
+  }
+
+  console.log(comments)
 
   const handleImageClick = (image) => {
     if (enlargedImage === image) {
@@ -25,6 +47,10 @@ const Gallery = () => {
 
   return (
     <div>
+
+      <Link to="/">
+        <button className="galleryHomeBtn btn btn-primary">Go To Home</button>
+      </Link>
       {imgContainer.map((image, index) => (
         <img
           id='galleryImg'
@@ -40,8 +66,12 @@ const Gallery = () => {
           <div className="enlarged-image">
             <img id='enlargedImg' src={enlargedImage} alt="Enlarged" onClick={handleEnlargedImageClick} />
             </div>
-            <h3 className='galleryEnlargeTitle'>Leave a caption!</h3>
-            <input type="text" className="galleryInput" />
+            <div className="captionContainer">
+              <h3 className='galleryEnlargeTitle'>Leave a caption!</h3>
+              <input type="text" name='photo_comments' className="galleryInput" onChange={handleChange} placeholder='Enter a comment!'/>
+              <input type="text" className="galleryInput" name='commentator' onChange={handleChange} placeholder='Who is leaving this message!'/>
+              <button className="formButton" onClick={postComment}>Comment</button>
+            </div>
             <div className="galleryPhotoCommentsContainer">
               <p className="galleryPhotoComments">Comments</p>
           </div>

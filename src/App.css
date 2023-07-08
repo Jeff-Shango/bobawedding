@@ -119,6 +119,14 @@ code {
 
 /* small devices */
 @media screen and (max-width: 600px) {
+  #root {
+    background-color: black;
+  }
+
+  .slideshowCaption {
+    background-color: rgb(80, 80, 80);
+  }
+  
   #dashboardTitle {
     width: fit-content;
     margin: auto;
@@ -133,7 +141,7 @@ code {
   }
 
   .wedTeamContainer {
-    border: 2px solid pink;
+    background-color: rgb(0, 0, 0, 0.75);
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     gap: 20px;
