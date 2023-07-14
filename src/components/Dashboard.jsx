@@ -12,6 +12,7 @@ import wife from '../assets/ashAshin.jpg';
 import mc from '../assets/derekG.jpg'
 import bridesmaid from '../assets/bridesmaid.jpg';
 import partyPlanner from '../assets/partyPlanner.jpg';
+import bestMan from '../assets/bestMan.JPG';
 import { Chrono } from 'react-chrono';
 
 const items = [
@@ -198,6 +199,10 @@ const Dashboard = () => {
 
       <CountdownTimer targetDate={targetDate} />
 
+      <Link to="/rsvp">
+        <button className='btn btn-primary'>RSVP</button>
+       </Link>
+
       {/* events coming up/highlighted */}
       <div className="dashEventContainer">
         <h3 className="mainComp" id='dashboardTitle'>Events Coming Up</h3>
@@ -252,7 +257,7 @@ const Dashboard = () => {
 
               {/* husband and Wife Section  */}
               {/* Husband section */}
-          <div className="husWifContainer">
+          <div className="husContainer">
             <label htmlFor="husSection" className="husSection mainComp">Husband<br/>Jeff Bozier, Jr</label>
 
             <img className='husbandPic' src={husband} alt="husband" />
@@ -275,6 +280,14 @@ const Dashboard = () => {
           <img className='bridesmaidPic' src={bridesmaid} alt="bridesmaid" />
           </div>
           {/* end of bridesmaid section */}
+
+          {/* bestMan section */}
+          <div className="bestManContainer">
+          <label htmlFor="bestManSection" className="bestManSection mainComp">Best Man<br/>Chris Kiah</label>
+
+          <img className='bestManPic' src={bestMan} alt="bestMan" />
+          </div>
+          {/* end of bestMan section */}
 
 
           {/* Master of Ceremony section */}
@@ -299,6 +312,9 @@ const Dashboard = () => {
 
         <div className="registryContainer">
 
+        <Link to="/Registry">
+          <button className="cashAppTitle btn btn-primary">Click Hashtag for Registry</button>
+        </Link>
           <div className="cashAppContainer">
             <img src={cashApp} alt="cashApp" />
           </div>
@@ -307,14 +323,6 @@ const Dashboard = () => {
         {/* End of Registry Portion */}
         {/* container for other features  */}
       <div className="buttonContainer">
-
-       <Link to="/rsvp">
-        <button className='btn btn-primary'>RSVP</button>
-       </Link>
-
-       <Link to="/schedule">
-        <button className='btn btn-primary'>Go to Schedule</button>
-       </Link>
       </div>
       {/* end of feature container */}
     </div>

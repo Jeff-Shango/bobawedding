@@ -23,6 +23,8 @@ const Gallery = () => {
     e.preventDefault()
     try{
       await axios.post("/gallery", comments)
+      console.log("Comment Posted")
+      
     }catch(err){
       console.log(err)
     }

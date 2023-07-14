@@ -136,6 +136,7 @@ code {
   .husWifContainer,
   .mcSection,
   .bridesmaidSection,
+  .bestManSection,
   .partyPlannerSection {
     grid-column: span 2;
   }
@@ -147,6 +148,7 @@ code {
     gap: 20px;
     justify-content: center;
     align-items: center;
+    margin: 1rem;
   }
 
   .App {
@@ -173,9 +175,9 @@ code {
     /* style={{ width: "30rem", height: "fit-content", border: "2px solid black", margin: "auto", backgroundColor: "darkgray", fontSize: "20px", color: "red" }} */
   }
 
-  .husbandPic, .wifePic, .mcPic, .bridesmaidPic, .partyPlannerPic {
-    height: 200px;
-    width: 200px;
+  .husbandPic, .wifePic, .mcPic, .bridesmaidPic, .bestManPic, .partyPlannerPic {
+    height: 100px;
+    width: 100px;
     object-fit: cover;
   }
   
@@ -191,6 +193,10 @@ code {
     background-color: rgb(80, 80, 80, 0.5);
     border: 1px solid black;
     margin-bottom: 1rem;
+    margin-top: 1rem;
+    font-size: large;
   }
+
+
 
 }
