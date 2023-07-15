@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import img1 from '../assets/imgA.jpg';
 import img2 from '../assets/imgB.jpg';
 import img3 from '../assets/imgC.jpg';
@@ -6,12 +6,12 @@ import "../App.css";
 import { Link } from 'react-router-dom';
 import axios from "axios";
 
-
 const Gallery = () => {
   const imgContainer = [img1, img2, img3];
   const [enlargedImage, setEnlargedImage] = useState(null);
+  const [makecomment, setMakeComment] = useState([]);
   const [comments, setComments] = useState({
-    photo_comments: "",
+    user_comment: "",
     commentator: ""
   });
 
@@ -22,13 +22,26 @@ const Gallery = () => {
   const postComment = async e => {
     e.preventDefault()
     try{
-      await axios.post("/gallery", comments)
+      await axios.post("http://localhost:8000/gallery", comments)
       console.log("Comment Posted")
       
     }catch(err){
       console.log(err)
     }
   }
+
+  useEffect(() => {
+    const fetchComments = async () => {
+      try {
+        const response = await axios.get("http://localhost:8000/gallery");
+        setMakeComment(response.data);
+      } catch (err) {
+        console.log(err)
+      }
+    };
+
+    fetchComments();
+  }, [])
 
   console.log(comments)
 
@@ -70,12 +83,14 @@ const Gallery = () => {
             </div>
             <div className="captionContainer">
               <h3 className='galleryEnlargeTitle'>Leave a caption!</h3>
-              <input type="text" name='photo_comments' className="galleryInput" onChange={handleChange} placeholder='Enter a comment!'/>
+              <input type="text" name='user_comment' className="galleryInput" onChange={handleChange} placeholder='Enter a comment!'/>
               <input type="text" className="galleryInput" name='commentator' onChange={handleChange} placeholder='Who is leaving this message!'/>
               <button className="formButton" onClick={postComment}>Comment</button>
             </div>
             <div className="galleryPhotoCommentsContainer">
-              <p className="galleryPhotoComments">Comments</p>
+              <p className="galleryPhotoComments">{makecomment.map((makecomment, index) => (
+                <span className='tracking-in-contract' key={index}>{makecomment.user_comment} - {makecomment.commentator}<br/></span>
+              ))}</p>
           </div>
         </div>
       )}

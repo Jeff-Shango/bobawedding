@@ -22,13 +22,13 @@ app.get("/gallery", (req, res) => {
 });
 
 app.post("/gallery", (req, res) => {
-    const q = "INSERT INTO boba_wedding.photo_comments (`photo_comments`, `commentator`) VALUES (?, ?)"
+    const q = "INSERT INTO boba_wedding.photo_comments (`user_comment`, `commentator`) VALUES (?, ?)"
     const values = [
-        req.body.photo_comments,
+        req.body.user_comment,
         req.body.commentator
     ]
 
-    db.query(q, [values], (err, data) => {
+    db.query(q, values, (err, data) => {
         if(err) return res.json(err)
         return res.json("Comment has been added")
     })
