@@ -188,17 +188,42 @@ const Dashboard = () => {
 
   return (
     <div className='mainDashboard'>
-      <h1 className='mainComp' id="dashboardTitle">SAVE THE DATE</h1>
-
-
-      <label htmlFor="date" className='mainComp'>When:</label>
-      <h1 id="dashboardTitle" className='mainComp'>May 31, 2024</h1>
-
-      <label htmlFor="time" className='mainComp'>Time:</label>
-      <h1 id="dashboardTitle" className='mainComp'>6:30pm - 11:30pm</h1>
+      <h1 className='text-shadow-pop-top'>SAVE THE DATE</h1>
 
       <CountdownTimer targetDate={targetDate} />
+      
+      <div className="timeMainContainer">
+        <label htmlFor="date" className='calendarLabel mainComp'>When:</label>
+        <h1 id="dashboardTitle" className='mainComp text-pop-up-top calendarSlot'>May 31, 2024</h1>
 
+        <label htmlFor="time" className='calendarLabel mainComp'>Time:</label>
+        <h1 id="dashboardTitle" className='mainComp text-pop-up-top calendarSlot'>6:30pm - 11:30pm</h1>
+      </div>
+      {/* put below  */}
+             {/* slideshow */}
+       
+             <div id="galleryContainer"/>
+
+<div id="dashboardSlideshow">
+  <Fade>
+    {fadeImages.map((fadeImage, index) => (
+      <div key={index}>
+        <img
+          style={{ height: '30rem', width: '30rem' }}
+          src={fadeImage.img}
+          alt="slideshow"
+        />
+        <h2 className='slideshowCaption'>{fadeImage.caption}</h2>
+      </div>
+    ))}
+  </Fade>
+  <Link to="/gallery">
+<button className='btn btn-primary'>Go to Gallery</button>
+</Link>
+</div>
+
+
+      {/* put above */}
       <Link to="/rsvp">
         <button className='btn btn-primary'>RSVP</button>
        </Link>
@@ -226,28 +251,6 @@ const Dashboard = () => {
       
       {/* main dashboard */}
       <div className="dashboardContainer">
-       
-       {/* slideshow */}
-       
-        <div id="galleryContainer"/>
-
-        <div id="dashboardSlideshow">
-          <Fade>
-            {fadeImages.map((fadeImage, index) => (
-              <div key={index}>
-                <img
-                  style={{ height: '30rem', width: '30rem' }}
-                  src={fadeImage.img}
-                  alt="slideshow"
-                />
-                <h2 className='slideshowCaption'>{fadeImage.caption}</h2>
-              </div>
-            ))}
-          </Fade>
-          <Link to="/gallery">
-        <button className='btn btn-primary'>Go to Gallery</button>
-       </Link>
-        </div>
       </div>
         {/* end of slideshow */}
 

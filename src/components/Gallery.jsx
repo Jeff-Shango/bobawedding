@@ -19,10 +19,10 @@ const Gallery = () => {
     setComments(prev =>({...prev, [e.target.name]: e.target.value}))
   };
 
-  const postComment = async e => {
+  const postComment = async (e, tableName) => {
     e.preventDefault()
     try{
-      await axios.post("http://localhost:8000/gallery", comments)
+      await axios.post(`http://localhost:8000/${tableName}`, comments)
       console.log("Comment Posted")
       
     }catch(err){
@@ -43,15 +43,39 @@ const Gallery = () => {
     fetchComments();
   }, [])
 
+  useEffect(() => {
+    const createTable = async () => {
+      try {
+        const response = await axios.post("http://localhost:8000/tables");
+        const existingTables = response.data;
+        const maxTableNumber = Math.max(...existingTables.map(table => {
+          const number = Number(table.tableName.split("_")[1]);
+          return isNaN(number) ? 0 : number;
+        }));
+        const nextTableNumber = maxTableNumber + 1;
+        const nextTableName = `table_${nextTableNumber}`;
+
+        await axios.post("http://localhost:8000/createTable", { tableName: nextTableName });
+        console.log("Table was created successfully, mane!");
+      } catch (err) {
+        console.log(err);
+      }
+    };
+
+    createTable();
+  }, []);
+
   console.log(comments)
 
-  const handleImageClick = (image) => {
+  const handleImageClick = (image, index) => {
     if (enlargedImage === image) {
       // If the clicked image is already enlarged, shrink it back to the original size
       setEnlargedImage(null);
     } else {
       // Otherwise, enlarge the clicked image
       setEnlargedImage(image);
+      const tableName = `table_${index + 1}`;
+      setComments((prev) => ({ ...prev, tableName: tableName }))
     }
   };
 
@@ -72,7 +96,7 @@ const Gallery = () => {
           key={index}
           src={image}
           alt={`${index + 1}`}
-          onClick={() => handleImageClick(image)}
+          onClick={() => handleImageClick(image, index)}
           className={enlargedImage === image ? 'enlarged' : ''}
         />
       ))}
