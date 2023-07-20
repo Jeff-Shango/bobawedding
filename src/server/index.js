@@ -40,50 +40,39 @@ app.get("/tables", (req, res) => {
     })
 })
 
-app.post("/gallery/:tableName", (req, res) => {
-    const tableName = req.params.tableName;
-    const { user_comment, commentator } = req.body;
+app.get("/get_comments/:imageId", (req, res) => {
+    const { imageId } = req.params;
+    const tableName = `photo_comments_${imageId}`;
 
-    const insertCommentQuery = `INSERT INTO boba_wedding.${tableName} (user_comment, commentator) VALUES (?, ?)`;
-    const values = [user_comment, commentator]
-    // const q = "INSERT INTO boba_wedding.photo_comments ( `caption`,`user_comment`, `commentator`) VALUES (?, ?, ?)"
-    // const values = [
-    //     req.body.caption,
-    //     req.body.user_comment,
-    //     req.body.commentator
-    // ]
+    const getCommentsQuery = `SELECT comment, commentator FROM ${tableName}`;
 
-    db.query(insertCommentQuery, values, (err, data) => {
-        if(err) {
-            console.log(err);
-            return res.status(500).json({ error: "Error adding comment"});
-        }
-        return res.json("Comment has been added")
-    })
-});
-
-
-
-app.post("/createTable", (req, res) => {
-    const tableName = req.body.tableName;
-
-    const createTableQuery = `CREATE TABLE ${tableName} (
-        id INT PRIMARY KEY AUTO_INCREMENT,
-        caption VARCHAR(255),
-        user_comment VARCHAR(255),
-        commentator VARCHAR(255)
-    )`;
-
-    db.query(createTableQuery, (err) => {
+    db.query(getCommentsQuery, (err, data) => {
         if (err) {
-            console.error("There was an error creating table, via error:", err);
-            return res.status(500).json({ error: "There was an error creating a table"});
+            console.error("There was an error:", err);
+            return res.status(500).json({ error: "There was an error retrieving that shit"})
         }
 
-        console.log("Table created successfully!");
-        return res.sendStatus(200);
+        return res.json(data);
     });
 });
+
+app.post("/add_comment", (req, res) => {
+    const { imageId, comment, commentator } = req.body;
+    const tableName = `photo_comments_${imageId}`;
+
+    const addCommentQuery = `INSERT INTO ${tableName} VALUES (?, ?)`;
+    const values = [comment, commentator];
+
+    db.query(addCommentQuery, values, (err, result) => {
+        if (err) {
+            console.error("Error adding comment:", err);
+            return res.status(500).json({ error: "There was an error, bruh"});
+        }
+
+        return res.json({ message: "That comment was added"})
+    })
+})
+
 
 const photoComments = 8000;
 

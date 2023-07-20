@@ -43,30 +43,6 @@ const Gallery = () => {
     fetchComments();
   }, [])
 
-  useEffect(() => {
-    const createTable = async () => {
-      try {
-        const response = await axios.post("http://localhost:8000/tables");
-        const existingTables = response.data;
-        const maxTableNumber = Math.max(...existingTables.map(table => {
-          const number = Number(table.tableName.split("_")[1]);
-          return isNaN(number) ? 0 : number;
-        }));
-        const nextTableNumber = maxTableNumber + 1;
-        const nextTableName = `table_${nextTableNumber}`;
-
-        await axios.post("http://localhost:8000/createTable", { tableName: nextTableName });
-        console.log("Table was created successfully, mane!");
-      } catch (err) {
-        console.log(err);
-      }
-    };
-
-    createTable();
-  }, []);
-
-  console.log(comments)
-
   const handleImageClick = (image, index) => {
     if (enlargedImage === image) {
       // If the clicked image is already enlarged, shrink it back to the original size
