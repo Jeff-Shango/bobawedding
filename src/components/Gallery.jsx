@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+ import React, { useEffect, useState } from 'react';
 import img1 from '../assets/imgA.jpg';
 import img2 from '../assets/imgB.jpg';
 import img3 from '../assets/imgC.jpg';
@@ -15,6 +15,15 @@ const Gallery = () => {
     commentator: ""
   });
 
+  const testFetchComments = async (imageIndex) => {
+    try {
+      const response = await axios.get(`http://localhost:8000/get_comments/${imageIndex}`);
+      console.log(`The comments for ${imageIndex}:`, response.data);
+    } catch (err) {
+      console.log(err)
+    }
+  };
+
   const handleChange = (e) => {
     setComments(prev =>({...prev, [e.target.name]: e.target.value}))
   };
@@ -22,8 +31,17 @@ const Gallery = () => {
   const postComment = async (e, tableName) => {
     e.preventDefault()
     try{
-      await axios.post(`http://localhost:8000/${tableName}`, comments)
-      console.log("Comment Posted")
+      if (comments.user_comment && comments.commentator && comments.tableName) {
+        const data = {
+          user_comment: comments.user_comment,
+          commentator: comments.commentator,
+          imageUrl: enlargedImage,
+        }
+      await axios.post("http://localhost:8000/add_comment", data)
+      console.log("Comment Posted");
+    } else { 
+      console.log("Please fill in all the comment fields")
+    }
       
     }catch(err){
       console.log(err)
@@ -50,8 +68,11 @@ const Gallery = () => {
     } else {
       // Otherwise, enlarge the clicked image
       setEnlargedImage(image);
-      const tableName = `table_${index + 1}`;
-      setComments((prev) => ({ ...prev, tableName: tableName }))
+      setComments({
+        user_comment: "",
+        commentator: "",
+      });
+      testFetchComments(index + 1);
     }
   };
 

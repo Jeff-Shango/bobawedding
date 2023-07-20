@@ -48,6 +48,34 @@ app.get("/get_comments/:imageId", (req, res) => {
 
     db.query(getCommentsQuery, (err, data) => {
         if (err) {
+            console.error("There was a damn error:". err);
+            return res.status(500).json({ error: "There was a got damn error retrieving the comments"});
+        }
+
+        return res.json(data);
+    });
+});
+
+app.get("/get_all_comments", (req, res) => {
+    const getAllCommentsQuery = "SELECT * FROM boba_wedding.photo_comments";
+    db.query(getAllCommentsQuery, (err, data) => {
+        if (err) {
+            console.error("There was a damn error:", err);
+            return res.status(500).json({ error: "There was an error retrieving all of the comments"})
+        }
+
+        return res.json(data);
+    })
+})
+
+app.get("/get_comments/:imageId", (req, res) => {
+    const { imageId } = req.params;
+    const tableName = `photo_comments_${imageId}`;
+
+    const getCommentsQuery = `SELECT comment, commentator FROM ${tableName}`;
+
+    db.query(getCommentsQuery, (err, data) => {
+        if (err) {
             console.error("There was an error:", err);
             return res.status(500).json({ error: "There was an error retrieving that shit"})
         }
@@ -57,11 +85,14 @@ app.get("/get_comments/:imageId", (req, res) => {
 });
 
 app.post("/add_comment", (req, res) => {
-    const { imageId, comment, commentator } = req.body;
-    const tableName = `photo_comments_${imageId}`;
-
-    const addCommentQuery = `INSERT INTO ${tableName} VALUES (?, ?)`;
-    const values = [comment, commentator];
+    const { imageUrl, user_comment, commentator } = req.body;
+    if (!imageUrl || !user_comment || !commentator) {
+        return res.status(400).json({ error: "Invalid ass request"});
+    }
+    const imageIndex = imageUrl.match(/img(\d+)\.jpg/i)[1];
+    const tableName = `photo_comments_${imageIndex}`;
+    const addCommentQuery = `INSERT INTO ${tableName} (comment, commentator) VALUES (?, ?)`;
+    const values = [user_comment, commentator];
 
     db.query(addCommentQuery, values, (err, result) => {
         if (err) {
