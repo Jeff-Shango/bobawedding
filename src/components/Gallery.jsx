@@ -15,10 +15,11 @@ const Gallery = () => {
     commentator: ""
   });
 
-  const testFetchComments = async (imageIndex) => {
+  const testFetchComments = async (imageId) => {
     try {
-      const response = await axios.get(`http://localhost:8000/get_comments/${imageIndex}`);
-      console.log(`The comments for ${imageIndex}:`, response.data);
+      const tableName = `photo_comments_/${imageId}`;      
+      const response = await axios.get(`http://localhost:8000/get_comments/${imageId}`);
+      console.log(`The comments for ${tableName}:`, response.data);
     } catch (err) {
       console.log(err)
     }
@@ -31,9 +32,9 @@ const Gallery = () => {
   const postComment = async (e, tableName) => {
     e.preventDefault()
     try{
-      if (comments.user_comment && comments.commentator && comments.tableName) {
+      if (comments.comments && comments.commentator && comments.tableName) {
         const data = {
-          user_comment: comments.user_comment,
+          comments: comments.comments,
           commentator: comments.commentator,
           imageUrl: enlargedImage,
         }
@@ -52,6 +53,7 @@ const Gallery = () => {
     const fetchComments = async () => {
       try {
         const response = await axios.get("http://localhost:8000/gallery");
+        console.log("Response from API:", response.data);
         setMakeComment(response.data);
       } catch (err) {
         console.log(err)
@@ -69,7 +71,7 @@ const Gallery = () => {
       // Otherwise, enlarge the clicked image
       setEnlargedImage(image);
       setComments({
-        user_comment: "",
+        comments: "",
         commentator: "",
       });
       testFetchComments(index + 1);
@@ -110,7 +112,7 @@ const Gallery = () => {
             </div>
             <div className="galleryPhotoCommentsContainer">
               <p className="galleryPhotoComments">{makecomment.map((makecomment, index) => (
-                <span className='tracking-in-contract' key={index}>{makecomment.user_comment} - {makecomment.commentator}<br/></span>
+                <span className='tracking-in-contract' key={index}>{makecomment.comment} - {makecomment.commentator}<br/></span>
               ))}</p>
           </div>
         </div>

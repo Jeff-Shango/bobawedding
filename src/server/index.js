@@ -13,13 +13,15 @@ const db = mysql.createConnection({
     user: "root",
     password: "Woodward20!",
     database: "boba_wedding"
-})
+});
+
 
 app.use(express.json())
 app.use(cors())
 
 app.get("/gallery", (req, res) => {
-    const q = "SELECT * FROM boba_wedding.photo_comments";
+    const tableName = `photo_comments_${imageId}`;
+    const q = `SELECT * FROM boba_wedding.${tableName}`;
     db.query(q, (err, data) => {
         if(err) return res.json(err);
         return res.json(data)
@@ -44,7 +46,7 @@ app.get("/get_comments/:imageId", (req, res) => {
     const { imageId } = req.params;
     const tableName = `photo_comments_${imageId}`;
 
-    const getCommentsQuery = `SELECT comment, commentator FROM ${tableName}`;
+    const getCommentsQuery = `SELECT comment, commentator FROM boba_wedding.${tableName}.comments`;
 
     db.query(getCommentsQuery, (err, data) => {
         if (err) {
@@ -57,7 +59,8 @@ app.get("/get_comments/:imageId", (req, res) => {
 });
 
 app.get("/get_all_comments", (req, res) => {
-    const getAllCommentsQuery = "SELECT * FROM boba_wedding.photo_comments";
+    const tableName = `photo_comments_${imageId}`;
+    const getAllCommentsQuery = `SELECT * FROM boba_wedding.${tableName}.comments`;
     db.query(getAllCommentsQuery, (err, data) => {
         if (err) {
             console.error("There was a damn error:", err);
@@ -68,22 +71,6 @@ app.get("/get_all_comments", (req, res) => {
     })
 })
 
-app.get("/get_comments/:imageId", (req, res) => {
-    const { imageId } = req.params;
-    const tableName = `photo_comments_${imageId}`;
-
-    const getCommentsQuery = `SELECT comment, commentator FROM ${tableName}`;
-
-    db.query(getCommentsQuery, (err, data) => {
-        if (err) {
-            console.error("There was an error:", err);
-            return res.status(500).json({ error: "There was an error retrieving that shit"})
-        }
-
-        return res.json(data);
-    });
-});
-
 app.post("/add_comment", (req, res) => {
     const { imageUrl, user_comment, commentator } = req.body;
     if (!imageUrl || !user_comment || !commentator) {
@@ -91,7 +78,7 @@ app.post("/add_comment", (req, res) => {
     }
     const imageIndex = imageUrl.match(/img(\d+)\.jpg/i)[1];
     const tableName = `photo_comments_${imageIndex}`;
-    const addCommentQuery = `INSERT INTO ${tableName} (comment, commentator) VALUES (?, ?)`;
+    const addCommentQuery = `INSERT INTO boba_wedding.${tableName} (comment, commentator) VALUES (?, ?)`;
     const values = [user_comment, commentator];
 
     db.query(addCommentQuery, values, (err, result) => {
