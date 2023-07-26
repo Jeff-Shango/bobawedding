@@ -9,7 +9,7 @@ import axios from "axios";
 const Gallery = () => {
   const imgContainer = [img1, img2, img3];
   const [enlargedImage, setEnlargedImage] = useState(null);
-  const [makecomment, setMakeComment] = useState([]);
+  const [commentsData, setCommentsData] = useState([]);
   const [comments, setComments] = useState({
     user_comment: "",
     commentator: ""
@@ -17,7 +17,7 @@ const Gallery = () => {
 
   const testFetchComments = async (imageId) => {
     try {
-      const tableName = `photo_comments_/${imageId}`;      
+      const tableName = `photo_comments_${imageId}`;      
       const response = await axios.get(`http://localhost:8000/get_comments/${imageId}`);
       console.log(`The comments for ${tableName}:`, response.data);
     } catch (err) {
@@ -32,12 +32,13 @@ const Gallery = () => {
   const postComment = async (e, tableName) => {
     e.preventDefault()
     try{
-      if (comments.comments && comments.commentator && comments.tableName) {
+      if (comments.comments && comments.commentator) {
         const data = {
           comments: comments.comments,
           commentator: comments.commentator,
           imageUrl: enlargedImage,
-        }
+        };
+      // const imageIndex = imgContainer.findIndex((img) => img === enlargedImage) + 1;
       await axios.post("http://localhost:8000/add_comment", data)
       console.log("Comment Posted");
     } else { 
@@ -54,7 +55,7 @@ const Gallery = () => {
       try {
         const response = await axios.get("http://localhost:8000/gallery");
         console.log("Response from API:", response.data);
-        setMakeComment(response.data);
+        setCommentsData(response.data);
       } catch (err) {
         console.log(err)
       }
@@ -111,8 +112,8 @@ const Gallery = () => {
               <button className="formButton" onClick={postComment}>Comment</button>
             </div>
             <div className="galleryPhotoCommentsContainer">
-              <p className="galleryPhotoComments">{makecomment.map((makecomment, index) => (
-                <span className='tracking-in-contract' key={index}>{makecomment.comment} - {makecomment.commentator}<br/></span>
+              <p className="galleryPhotoComments">{Array.isArray(commentsData) && commentsData.map((commentsData, index) => (
+                <span className='tracking-in-contract' key={index}>{commentsData.comment} - {commentsData.commentator}<br/></span>
               ))}</p>
           </div>
         </div>
