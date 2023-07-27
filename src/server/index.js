@@ -28,7 +28,7 @@ app.get("/gallery", (req, res) => {
         return res.json(data)
     })
 });
-// work on the code above 
+// work on the code above
 
 app.get("/tables", (req, res) => {
     const getTablesQuery = "SHOW TABLES";

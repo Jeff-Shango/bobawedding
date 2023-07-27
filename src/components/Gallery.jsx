@@ -1,4 +1,4 @@
- import React, { useEffect, useState } from 'react';
+ import React, { useState } from 'react';
 import img1 from '../assets/imgA.jpg';
 import img2 from '../assets/imgB.jpg';
 import img3 from '../assets/imgC.jpg';
@@ -11,19 +11,19 @@ const Gallery = () => {
   const [enlargedImage, setEnlargedImage] = useState(null);
   const [commentsData, setCommentsData] = useState([]);
   const [comments, setComments] = useState({
-    user_comment: "",
+    comments: "",
     commentator: ""
   });
 
-  const testFetchComments = async (imageId) => {
-    try {
-      const tableName = `photo_comments_${imageId}`;      
-      const response = await axios.get(`http://localhost:8000/get_comments/${imageId}`);
-      console.log(`The comments for ${tableName}:`, response.data);
-    } catch (err) {
-      console.log(err)
-    }
-  };
+  // const testFetchComments = async (imageId) => {
+  //   try {
+  //     const tableName = `photo_comments_${imageId}`;      
+  //     const response = await axios.get(`http://localhost:8000/get_comments/${imageId}`);
+  //     console.log(`The comments for ${tableName}:`, response.data);
+  //   } catch (err) {
+  //     console.log(err)
+  //   }
+  // };
 
   const handleChange = (e) => {
     setComments(prev =>({...prev, [e.target.name]: e.target.value}))
@@ -38,8 +38,8 @@ const Gallery = () => {
           commentator: comments.commentator,
           imageUrl: enlargedImage,
         };
-      // const imageIndex = imgContainer.findIndex((img) => img === enlargedImage) + 1;
-      await axios.post("http://localhost:8000/add_comment", data)
+      const imageIndex = imgContainer.findIndex((img) => img === enlargedImage) + 1;
+      await axios.post(`http://localhost:8000/add_comment/${imageIndex}`, data)
       console.log("Comment Posted");
     } else { 
       console.log("Please fill in all the comment fields")
@@ -50,19 +50,21 @@ const Gallery = () => {
     }
   }
 
-  useEffect(() => {
-    const fetchComments = async () => {
+    const fetchComments = async (imageId) => {
       try {
-        const response = await axios.get("http://localhost:8000/gallery");
-        console.log("Response from API:", response.data);
-        setCommentsData(response.data);
+        const response = await axios.get(`http://localhost:8000/gallery?imageId=${imageId}`);
+        // console.log("Response from API:", response.data);
+        const comments = response.data.map((item) => ({
+          comment: item.comment,
+          commentator: item.commentator,
+        }));
+        setCommentsData(comments);
       } catch (err) {
         console.log(err)
       }
     };
 
-    fetchComments();
-  }, [])
+    fetchComments(1);
 
   const handleImageClick = (image, index) => {
     if (enlargedImage === image) {
@@ -75,7 +77,8 @@ const Gallery = () => {
         comments: "",
         commentator: "",
       });
-      testFetchComments(index + 1);
+      // testFetchComments(index + 1);
+      fetchComments(index + 1);
     }
   };
 
