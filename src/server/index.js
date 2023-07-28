@@ -76,14 +76,14 @@ app.get("/get_all_comments", (req, res) => {
 })
 
 app.post("/add_comment/:imageId", (req, res) => {
-    const { imageUrl, user_comment, commentator } = req.body;
-    if (!imageUrl || !user_comment || !commentator) {
+    const { imageUrl, comments, commentator } = req.body;
+    if (!imageUrl || !comments || !commentator) {
         return res.status(400).json({ error: "Invalid ass request"});
     }
     const imageIndex = imageUrl.match(/img(\d+)\.jpg/i)[1];
     const tableName = `photo_comments_${imageIndex}`;
-    const addCommentQuery = `INSERT INTO boba_wedding.${tableName} (comment, commentator) VALUES (?, ?)`;
-    const values = [user_comment, commentator];
+    const addCommentQuery = `INSERT INTO boba_wedding.${tableName} (comments, commentator) VALUES (?, ?)`;
+    const values = [comments, commentator];
 
     db.query(addCommentQuery, values, (err, result) => {
         if (err) {

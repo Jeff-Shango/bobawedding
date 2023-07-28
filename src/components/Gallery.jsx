@@ -41,8 +41,6 @@ const Gallery = () => {
       const imageIndex = imgContainer.findIndex((img) => img === enlargedImage) + 1;
       await axios.post(`http://localhost:8000/add_comment/${imageIndex}`, data)
       console.log("Comment Posted");
-    } else { 
-      console.log("Please fill in all the comment fields")
     }
       
     }catch(err){
@@ -55,7 +53,7 @@ const Gallery = () => {
         const response = await axios.get(`http://localhost:8000/gallery?imageId=${imageId}`);
         // console.log("Response from API:", response.data);
         const comments = response.data.map((item) => ({
-          comment: item.comment,
+          comments: item.comments,
           commentator: item.commentator,
         }));
         setCommentsData(comments);
@@ -64,7 +62,7 @@ const Gallery = () => {
       }
     };
 
-    fetchComments(1);
+    fetchComments();
 
   const handleImageClick = (image, index) => {
     if (enlargedImage === image) {
@@ -116,7 +114,7 @@ const Gallery = () => {
             </div>
             <div className="galleryPhotoCommentsContainer">
               <p className="galleryPhotoComments">{Array.isArray(commentsData) && commentsData.map((commentsData, index) => (
-                <span className='tracking-in-contract' key={index}>{commentsData.comment} - {commentsData.commentator}<br/></span>
+                <span className='tracking-in-contract' key={index}>{commentsData.comments} - {commentsData.commentator}<br/></span>
               ))}</p>
           </div>
         </div>
