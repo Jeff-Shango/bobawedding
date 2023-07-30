@@ -29,24 +29,50 @@ const Gallery = () => {
     setComments(prev =>({...prev, [e.target.name]: e.target.value}))
   };
 
-  const postComment = async (e, tableName) => {
+  const postComment = async e => {
     e.preventDefault()
-    try{
-      if (comments.comments && comments.commentator) {
-        const data = {
-          comments: comments.comments,
-          commentator: comments.commentator,
-          imageUrl: enlargedImage,
-        };
-      const imageIndex = imgContainer.findIndex((img) => img === enlargedImage) + 1;
-      await axios.post(`http://localhost:8000/add_comment/${imageIndex}`, data)
-      console.log("Comment Posted");
-    }
-      
-    }catch(err){
+    try {
+      const data = {
+                comments: comments.comments,
+                commentator: comments.commentator,
+                imageUrl: enlargedImage,
+              };
+      // const imageIndex = enlargedImage.match(/img(\d+)\.jpg/i)[1];
+      await axios.post(`http://localhost:8000/add_comment/`, data)
+    } catch(err) {
       console.log(err)
     }
   }
+
+  // const postComment = async (e, tableName) => {
+  //   e.preventDefault();
+  //   console.log("comments:", comments);
+  //   console.log("comments.comments:", comments.comments);
+  //   console.log("comments.commentator:", comments.commentator);
+  //   console.log("enlargedImage:", enlargedImage);
+
+  //   try{
+  //     if (comments.comments && comments.commentator && enlargedImage ) {
+  //       const data = {
+  //         comments: comments.comments,
+  //         commentator: comments.commentator,
+  //         imageUrl: enlargedImage,
+  //       };
+
+  //     const imageIndex = enlargedImage.match(/img(\d+)\.jpg/i)[1];
+  //     await axios.post(`http://localhost:8000/add_comment/${imageIndex}`, data)
+  //     console.log("Comment Posted");
+  //     setComments({
+  //       comments: "",
+  //       commentator: "",
+  //     });
+  //   } else {
+  //     console.log("Fill all of the comment fields or select a pic, mane!")
+  //   }      
+  // }catch (err) {
+  //     console.log(err)
+  //   }
+  // };
 
     const fetchComments = async (imageId) => {
       try {
@@ -58,13 +84,14 @@ const Gallery = () => {
         }));
         setCommentsData(comments);
       } catch (err) {
-        console.log(err)
+        // console.log(err)
       }
     };
 
     fetchComments();
 
   const handleImageClick = (image, index) => {
+    console.log("Image clicked:", image)
     if (enlargedImage === image) {
       // If the clicked image is already enlarged, shrink it back to the original size
       setEnlargedImage(null);
@@ -108,7 +135,7 @@ const Gallery = () => {
             </div>
             <div className="captionContainer">
               <h3 className='galleryEnlargeTitle'>Leave a caption!</h3>
-              <input type="text" name='user_comment' className="galleryInput" onChange={handleChange} placeholder='Enter a comment!'/>
+              <input type="text" name='comments' className="galleryInput" onChange={handleChange} placeholder='Enter a comment!'/>
               <input type="text" className="galleryInput" name='commentator' onChange={handleChange} placeholder='Who is leaving this message!'/>
               <button className="formButton" onClick={postComment}>Comment</button>
             </div>
