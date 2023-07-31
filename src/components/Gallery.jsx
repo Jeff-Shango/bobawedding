@@ -32,13 +32,14 @@ const Gallery = () => {
   const postComment = async e => {
     e.preventDefault()
     try {
+      const imageIndex = enlargedImage.match(/img(\d+)\.jpg/i)[1];
+      
       const data = {
                 comments: comments.comments,
                 commentator: comments.commentator,
                 imageUrl: enlargedImage,
               };
-      // const imageIndex = enlargedImage.match(/img(\d+)\.jpg/i)[1];
-      await axios.post(`http://localhost:8000/add_comment/`, data)
+      await axios.post(`http://localhost:8000/add_comment/:imageId`, data)
     } catch(err) {
       console.log(err)
     }
