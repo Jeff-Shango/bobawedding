@@ -44,21 +44,21 @@ app.get("/tables", (req, res) => {
     })
 })
 
-// app.get("/get_comments/:imageId", (req, res) => {
-//     const { imageId } = req.params;
-//     const tableName = `photo_comments_${imageId}`;
+app.get("/get_comments/:imageId", (req, res) => {
+    const { imageId } = req.params;
+    const tableName = `photo_comments_${imageId}`;
 
-//     const getCommentsQuery = `SELECT comments, commentator FROM boba_wedding.${tableName}`;
+    const getCommentsQuery = `SELECT comments, commentator FROM boba_wedding.${tableName}`;
 
-//     db.query(getCommentsQuery, (err, data) => {
-//         if (err) {
-//             console.error("There was a damn error:". err);
-//             return res.status(500).json({ error: "There was a got damn error retrieving the comments"});
-//         }
+    db.query(getCommentsQuery, (err, data) => {
+        if (err) {
+            console.error("There was a damn error:". err);
+            return res.status(500).json({ error: "There was a got damn error retrieving the comments"});
+        }
 
-//         return res.json(data);
-//     });
-// });
+        return res.json(data);
+    });
+});
 
 // app.get("/get_all_comments", (req, res) => {
 //     const { imageId } = req.query
@@ -75,26 +75,43 @@ app.get("/tables", (req, res) => {
 //     })
 // })
 
-app.post("/add_comment/:imageId", (req, res) => {
-    // const { imageId } = req.query;
-    const { imageUrl } = req.query;
-    const imageIndex = imageUrl.match(/img(\d+)\.jpg/i)[1];
-    const tableName = `photo_comments_${imageIndex}`;
-    const addCommentQuery = `INSERT INTO boba_wedding.${tableName} (comments, commentator) VALUES (?, ?)`
-    const values = [
-        req.body.comments,
-        req.body.commentator,
-    ]
+app.post("/add_comment", (req, res) => {
+    const { imageId } = req.query;
+    const tableName = `photo_comments_${imageId}`;
+    const addCommentQuery = `INSERT INTO boba_wedding.${tableName} (comments, commentator) VALUES (?, ?)`;
+    const values = [req.body.comments, req.body.commentator];
 
-    db.query(addCommentQuery, [values], (err, result) => {
-        if(err) {
-            console.error("ERRic adding comment:", err);
-            return res.status(500).json({ error: "there was eric adding the comment"});
+    db.query(addCommentQuery, values, (err, result) => {
+        if (err) {
+            console.error("Error adding the comment, bruh:", err);
+            return res.status(500).json({ error: "There was a damn error with adding the comment"});
         }
 
-        return res.json({ message: "Comment was successfully added, mane!"})
-    })
-})
+        return res.json({ message: "Comment was successfully added, mane :)"});
+    });
+});
+
+
+// app.post("/add_comment/:imageIndex", (req, res) => {
+//     // const { imageId } = req.query;
+//     const { imageUrl } = req.query;
+//     const imageIndex = imageUrl.match(/img(\d+)\.jpg/i)[1];
+//     const tableName = `photo_comments_${imageIndex}`;
+//     const addCommentQuery = `INSERT INTO boba_wedding.${tableName} (comments, commentator) VALUES (?, ?)`
+//     const values = [
+//         req.body.comments,
+//         req.body.commentator,
+//     ]
+
+//     db.query(addCommentQuery, [values], (err, result) => {
+//         if(err) {
+//             console.error("ERRic adding comment:", err);
+//             return res.status(500).json({ error: "there was eric adding the comment"});
+//         }
+
+//         return res.json({ message: "Comment was successfully added, mane!"})
+//     })
+// })
 
 // app.post("/add_comment/:imageId", (req, res) => {
 //     const { imageUrl, comments, commentator } = req.body;
