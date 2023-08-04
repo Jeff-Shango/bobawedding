@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react';
 import './dashboard.css';
 import 'react-slideshow-image/dist/styles.css';
 import { Fade } from 'react-slideshow-image';
-import cashApp from '../assets/cashApp.jpg';
+import cashApp from '../assets/theBoziersCashApp.jpg';
 import img1 from '../assets/imgA.jpg';
 import img2 from '../assets/imgB.jpg';
 import img3 from '../assets/imgC.jpg';
@@ -319,7 +319,9 @@ const Dashboard = () => {
           <button className="cashAppTitle btn btn-primary">Click Hashtag for Registry</button>
         </Link>
           <div className="cashAppContainer">
+            <button src="https://cash.app/$TheBoziers" className='cashAppButton' onClick={() => window.open('https://cash.app/$TheBoziers', '_blank')}>
             <img src={cashApp} alt="cashApp" />
+            </button>
           </div>
 
         </div>
