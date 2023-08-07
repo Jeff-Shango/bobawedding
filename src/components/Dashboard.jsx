@@ -1,4 +1,7 @@
 import React, { useEffect, useState } from 'react';
+import {Row, Col} from 'react-bootstrap';
+import { productsArray } from '../functions/stripeFunctions';
+import { ProductCard } from '../functions/ProductCard';
 import './dashboard.css';
 import 'react-slideshow-image/dist/styles.css';
 import { Fade } from 'react-slideshow-image';
@@ -14,6 +17,8 @@ import bridesmaid from '../assets/bridesmaid.jpg';
 import partyPlanner from '../assets/partyPlanner.jpg';
 import bestMan from '../assets/bestMan.JPG';
 import { Chrono } from 'react-chrono';
+import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import { NavbarComponent } from './NavbarComponent';
 
 const items = [
   {
@@ -188,6 +193,9 @@ const Dashboard = () => {
 
   return (
     <div className='mainDashboard'>
+      {/* navbar */}
+      <NavbarComponent></NavbarComponent>
+      {/* end of navbar */}
       <h1 className='text-shadow-pop-top'>SAVE THE DATE</h1>
 
       <CountdownTimer targetDate={targetDate} />
@@ -323,6 +331,20 @@ const Dashboard = () => {
             <img src={cashApp} alt="cashApp" />
             </button>
           </div>
+
+          <div className="zelleContainer">
+            <h2 align="center" className='p-3'>Quick Payments</h2>
+            <Row xs={2} md={3} classname="g-4">
+              {productsArray.map((product, idx) => (
+                <Col align="center" key={idx}>
+                  <ProductCard product={product}/>
+                </Col>
+              ))}
+              
+
+            </Row>
+          </div>
+          
 
         </div>
         {/* End of Registry Portion */}
