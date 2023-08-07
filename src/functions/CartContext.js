@@ -1,13 +1,13 @@
 import { createContext, useState } from "react";
-import { productsArray, getProductsData } from "./stripeFunctions";
+import { productsArray, getProductsData } from "./stripeFunctions.js";
 
-const cartContext = createContext({
+export const CartContext = createContext({
     items: [],
     getProductQuantity: () => {},
     addOneToCart: () => {},
     removeOneToCart: () => {},
     deleteFromCart: () => {},
-    GetTotalCost: () => {},
+    getTotalCost: () => {},
 });
 
 export function CartProvider({children}) {
@@ -35,7 +35,7 @@ export function CartProvider({children}) {
                         quantity:1
                     }
                 ]
-            cartProducts.filter(createRoutesFromElements)
+            // cartProducts.filter(createRoutesFromElements)
             )
         } else {
             setCartProducts(
@@ -76,7 +76,7 @@ export function CartProvider({children}) {
         )
     }
 
-    function GetTotalCost() {
+    function getTotalCost() {
         let totalCost = 0;
         cartProducts.map((cartItem) => {
             const productData = getProductsData(cartItem.id);
@@ -88,15 +88,17 @@ export function CartProvider({children}) {
     const contextValue = {
         items: cartProducts,
         getProductQuantity,
-        AddOneToCart,
+        addOneToCart,
         removeOneFromCart, 
         deleteFromCart,
-        GetTotalCost
+        getTotalCost
     }
 
     return (
-        <cartContext.Provider value={contextValue}>
+        <CartContext.Provider value={contextValue}>
             {children}
-        </cartContext.Provider>
+        </CartContext.Provider>
     )
 }
+
+export default CartProvider;

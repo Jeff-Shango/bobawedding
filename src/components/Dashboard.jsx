@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import {Row, Col} from 'react-bootstrap';
 import { productsArray } from '../functions/stripeFunctions';
-import { ProductCard } from '../functions/ProductCard';
+import { ProductCard } from '../functions/ProductCard.js';
 import './dashboard.css';
 import 'react-slideshow-image/dist/styles.css';
 import { Fade } from 'react-slideshow-image';
@@ -17,7 +17,7 @@ import bridesmaid from '../assets/bridesmaid.jpg';
 import partyPlanner from '../assets/partyPlanner.jpg';
 import bestMan from '../assets/bestMan.JPG';
 import { Chrono } from 'react-chrono';
-import { BrowserRouter, Routes, Route } from 'react-router-dom';
+// import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import { NavbarComponent } from './NavbarComponent';
 
 const items = [
