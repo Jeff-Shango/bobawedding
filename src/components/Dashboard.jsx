@@ -14,8 +14,12 @@ import husband from '../assets/breakdownImgA.jpg';
 import wife from '../assets/ashAshin.jpg';
 import mc from '../assets/derekG.jpg'
 import bridesmaid from '../assets/bridesmaid.jpg';
+import brideMaid from '../assets/brideMaid.jpg';
 import partyPlanner from '../assets/partyPlanner.jpg';
-import bestMan from '../assets/bestMan.JPG';
+import bestMan from '../assets/bestMan.jpg';
+import groomsMen from '../assets/groomsMen.jpg'
+import groomsMan from '../assets/groomsMan.jpg'
+import groomsWoman from '../assets/groomsWoman.jpg'
 import { Chrono } from 'react-chrono';
 // import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import { NavbarComponent } from './NavbarComponent';
@@ -29,7 +33,7 @@ const items = [
   media: {
     type: "IMAGE",
     source: {
-      url: "../assets/breakdownImgA.jpg"
+      url: "../assets/ashAshin.jpg",
     }
   }
 },
@@ -292,6 +296,17 @@ const Dashboard = () => {
           </div>
           {/* end of bridesmaid section */}
 
+
+          {/* Bridesmaid section */}
+          <div className="bridemaidContainer">
+          <label htmlFor="brideMaidSection" className="brideMaidSection mainComp">Maid of Honor<br/>Autumn Bruton</label>
+
+          <img className='brideMaidPic' src={brideMaid} alt="brideMaid" />
+          </div>
+          {/* end of bridesmaid section */}
+
+
+
           {/* bestMan section */}
           <div className="bestManContainer">
           <label htmlFor="bestManSection" className="bestManSection mainComp">Best Man<br/>Chris Kiah</label>
@@ -299,6 +314,31 @@ const Dashboard = () => {
           <img className='bestManPic' src={bestMan} alt="bestMan" />
           </div>
           {/* end of bestMan section */}
+
+          {/* groomsWoman section */}
+          <div className="groomsWomanContainer">
+          <label htmlFor="groomsWomanSection" className="groomsWomanSection mainComp">Grooms Women<br/>Erica Settles</label>
+
+          <img className='groomsWomanPic' src={groomsWoman} alt="groomsWoman" />
+          </div>
+          {/* end of groomsMen section */}
+
+          {/* groomsMen section */}
+          <div className="groomsMenContainer">
+          <label htmlFor="groomsMenSection" className="groomsMenSection mainComp">Grooms Men<br/>Michael Wright</label>
+
+          <img className='groomsMenPic' src={groomsMen} alt="groomsMen" />
+          </div>
+          {/* end of groomsMen section */}
+
+          {/* groomsMen section */}
+          <div className="groomsMenContainer">
+          <label htmlFor="groomsMenSection" className="groomsMenSection mainComp">Grooms Men<br/>Michael James</label>
+
+          <img className='groomsMenPic' src={groomsMan} alt="groomsMen" />
+          </div>
+          {/* end of groomsMen section */}
+
 
 
           {/* Master of Ceremony section */}

@@ -9,7 +9,7 @@ import cors from "cors";
 import stripe from "stripe"
 // var cors = require('cors');
 // const stripe = require('stripe')('sk_test_51MtGJLBsGKDDlKM9E7BpOPMQDqSBao99cu7apMzgaJH1Vpbgu6nnbESr4tlLbX1pIvOe58WwhKCdR3zP3gmU7QSx00dfTdavxu')
-
+const stripeInstance = stripe('sk_test_51MtGJLBsGKDDlKM9E7BpOPMQDqSBao99cu7apMzgaJH1Vpbgu6nnbESr4tlLbX1pIvOe58WwhKCdR3zP3gmU7QSx00dfTdavxu')
 
 const app = express();
 app.use(cors());
@@ -44,16 +44,21 @@ app.post("/checkout", async (req, res) => {
         )
     });
 
-    const sessions = await stripe.checkout.sessions.create({
+    try {
+    const session = await stripeInstance.checkout.sessions.create({
         line_items: lineItems,
         mode: 'payment',
         success_url: "http://localhost:3000/success",
-        cancel_url: "http:localhost:3000/cancel"
+        cancel_url: "http://localhost:3000/cancel",
     });
 
     res.send(JSON.stringify({
-        url: sessions.url
+        url: session.url
     }));
+} catch (error) {
+        console.error("Error creating checkout session:", error);
+        res.status(500).send("An error occured, mane.")
+    }
 });
 
-app.listen(5000, () => console.log("listening on port 5000"))
+app.listen(4000, () => console.log("listening on port 4000"))

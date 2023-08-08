@@ -7,6 +7,8 @@ import Registry from "./components/Registry.jsx";
 import RSVP from "./components/RSVP.jsx";
 import Schedule from "./components/Schedule.jsx";
 import CartProvider from "./functions/CartContext.js";
+import Success from "./functions/Success.jsx";
+import Cancel from "./functions/Cancel.jsx";
 
 function App() {
   return (
@@ -25,6 +27,8 @@ function App() {
             <Route path="/registry" element={<Registry/>}/>
             <Route path="/rsvp" element={<RSVP/>}/>
             <Route path="/schedule" element={<Schedule/>}/>
+            <Route path="/cancel" element={<Cancel/>}/>
+            <Route path="/success" element={<Success/>}/>
           </Routes>
         </BrowserRouter>
 

@@ -171,7 +171,11 @@ code {
   .mcSection,
   .bridesmaidSection,
   .bestManSection,
-  .partyPlannerSection {
+  .partyPlannerSection,
+  .groomsMenSection,
+  .groomsWomanSection,
+  .groomsManSection,
+  .brideMaidSection {
     grid-column: span 2;
   }
 
@@ -227,7 +231,7 @@ code {
     /* style={{ width: "30rem", height: "fit-content", border: "2px solid black", margin: "auto", backgroundColor: "darkgray", fontSize: "20px", color: "red" }} */
   }
 
-  .husbandPic, .wifePic, .mcPic, .bridesmaidPic, .bestManPic, .partyPlannerPic {
+  .husbandPic, .wifePic, .mcPic, .bridesmaidPic, .bestManPic, .partyPlannerPic, .groomsMenPic, .groomsWomanPic, .groomsManPic, .brideMaidPic {
     height: 100px;
     width: 100px;
     object-fit: cover;
