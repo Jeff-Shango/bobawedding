@@ -23,6 +23,7 @@ import groomsWoman from '../assets/groomsWoman.jpg'
 import { Chrono } from 'react-chrono';
 // import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import { NavbarComponent } from './NavbarComponent';
+// import okCupidPic from '../assets/okCupidPic.mp4';
 
 const items = [
   {
@@ -31,9 +32,9 @@ const items = [
   cardSubtitle:"Jeff slid into Ashley's DMs on OK Cupid!",
   cardDetailedText: "",
   media: {
-    type: "IMAGE",
+    type: "VIDEO",
     source: {
-      url: "../assets/ashAshin.jpg",
+      url: require("../assets/okCupidPic.mp4")
     }
   }
 },

@@ -121,8 +121,21 @@ code {
 /* small devices */
 @media screen and (max-width: 600px) {
 
+  .puff-out-hor { -webkit-animation:puff-out-hor .9s cubic-bezier(.165,.84,.44,1.000) both; animation:puff-out-hor .9s cubic-bezier(.165,.84,.44,1.000) both; }
+
+  @-webkit-keyframes puff-out-hor{0%{-webkit-transform:scaleX(1);transform:scaleX(1);-webkit-filter:blur(0);filter:blur(0);opacity:1}100%{-webkit-transform:scaleX(2);transform:scaleX(2);-webkit-filter:blur(4px);filter:blur(4px);opacity:0}}@keyframes puff-out-hor{0%{-webkit-transform:scaleX(1);transform:scaleX(1);-webkit-filter:blur(0);filter:blur(0);opacity:1}100%{-webkit-transform:scaleX(2);transform:scaleX(2);-webkit-filter:blur(4px);filter:blur(4px);opacity:0}}
+
   #root {
     background-color: black;
+  }
+
+  #navBar {
+    position: fixed;
+    width: 35%;
+    z-index: 5;
+    background-color: darkgray;
+    right: 30px;
+
   }
 
   .slideshowCaption {
