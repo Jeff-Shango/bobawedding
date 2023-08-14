@@ -1,5 +1,5 @@
 import {Button, Navbar, Modal} from "react-bootstrap"
-import { useState, useContext, useEffect } from "react"
+import { useState, useContext } from "react"
 import { CartContext } from "../functions/CartContext.js";
 import { CartProduct } from "../functions/CartProduct.js";
 
@@ -10,46 +10,26 @@ function NavbarComponent() {
     const handleClose = () => setShow(false);
     const handleShow = () => setShow(true);
 
-    let timeoutId = useRef(null);
+// scrolling function
+let scrolling = false;
+
+window.addEventListener("scroll", () => {
+  scrolling = true;
+  console.log(scrolling);
+
+  clearTimeout(window._scrollTimeout);
+  
+  window._scrollTimeout = setTimeout(() => {
+    scrolling = false;
+  }, 300); // Adjust the time duration as needed
+});
+
+
+// Now you can use the 'scrolling' variable to determine if the user is scrolling or not.
 
 
     
-    const handleScroll = () => {
-          const navBar = document.getElementById("navBar");
-
-          if (window.scrollY > 0) {
-            if (timeoutId.current) {
-              clearTimeout(timeoutId.current);
-            }
-            navBar.style.opacity = "1";
-            timeoutId = setTimeout(() => {
-              navBar.style.opacity = "0";
-            }, 3000);
-          } else {
-            navBar.style.opacity = "1";
-            if (timeoutId.current) {
-              clearTimeout(timeoutId.current);
-            }
-          }
-        };
-        
-        const initialScroll = () => {
-          handleScroll();
-          window.removeEventListener("scroll", initialScroll);
-        };
-
-        useEffect(() => {
-          window.addEventListener("scroll", initialScroll);
-          window.addEventListener("scroll", handleScroll);
     
-          return () => {
-            window.removeEventListener("scroll", initialScroll);
-            window.removeEventListener("scroll", handleScroll);
-            if (timeoutId.current) {
-              clearTimeout(timeoutId.current);
-            }
-          };
-        }, []);
     
     
     const checkout = async () => {
@@ -71,7 +51,7 @@ function NavbarComponent() {
     const productCount = cart.items.reduce((sum, product) => sum + product.quantity, 0);
 
     return(
-        <div id="navBar" className="navbar-default puff-out-hor" style={{ transition: 'opacity 0.3s', opacity: "1" }}>
+        <div id="navBar" onScroll={scrolling}>
             <Navbar expand="sm" >
                 <Navbar.Brand href="/">Donate</Navbar.Brand>
                 <Navbar.Toggle />
@@ -92,7 +72,7 @@ function NavbarComponent() {
                             <CartProduct key={idx} id={currentProduct.id} quantity={currentProduct.quantity}></CartProduct>
                         ))}
 
-                        <h1>Total" {cart.getTotalCost().toFixed(2)}</h1>
+                        <h1>Total: {cart.getTotalCost().toFixed(2)}</h1>
 
                         <Button variant="success" onClick={checkout}>
                             Purchase Items!

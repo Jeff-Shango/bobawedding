@@ -21,9 +21,9 @@ import groomsMen from '../assets/groomsMen.jpg'
 import groomsMan from '../assets/groomsMan.jpg'
 import groomsWoman from '../assets/groomsWoman.jpg'
 import { Chrono } from 'react-chrono';
-// import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import { NavbarComponent } from './NavbarComponent';
 // import okCupidPic from '../assets/okCupidPic.mp4';
+
 
 const items = [
   {
@@ -179,6 +179,19 @@ const CountdownTimer = ({ targetDate }) => {
 };
 
 const Dashboard = () => {
+
+  useEffect(() => {
+    const script = document.createElement('script');
+    script.src = '//www.myregistry.com//Visitors/GiftList/iFrames/EmbedRegistry.ashx?r=hvFHaT5YimquHhrHtXG1yQ2&v=2';
+    document.getElementById('scriptContainer').appendChild(script);
+
+    return () => {
+      // Clean up: Remove the script when the component unmounts
+      document.getElementById('scriptContainer').removeChild(script);
+    };
+  }, []);
+  
+
   const targetDate = new Date('May 31, 2024 18:30:00');
 
   const fadeImages = [
@@ -198,6 +211,7 @@ const Dashboard = () => {
 
   return (
     <div className='mainDashboard'>
+      
       {/* navbar */}
       <NavbarComponent></NavbarComponent>
       {/* end of navbar */}
@@ -389,9 +403,15 @@ const Dashboard = () => {
 
         </div>
         {/* End of Registry Portion */}
+
+        <iframe
+        id='script_myregistry_giftlist_iframe'
+        title="MyRegistry Gift List"
+      ></iframe>
+        
+
         {/* container for other features  */}
-      <div className="buttonContainer">
-      </div>
+
       {/* end of feature container */}
     </div>
   );
