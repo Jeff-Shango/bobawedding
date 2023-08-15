@@ -11,6 +11,7 @@ import Success from "./functions/Success.jsx";
 import Cancel from "./functions/Cancel.jsx";
 
 function App() {
+  
   return (
     <CartProvider>
       <div className="App">

@@ -1,5 +1,5 @@
 import {Button, Navbar, Modal} from "react-bootstrap"
-import { useState, useContext } from "react"
+import { useState, useContext, useEffect } from "react"
 import { CartContext } from "../functions/CartContext.js";
 import { CartProduct } from "../functions/CartProduct.js";
 
@@ -11,18 +11,6 @@ function NavbarComponent() {
     const handleShow = () => setShow(true);
 
 // scrolling function
-let scrolling = false;
-
-window.addEventListener("scroll", () => {
-  scrolling = true;
-  console.log(scrolling);
-
-  clearTimeout(window._scrollTimeout);
-  
-  window._scrollTimeout = setTimeout(() => {
-    scrolling = false;
-  }, 300); // Adjust the time duration as needed
-});
 
 
 // Now you can use the 'scrolling' variable to determine if the user is scrolling or not.
@@ -51,7 +39,7 @@ window.addEventListener("scroll", () => {
     const productCount = cart.items.reduce((sum, product) => sum + product.quantity, 0);
 
     return(
-        <div id="navBar" onScroll={scrolling}>
+        <div id="navBar">
             <Navbar expand="sm" >
                 <Navbar.Brand href="/">Donate</Navbar.Brand>
                 <Navbar.Toggle />

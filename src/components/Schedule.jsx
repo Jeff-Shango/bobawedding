@@ -8,12 +8,14 @@ const Schedule = () => {
     cardTitle: "Initial Contact",
     cardSubtitle:"Jeff slid into Ashley's DMs on OK Cupid!",
     cardDetailedText: "",
-    media: {
-      type: "IMAGE",
-      source: {
-        url: "../assets/breakdownImgA.jpg"
-      }
-    }
+      media: {
+    source: {
+      url: require("../assets/okCupidPic.mp4"),
+      type: "mp4"
+    },
+    type: "VIDEO",
+    name: "First Sight"
+  }
   },
   {
     title: "May 31, 2020",
@@ -21,11 +23,13 @@ const Schedule = () => {
     cardSubtitle:"We first saw each other in person",
     cardDetailedText: "Hung out around Parkville, MD ",
     media: {
-      type: "IMAGE",
-      source: {
-        url: "http://someurl/image.jpg"
-      }
-    }
+    source: {
+      url: require("../assets/ladyTrampVid.mp4"),
+      type: "mp4"
+    },
+    type: "VIDEO",
+    name: "First Encouter"
+  }
   },
   {
     title: "November 4-6, 2020",

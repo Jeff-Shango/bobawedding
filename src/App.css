@@ -121,10 +121,7 @@ code {
 /* small devices */
 @media screen and (max-width: 600px) {
 
-  .container {
-    border: 2px solid yellow;
-  }
-
+  
   #mainDiv {
     border: 2px solid red;
     position: relative;
@@ -140,12 +137,8 @@ code {
 
 
   #navBar {
-    position: fixed;
-    width: 35%;
     z-index: 5;
     background-color: darkgray;
-    right: 30px;
-
   }
 
   .slideshowCaption {
@@ -417,7 +410,7 @@ code {
 }
 
 .registryContainer {
-  border: 2px solid white;
+  margin-bottom: 1rem;
 }
 
 #script_myregistry_giftlist_iframe {

@@ -22,7 +22,6 @@ import groomsMan from '../assets/groomsMan.jpg'
 import groomsWoman from '../assets/groomsWoman.jpg'
 import { Chrono } from 'react-chrono';
 import { NavbarComponent } from './NavbarComponent';
-// import okCupidPic from '../assets/okCupidPic.mp4';
 
 
 const items = [
@@ -31,96 +30,112 @@ const items = [
   cardTitle: "Initial Contact",
   cardSubtitle:"Jeff slid into Ashley's DMs on OK Cupid!",
   cardDetailedText: "",
-  media: {
-    type: "VIDEO",
-    source: {
-      url: require("../assets/okCupidPic.mp4")
-    }
-  }
+  // media: {
+  //   source: {
+  //     url: "../assets/okCupidPic.mp4",
+  //     type: "mp4"
+  //   },
+  //   type: "VIDEO",
+  //   name: "First Sight"
+  // }
+  // media: {
+  //   type: "VIDEO",
+  //   source: {
+  //     url: require("../assets/okCupidPic.mp4")
+  //   }
+  // }
 },
 {
   title: "May 31, 2020",
   cardTitle: "Initial Sight",
   cardSubtitle:"We first saw each other in person",
   cardDetailedText: "Hung out around Parkville, MD ",
-  media: {
-    type: "IMAGE",
-    source: {
-      url: "http://someurl/image.jpg"
-    }
-  }
+  // media: {
+  //   source: {
+  //     url: "../assets/ladyTrampVid.mp4",
+  //     type: "mp4"
+  //   },
+  //   type: "VIDEO",
+  //   name: "First Encouter"
+  // }
+  // media: {
+  //   type: "VIDEO",
+  //   source: {
+  //     url: require("../assets/ladyTrampGif.jpeg")
+  //   }
+  // }
 },
 {
   title: "November 4-6, 2020",
   cardTitle: "First Bae-cation",
   cardSubtitle:"Front Royal, VA",
   cardDetailedText: "Both felt the need for a vacation from life, and both decided to go together!",
-  media: {
-    type: "IMAGE",
-    source: {
-      url: "http://someurl/image.jpg"
-    }
-  }
+  // media: {
+  //   type: "IMAGE",
+  //   source: {
+  //     url: "http://someurl/image.jpg"
+  //   }
+  // }
 },
 {
   title: "November 13, 2020",
   cardTitle: "Become an official couple",
   cardSubtitle:"Decide to stop playing games and make it official as a couple.",
   cardDetailedText: "Wanting to make a pact that we were going to be each other's boyfriend and girlfriend.",
-  media: {
-    type: "IMAGE",
-    source: {
-      url: "http://someurl/image.jpg"
-    }
-  }
+  // media: {
+  //   type: "IMAGE",
+  //   source: {
+  //     url: "http://someurl/image.jpg"
+  //   }
+  // }
 },
 {
   title: "April 17-18, 2021",
   cardTitle: "Myrtle Beach, South Carolina",
   cardSubtitle:"Weekend trip to Myrtle Beach, South Carolina.",
   cardDetailedText: "This trip was where Jeff and Ashley almost talked each other into eloping and marrying then and there.",
-  media: {
-    type: "IMAGE",
-    source: {
-      url: "http://someurl/image.jpg"
-    }
-  }
+  // media: {
+  //   type: "IMAGE",
+  //   source: {
+  //     url: "http://someurl/image.jpg"
+  //   }
+  // }
 },
 {
   title: "August 9-15, 2021",
   cardTitle: "Miami, Florida",
   cardSubtitle:"Baecation to Florida.",
   cardDetailedText: "Celebrating Ashley's birthday!",
-  media: {
-    type: "IMAGE",
-    source: {
-      url: "http://someurl/image.jpg"
-    }
-  }
+  // media: {
+  //   type: "IMAGE",
+  //   source: {
+  //     url: "http://someurl/image.jpg"
+  //   }
+  // }
 },
 {
   title: "July 8-15, 2022",
   cardTitle: "Montego Bay, Jamaica",
   cardSubtitle:"Weekend trip to Myrtle Beach, South Carolina.",
   cardDetailedText: "This trip was where Jeff and Ashley almost talked each other into eloping and marrying then and there.",
-  media: {
-    type: "IMAGE",
-    source: {
-      url: "http://someurl/image.jpg"
-    }
-  }
+  // media: {
+  //   type: "IMAGE",
+  //   source: {
+  //     url: "http://someurl/image.jpg"
+  //   }
+  // }
 },
 {
   title: "April 21, 2023",
   cardTitle: "Jeff proposes!",
   cardSubtitle:"Jeff surprises Ashley by popping the question!",
   cardDetailedText: "Having a student from Jeff's boxing classes, he had the person pose as a photographer at the community event they were going to at Carrol Park. As the photographer told us he wanted to give us a photoshoot, he prompted Ashley and Jeff to a spot where he proceeded to do a photoshoot. Instructing Ashley to step in front of Jeff, Jeff prepared himself by getting down on one knee and waiting for the photographer to tell Ashley to look at Jeff.",
-  media: {
-    type: "IMAGE",
-    source: {
-      url: "http://someurl/image.jpg"
-    }
-  }
+  // media: {
+  //   type: "IMAGE",
+  //   source: {
+  //     url: "http://someurl/image.jpg"
+  //   }
+  // }
 } ];
 
 const CountdownTimer = ({ targetDate }) => {
@@ -179,7 +194,14 @@ const CountdownTimer = ({ targetDate }) => {
 };
 
 const Dashboard = () => {
+  const [activeItems, setActiveItems] = useState(Array(items.length).fill(false));
 
+  const handleItemClick = (index) => {
+    const updatedActiveItems = [...activeItems];
+    updatedActiveItems[index] = true;
+    setActiveItems(updatedActiveItems);
+  };
+  
   useEffect(() => {
     const script = document.createElement('script');
     script.src = '//www.myregistry.com//Visitors/GiftList/iFrames/EmbedRegistry.ashx?r=hvFHaT5YimquHhrHtXG1yQ2&v=2';
@@ -212,9 +234,7 @@ const Dashboard = () => {
   return (
     <div className='mainDashboard'>
       
-      {/* navbar */}
-      <NavbarComponent></NavbarComponent>
-      {/* end of navbar */}
+
       <h1 className='text-shadow-pop-top'>SAVE THE DATE</h1>
 
       <CountdownTimer targetDate={targetDate} />
@@ -262,7 +282,10 @@ const Dashboard = () => {
         <div className="dashEvents">
           
           <div className="timelineSection" >
-            <Chrono scrollable={{ scrollbar: true }} items={items}/>
+            <Chrono
+             scrollable={{ scrollbar: true }} 
+             items={items}
+             onItemClick={(item, index) => handleItemClick(index)}/>
           </div>
         </div>
         <Link to="/schedule">
@@ -389,7 +412,7 @@ const Dashboard = () => {
 
           <div className="zelleContainer">
             <h2 align="center" className='p-3'>Quick Payments</h2>
-            <Row xs={2} md={3} classname="g-4">
+            <Row xs={2} md={3} className="g-4">
               {productsArray.map((product, idx) => (
                 <Col align="center" key={idx}>
                   <ProductCard product={product}/>
@@ -400,6 +423,9 @@ const Dashboard = () => {
             </Row>
           </div>
           
+      {/* navbar */}
+      <NavbarComponent></NavbarComponent>
+      {/* end of navbar */}
 
         </div>
         {/* End of Registry Portion */}
