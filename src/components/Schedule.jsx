@@ -1,5 +1,7 @@
 import React from 'react'
 import { Chrono } from 'react-chrono'
+import "./schedule/scheduleStyling.css";
+import { Link } from "react-router-dom";
 
 const Schedule = () => {
   const items = [
@@ -14,8 +16,11 @@ const Schedule = () => {
       type: "mp4"
     },
     type: "VIDEO",
-    name: "First Sight"
-  }
+    name: "First Sight",
+    muted: true
+  },
+  autoPlay: true,
+  controls: false
   },
   {
     title: "May 31, 2020",
@@ -28,8 +33,11 @@ const Schedule = () => {
       type: "mp4"
     },
     type: "VIDEO",
-    name: "First Encouter"
-  }
+    name: "First Encouter",
+    muted: true
+  },
+  autoPlay: true,
+  controls: false
   },
   {
     title: "November 4-6, 2020",
@@ -37,11 +45,16 @@ const Schedule = () => {
     cardSubtitle:"Front Royal, VA",
     cardDetailedText: "Both felt the need for a vacation from life, and both decided to go together!",
     media: {
-      type: "IMAGE",
       source: {
-        url: "http://someurl/image.jpg"
-      }
-    }
+        url: require("../assets/baecation.mp4"),
+        type: "mp4"
+      },
+      type: "VIDEO",
+      name: "First Encouter",
+      muted: true
+    },
+    autoPlay: true,
+    controls: false
   },
   {
     title: "November 13, 2020",
@@ -51,7 +64,7 @@ const Schedule = () => {
     media: {
       type: "IMAGE",
       source: {
-        url: "http://someurl/image.jpg"
+        url: require("../assets/officialCouple.jpg")
       }
     }
   },
@@ -63,7 +76,7 @@ const Schedule = () => {
     media: {
       type: "IMAGE",
       source: {
-        url: "http://someurl/image.jpg"
+        url: require("../assets/myrtleBeach.jpg")
       }
     }
   },
@@ -73,9 +86,9 @@ const Schedule = () => {
     cardSubtitle:"Baecation to Florida.",
     cardDetailedText: "Celebrating Ashley's birthday!",
     media: {
-      type: "IMAGE",
+      type: "VIDEO",
       source: {
-        url: "http://someurl/image.jpg"
+        url: require("../assets/florida.mp4")
       }
     }
   },
@@ -87,7 +100,7 @@ const Schedule = () => {
     media: {
       type: "IMAGE",
       source: {
-        url: "http://someurl/image.jpg"
+        url: require("../assets/jamaica.jpg")
       }
     }
   },
@@ -99,14 +112,35 @@ const Schedule = () => {
     media: {
       type: "IMAGE",
       source: {
-        url: "http://someurl/image.jpg"
+        url: require("../assets/proposal.jpg")
       }
     }
   } ];
   
   return (
-    <div>
-      <Chrono items={items} mode="VERTICAL"/>
+    <div id='scheduleContainer'>
+        <Link to="/">
+          <button id='scheduleHmeBtn' className="galleryHomeBtn btn btn-primary">Go To Home</button>
+        </Link>
+      <Chrono
+        className="my-timeline"
+        items={items}        
+        enableBreakPoint
+        verticalBreakPoint={450}
+        mode="VERTICAL_ALTERNATING"
+        slideShow
+        slideShowType="reveal"
+        slideShowDuration={2200}
+        classNames={{
+          card: 'my-card',
+          cardMedia: 'my-card-media',
+          cardSubTitle: 'my-card-subtitle',
+          cardText: 'my-card-text',
+          cardTitle: 'my-card-title',
+          // controls: 'my-controls',
+          title: 'my-title',
+        }}
+        />
       </div>
   )
 }

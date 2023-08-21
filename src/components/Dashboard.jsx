@@ -401,7 +401,7 @@ const Dashboard = () => {
 
         <div className="registryContainer">
 
-        <Link to="/Registry">
+        <Link to="/registry">
           <button className="cashAppTitle btn btn-primary">Click Hashtag for Registry</button>
         </Link>
           <div className="cashAppContainer">

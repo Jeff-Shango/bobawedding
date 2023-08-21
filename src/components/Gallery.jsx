@@ -16,16 +16,6 @@ const Gallery = () => {
   });
   const [currentImageId, setCurrentImageId] = useState(null);
 
-  // const testFetchComments = async (imageId) => {
-  //   try {
-  //     const tableName = `photo_comments_${imageId}`;      
-  //     const response = await axios.get(`http://localhost:8000/get_comments/${imageId}`);
-  //     console.log(`The comments for ${tableName}:`, response.data);
-  //   } catch (err) {
-  //     console.log(err)
-  //   }
-  // };
-
   const handleChange = (e) => {
     setComments(prev =>({...prev, [e.target.name]: e.target.value}))
   };
@@ -40,49 +30,16 @@ const Gallery = () => {
                 commentator: commentator,
               };
         await axios.post(`http://localhost:8000/add_comment?imageId=${imageId}`, data);      
-        // const imageIndex = enlargedImage.match(/img(\d+)\.jpg/i)[1];
 
-      // setComments(data);
       fetchComments(imageId);
   }  catch (err) {
       console.log(err)
     }
   };
 
-  // const postComment = async (e, tableName) => {
-  //   e.preventDefault();
-  //   console.log("comments:", comments);
-  //   console.log("comments.comments:", comments.comments);
-  //   console.log("comments.commentator:", comments.commentator);
-  //   console.log("enlargedImage:", enlargedImage);
-
-  //   try{
-  //     if (comments.comments && comments.commentator && enlargedImage ) {
-  //       const data = {
-  //         comments: comments.comments,
-  //         commentator: comments.commentator,
-  //         imageUrl: enlargedImage,
-  //       };
-
-  //     const imageIndex = enlargedImage.match(/img(\d+)\.jpg/i)[1];
-  //     await axios.post(`http://localhost:8000/add_comment/${imageIndex}`, data)
-  //     console.log("Comment Posted");
-  //     setComments({
-  //       comments: "",
-  //       commentator: "",
-  //     });
-  //   } else {
-  //     console.log("Fill all of the comment fields or select a pic, mane!")
-  //   }      
-  // }catch (err) {
-  //     console.log(err)
-  //   }
-  // };
-
     const fetchComments = async (imageId = null) => {
       try {
         const response = await axios.get(`http://localhost:8000/gallery?imageId=${imageId}`);
-        // console.log("Response from API:", response.data);
         const comments = response.data.map((item) => ({
           comments: item.comments,
           commentator: item.commentator,
@@ -93,22 +50,18 @@ const Gallery = () => {
       }
     };
 
-    // fetchComments();
 
   const handleImageClick = (image, index) => {
     console.log("Image clicked:", image);
     if (enlargedImage === image) {
-      // If the clicked image is already enlarged, shrink it back to the original size
       setEnlargedImage(null);
       setCurrentImageId(null);
     } else {
-      // Otherwise, enlarge the clicked image
       setEnlargedImage(image);
       setComments({
         comments: "",
         commentator: "",
       });
-      // testFetchComments(index + 1);
       setCurrentImageId(index + 1);
       fetchComments(index + 1);
     }
@@ -121,7 +74,6 @@ const Gallery = () => {
 
   return (
     <div>
-
       <Link to="/">
         <button className="galleryHomeBtn btn btn-primary">Go To Home</button>
       </Link>

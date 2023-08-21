@@ -1,0 +1,31 @@
+#scheduleContainer {
+    position: relative;
+    height: 100vh;
+}
+
+#scheduleHmeBtn {
+    position: fixed;
+    left: 10px;
+    top: 5px;
+    max-width: 5rem;
+    padding: 2px 2px;
+    z-index: 2;
+}
+
+.my-timeline {
+    border: 2px solid green;
+}
+
+.my-controls {
+    border: 2px solid red;
+    position: fixed;
+}
+
+.my-card {
+    border: 2px solid purple;    
+}
+
+.my-card-media {
+    border: 2px solid red;
+}
+
