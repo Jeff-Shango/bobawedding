@@ -2,7 +2,7 @@ import React, { useRef } from 'react'
 import "./rsvp/rsvpStyling.css";
 import ReCAPTCHA from "react-google-recaptcha";
 import emailjs from 'emailjs-com';
-
+import { Link } from 'react-router-dom';
 
 const RSVP = () => {
   const form = useRef();
@@ -21,6 +21,10 @@ const RSVP = () => {
 
   return (
     <div id='rsvpPage'>
+      <Link to="/">
+        <button className='btn btn-primary'>Go Home</button>
+      </Link>
+
       <h1 className="rsvpTitle">RSVP</h1>
 
       <h2 className="rsvpSubTitle">RSVP CutOff Date: 00/00/00</h2>
