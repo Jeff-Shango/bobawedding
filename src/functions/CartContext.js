@@ -1,5 +1,5 @@
 import { createContext, useState } from "react";
-import { productsArray, getProductsData } from "./stripeFunctions.js";
+import {  getProductsData } from "./stripeFunctions.js";
 
 export const CartContext = createContext({
     items: [],
@@ -35,7 +35,6 @@ export function CartProvider({children}) {
                         quantity:1
                     }
                 ]
-            // cartProducts.filter(createRoutesFromElements)
             )
         } else {
             setCartProducts(

@@ -1,5 +1,5 @@
 import {Button, Navbar, Modal} from "react-bootstrap"
-import { useState, useContext, useEffect } from "react"
+import { useState, useContext } from "react"
 import { CartContext } from "../functions/CartContext.js";
 import { CartProduct } from "../functions/CartProduct.js";
 
@@ -10,16 +10,6 @@ function NavbarComponent() {
     const handleClose = () => setShow(false);
     const handleShow = () => setShow(true);
 
-// scrolling function
-
-
-// Now you can use the 'scrolling' variable to determine if the user is scrolling or not.
-
-
-    
-    
-    
-    
     const checkout = async () => {
         await fetch('http://localhost:4000/checkout', {
             method: "POST",

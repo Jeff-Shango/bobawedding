@@ -23,9 +23,6 @@ code {
 
 .App {
   text-align: center;
-  /* height: fit-content; */
-  /* max-height: 100vh; */
-  /* overflow-y: scroll; */
 }
 
 .App-logo {
@@ -211,12 +208,6 @@ code {
     margin: auto;
   }
 
-  /* .timeContainer div[data-value]{
-    font-size: 1px;
-    border: 2px solid purple;
-    color: blue;
-  } */
-
   .timeContainer {
     font-family: 'Poppins', sans-serif;
     font-size: 20px;
@@ -244,7 +235,6 @@ code {
     width: fit-content;
     height: fit-content;
     margin: auto;
-    /* style={{ width: "30rem", height: "fit-content", border: "2px solid black", margin: "auto", backgroundColor: "darkgray", fontSize: "20px", color: "red" }} */
   }
 
   .husbandPic, .wifePic, .mcPic, .bridesmaidPic, .bestManPic, .partyPlannerPic, .groomsMenPic, .groomsWomanPic, .groomsManPic, .brideMaidPic {
@@ -257,7 +247,6 @@ code {
     height: fit-content;
     max-height: 100vh;
     overflow-y: scroll;
-    /* background: url("./assets/imgB.jpg"); */
     background-size: cover;
     color: white;
   }
@@ -265,7 +254,6 @@ code {
   .mainComp {
     border: 1px solid black;
     font-size: large;
-    /* height: 5rem; */
   }
 
   .calendarLabel {

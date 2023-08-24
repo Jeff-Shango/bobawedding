@@ -8,7 +8,6 @@ const Registry = () => {
     document.getElementById('scriptContainer').appendChild(script);
 
     return () => {
-      // Clean up: Remove the script when the component unmounts
       document.getElementById('scriptContainer').removeChild(script);
     };
   }, []);

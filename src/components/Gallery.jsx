@@ -21,7 +21,6 @@ const Gallery = () => {
   };
 
   const postComment = async (imageId) => {
-    // e.preventDefault()
     try {
       const { comments: commentText, commentator } = comments;
       
@@ -68,7 +67,6 @@ const Gallery = () => {
   };
 
   const handleEnlargedImageClick = () => {
-    // When the enlarged image is clicked, shrink it back to the original size
     setEnlargedImage(null);
   };
 
