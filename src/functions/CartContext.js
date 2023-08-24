@@ -5,7 +5,7 @@ export const CartContext = createContext({
     items: [],
     getProductQuantity: () => {},
     addOneToCart: () => {},
-    removeOneToCart: () => {},
+    removeOneFromCart: () => {},
     deleteFromCart: () => {},
     getTotalCost: () => {},
 });
@@ -77,7 +77,7 @@ export function CartProvider({children}) {
 
     function getTotalCost() {
         let totalCost = 0;
-        cartProducts.map((cartItem) => {
+        cartProducts.forEach((cartItem) => {
             const productData = getProductsData(cartItem.id);
             totalCost += (productData.price * cartItem.quantity);
         })

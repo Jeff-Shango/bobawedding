@@ -19,7 +19,7 @@ function ProductCard(props) {
                             <Form.Label column="true" sm="6">In Cart: {productQuantity}</Form.Label>
                             <Col sm="6">
                                 <Button sm="6" className='mx-2' onClick={() => cart.addOneToCart(product.id)}>+</Button>
-                                <Button sm="6" className='mx-2' onClick={() => cart.removeOneToCart(product.id)}>-</Button>
+                                <Button sm="6" className='mx-2' onClick={() => cart.removeOneFromCart(product.id)}>-</Button>
                             </Col>
                         </Form>
                         <Button variant='danger' className='my-2' onClick={() => cart.deleteFromCart(product.id)}>Remove</Button>

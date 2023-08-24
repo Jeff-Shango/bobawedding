@@ -349,7 +349,7 @@ const Dashboard = () => {
             <h2 align="center" className='p-3'>Quick Payments</h2>
             <Row xs={2} md={3} className="g-4">
               {productsArray.map((product, idx) => (
-                <Col align="center" key={idx}>
+                <Col align="center" key={idx} >
                   <ProductCard product={product}/>
                 </Col>
               ))}
