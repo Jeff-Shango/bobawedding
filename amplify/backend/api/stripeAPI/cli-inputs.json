@@ -1,0 +1,12 @@
+{
+  "version": 1,
+  "paths": {
+    "/rsvp/{rsvpId}": {
+      "name": "/rsvp/{rsvpId}",
+      "lambdaFunction": "bobaweddingaea1fb9e",
+      "permissions": {
+        "setting": "open"
+      }
+    }
+  }
+}

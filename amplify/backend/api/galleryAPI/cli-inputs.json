@@ -1,0 +1,12 @@
+{
+  "version": 1,
+  "paths": {
+    "/galleryAPI": {
+      "name": "/galleryAPI",
+      "lambdaFunction": "bobaweddingaea1fb9e",
+      "permissions": {
+        "setting": "open"
+      }
+    }
+  }
+}
