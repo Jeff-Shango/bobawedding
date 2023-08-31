@@ -1,10 +1,14 @@
- import React, { useState } from 'react';
+ import React, { useState, useEffect } from 'react';
 import img1 from '../assets/imgA.jpg';
 import img2 from '../assets/imgB.jpg';
 import img3 from '../assets/imgC.jpg';
 import "../App.css";
 import { Link } from 'react-router-dom';
 import axios from "axios";
+import Amplify, { API } from "aws-amplify";
+
+const myAPI = "api351dbd2";
+const path = '/galleryAPI';
 
 const Gallery = () => {
   const imgContainer = [img1, img2, img3];
