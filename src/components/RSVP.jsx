@@ -31,7 +31,7 @@ const RSVP = () => {
 
       <p className="rsvpP">We warmly invite you to RSVP for The Bozier wedding! Please don't hesistate to contact either Ashley or Jeff if you have any questions or need assistance. We're looking forward to seeing all of you there and sharing this joyous occasion together!!</p>
 
-      <form ref={form} className="rsvpForm" onSubmit={sendEmail} method="post">
+      <form ref={form} className="rsvpForm" onSubmit={sendEmail} method="post" data-netlify="true">
         {/* enter name */}
         <h3 className="rsvpFormSTitle" >Name</h3>
         <input required type="text" name="name" id="formInput" placeholder='First'/>
