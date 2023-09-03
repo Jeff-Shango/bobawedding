@@ -2,6 +2,10 @@ import express from "express"
 import mysql from "mysql2";
 import cors from "cors";
 import stripe from "stripe"
+
+
+
+exports.handler = async function (event, context) {
 const app = express();
 const stripeInstance = stripe('sk_test_51MtGJLBsGKDDlKM9E7BpOPMQDqSBao99cu7apMzgaJH1Vpbgu6nnbESr4tlLbX1pIvOe58WwhKCdR3zP3gmU7QSx00dfTdavxu')
 
@@ -109,4 +113,11 @@ const photoComments = 8000;
 app.listen(
     photoComments,
     () => console.log(`Running on ${photoComments}`)
+
+
 );
+return {
+    statusCode: 200,
+    body: JSON.stringify({ message: "wht it do, baby"}),
+};
+}
