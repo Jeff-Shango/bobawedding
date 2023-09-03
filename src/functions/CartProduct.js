@@ -1,6 +1,6 @@
 import { Button } from 'react-bootstrap';
 import { CartContext } from './CartContext.js';
-import { useContext } from 'react';
+import React, { useContext } from 'react';
 import { getProductsData } from './stripeFunctions.js';
 
 function CartProduct(props) {
