@@ -2,10 +2,8 @@ import express from "express"
 import mysql from "mysql2";
 import cors from "cors";
 import stripe from "stripe"
-<<<<<<<< HEAD:src/galleryServer.js
 const app = express();
 const stripeInstance = stripe('sk_test_51MtGJLBsGKDDlKM9E7BpOPMQDqSBao99cu7apMzgaJH1Vpbgu6nnbESr4tlLbX1pIvOe58WwhKCdR3zP3gmU7QSx00dfTdavxu')
-========
 
 
 
@@ -13,7 +11,6 @@ exports.handler = async function (event, context) {
 const app = express();
 const stripeInstance = stripe('sk_test_51MtGJLBsGKDDlKM9E7BpOPMQDqSBao99cu7apMzgaJH1Vpbgu6nnbESr4tlLbX1pIvOe58WwhKCdR3zP3gmU7QSx00dfTdavxu')
 
->>>>>>>> shitmane:netlify/functions/backendAPI.js
 
 const db = mysql.createConnection({
     host: "localhost",
@@ -118,7 +115,6 @@ const photoComments = 8000;
 app.listen(
     photoComments,
     () => console.log(`Running on ${photoComments}`)
-<<<<<<<< HEAD:src/galleryServer.js
 );
 
 // stripe server
@@ -158,13 +154,10 @@ app.post("/checkout", async (req, res) => {
 });
 
 app.listen(4000, () => console.log("listening on port 4000"))
-========
 
-
-);
+;
 return {
     statusCode: 200,
     body: JSON.stringify({ message: "wht it do, baby"}),
 };
 }
->>>>>>>> shitmane:netlify/functions/backendAPI.js
