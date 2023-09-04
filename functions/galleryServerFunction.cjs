@@ -99,8 +99,8 @@ expressApp.post("/checkout", async (req, res) => {
     const session = await stripe.checkout.sessions.create({
         line_items: lineItems,
         mode: 'payment',
-        success_url: `${process.env.SERVER_URL}/success`,
-        cancel_url: `${process.env.SERVER_URL}/cancel`,
+        success_url: "https://bozierwedding.netlify.app/success",
+        cancel_url: "https://bozierwedding.netlify.app/cancel",
     });
 
     res.send(JSON.stringify({
