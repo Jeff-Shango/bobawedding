@@ -16,7 +16,10 @@ const db = mysql.createConnection({
 
 
 expressApp.use(express.json())
-expressApp.use(cors());
+expressApp.use(
+    cors({
+        origin: "https://bozierwedding.netlify.app",
+}));
 
 expressApp.get("/gallery", (req, res) => {
     const { imageId } = req.query;
@@ -93,7 +96,7 @@ expressApp.post("/checkout", async (req, res) => {
     });
 
     try {
-    const session = await stripeInstance.checkout.sessions.create({
+    const session = await stripe.checkout.sessions.create({
         line_items: lineItems,
         mode: 'payment',
         success_url: `${process.env.SERVER_URL}/success`,
