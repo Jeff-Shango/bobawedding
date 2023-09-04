@@ -1,11 +1,11 @@
 const express = require("express");
 const mysql = require("mysql2");
 const cors = require("cors");
-const stripe = require("stripe");
+const stripe = require("stripe")(process.env.SECRET_STRIPE);
 
 const expressApp = express();
 
-const stripeInstance = stripe('sk_test_51MtGJLBsGKDDlKM9E7BpOPMQDqSBao99cu7apMzgaJH1Vpbgu6nnbESr4tlLbX1pIvOe58WwhKCdR3zP3gmU7QSx00dfTdavxu')
+
 
 const db = mysql.createConnection({
     host: "localhost",
@@ -96,8 +96,8 @@ expressApp.post("/checkout", async (req, res) => {
     const session = await stripeInstance.checkout.sessions.create({
         line_items: lineItems,
         mode: 'payment',
-        success_url: "/success",
-        cancel_url: "/cancel",
+        success_url: `${process.env.SERVER_URL}/success`,
+        cancel_url: `${process.env.SERVER_URL}/cancel`,
     });
 
     res.send(JSON.stringify({
