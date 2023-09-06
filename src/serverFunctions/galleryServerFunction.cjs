@@ -1,15 +1,10 @@
-import express from "express"
-import mysql from "mysql2";
-import cors from "cors";
-import stripe from "stripe"
-const app = express();
-const stripeInstance = stripe('sk_test_51MtGJLBsGKDDlKM9E7BpOPMQDqSBao99cu7apMzgaJH1Vpbgu6nnbESr4tlLbX1pIvOe58WwhKCdR3zP3gmU7QSx00dfTdavxu')
+const express = require("express");
+const mysql = require("mysql2");
+const cors = require("cors");
+const stripe = require("stripe")(process.env.SECRET_STRIPE);
 
-
-
-exports.handler = async function (event, context) {
-const app = express();
-const stripeInstance = stripe('sk_test_51MtGJLBsGKDDlKM9E7BpOPMQDqSBao99cu7apMzgaJH1Vpbgu6nnbESr4tlLbX1pIvOe58WwhKCdR3zP3gmU7QSx00dfTdavxu')
+const expressApp = express();
+const PORT = process.env.PORT || 8080;
 
 
 const db = mysql.createConnection({
@@ -19,10 +14,10 @@ const db = mysql.createConnection({
     database: "boba_wedding"
 });
 
-app.use(express.static("public"));
-app.use(express.json())
-app.use(cors())
-app.get("/gallery", (req, res) => {
+
+expressApp.use(express.json())
+
+expressApp.get("/gallery", (req, res) => {
     const { imageId } = req.query;
     const tableName = `photo_comments_${imageId}`;
     const q = `SELECT * FROM boba_wedding.${tableName}`;
@@ -32,7 +27,7 @@ app.get("/gallery", (req, res) => {
     })
 });
 
-app.get("/tables", (req, res) => {
+expressApp.get("/tables", (req, res) => {
     const getTablesQuery = "SHOW TABLES";
 
     db.query(getTablesQuery, (err, data) => {
@@ -46,7 +41,7 @@ app.get("/tables", (req, res) => {
     })
 })
 
-app.get("/get_comments/:imageId", (req, res) => {
+expressApp.get("/get_comments/:imageId", (req, res) => {
     const { imageId } = req.params;
     const tableName = `photo_comments_${imageId}`;
 
@@ -62,7 +57,7 @@ app.get("/get_comments/:imageId", (req, res) => {
     });
 });
 
-app.post("/add_comment", (req, res) => {
+expressApp.post("/add_comment", (req, res) => {
     const { imageId } = req.query;
     const tableName = `photo_comments_${imageId}`;
     const addCommentQuery = `INSERT INTO boba_wedding.${tableName} (comments, commentator) VALUES (?, ?)`;
@@ -78,52 +73,12 @@ app.post("/add_comment", (req, res) => {
     });
 });
 
-app.post("/checkout", async (req, res) => {
-    console.log(req.body)
-    const items = req.body.items;
-    let lineItems = [];
-    items.forEach((item) => {
-        lineItems.push(
-            {
-                price: item.id,
-                quantity: item.quantity
-            }
-        )
-    });
-
-    try {
-    const session = await stripeInstance.checkout.sessions.create({
-        line_items: lineItems,
-        mode: 'payment',
-        success_url: "http://localhost:3000/success",
-        cancel_url: "http://localhost:3000/cancel",
-    });
-
-    res.send(JSON.stringify({
-        url: session.url
-    }));
-} catch (error) {
-        console.error("Error creating checkout session:", error);
-        res.status(500).send("An error occured, mane.")
-    }
-});
-
-app.listen(4000, () => console.log("listening on port 4000"))
-
-const photoComments = 8000;
-
-app.listen(
-    photoComments,
-    () => console.log(`Running on ${photoComments}`)
-);
-
 // stripe server
 
-app.use(cors());
-app.use(express.static("public"));
-app.use(express.json());
+expressApp.use(express.static("public"));
+expressApp.use(express.json());
 
-app.post("/checkout", async (req, res) => {
+expressApp.post("/checkout", async (req, res) => {
     console.log(req.body)
     const items = req.body.items;
     let lineItems = [];
@@ -137,11 +92,11 @@ app.post("/checkout", async (req, res) => {
     });
 
     try {
-    const session = await stripeInstance.checkout.sessions.create({
+    const session = await stripe.checkout.sessions.create({
         line_items: lineItems,
         mode: 'payment',
-        success_url: "http://localhost:3000/success",
-        cancel_url: "http://localhost:3000/cancel",
+        success_url: "https://bozierwedding.netlify.app/success",
+        cancel_url: "https://bozierwedding.netlify.app/cancel",
     });
 
     res.send(JSON.stringify({
@@ -153,11 +108,8 @@ app.post("/checkout", async (req, res) => {
     }
 });
 
-app.listen(4000, () => console.log("listening on port 4000"))
+module.exports = expressApp;
+expressApp.listen(PORT, () => {
+    console.log(`that thang running on port ${PORT}`)
+})
 
-;
-return {
-    statusCode: 200,
-    body: JSON.stringify({ message: "wht it do, baby"}),
-};
-}
