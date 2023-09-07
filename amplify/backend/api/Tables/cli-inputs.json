@@ -1,0 +1,33 @@
+{
+  "version": 1,
+  "paths": {
+    "/tables": {
+      "name": "/tables",
+      "lambdaFunction": "serverTablesAvailable",
+      "permissions": {
+        "setting": "open"
+      }
+    },
+    "/getComments/{imageId}": {
+      "name": "/getComments/{imageId}",
+      "lambdaFunction": "specificComments",
+      "permissions": {
+        "setting": "open"
+      }
+    },
+    "/addComment": {
+      "name": "/addComment",
+      "lambdaFunction": "addingComments",
+      "permissions": {
+        "setting": "open"
+      }
+    },
+    "/checkout": {
+      "name": "/checkout",
+      "lambdaFunction": "stripeCheckout",
+      "permissions": {
+        "setting": "open"
+      }
+    }
+  }
+}

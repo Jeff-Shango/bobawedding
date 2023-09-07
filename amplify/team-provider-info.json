@@ -1,0 +1,42 @@
+{
+  "dev": {
+    "awscloudformation": {
+      "AuthRoleName": "amplify-bozierwedding2024-dev-162307-authRole",
+      "UnauthRoleArn": "arn:aws:iam::869948477602:role/amplify-bozierwedding2024-dev-162307-unauthRole",
+      "AuthRoleArn": "arn:aws:iam::869948477602:role/amplify-bozierwedding2024-dev-162307-authRole",
+      "Region": "us-east-1",
+      "DeploymentBucketName": "amplify-bozierwedding2024-dev-162307-deployment",
+      "UnauthRoleName": "amplify-bozierwedding2024-dev-162307-unauthRole",
+      "StackName": "amplify-bozierwedding2024-dev-162307",
+      "StackId": "arn:aws:cloudformation:us-east-1:869948477602:stack/amplify-bozierwedding2024-dev-162307/31c6a550-4cf3-11ee-9832-120c2f292015",
+      "AmplifyAppId": "d3umyzivxowfet"
+    },
+    "categories": {
+      "function": {
+        "serverTablesAvailable": {
+          "deploymentBucketName": "amplify-bozierwedding2024-dev-162307-deployment",
+          "s3Key": "amplify-builds/serverTablesAvailable-7a2f673144302b6c526e-build.zip"
+        },
+        "specificComments": {
+          "deploymentBucketName": "amplify-bozierwedding2024-dev-162307-deployment",
+          "s3Key": "amplify-builds/specificComments-71735044416336545845-build.zip"
+        },
+        "addingComments": {
+          "deploymentBucketName": "amplify-bozierwedding2024-dev-162307-deployment",
+          "s3Key": "amplify-builds/addingComments-546a694c346d71344436-build.zip"
+        },
+        "stripeCheckout": {
+          "deploymentBucketName": "amplify-bozierwedding2024-dev-162307-deployment",
+          "s3Key": "amplify-builds/stripeCheckout-454c727034344d535376-build.zip"
+        },
+        "GalleryPictures": {
+          "deploymentBucketName": "amplify-bozierwedding2024-dev-162307-deployment",
+          "s3Key": "amplify-builds/GalleryPictures-654e4c72553251314274-build.zip"
+        }
+      },
+      "api": {
+        "Tables": {}
+      }
+    }
+  }
+}
