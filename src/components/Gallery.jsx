@@ -29,7 +29,7 @@ const Gallery = () => {
                 comments: commentText,
                 commentator: commentator,
               };
-        await axios.post(`https://bozierwedding.netlify.app/add_comment?imageId=${imageId}`, data);      
+        await axios.post(`/add_comment?imageId=${imageId}`, data);      
 
       fetchComments(imageId);
   }  catch (err) {
@@ -39,7 +39,7 @@ const Gallery = () => {
 
     const fetchComments = async (imageId = null) => {
       try {
-        const response = await axios.get(`https://bozierwedding.netlify.app/gallery?imageId=${imageId}`);
+        const response = await axios.get(`/gallery?imageId=${imageId}`);
         const comments = response.data.map((item) => ({
           comments: item.comments,
           commentator: item.commentator,
