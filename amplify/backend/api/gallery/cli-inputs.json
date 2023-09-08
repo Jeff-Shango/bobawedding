@@ -1,0 +1,12 @@
+{
+  "version": 1,
+  "paths": {
+    "/gallery": {
+      "name": "/gallery",
+      "lambdaFunction": "gettingPictures",
+      "permissions": {
+        "setting": "open"
+      }
+    }
+  }
+}
