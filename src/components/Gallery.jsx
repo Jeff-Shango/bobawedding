@@ -39,7 +39,7 @@ const Gallery = () => {
 
     const fetchComments = async (imageId = null) => {
       try {
-        const response = await axios.get(`/gallery?imageId=${imageId}`);
+        const response = await axios.get(`http://localhost:8080/gallery?imageId=${imageId}`);
         const comments = response.data.map((item) => ({
           comments: item.comments,
           commentator: item.commentator,
