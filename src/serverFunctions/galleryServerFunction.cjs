@@ -4,7 +4,8 @@ const cors = require("cors");
 const stripe = require("stripe")(process.env.SECRET_STRIPE);
 
 const expressApp = express();
-const PORT = process.env.PORT || 8080;
+const PORT = 8080;
+expressApp.use(cors());
 
 
 const db = mysql.createConnection({
@@ -15,7 +16,7 @@ const db = mysql.createConnection({
 });
 
 
-expressApp.use(express.json())
+expressApp.use(express.json());
 
 expressApp.get("/gallery", (req, res) => {
     const { imageId } = req.query;
@@ -108,7 +109,6 @@ expressApp.post("/checkout", async (req, res) => {
     }
 });
 
-module.exports = expressApp;
 expressApp.listen(PORT, () => {
     console.log(`that thang running on port ${PORT}`)
 })
