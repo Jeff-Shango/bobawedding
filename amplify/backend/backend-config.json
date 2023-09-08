@@ -47,5 +47,23 @@
       "providerPlugin": "awscloudformation",
       "service": "Lambda"
     }
+  },
+  "parameters": {
+    "AMPLIFY_function_gettingPictures_deploymentBucketName": {
+      "usedBy": [
+        {
+          "category": "function",
+          "resourceName": "gettingPictures"
+        }
+      ]
+    },
+    "AMPLIFY_function_gettingPictures_s3Key": {
+      "usedBy": [
+        {
+          "category": "function",
+          "resourceName": "gettingPictures"
+        }
+      ]
+    }
   }
 }

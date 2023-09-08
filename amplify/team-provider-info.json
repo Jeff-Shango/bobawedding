@@ -16,7 +16,13 @@
         "bobawedding6ba1fbaa": {}
       },
       "function": {
-        "gettingPictures": {}
+        "gettingPictures": {
+          "deploymentBucketName": "amplify-amplify071e2990e8f24-staging-144045-deployment",
+          "s3Key": "amplify-builds/gettingPictures-616545435a4f2b2b2b65-build.zip"
+        }
+      },
+      "api": {
+        "gallery": {}
       }
     }
   }

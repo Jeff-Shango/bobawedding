@@ -16,7 +16,7 @@ exports.handler = async (event) => {
         });
 
         expressApp.get('/gallery', async (req, res) => {
-            const { imageId } = req.query;
+            const { imageId } = event.pathParameters;
             const tableName = `photo_comments_${imageId}`;
             const q = `SELECT * FROM boba_wedding.${tableName}`;
             const [rows] = await pool.query(q);
