@@ -1,3 +1,5 @@
+FROM node:10
+
 WORKDIR /APP 
 
 COPY package.json . 
