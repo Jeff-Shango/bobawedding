@@ -1,0 +1,20 @@
+{
+  "staging": {
+    "awscloudformation": {
+      "AuthRoleName": "amplify-amplify071e2990e8f24-staging-144045-authRole",
+      "UnauthRoleArn": "arn:aws:iam::869948477602:role/amplify-amplify071e2990e8f24-staging-144045-unauthRole",
+      "AuthRoleArn": "arn:aws:iam::869948477602:role/amplify-amplify071e2990e8f24-staging-144045-authRole",
+      "Region": "us-east-1",
+      "DeploymentBucketName": "amplify-amplify071e2990e8f24-staging-144045-deployment",
+      "UnauthRoleName": "amplify-amplify071e2990e8f24-staging-144045-unauthRole",
+      "StackName": "amplify-amplify071e2990e8f24-staging-144045",
+      "StackId": "arn:aws:cloudformation:us-east-1:869948477602:stack/amplify-amplify071e2990e8f24-staging-144045/b19da770-4e55-11ee-b203-0afb236fc995",
+      "AmplifyAppId": "de77es7x7z7z7"
+    },
+    "categories": {
+      "auth": {
+        "bobawedding6ba1fbaa": {}
+      }
+    }
+  }
+}
