@@ -5,7 +5,7 @@ import img3 from '../assets/imgC.jpg';
 import "../App.css";
 import { Link } from 'react-router-dom';
 import axios from "axios";
-import Amplify, { API } from "@aws-amplify";
+import Amplify, { API } from "@aws-amplify.js";
 
 const myAPI = 'gallery';
 const path = '/gallery'
@@ -42,7 +42,7 @@ const Gallery = () => {
 
     const fetchComments = async (imageId = null) => {
       try {
-        const response = await axios.get(myAPI, path + `?imageId=${imageId}`);
+        const response = API.get(myAPI, path + `?imageId=${imageId}`);
         const comments = response.data.map((item) => ({
           comments: item.comments,
           commentator: item.commentator,
