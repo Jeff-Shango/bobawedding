@@ -8,10 +8,10 @@ exports.handler = async (event) => {
 
     try {
         const pool = await mysql.createPool({
-            host: 'localhost',
-            user: 'root',
+            host: 'thebozierweddingcluster.cxrocbv1hrpw.us-east-1.rds.amazonaws.com',
+            user: 'JeffBoz',
             password: 'Woodward20!',
-            database: "boba_wedding",
+            database: "bozier_wedding",
             connectionLimit: 10,
         });
 
