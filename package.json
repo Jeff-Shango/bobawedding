@@ -13,7 +13,6 @@
     "axios": "^1.4.0",
     "bootstrap": "^5.3.1",
     "camel-case": "^4.1.2",
-    "camelcase-keys": "^9.0.0",
     "confetti": "^2.0.0",
     "confetti-js": "^0.0.18",
     "cors": "^2.8.5",
