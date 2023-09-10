@@ -5,7 +5,7 @@ import img3 from '../assets/imgC.jpg';
 import "../App.css";
 import { Link } from 'react-router-dom';
 import axios from "axios";
-import Amplify, { API } from "@aws-amplify";
+import Amplify, { API } from "@aws-amplify/core";
 
 
 const myAPI = 'gallery';
