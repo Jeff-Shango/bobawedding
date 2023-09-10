@@ -18,7 +18,7 @@
       "function": {
         "gettingPictures": {
           "deploymentBucketName": "amplify-amplify071e2990e8f24-staging-144045-deployment",
-          "s3Key": "amplify-builds/gettingPictures-616545435a4f2b2b2b65-build.zip"
+          "s3Key": "amplify-builds/gettingPictures-616531764a6e61315a4c-build.zip"
         }
       },
       "api": {
