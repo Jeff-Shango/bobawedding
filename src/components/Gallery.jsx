@@ -32,7 +32,7 @@ const Gallery = () => {
                 comments: commentText,
                 commentator: commentator,
               };
-        await axios.post(`/add_comment?imageId=${imageId}`, data);      
+        await API.post(`/add_comment?imageId=${imageId}`, data);      
 
       fetchComments(imageId);
   }  catch (err) {
@@ -42,7 +42,7 @@ const Gallery = () => {
 
     const fetchComments = async (imageId = null) => {
       try {
-        const response = API.get(myAPI, path + `?imageId=${imageId}`);
+        const response = await axios.get(myAPI, path + `?imageId=${imageId}`);
         const comments = response.data.map((item) => ({
           comments: item.comments,
           commentator: item.commentator,
