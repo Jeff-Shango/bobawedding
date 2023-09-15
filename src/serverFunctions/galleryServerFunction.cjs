@@ -18,7 +18,7 @@ const db = mysql.createConnection({
 
 expressApp.use(express.json());
 
-expressApp.get("/gallery", (req, res) => {
+expressApp.get("thebozierweddingcluster.cxrocbv1hrpw.us-east-1.rds.amazonaws.com/gallery", (req, res) => {
     const { imageId } = req.query;
     const tableName = `photo_comments_${imageId}`;
     const q = `SELECT * FROM boba_wedding.${tableName}`;
@@ -28,7 +28,7 @@ expressApp.get("/gallery", (req, res) => {
     })
 });
 
-expressApp.get("/tables", (req, res) => {
+expressApp.get("thebozierweddingcluster.cxrocbv1hrpw.us-east-1.rds.amazonaws.com/tables", (req, res) => {
     const getTablesQuery = "SHOW TABLES";
 
     db.query(getTablesQuery, (err, data) => {
@@ -42,7 +42,7 @@ expressApp.get("/tables", (req, res) => {
     })
 })
 
-expressApp.get("/get_comments/:imageId", (req, res) => {
+expressApp.get("thebozierweddingcluster.cxrocbv1hrpw.us-east-1.rds.amazonaws.com/get_comments/:imageId", (req, res) => {
     const { imageId } = req.params;
     const tableName = `photo_comments_${imageId}`;
 
@@ -58,7 +58,7 @@ expressApp.get("/get_comments/:imageId", (req, res) => {
     });
 });
 
-expressApp.post("/add_comment", (req, res) => {
+expressApp.post("thebozierweddingcluster.cxrocbv1hrpw.us-east-1.rds.amazonaws.com/add_comment", (req, res) => {
     const { imageId } = req.query;
     const tableName = `photo_comments_${imageId}`;
     const addCommentQuery = `INSERT INTO boba_wedding.${tableName} (comments, commentator) VALUES (?, ?)`;
@@ -79,7 +79,7 @@ expressApp.post("/add_comment", (req, res) => {
 expressApp.use(express.static("public"));
 expressApp.use(express.json());
 
-expressApp.post("/checkout", async (req, res) => {
+expressApp.post("thebozierweddingcluster.cxrocbv1hrpw.us-east-1.rds.amazonaws.com/checkout", async (req, res) => {
     console.log(req.body)
     const items = req.body.items;
     let lineItems = [];
