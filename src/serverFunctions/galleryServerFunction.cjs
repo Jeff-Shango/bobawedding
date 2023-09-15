@@ -9,16 +9,16 @@ expressApp.use(cors());
 
 
 const db = mysql.createConnection({
-    host: "localhost",
-    user: "root",
+    host: "https://main.de77es7x7z7z7.amplifyapp.com/",
+    user: "JeffBoz",
     password: "Woodward20!",
-    database: "boba_wedding"
+    database: "thebozierweddingcluster"
 });
 
 
 expressApp.use(express.json());
 
-expressApp.get("thebozierweddingcluster.cxrocbv1hrpw.us-east-1.rds.amazonaws.com/gallery", (req, res) => {
+expressApp.get("/gallery", (req, res) => {
     const { imageId } = req.query;
     const tableName = `photo_comments_${imageId}`;
     const q = `SELECT * FROM boba_wedding.${tableName}`;
@@ -28,7 +28,7 @@ expressApp.get("thebozierweddingcluster.cxrocbv1hrpw.us-east-1.rds.amazonaws.com
     })
 });
 
-expressApp.get("thebozierweddingcluster.cxrocbv1hrpw.us-east-1.rds.amazonaws.com/tables", (req, res) => {
+expressApp.get("/tables", (req, res) => {
     const getTablesQuery = "SHOW TABLES";
 
     db.query(getTablesQuery, (err, data) => {
@@ -42,7 +42,7 @@ expressApp.get("thebozierweddingcluster.cxrocbv1hrpw.us-east-1.rds.amazonaws.com
     })
 })
 
-expressApp.get("thebozierweddingcluster.cxrocbv1hrpw.us-east-1.rds.amazonaws.com/get_comments/:imageId", (req, res) => {
+expressApp.get("/get_comments/:imageId", (req, res) => {
     const { imageId } = req.params;
     const tableName = `photo_comments_${imageId}`;
 
@@ -58,7 +58,7 @@ expressApp.get("thebozierweddingcluster.cxrocbv1hrpw.us-east-1.rds.amazonaws.com
     });
 });
 
-expressApp.post("thebozierweddingcluster.cxrocbv1hrpw.us-east-1.rds.amazonaws.com/add_comment", (req, res) => {
+expressApp.post("/add_comment", (req, res) => {
     const { imageId } = req.query;
     const tableName = `photo_comments_${imageId}`;
     const addCommentQuery = `INSERT INTO boba_wedding.${tableName} (comments, commentator) VALUES (?, ?)`;
@@ -79,7 +79,7 @@ expressApp.post("thebozierweddingcluster.cxrocbv1hrpw.us-east-1.rds.amazonaws.co
 expressApp.use(express.static("public"));
 expressApp.use(express.json());
 
-expressApp.post("thebozierweddingcluster.cxrocbv1hrpw.us-east-1.rds.amazonaws.com/checkout", async (req, res) => {
+expressApp.post("/checkout", async (req, res) => {
     console.log(req.body)
     const items = req.body.items;
     let lineItems = [];
