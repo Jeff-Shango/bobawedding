@@ -79,7 +79,7 @@ expressApp.post("/add_comment", (req, res) => {
 expressApp.use(express.static("public"));
 expressApp.use(express.json());
 
-expressApp.post("https://main.de77es7x7z7z7.amplifyapp.com/checkout", async (req, res) => {
+expressApp.post("/checkout", async (req, res) => {
     console.log(req.body)
     const items = req.body.items;
     let lineItems = [];

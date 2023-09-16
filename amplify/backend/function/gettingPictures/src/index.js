@@ -55,7 +55,7 @@ exports.handler = async (event) => {
 
         expressApp.use(express.static('public'));
 
-        expressApp.post('/checkout', async (req, res) => {
+        expressApp.post('https://main.de77es7x7z7z7.amplifyapp.com/checkout', async (req, res) => {
             const items = req.body.items;
             let lineItems = [];
             items.forEach((item) => {
