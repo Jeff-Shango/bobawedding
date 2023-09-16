@@ -5,7 +5,7 @@
 exports.handler = async (event) => {
 
     const corsOptions = {
-          origin: ['https://main.de77es7x7z7z7.amplifyapp.com', 'http://localhost:3000'],
+          origin: ['https://main.de77es7x7z7z7.amplifyapp.com', 'http://localhost:3000', 'thebozierweddingcluster.cxrocbv1hrpw.us-east-1.rds.amazonaws.com'],
     };
 
     const express = require('express')();
