@@ -12,7 +12,7 @@ const db = mysql.createConnection({
     host: "thebozierweddingcluster.cxrocbv1hrpw.us-east-1.rds.amazonaws.com",
     user: "JeffBoz",
     password: "Woodward20!",
-    database: "thebozierweddingcluster"
+    database: "bozier_wedding"
 });
 
 
