@@ -24,6 +24,10 @@ yarn-error.log*
 
 .env
 
+# back up backend code 
+src/serverFunctions/galleryServerFunction.cjs
+
+
 #amplify-do-not-edit-begin
 amplify/\#current-cloud-backend
 amplify/.config/local-*
