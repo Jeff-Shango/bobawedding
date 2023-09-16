@@ -3,8 +3,14 @@
  */
 
 exports.handler = async (event) => {
-    const expressApp = require('express')();
-    expressApp.use(require('cors')());
+
+    const corsOptions = {
+          origin: ['https://main.de77es7x7z7z7.amplifyapp.com', 'http://localhost:3000'],
+    };
+
+    const express = require('express')();
+    express.use(require('cors')());
+    express.use(cors(corsOptions));
 
     try {
         const pool = await mysql.createPool({
@@ -15,7 +21,7 @@ exports.handler = async (event) => {
             connectionLimit: 10,
         });
 
-        expressApp.get('/gallery', async (req, res) => {
+        express.get('/gallery', async (req, res) => {
             const { imageId } = event.pathParameters;
             const tableName = `photo_comments_${imageId}`;
             const q = `SELECT * FROM boba_wedding.${tableName}`;
@@ -23,14 +29,14 @@ exports.handler = async (event) => {
             res.json(rows);
         });
 
-        expressApp.get('/tables', async (req, res) => {
+        express.get('/tables', async (req, res) => {
             const getTablesQuery = 'SHOW TABLES';
             const [tablesData] = await pool.query(getTablesQuery);
             const tables = tablesData.map((table) => table[`Tables_in_${pool.config.database}`]);
             res.json(tables);
         });
 
-        expressApp.get('/get_comments/:imageId', async (req, res) => {
+        express.get('/get_comments/:imageId', async (req, res) => {
             const { imageId } = req.params;
             const tableName = `photo_comments_${imageId}`;
             const getCommentsQuery = `SELECT comments, commentator FROM boba_wedding.${tableName}`;
@@ -38,7 +44,7 @@ exports.handler = async (event) => {
             res.json(commentsData);
         });
 
-        expressApp.post('/add_comment', async (req, res) => {
+        express.post('/add_comment', async (req, res) => {
             const { imageId } = req.query;
             const tableName = `photo_comments_${imageId}`;
             const addCommentQuery = `INSERT INTO boba_wedding.${tableName} (comments, commentator) VALUES (?, ?)`;
@@ -53,9 +59,9 @@ exports.handler = async (event) => {
             }
         });
 
-        expressApp.use(express.static('public'));
+        express.use(express.static('public'));
 
-        expressApp.post('https://main.de77es7x7z7z7.amplifyapp.com/checkout', async (req, res) => {
+        express.post('https://main.de77es7x7z7z7.amplifyapp.com/checkout', async (req, res) => {
             const items = req.body.items;
             let lineItems = [];
             items.forEach((item) => {
@@ -86,12 +92,12 @@ exports.handler = async (event) => {
         const PORT = 8080;
 
         // Start the server
-        expressApp.listen(PORT, () => {
+        express.listen(PORT, () => {
             console.log(`Server running on port ${PORT}`);
         });
 
         // Handle the Lambda event
-        const response = await expressApp(event);
+        const response = await express(event);
 
         return {
             statusCode: 200,
