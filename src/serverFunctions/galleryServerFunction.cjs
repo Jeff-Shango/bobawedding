@@ -21,7 +21,7 @@ expressApp.use(express.json());
 expressApp.get("/gallery", (req, res) => {
     const { imageId } = req.query;
     const tableName = `photo_comments_${imageId}`;
-    const q = `SELECT * FROM boba_wedding.${tableName}`;
+    const q = `SELECT * FROM bozier_wedding.${tableName}`;
     db.query(q, (err, data) => {
         if(err) return res.json(err);
         return res.json(data);
@@ -46,7 +46,7 @@ expressApp.get("/get_comments/:imageId", (req, res) => {
     const { imageId } = req.params;
     const tableName = `photo_comments_${imageId}`;
 
-    const getCommentsQuery = `SELECT comments, commentator FROM boba_wedding.${tableName}`;
+    const getCommentsQuery = `SELECT comments, commentator FROM bozier_wedding.${tableName}`;
 
     db.query(getCommentsQuery, (err, data) => {
         if (err) {
@@ -58,10 +58,10 @@ expressApp.get("/get_comments/:imageId", (req, res) => {
     });
 });
 
-expressApp.post("/add_comment", (req, res) => {
+expressApp.post("/add_comment?imageId=${imageId}", (req, res) => {
     const { imageId } = req.query;
     const tableName = `photo_comments_${imageId}`;
-    const addCommentQuery = `INSERT INTO boba_wedding.${tableName} (comments, commentator) VALUES (?, ?)`;
+    const addCommentQuery = `INSERT INTO bozier_wedding.${tableName} (comments, commentator) VALUES (?, ?)`;
     const values = [req.body.comments, req.body.commentator];
 
     db.query(addCommentQuery, values, (err, result) => {

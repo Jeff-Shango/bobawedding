@@ -13,6 +13,20 @@
       ],
       "providerPlugin": "awscloudformation",
       "service": "API Gateway"
+    },
+    "showTables": {
+      "dependsOn": [
+        {
+          "attributes": [
+            "Name",
+            "Arn"
+          ],
+          "category": "function",
+          "resourceName": "tablesFunction"
+        }
+      ],
+      "providerPlugin": "awscloudformation",
+      "service": "API Gateway"
     }
   },
   "auth": {
@@ -46,6 +60,11 @@
       "build": true,
       "providerPlugin": "awscloudformation",
       "service": "Lambda"
+    },
+    "tablesFunction": {
+      "build": true,
+      "providerPlugin": "awscloudformation",
+      "service": "Lambda"
     }
   },
   "parameters": {
@@ -62,6 +81,22 @@
         {
           "category": "function",
           "resourceName": "gettingPictures"
+        }
+      ]
+    },
+    "AMPLIFY_function_tablesFunction_deploymentBucketName": {
+      "usedBy": [
+        {
+          "category": "function",
+          "resourceName": "tablesFunction"
+        }
+      ]
+    },
+    "AMPLIFY_function_tablesFunction_s3Key": {
+      "usedBy": [
+        {
+          "category": "function",
+          "resourceName": "tablesFunction"
         }
       ]
     }

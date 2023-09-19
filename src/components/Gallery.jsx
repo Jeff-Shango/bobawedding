@@ -8,7 +8,9 @@ import axios from "axios";
 import {API}  from "aws-amplify"
 
 const myAPI = 'gallery';
-const path = '/gallery'
+const path = '/gallery';
+// const tableAPI = 'showTables';
+// const tablePath = '/tables';
 
 const Gallery = () => {
   const imgContainer = [img1, img2, img3];
@@ -49,7 +51,7 @@ const Gallery = () => {
         }));
         setCommentsData(comments);
       } catch (err) {
-        // console.log(err)
+        console.log(err)
       }
     };
 

@@ -18,11 +18,16 @@
       "function": {
         "gettingPictures": {
           "deploymentBucketName": "amplify-amplify071e2990e8f24-staging-144045-deployment",
-          "s3Key": "amplify-builds/gettingPictures-616531764a6e61315a4c-build.zip"
+          "s3Key": "amplify-builds/gettingPictures-47644c7365462b517249-build.zip"
+        },
+        "tablesFunction": {
+          "deploymentBucketName": "amplify-amplify071e2990e8f24-staging-144045-deployment",
+          "s3Key": "amplify-builds/tablesFunction-7965422b345834464463-build.zip"
         }
       },
       "api": {
-        "gallery": {}
+        "gallery": {},
+        "showTables": {}
       }
     }
   }

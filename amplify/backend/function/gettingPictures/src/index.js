@@ -5,7 +5,7 @@
 exports.handler = async (event) => {
 
     const corsOptions = {
-          origin: ['https://main.de77es7x7z7z7.amplifyapp.com', 'http://localhost:3000', 'thebozierweddingcluster.cxrocbv1hrpw.us-east-1.rds.amazonaws.com'],
+          origin: ['https://main.de77es7x7z7z7.amplifyapp.com', 'http://localhost:8080', 'thebozierweddingcluster.cxrocbv1hrpw.us-east-1.rds.amazonaws.com'],
     };
 
     const express = require('express')();
@@ -24,22 +24,22 @@ exports.handler = async (event) => {
         express.get('/gallery', async (req, res) => {
             const { imageId } = event.pathParameters;
             const tableName = `photo_comments_${imageId}`;
-            const q = `SELECT * FROM boba_wedding.${tableName}`;
+            const q = `SELECT * FROM bozier_wedding.${tableName}`;
             const [rows] = await pool.query(q);
             res.json(rows);
         });
 
-        express.get('/tables', async (req, res) => {
-            const getTablesQuery = 'SHOW TABLES';
-            const [tablesData] = await pool.query(getTablesQuery);
-            const tables = tablesData.map((table) => table[`Tables_in_${pool.config.database}`]);
-            res.json(tables);
-        });
+        // express.get('/tables', async (req, res) => {
+        //     const getTablesQuery = 'SHOW TABLES';
+        //     const [tablesData] = await pool.query(getTablesQuery);
+        //     const tables = tablesData.map((table) => table[`Tables_in_${pool.config.database}`]);
+        //     res.json(tables);
+        // });
 
         express.get('/get_comments/:imageId', async (req, res) => {
             const { imageId } = req.params;
             const tableName = `photo_comments_${imageId}`;
-            const getCommentsQuery = `SELECT comments, commentator FROM boba_wedding.${tableName}`;
+            const getCommentsQuery = `SELECT comments, commentator FROM bozier_wedding.${tableName}`;
             const [commentsData] = await pool.query(getCommentsQuery);
             res.json(commentsData);
         });
@@ -47,7 +47,7 @@ exports.handler = async (event) => {
         express.post('/add_comment', async (req, res) => {
             const { imageId } = req.query;
             const tableName = `photo_comments_${imageId}`;
-            const addCommentQuery = `INSERT INTO boba_wedding.${tableName} (comments, commentator) VALUES (?, ?)`;
+            const addCommentQuery = `INSERT INTO bozier_wedding.${tableName} (comments, commentator) VALUES (?, ?)`;
             const values = [req.body.comments, req.body.commentator];
 
             try {
@@ -61,7 +61,7 @@ exports.handler = async (event) => {
 
         express.use(express.static('public'));
 
-        express.post('https://main.de77es7x7z7z7.amplifyapp.com/checkout', async (req, res) => {
+        express.post('/checkout', async (req, res) => {
             const items = req.body.items;
             let lineItems = [];
             items.forEach((item) => {
