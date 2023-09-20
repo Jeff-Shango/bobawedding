@@ -1,0 +1,12 @@
+{
+  "version": 1,
+  "paths": {
+    "/getcomments/{imageId}": {
+      "name": "/getcomments/{imageId}",
+      "lambdaFunction": "getComments",
+      "permissions": {
+        "setting": "open"
+      }
+    }
+  }
+}

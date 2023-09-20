@@ -5,6 +5,11 @@ export type AmplifyDependentResourcesAttributes = {
       "ApiName": "string",
       "RootUrl": "string"
     },
+    "getComments": {
+      "ApiId": "string",
+      "ApiName": "string",
+      "RootUrl": "string"
+    },
     "showTables": {
       "ApiId": "string",
       "ApiName": "string",
@@ -23,6 +28,13 @@ export type AmplifyDependentResourcesAttributes = {
     }
   },
   "function": {
+    "getComments": {
+      "Arn": "string",
+      "LambdaExecutionRole": "string",
+      "LambdaExecutionRoleArn": "string",
+      "Name": "string",
+      "Region": "string"
+    },
     "gettingPictures": {
       "Arn": "string",
       "LambdaExecutionRole": "string",

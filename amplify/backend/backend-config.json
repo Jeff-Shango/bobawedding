@@ -14,6 +14,20 @@
       "providerPlugin": "awscloudformation",
       "service": "API Gateway"
     },
+    "getComments": {
+      "dependsOn": [
+        {
+          "attributes": [
+            "Name",
+            "Arn"
+          ],
+          "category": "function",
+          "resourceName": "getComments"
+        }
+      ],
+      "providerPlugin": "awscloudformation",
+      "service": "API Gateway"
+    },
     "showTables": {
       "dependsOn": [
         {
@@ -56,6 +70,11 @@
     }
   },
   "function": {
+    "getComments": {
+      "build": true,
+      "providerPlugin": "awscloudformation",
+      "service": "Lambda"
+    },
     "gettingPictures": {
       "build": true,
       "providerPlugin": "awscloudformation",
@@ -68,6 +87,22 @@
     }
   },
   "parameters": {
+    "AMPLIFY_function_getComments_deploymentBucketName": {
+      "usedBy": [
+        {
+          "category": "function",
+          "resourceName": "getComments"
+        }
+      ]
+    },
+    "AMPLIFY_function_getComments_s3Key": {
+      "usedBy": [
+        {
+          "category": "function",
+          "resourceName": "getComments"
+        }
+      ]
+    },
     "AMPLIFY_function_gettingPictures_deploymentBucketName": {
       "usedBy": [
         {

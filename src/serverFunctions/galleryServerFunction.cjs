@@ -50,7 +50,7 @@ expressApp.get("/get_comments/:imageId", (req, res) => {
 
     db.query(getCommentsQuery, (err, data) => {
         if (err) {
-            console.error("There was a damn error:". err);
+            console.error("There was a damn error:", err);
             return res.status(500).json({ error: "There was a got damn error retrieving the comments"});
         }
 

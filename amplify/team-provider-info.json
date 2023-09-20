@@ -23,11 +23,16 @@
         "tablesFunction": {
           "deploymentBucketName": "amplify-amplify071e2990e8f24-staging-144045-deployment",
           "s3Key": "amplify-builds/tablesFunction-50704955643778776735-build.zip"
+        },
+        "getComments": {
+          "deploymentBucketName": "amplify-amplify071e2990e8f24-staging-144045-deployment",
+          "s3Key": "amplify-builds/getComments-48537230514b79526d33-build.zip"
         }
       },
       "api": {
         "gallery": {},
-        "showTables": {}
+        "showTables": {},
+        "getComments": {}
       }
     }
   }
