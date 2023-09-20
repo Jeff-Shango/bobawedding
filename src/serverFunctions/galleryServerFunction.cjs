@@ -3,16 +3,20 @@ const mysql = require("mysql2");
 const cors = require("cors");
 const stripe = require("stripe")(process.env.SECRET_STRIPE);
 
+const corsOptions = {
+    origin: [ 'https://main.de77es7x7z7z7.amplifyapp.com/', 'http://localhost:3301' ]
+}
 const expressApp = express();
-const PORT = 8080;
+const PORT = 3301;
 expressApp.use(cors());
-
+expressApp.use(cors(corsOptions));
 
 const db = mysql.createConnection({
-    host: "thebozierweddingcluster.cxrocbv1hrpw.us-east-1.rds.amazonaws.com",
+    host: "bozierweddinginstance.cxrocbv1hrpw.us-east-1.rds.amazonaws.com",
     user: "JeffBoz",
+    port: "3301",
     password: "Woodward20!",
-    database: "bozier_wedding"
+    database: "bozierWeddingDB"
 });
 
 
@@ -21,7 +25,7 @@ expressApp.use(express.json());
 expressApp.get("/gallery", (req, res) => {
     const { imageId } = req.query;
     const tableName = `photo_comments_${imageId}`;
-    const q = `SELECT * FROM bozier_wedding.${tableName}`;
+    const q = `SELECT * FROM bozierWeddingDB.${tableName}`;
     db.query(q, (err, data) => {
         if(err) return res.json(err);
         return res.json(data);
@@ -46,7 +50,7 @@ expressApp.get("/get_comments/:imageId", (req, res) => {
     const { imageId } = req.params;
     const tableName = `photo_comments_${imageId}`;
 
-    const getCommentsQuery = `SELECT comments, commentator FROM bozier_wedding.${tableName}`;
+    const getCommentsQuery = `SELECT comments, commentator FROM bozierWeddingDB.${tableName}`;
 
     db.query(getCommentsQuery, (err, data) => {
         if (err) {
@@ -61,7 +65,7 @@ expressApp.get("/get_comments/:imageId", (req, res) => {
 expressApp.post("/add_comment?imageId=${imageId}", (req, res) => {
     const { imageId } = req.query;
     const tableName = `photo_comments_${imageId}`;
-    const addCommentQuery = `INSERT INTO bozier_wedding.${tableName} (comments, commentator) VALUES (?, ?)`;
+    const addCommentQuery = `INSERT INTO bozierWeddingDB.${tableName} (comments, commentator) VALUES (?, ?)`;
     const values = [req.body.comments, req.body.commentator];
 
     db.query(addCommentQuery, values, (err, result) => {
