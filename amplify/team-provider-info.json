@@ -22,7 +22,7 @@
         },
         "tablesFunction": {
           "deploymentBucketName": "amplify-amplify071e2990e8f24-staging-144045-deployment",
-          "s3Key": "amplify-builds/tablesFunction-7965422b345834464463-build.zip"
+          "s3Key": "amplify-builds/tablesFunction-50704955643778776735-build.zip"
         }
       },
       "api": {

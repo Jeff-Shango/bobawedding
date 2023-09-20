@@ -7,8 +7,8 @@ import { Link } from 'react-router-dom';
 import axios from "axios";
 import {API}  from "aws-amplify"
 
-const myAPI = 'gallery';
-const path = '/gallery';
+const myAPI = 'showTables';
+const path = '/tables';
 // const tableAPI = 'showTables';
 // const tablePath = '/tables';
 
