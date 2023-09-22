@@ -48,12 +48,12 @@ const Gallery = () => {
         // const response = await axios.get(apiUrl)
         const response = await axios.get(`/get_comments/${imageId}`);
         if (Array.isArray(response.data)) {
-        const comments = response.data.map((item) => ({
-          comments: item.comments,
-          commentator: item.commentator,
-        }));
-        setCommentsData(comments);
-      } else {
+          const comments = response.data.map((item) => ({
+            comments: item.comments,
+            commentator: item.commentator,
+          }));
+          setCommentsData(comments);
+        } else {
         console.error("The Response isn't an array:", response.data);
       } 
     } catch (err) {
