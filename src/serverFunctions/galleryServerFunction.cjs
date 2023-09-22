@@ -11,7 +11,7 @@ const PORT = 3301;
 expressApp.use(cors());
 expressApp.use(cors(corsOptions));
 
-const db = mysql.createConnection({
+const db = mysql.createPool({
     host: "bozierweddinginstance.cxrocbv1hrpw.us-east-1.rds.amazonaws.com",
     user: "JeffBoz",
     port: PORT,
