@@ -3,13 +3,13 @@ const mysql = require("mysql2");
 const cors = require("cors");
 const stripe = require("stripe")(process.env.SECRET_STRIPE);
 
-// const corsOptions = {
-//     origin: [ 'https://main.de77es7x7z7z7.amplifyapp.com/', 'http://localhost:3301' ]
-// }
+const corsOptions = {
+    origin: [ 'https://main.de77es7x7z7z7.amplifyapp.com/', 'http://localhost:3301' ]
+}
 const expressApp = express();
 const PORT = 3301;
 expressApp.use(cors());
-// expressApp.use(cors(corsOptions));
+expressApp.use(cors(corsOptions));
 
 const db = mysql.createConnection({
     host: "bozierweddinginstance.cxrocbv1hrpw.us-east-1.rds.amazonaws.com",
