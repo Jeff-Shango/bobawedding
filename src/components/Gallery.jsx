@@ -52,10 +52,9 @@ const Gallery = () => {
             comments: item.comments,
             commentator: item.commentator,
           }));
-          setCommentsData(comments);
+          setCommentsData([comments]);
         } else {
         console.error("The Response isn't an array:", response.data);
-        setCommentsData([])
       } 
     } catch (err) {
         console.log(err)
