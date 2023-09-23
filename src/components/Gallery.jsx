@@ -15,7 +15,7 @@ const Gallery = () => {
   
   const imgContainer = [img1, img2, img3];
   const [enlargedImage, setEnlargedImage] = useState(null);
-  const [commentsData, setCommentsData] = useState();
+  const [commentsData, setCommentsData] = useState([]);
   const [comments, setComments] = useState({
     comments: "",
     commentator: ""
@@ -44,9 +44,11 @@ const Gallery = () => {
 
     const fetchComments = async (imageId = null) => {
       try {
+        const apiServer = `https://bozierweddinginstance.cxrocbv1hrpw.us-east-1.rds.amazonaws.com/get_comments/${imageId}`;
+        const response = await axios.get(apiServer)
         // const apiUrl = `${window.location.origin}/get_comments/${imageId}`;
         // const response = await axios.get(apiUrl)
-        const response = await axios.get(`/get_comments/${imageId}`);
+        // const response = await axios.get(`/get_comments/${imageId}`);
           const comments = response.data.map((item) => ({
             comments: item.comments,
             commentator: item.commentator,

@@ -19,6 +19,12 @@ const db = mysql.createPool({
     database: "bozierWeddingDB"
 });
 
+// const db = mysql.createPool({
+//     host: "localhost",
+//     user: "JeffBoz",
+//     port: PORT,
+//     database: "boba_wedding"
+// })
 
 expressApp.use(express.json());
 
