@@ -4,10 +4,10 @@ const cors = require("cors");
 const stripe = require("stripe")(process.env.SECRET_STRIPE);
 
 const corsOptions = {
-    origin: [ 'https://main.de77es7x7z7z7.amplifyapp.com', 'http://localhost:3301' ]
+    origin: [ 'https://main.de77es7x7z7z7.amplifyapp.com', 'http://localhost:3306' ]
 }
 const expressApp = express();
-const PORT = 3301;
+const PORT = 3306;
 expressApp.use(cors());
 expressApp.use(cors(corsOptions));
 
