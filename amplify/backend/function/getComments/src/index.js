@@ -2,7 +2,8 @@
  * @type {import('@types/aws-lambda').APIGatewayProxyHandler}
  */
 exports.handler = async (event) => {
-    const corsOptions = {
+
+  const corsOptions = {
         origin: [ 'https://lck1xcnul8.execute-api.us-east-1.amazonaws.com/staging', 'https://main.de77es7x7z7z7.amplifyapp.com', 'http://localhost:8080', 'thebozierweddingcluster.cxrocbv1hrpw.us-east-1.rds.amazonaws.com'],
   };
   const mysql = require("mysql2")
@@ -23,7 +24,7 @@ exports.handler = async (event) => {
     const tableName = `photo_comments_${imageId}`;
     const getCommentsQuery = `SELECT comments, commentator FROM bozierWeddingDB.${tableName}`;
 
-    pool.query(getCommentsQuery, (err, data) => {
+    const sqlCall = pool.query(getCommentsQuery, (err, data) => {
         if (err) {
             console.error("There was a damn error:", err);
             return res.status(500).json({ error: "There was a got damn error retrieving the comments"});
@@ -36,15 +37,16 @@ exports.handler = async (event) => {
 
         return res.json(commentsData);
     });
-  };
 
 
-    console.log(`EVENT: ${JSON.stringify(event)}`);
-    return {
+  const response = {
         statusCode: 200,
     //  Uncomment below to enable CORS requests
-    //  headers: {
+     headers: {
          "Access-Control-Allow-Origin": "*",
          "Access-Control-Allow-Headers": "*"
-    //  },
+     },
+     body: JSON.stringify(sqlCall)
     };
+    return response;
+  }
