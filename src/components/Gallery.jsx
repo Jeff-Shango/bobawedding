@@ -7,7 +7,7 @@ import { Link } from 'react-router-dom';
 import axios from "axios";
 import {API}  from "aws-amplify";
 const myAPI = 'getComments';
-const path = '/getcomments/{imageId}';
+const path = '/getcomments/';
 // const tableAPI = 'showTables';
 // const tablePath = '/tables';
 
@@ -45,7 +45,7 @@ const Gallery = () => {
 
     const fetchComments = async (imageId = null) => {
       try {
-        response = await axios.get(myAPI, path + "/" )
+        const response = await axios.get(myAPI, path + imageId )
         // const response = await axios.get(myAPI, { params: { imageId} });
         const comments = response.data;
 
