@@ -14,7 +14,7 @@ exports.handler = async (event) => {
   const pool = await mysql.createPool({
     host: 'bozierweddinginstance.cxrocbv1hrpw.us-east-1.rds.amazonaws.com',
     user: 'JeffBoz',
-    port: '3301',
+    port: '3306',
     password: 'Woodward20!',
     database: "bozierWeddingDB",
   });
