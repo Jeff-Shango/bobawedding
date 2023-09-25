@@ -19,7 +19,6 @@ exports.handler = async (event) => {
     database: "bozierWeddingDB",
   });
 
-  express.get('/getcomments/{imageId}', (req, res) => {
     const { imageId } = req.params;
     const tableName = `photo_comments_${imageId}`;
     const getCommentsQuery = `SELECT comments, commentator FROM bozierWeddingDB.${tableName}`;
@@ -37,7 +36,7 @@ exports.handler = async (event) => {
 
         return res.json(commentsData);
     });
-  });
+  };
 
 
     console.log(`EVENT: ${JSON.stringify(event)}`);
@@ -45,8 +44,7 @@ exports.handler = async (event) => {
         statusCode: 200,
     //  Uncomment below to enable CORS requests
     //  headers: {
-    //      "Access-Control-Allow-Origin": "*",
-    //      "Access-Control-Allow-Headers": "*"
+         "Access-Control-Allow-Origin": "*",
+         "Access-Control-Allow-Headers": "*"
     //  },
     };
-};
