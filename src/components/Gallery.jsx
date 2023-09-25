@@ -5,7 +5,7 @@ import img3 from '../assets/imgC.jpg';
 import "../App.css";
 import { Link } from 'react-router-dom';
 import axios from "axios";
-import {API}  from "aws-amplify"
+import {API}  from "aws-amplify";
 // const myAPI = 'showTables';
 // const path = '/tables';
 // const tableAPI = 'showTables';
@@ -13,6 +13,7 @@ import {API}  from "aws-amplify"
 
 const Gallery = () => {
   
+  const awsDB = 'https://bozierweddinginstance.cxrocbv1hrpw.us-east-1.rds.amazonaws.com';
   const imgContainer = [img1, img2, img3];
   const [enlargedImage, setEnlargedImage] = useState(null);
   const [commentsData, setCommentsData] = useState([]);
@@ -34,7 +35,7 @@ const Gallery = () => {
                 comments: commentText,
                 commentator: commentator,
               };
-        await API.post(`/add_comment?imageId=${imageId}`, data);      
+        await API.post( awsDB + `/add_comment?imageId=${imageId}`, data);      
 
       fetchComments(imageId);
   }  catch (err) {
@@ -44,7 +45,7 @@ const Gallery = () => {
 
     const fetchComments = async (imageId = null) => {
       try {
-        const apiServer = `https://bozierweddinginstance.cxrocbv1hrpw.us-east-1.rds.amazonaws.com/get_comments/${imageId}`;
+        const apiServer = awsDB + `/get_comments/${imageId}`;
         const response = await axios.get(apiServer)
         // const apiUrl = `${window.location.origin}/get_comments/${imageId}`;
         // const response = await axios.get(apiUrl)

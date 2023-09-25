@@ -4,6 +4,7 @@
 
 exports.handler = async (event) => {
 
+    const awsDB = 'https://bozierweddinginstance.cxrocbv1hrpw.us-east-1.rds.amazonaws.com'
     const corsOptions = {
           origin: ['https://main.de77es7x7z7z7.amplifyapp.com', 'http://localhost:8080', 'thebozierweddingcluster.cxrocbv1hrpw.us-east-1.rds.amazonaws.com'],
     };
@@ -14,14 +15,14 @@ exports.handler = async (event) => {
 
     try {
         const pool = await mysql.createPool({
-            host: 'thebozierweddingcluster.cxrocbv1hrpw.us-east-1.rds.amazonaws.com',
+            host: awsDB,
             user: 'JeffBoz',
             password: 'Woodward20!',
             database: "bozier_wedding",
             connectionLimit: 10,
         });
 
-        express.get('/gallery', async (req, res) => {
+        express.get( awsDB + '/gallery', async (req, res) => {
             const { imageId } = event.pathParameters;
             const tableName = `photo_comments_${imageId}`;
             const q = `SELECT * FROM bozier_wedding.${tableName}`;
@@ -36,7 +37,7 @@ exports.handler = async (event) => {
         //     res.json(tables);
         // });
 
-        express.get('/get_comments/:imageId', async (req, res) => {
+        express.get( awsDB + '/get_comments/:imageId', async (req, res) => {
             const { imageId } = req.params;
             const tableName = `photo_comments_${imageId}`;
             const getCommentsQuery = `SELECT comments, commentator FROM bozier_wedding.${tableName}`;
@@ -44,7 +45,7 @@ exports.handler = async (event) => {
             res.json(commentsData);
         });
 
-        express.post('/add_comment', async (req, res) => {
+        express.post( awsDB + '/add_comment', async (req, res) => {
             const { imageId } = req.query;
             const tableName = `photo_comments_${imageId}`;
             const addCommentQuery = `INSERT INTO bozier_wedding.${tableName} (comments, commentator) VALUES (?, ?)`;
@@ -61,7 +62,7 @@ exports.handler = async (event) => {
 
         express.use(express.static('public'));
 
-        express.post('/checkout', async (req, res) => {
+        express.post( awsDB + '/checkout', async (req, res) => {
             const items = req.body.items;
             let lineItems = [];
             items.forEach((item) => {
