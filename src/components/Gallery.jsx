@@ -45,7 +45,8 @@ const Gallery = () => {
 
     const fetchComments = async (imageId = null) => {
       try {
-        const response = await axios.get(myAPI, { params: { imageId} });
+        response = await axios.get(myAPI, path + "/" )
+        // const response = await axios.get(myAPI, { params: { imageId} });
         const comments = response.data;
 
         if (!Array.isArray(comments)) {
