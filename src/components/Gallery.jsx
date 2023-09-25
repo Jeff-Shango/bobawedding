@@ -6,23 +6,12 @@ import "../App.css";
 import { Link } from 'react-router-dom';
 import axios from "axios";
 import {API}  from "aws-amplify";
-import { createWEDDINGAMPLIFYSDB } from './graphql/mutations';
 // const myAPI = 'showTables';
 // const path = '/tables';
 // const tableAPI = 'showTables';
 // const tablePath = '/tables';
 
-const newWEDDINGAMPLIFYSDB = await API.graphql({
-  query: createWEDDINGAMPLIFYSDB,
-  variables: {
-      input: {
-  "comments": [],
-  "commentator": []
-}
-  }
-});
 const Gallery = () => {
-
   
   const awsDB = 'https://bozierweddinginstance.cxrocbv1hrpw.us-east-1.rds.amazonaws.com';
   const imgContainer = [img1, img2, img3];
