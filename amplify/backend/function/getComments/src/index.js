@@ -19,7 +19,7 @@ exports.handler = async (event) => {
     database: "bozierWeddingDB",
   });
 
-  const response = express.get('/getcomments/{imageId}', (req, res) => {
+  express.get('/getcomments/{imageId}', (req, res) => {
     const { imageId } = req.params;
     const tableName = `photo_comments_${imageId}`;
     const getCommentsQuery = `SELECT comments, commentator FROM bozierWeddingDB.${tableName}`;
@@ -29,7 +29,13 @@ exports.handler = async (event) => {
             console.error("There was a damn error:", err);
             return res.status(500).json({ error: "There was a got damn error retrieving the comments"});
         }
-        return res.json(data);
+        const commentsData = data[0];
+
+        if (!commentsData) {
+            return res.status(404).json({ error: "No comments found for this image, mane!"});
+        }
+
+        return res.json(commentsData);
     });
   });
 

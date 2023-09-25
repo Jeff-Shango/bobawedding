@@ -45,20 +45,31 @@ const Gallery = () => {
 
     const fetchComments = async (imageId = null) => {
       try {
-        // const apiServer = `/get_comments/${imageId}`;
-        const response = await axios.get( myAPI, path + "/" + imageId)
+        const response = await axios.get(myAPI, { params: { imageId} });
+        const comments = response.data;
+
+        if (!Array.isArray(comments)) {
+          setCommentsData([]);
+        } else {
+          setCommentsData(comments);
+        }
+      } catch (err) {
+        console.log(err);
+      }
+    }
+        // const response = await axios.get( myAPI, path + "/" + imageId)
         // const apiUrl = `${window.location.origin}/get_comments/${imageId}`;
         // const response = await axios.get(apiUrl)
         // const response = await axios.get(`/get_comments/${imageId}`);
-          const comments = response.data.map((item) => ({
-            comments: item.comments,
-            commentator: item.commentator,
-          }));
-          setCommentsData(comments);
-        } catch (err) {
-        console.log(err)
-      }
-    };
+          // const comments = response.data.map((item) => ({
+          //   comments: item.comments,
+          //   commentator: item.commentator,
+          // }));
+    //       setCommentsData(comments);
+    //     } catch (err) {
+    //     console.log(err)
+    //   }
+    // };
 
 
   const handleImageClick = (image, index) => {
