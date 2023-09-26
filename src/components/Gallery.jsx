@@ -5,9 +5,12 @@ import img3 from '../assets/imgC.jpg';
 import "../App.css";
 import { Link } from 'react-router-dom';
 import axios from "axios";
-import {API}  from "aws-amplify";
-const myAPI = 'getComments';
+import Amplify, {API}  from "aws-amplify";
+
+const myAPI = 'bozierweddinggetcomments';
 const path = '/getcomments/';
+const postAPI = 'bozierweddingpostcomments';
+const postPath = '/addcomment/'
 // const tableAPI = 'showTables';
 // const tablePath = '/tables';
 
@@ -35,7 +38,7 @@ const Gallery = () => {
                 comments: commentText,
                 commentator: commentator,
               };
-        await API.post( awsDB + `/add_comment?imageId=${imageId}`, data);      
+        await API.post( postAPI, postPath + imageId, data);      
 
       fetchComments(imageId);
   }  catch (err) {
