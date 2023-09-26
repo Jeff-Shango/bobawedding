@@ -5,7 +5,7 @@ import img3 from '../assets/imgC.jpg';
 import "../App.css";
 import { Link } from 'react-router-dom';
 import axios from "axios";
-import Amplify, {API}  from "aws-amplify";
+import {API}  from "aws-amplify";
 
 const myAPI = 'bozierweddinggetcomments';
 const path = '/getcomments/';
@@ -16,7 +16,6 @@ const postPath = '/addcomment/'
 
 const Gallery = () => {
   
-  const awsDB = 'https://bozierweddinginstance.cxrocbv1hrpw.us-east-1.rds.amazonaws.com';
   const imgContainer = [img1, img2, img3];
   const [enlargedImage, setEnlargedImage] = useState(null);
   const [commentsData, setCommentsData] = useState([]);
