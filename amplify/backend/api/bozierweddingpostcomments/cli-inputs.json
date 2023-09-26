@@ -1,0 +1,12 @@
+{
+  "version": 1,
+  "paths": {
+    "/addcomment/{imageId}": {
+      "name": "/addcomment/{imageId}",
+      "lambdaFunction": "bozierweddingpostcomments",
+      "permissions": {
+        "setting": "open"
+      }
+    }
+  }
+}

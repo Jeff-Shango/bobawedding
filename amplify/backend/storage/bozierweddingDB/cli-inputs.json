@@ -1,0 +1,10 @@
+{
+  "resourceName": "bozierweddingDB",
+  "tableName": "bozierweddingDB",
+  "partitionKey": {
+    "fieldName": "id",
+    "fieldType": "number"
+  },
+  "gsi": [],
+  "triggerFunctions": []
+}

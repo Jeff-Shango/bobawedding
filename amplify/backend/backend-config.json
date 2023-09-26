@@ -1,0 +1,112 @@
+{
+  "api": {
+    "bozierweddinggetcomments": {
+      "dependsOn": [
+        {
+          "attributes": [
+            "Name",
+            "Arn"
+          ],
+          "category": "function",
+          "resourceName": "bozierweddinggetcomments"
+        }
+      ],
+      "providerPlugin": "awscloudformation",
+      "service": "API Gateway"
+    },
+    "bozierweddingpostcomments": {
+      "dependsOn": [
+        {
+          "attributes": [
+            "Name",
+            "Arn"
+          ],
+          "category": "function",
+          "resourceName": "bozierweddingpostcomments"
+        }
+      ],
+      "providerPlugin": "awscloudformation",
+      "service": "API Gateway"
+    }
+  },
+  "function": {
+    "bozierweddinggetcomments": {
+      "build": true,
+      "dependsOn": [
+        {
+          "attributeEnvMap": {
+            "Arn": "TABLE_ARN",
+            "Name": "TABLE_NAME"
+          },
+          "attributes": [
+            "Name",
+            "Arn"
+          ],
+          "category": "storage",
+          "resourceName": "bozierweddingDB"
+        }
+      ],
+      "providerPlugin": "awscloudformation",
+      "service": "Lambda"
+    },
+    "bozierweddingpostcomments": {
+      "build": true,
+      "dependsOn": [
+        {
+          "attributeEnvMap": {
+            "Arn": "TABLE_ARN",
+            "Name": "TABLE_NAME"
+          },
+          "attributes": [
+            "Name",
+            "Arn"
+          ],
+          "category": "storage",
+          "resourceName": "bozierweddingDB"
+        }
+      ],
+      "providerPlugin": "awscloudformation",
+      "service": "Lambda"
+    }
+  },
+  "parameters": {
+    "AMPLIFY_function_bozierweddinggetcomments_deploymentBucketName": {
+      "usedBy": [
+        {
+          "category": "function",
+          "resourceName": "bozierweddinggetcomments"
+        }
+      ]
+    },
+    "AMPLIFY_function_bozierweddinggetcomments_s3Key": {
+      "usedBy": [
+        {
+          "category": "function",
+          "resourceName": "bozierweddinggetcomments"
+        }
+      ]
+    },
+    "AMPLIFY_function_bozierweddingpostcomments_deploymentBucketName": {
+      "usedBy": [
+        {
+          "category": "function",
+          "resourceName": "bozierweddingpostcomments"
+        }
+      ]
+    },
+    "AMPLIFY_function_bozierweddingpostcomments_s3Key": {
+      "usedBy": [
+        {
+          "category": "function",
+          "resourceName": "bozierweddingpostcomments"
+        }
+      ]
+    }
+  },
+  "storage": {
+    "bozierweddingDB": {
+      "providerPlugin": "awscloudformation",
+      "service": "DynamoDB"
+    }
+  }
+}
