@@ -4,6 +4,7 @@
   "private": true,
   "type": "module",
   "dependencies": {
+    "@aws-sdk/client-personalize-events": "^3.421.0",
     "@rollup/plugin-terser": "^0.4.3",
     "@testing-library/jest-dom": "^5.16.5",
     "@testing-library/react": "^13.4.0",
