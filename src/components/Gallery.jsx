@@ -5,14 +5,7 @@ import img3 from '../assets/imgC.jpg';
 import "../App.css";
 import { Link } from 'react-router-dom';
 import axios from "axios";
-import {API}  from "aws-amplify";
 
-const myAPI = 'bozierweddinggetcomments';
-const path = '/getcomments/';
-const postAPI = 'bozierweddingpostcomments';
-const postPath = '/addcomment/'
-// const tableAPI = 'showTables';
-// const tablePath = '/tables';
 
 const Gallery = () => {
   
@@ -37,7 +30,7 @@ const Gallery = () => {
                 comments: commentText,
                 commentator: commentator,
               };
-        await API.post( postAPI, postPath + imageId, data);      
+        await axios.post( "http://localhost:8090", data);      
 
       fetchComments(imageId);
   }  catch (err) {
@@ -47,7 +40,7 @@ const Gallery = () => {
 
     const fetchComments = async (imageId = null) => {
       try {
-        const response = await axios.get(myAPI, path + imageId )
+        const response = await axios.get("http://localhost:8090" )
         // const response = await axios.get(myAPI, { params: { imageId} });
         const comments = response.data;
 

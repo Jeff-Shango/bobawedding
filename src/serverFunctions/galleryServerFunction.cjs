@@ -4,7 +4,7 @@ const cors = require("cors");
 const stripe = require("stripe")(process.env.SECRET_STRIPE);
 
 // const corsOptions = {
-//     origin: [ 'https://main.de77es7x7z7z7.amplifyapp.com', 'http://localhost:3306' ]
+//     origin: [ 'http://localhost:3306' ]
 // }
 
 const expressApp = express();
@@ -13,7 +13,7 @@ expressApp.use(cors());
 // expressApp.use(cors(corsOptions));
 
 const db = mysql.createPool({
-    host: "bozierweddinginstance.cxrocbv1hrpw.us-east-1.rds.amazonaws.com",
+    host: "localhost",
     user: "JeffBoz",
     port: PORT,
     password: "Woodward20!",
