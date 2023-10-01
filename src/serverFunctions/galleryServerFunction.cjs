@@ -12,7 +12,7 @@ const PORT = 3306;
 expressApp.use(cors());
 // expressApp.use(cors(corsOptions));
 
-const db = mysql.createPool({
+const db = mysql.createConnection({
     host: "localhost",
     user: "JeffBoz",
     port: PORT,

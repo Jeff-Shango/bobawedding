@@ -9,6 +9,7 @@ import Schedule from "./components/Schedule.jsx";
 import CartProvider from "./functions/CartContext.js";
 import Success from "./functions/Success.jsx";
 import Cancel from "./functions/Cancel.jsx";
+import Auth from "./Auth.js";
 
 function App() {
   
@@ -30,6 +31,7 @@ function App() {
             <Route path="/schedule" element={<Schedule/>}/>
             <Route path="/cancel" element={<Cancel/>}/>
             <Route path="/success" element={<Success/>}/>
+            <Route path="/auth" element={<Auth/>}/>
           </Routes>
         </BrowserRouter>
 
