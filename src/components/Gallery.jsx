@@ -11,7 +11,8 @@ import Comments from './Comments';
 const Gallery = () => {
   const imgContainer = [img1, img2, img3];
   const [enlargedImage, setEnlargedImage] = useState(null);
-  const [comments, setComments] = useState([]);
+  const [comments, setComments] = useState('');
+  const [commentator, setCommentator] = useState('');
 
   useEffect(() => {
     const fetchHistoricalComments = async () => {
@@ -30,7 +31,11 @@ const Gallery = () => {
   }, []);
 
   const handleChange = (e) => {
-    setComments({ ...comments, [e.target.name]: e.target.value });
+    if (e.target.name === 'comments') {
+      setComments(e.target.value);
+    } else if (e.target.name === 'commentator') {
+      setCommentator(e.target.value);
+    }
   };
 
   const handleImageClick = (image, index) => {
@@ -39,10 +44,8 @@ const Gallery = () => {
       setEnlargedImage(null);
     } else {
       setEnlargedImage(image);
-      setComments({
-        comments: "",
-        commentator: "",
-      });
+      setComments('');
+      setCommentator('');
     }
   };
 
@@ -68,7 +71,8 @@ const Gallery = () => {
           console.log("Unable to publish message err = " + err.message);
         }
       });
-      setComments((prevComments) => [commentObject, ...prevComments]);
+      setComments('');
+      setCommentator('');
       e.target.elements.commentator.value = "";
       e.target.elements.comments.value = "";
     }
@@ -107,9 +111,9 @@ const Gallery = () => {
                   <input
                     type="text"
                     className="input"
-                    name="comments"
+                    name="commentator"
                     placeholder="Your name"
-                    value={comments.comments}
+                    value={commentator}
                     onChange={handleChange}
                   />
                 </div>
@@ -118,9 +122,9 @@ const Gallery = () => {
                 <div className="control">
                   <textarea
                     className="textarea"
-                    name="commentator"
+                    name="comments"
                     placeholder="Add a comment"
-                    value={comments.commentator}
+                    value={comments}
                     onChange={handleChange}
                   ></textarea>
                 </div>
