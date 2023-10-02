@@ -11,7 +11,7 @@ import Comments from './Comments';
 const Gallery = () => {
   const imgContainer = [img1, img2, img3];
   const [enlargedImage, setEnlargedImage] = useState(null);
-  const [comments, setComments] = useState('');
+  const [comments, setComments] = useState([]);
   const [commentator, setCommentator] = useState('');
 
   useEffect(() => {
@@ -53,10 +53,12 @@ const Gallery = () => {
     setEnlargedImage(null);
   };
 
-  const addComment = async (e) => {
-    e.preventDefault();
-    const comment = e.target.elements.commentator.value.trim();
-    const name = e.target.elements.comments.value.trim();
+  const addComment = async (commentText, commentatorName) => {
+    // e.preventDefault();
+    const comment = commentText.trim();
+    const name = commentatorName.trim();
+    // const comment = e.target.elements.comments.value.trim();
+    // const name = e.target.elements.commentator.value.trim();
     const timestamp = Date.now();
 
     const avatar = await (
@@ -71,10 +73,11 @@ const Gallery = () => {
           console.log("Unable to publish message err = " + err.message);
         }
       });
-      setComments('');
+      setComments((prevComments) => [ commentObject, ...prevComments]);
+      // setComments('');
       setCommentator('');
-      e.target.elements.commentator.value = "";
-      e.target.elements.comments.value = "";
+      // e.target.elements.commentator.value = "";
+      // e.target.elements.comments.value = "";
     }
   };
 
@@ -105,7 +108,13 @@ const Gallery = () => {
           </div>
           <div className='column is-half is-offset-one-quarter'>
             <h1 className="title">Please leave your feedback below</h1>
-            <form onSubmit={addComment}>
+            {/* <form onSubmit={addComment}> */}
+            <form onSubmit={(e) => {
+              e.preventDefault();
+              addComment(e.target.elements.comments.value, e.target.elements.commentator.value);
+              e.target.elements.commentator.value = "";
+              e.target.elements.comments.value = "";
+            }}>
               <div className="field">
                 <div className="control">
                   <input
@@ -148,3 +157,4 @@ const Gallery = () => {
 };
 
 export default Gallery;
+
