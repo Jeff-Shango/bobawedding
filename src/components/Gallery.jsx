@@ -1,66 +1,48 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import img1 from '../assets/imgA.jpg';
 import img2 from '../assets/imgB.jpg';
 import img3 from '../assets/imgC.jpg';
 import "../App.css";
 import { Link } from 'react-router-dom';
 import axios from "axios";
-import Ably from 'Ably';
+import Ably from '../Ably';
+import Comments from './Comments';
 
 const Gallery = () => {
   const imgContainer = [img1, img2, img3];
   const [enlargedImage, setEnlargedImage] = useState(null);
-  const [commentsData, setCommentsData] = useState([]);
-  const [comments, setComments] = useState({
-    comments: "",
-    commentator: ""
-  });
-  const [currentImageId, setCurrentImageId] = useState(null);
+  const [comments, setComments] = useState([]);
+
+  useEffect(() => {
+    const fetchHistoricalComments = async () => {
+      const channel = Ably.channels.get("comments");
+      channel.attach();
+      channel.once("attached", () => {
+        channel.history((err, page) => {
+          if (!err) {
+            const historicalComments = Array.from(page.items, (item) => item.data);
+            setComments(historicalComments);
+          }
+        });
+      });
+    };
+    fetchHistoricalComments();
+  }, []);
 
   const handleChange = (e) => {
     setComments({ ...comments, [e.target.name]: e.target.value });
-  };
-
-  const postComment = async (imageId) => {
-    try {
-      const { comments: commentText, commentator } = comments;
-      const data = {
-        comments: commentText,
-        commentator: commentator,
-      };
-      await axios.post(`/add_comment?imageId=${imageId}`, data);
-      fetchComments(imageId);
-    } catch (err) {
-      console.log(err)
-    }
-  };
-
-  const fetchComments = async (imageId = null) => {
-    try {
-      const response = await axios.get(`/get_comments/photo_comments_${imageId}`);
-      const comments = response.data.map((item) => ({
-        comments: item.comments,
-        commentator: item.commentator,
-      }));
-      setCommentsData(comments);
-    } catch (err) {
-      console.log(err)
-    }
   };
 
   const handleImageClick = (image, index) => {
     console.log("Image clicked:", image);
     if (enlargedImage === image) {
       setEnlargedImage(null);
-      setCurrentImageId(null);
     } else {
       setEnlargedImage(image);
       setComments({
         comments: "",
         commentator: "",
       });
-      setCurrentImageId(index + 1);
-      fetchComments(index + 1);
     }
   };
 
@@ -68,26 +50,25 @@ const Gallery = () => {
     setEnlargedImage(null);
   };
 
-  // Add the addComment method
-  const addComment = (e) => {
-    // Prevent the default behaviour of form submit
+  const addComment = async (e) => {
     e.preventDefault();
-    // Get the value of the comment box and make sure it's not empty strings
-    const comment = e.target.elements.comments.value.trim();
-    const name = e.target.elements.commentator.value.trim();
-    // Get the current time.
+    const comment = e.target.elements.commentator.value.trim();
+    const name = e.target.elements.comments.value.trim();
     const timestamp = Date.now();
-    // Make sure name and comment boxes are filled
+
+    const avatar = await (
+      await axios.get("https://dog.ceo/api/breeds/image/random")
+    ).data.message;
+
     if (name && comment) {
-      const commentObject = { name, comment, timestamp };
-      // Publish comment to Ably
+      const commentObject = { name, comment, timestamp, avatar };
       const channel = Ably.channels.get("comments");
       channel.publish("add_comment", commentObject, (err) => {
         if (err) {
           console.log("Unable to publish message err = " + err.message);
         }
       });
-      // Clear input fields
+      setComments((prevComments) => [commentObject, ...prevComments]);
       e.target.elements.commentator.value = "";
       e.target.elements.comments.value = "";
     }
@@ -111,15 +92,16 @@ const Gallery = () => {
       {enlargedImage && (
         <div className="enlarged-container">
           <div className="enlarged-image">
-            <img id='enlargedImg' src={enlargedImage} alt="Enlarged" onClick={handleEnlargedImageClick} />
+            <img
+              id='enlargedImg'
+              src={enlargedImage}
+              alt="Enlarged"
+              onClick={handleEnlargedImageClick}
+            />
           </div>
-          {/* Enter below here */}
-          <div>
+          <div className='column is-half is-offset-one-quarter'>
             <h1 className="title">Please leave your feedback below</h1>
-            <form onSubmit={(e) => {
-              e.preventDefault();
-              postComment(currentImageId);
-            }}>
+            <form onSubmit={addComment}>
               <div className="field">
                 <div className="control">
                   <input
@@ -145,11 +127,16 @@ const Gallery = () => {
               </div>
               <div className="field">
                 <div className="control">
-                  <button type="submit" className="button is-primary">Submit</button>
+                  <button type="submit" className="button is-primary">
+                    Submit
+                  </button>
                 </div>
               </div>
             </form>
           </div>
+          <section className="containerComment">
+            <Comments comments={comments} />
+          </section>
         </div>
       )}
     </div>

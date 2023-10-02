@@ -6,15 +6,14 @@ import Gallery from "./components/Gallery.jsx";
 import Registry from "./components/Registry.jsx";
 import RSVP from "./components/RSVP.jsx";
 import Schedule from "./components/Schedule.jsx";
-import CartProvider from "./functions/CartContext.js";
+// import CartProvider from "./functions/CartContext.js";
 import Success from "./functions/Success.jsx";
 import Cancel from "./functions/Cancel.jsx";
-import Auth from "./Auth.js";
 
 function App() {
   
   return (
-    <CartProvider>
+    // <CartProvider>
       <div className="App">
         <BrowserRouter>
           <Routes>
@@ -31,12 +30,11 @@ function App() {
             <Route path="/schedule" element={<Schedule/>}/>
             <Route path="/cancel" element={<Cancel/>}/>
             <Route path="/success" element={<Success/>}/>
-            <Route path="/auth" element={<Auth/>}/>
           </Routes>
         </BrowserRouter>
 
       </div>
-    </CartProvider>
+    // </CartProvider>
   );
 }
 

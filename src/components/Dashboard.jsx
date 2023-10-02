@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import {Row, Col} from 'react-bootstrap';
 import { productsArray } from '../functions/stripeFunctions';
-import { ProductCard } from '../functions/ProductCard.js';
+// import { ProductCard } from '../functions/ProductCard.js';
 import './dashboard.css';
 import 'react-slideshow-image/dist/styles.css';
 import { Fade } from 'react-slideshow-image';
@@ -21,7 +21,7 @@ import groomsMen from '../assets/groomsMen.jpg'
 import groomsMan from '../assets/groomsMan.jpg'
 import groomsWoman from '../assets/groomsWoman.jpg'
 import { Chrono } from 'react-chrono';
-import { NavbarComponent } from './NavbarComponent';
+// import { NavbarComponent } from './NavbarComponent';
 
 
 const items = [
@@ -350,7 +350,7 @@ const Dashboard = () => {
             <Row xs={2} md={3} className="g-4">
               {productsArray.map((product, idx) => (
                 <Col align="center" key={idx} >
-                  <ProductCard product={product}/>
+                  {/* <ProductCard product={product}/> */}
                 </Col>
               ))}
               
@@ -359,7 +359,7 @@ const Dashboard = () => {
           </div>
           
       {/* navbar */}
-      <NavbarComponent></NavbarComponent>
+      {/* <NavbarComponent></NavbarComponent> */}
       {/* end of navbar */}
 
         </div>
