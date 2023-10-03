@@ -1,5 +1,4 @@
 # See https://help.github.com/articles/ignoring-files/ for more about ignoring files.
-REACT_APP_ABLY_API_KEY=rQ1shg.o-v_Rw:QsAzUjT-GI3t4a-IDsQry94Z24Yp9mOUAzrSxHdF9Qg
 # dependencies
 /.pnp
 .pnp.js
