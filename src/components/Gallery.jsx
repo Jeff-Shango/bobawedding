@@ -6,11 +6,9 @@ import "../App.css";
 import { Link, useLocation } from 'react-router-dom';
 import axios from "axios";
 import Ably from '../Ably.js';
-// import { Realtime } from 'ably';
 import Comments from './Comments';
 
 const Gallery = () => {
-  // var Ably = require('ably')
   const location = useLocation();
   const imgContainer = [img1, img2, img3];
   const [enlargedImage, setEnlargedImage] = useState(null);
@@ -35,13 +33,21 @@ const Gallery = () => {
   }
 }, [location]);
 
-  const handleChange = (e) => {
-    if (e.target.name === 'comments') {
-      setComments(e.target.value);
-    } else if (e.target.name === 'commentator') {
-      setCommentator(e.target.value);
-    }
+  // const handleChange = (e) => {
+  //   if (e.target.name === 'comments') {
+  //     setCommentator(e.target.value);
+  //   } else if (e.target.name === 'commentator') {
+  //     setComments(e.target.value);
+  //   }
+  // };
+
+  const handleCommentChange = (e) => {
+    setComments(e.target.value);
   };
+
+  const handleCommentatorChange = (e) => {
+    setCommentator(e.target.value);
+  }
 
   const handleImageClick = (image, index) => {
     console.log("Image clicked:", image);
@@ -79,7 +85,7 @@ const Gallery = () => {
         }
       });
       setComments((prevComments) => [ commentObject, ...prevComments]);
-      // setComments('');
+      // setComment('');
       setCommentator('');
       // e.target.elements.commentator.value = "";
       // e.target.elements.comments.value = "";
@@ -116,9 +122,9 @@ const Gallery = () => {
             {/* <form onSubmit={addComment}> */}
             <form onSubmit={(e) => {
               e.preventDefault();
-              addComment(e.target.elements.comments.value, e.target.elements.commentator.value);
-              e.target.elements.commentator.value = "";
-              e.target.elements.comments.value = "";
+              addComment(commentator, comments);
+              // e.target.elements.commentator.value = "";
+              // e.target.elements.comments.value = "";
             }}>
               <div className="field">
                 <div className="control">
@@ -128,7 +134,7 @@ const Gallery = () => {
                     name="commentator"
                     placeholder="Your name"
                     value={commentator}
-                    onChange={handleChange}
+                    onChange={handleCommentatorChange}
                   />
                 </div>
               </div>
@@ -139,7 +145,7 @@ const Gallery = () => {
                     name="comments"
                     placeholder="Add a comment"
                     value={comments}
-                    onChange={handleChange}
+                    onChange={handleCommentChange}
                   ></textarea>
                 </div>
               </div>

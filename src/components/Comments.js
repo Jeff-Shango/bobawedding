@@ -10,7 +10,7 @@ const Comments = ({ comments }) => {
   return (
     <section className="section">
       {comments.map((comment, index) => (
-        <Comment key={comment.timestamp} comment={comment} />
+        <Comment key={comment.id} comment={comment} />
       ))}
     </section>
   );
