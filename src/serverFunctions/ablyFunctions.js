@@ -2,8 +2,12 @@ const Ably = require('ably');
 const express = require('express');
 const app = express();
 
+const dotenv = require('dotenv');
+dotenv.config(); // Load environment variables from .env
+
+
 const ably = new Ably.Realtime({
-  key: 'YOUR_API_KEY',
+  key: process.env.REACT_APP_ABLY_API_KEY, // Use the environment variable
 });
 
 // Route to generate Ably tokens
@@ -22,6 +26,7 @@ app.post('/generate-token', (req, res) => {
 });
 
 // Start your server
-app.listen(3030, () => {
-  console.log('Server is running on port 3000');
+const port = process.env.PORT || 3030; // Use the PORT environment variable if available
+app.listen(port, () => {
+  console.log(`Server is running on port ${port}`);
 });
