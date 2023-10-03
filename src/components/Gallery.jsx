@@ -3,18 +3,20 @@ import img1 from '../assets/imgA.jpg';
 import img2 from '../assets/imgB.jpg';
 import img3 from '../assets/imgC.jpg';
 import "../App.css";
-import { Link } from 'react-router-dom';
+import { Link, useLocation } from 'react-router-dom';
 import axios from "axios";
 import Ably from '../Ably';
 import Comments from './Comments';
 
 const Gallery = () => {
+  const location = useLocation();
   const imgContainer = [img1, img2, img3];
   const [enlargedImage, setEnlargedImage] = useState(null);
   const [comments, setComments] = useState([]);
   const [commentator, setCommentator] = useState('');
 
   useEffect(() => {
+    if (location.pathname === '/gallery') {
     const fetchHistoricalComments = async () => {
       const channel = Ably.channels.get("comments");
       channel.attach();
@@ -28,7 +30,8 @@ const Gallery = () => {
       });
     };
     fetchHistoricalComments();
-  }, []);
+  }
+}, [location]);
 
   const handleChange = (e) => {
     if (e.target.name === 'comments') {
