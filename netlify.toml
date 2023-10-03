@@ -1,0 +1,7 @@
+[build]
+  publish = "dist"
+  command = "npm run build"
+
+
+[template.environment]
+  ABLY_API_KEY = "rQ1shg.o-v_Rw:QsAzUjT-GI3t4a-IDsQry94Z24Yp9mOUAzrSxHdF9Qg"
