@@ -6,9 +6,11 @@ import "../App.css";
 import { Link, useLocation } from 'react-router-dom';
 import axios from "axios";
 import Ably from '../Ably.js';
+// import { Realtime } from 'ably';
 import Comments from './Comments';
 
 const Gallery = () => {
+  // var Ably = require('ably')
   const location = useLocation();
   const imgContainer = [img1, img2, img3];
   const [enlargedImage, setEnlargedImage] = useState(null);
