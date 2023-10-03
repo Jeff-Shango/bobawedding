@@ -20,3 +20,7 @@ build/
 dist/
 .secret-*
 **.sample
+
+.VSCodeCounter/2023-10-02_14-21-06
+# Local Netlify folder
+.netlify
