@@ -8,6 +8,7 @@ import axios from "axios";
 import Ably from '../Ably.js';
 import Comments from './Comments';
 
+// var Ably = require('ably');
 const Gallery = () => {
   const location = useLocation();
   const imgContainer = [img1, img2, img3];
