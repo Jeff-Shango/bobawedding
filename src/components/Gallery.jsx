@@ -6,7 +6,7 @@ import "../App.css";
 import { Link, useLocation } from 'react-router-dom';
 import axios from "axios";
 import Ably from '../Ably.js';
-import Comments from './Comments';
+import Comments from './Comments.js';
 
 // var Ably = require('ably');
 const Gallery = () => {
