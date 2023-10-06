@@ -7,7 +7,8 @@ import { Link, useLocation } from 'react-router-dom';
 import axios from "axios";
 import Ably from '../Ably.js';
 import Comments from './Comments.js';
-import { generateAblyToken } from '../serverFunctions/ablyFunctions.js';
+// import { generateAblyToken } from '../serverFunctions/ablyFunctions.js';
+import { generateAblyToken } from '../serverFunctions/ablyFunction.jsx';
 
 // var Ably = require('ably');
 const Gallery = () => {
@@ -19,8 +20,8 @@ const Gallery = () => {
 
   const generateToken = async () => {
     try {
-      const clientId = 'unique-client-id';
-      const response = await axios.post('/generate-ably-token', { clientId});
+      // const clientId = 'unique-client-id';
+      const response = await generateAblyToken({ clientId: 'unique-client-id' });
       // const response = await generateAblyToken({ clientId: 'unique-client-id' });
       const { tokenRequest } = response.data;
       // Use the generated tokenRequest as needed in your application
