@@ -7,6 +7,7 @@ import { Link, useLocation } from 'react-router-dom';
 import axios from "axios";
 import Ably from '../Ably.js';
 import Comments from './Comments.js';
+import { generateAblyToken } from '../serverFunctions/ablyFunctions';
 
 // var Ably = require('ably');
 const Gallery = () => {
@@ -15,6 +16,17 @@ const Gallery = () => {
   const [enlargedImage, setEnlargedImage] = useState(null);
   const [comments, setComments] = useState([]);
   const [commentator, setCommentator] = useState('');
+
+  const generateToken = async () => {
+    try {
+      const response = await generateAblyToken({ clientId: 'unique-client-id' });
+      const { tokenRequest } = response.data;
+      // Use the generated tokenRequest as needed in your application
+      console.log('Generated Token Request:', tokenRequest);
+    } catch (error) {
+      console.error('Error generating Ably token:', error);
+    }
+  };
 
   useEffect(() => {
     if (location.pathname === '/gallery') {
@@ -152,7 +164,7 @@ const Gallery = () => {
               </div>
               <div className="field">
                 <div className="control">
-                  <button type="submit" className="button is-primary">
+                  <button onClick={generateToken} type="submit" className="button is-primary">
                     Submit
                   </button>
                 </div>
