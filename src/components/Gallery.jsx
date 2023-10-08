@@ -1,45 +1,44 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState } from 'react';
 import img1 from '../assets/imgA.jpg';
 import img2 from '../assets/imgB.jpg';
 import img3 from '../assets/imgC.jpg';
 import "../App.css";
-import { Link, useLocation } from 'react-router-dom';
-import axios from "axios";
-import Ably from '../Ably.js';
-import Comments from './Comments';
+import { Link } from 'react-router-dom';
+import WedComments from '../weddingCommentServer/Comments';
+import "../galleryStyles.css"
 
 const Gallery = () => {
-  const location = useLocation();
+  // const location = useLocation();
   const imgContainer = [img1, img2, img3];
   const [enlargedImage, setEnlargedImage] = useState(null);
-  const [comments, setComments] = useState([]);
-  const [commentator, setCommentator] = useState('');
+  // const [comments, setComments] = useState([]);
+  // const [commentator, setCommentator] = useState('');
 
-  useEffect(() => {
-    if (location.pathname === '/gallery') {
-    const fetchHistoricalComments = async () => {
-      const channel = Ably.channels.get("comments");
-      channel.attach();
-      channel.once("attached", () => {
-        channel.history((err, page) => {
-          if (!err) {
-            const historicalComments = Array.from(page.items, (item) => item.data);
-            setComments(historicalComments);
-          }
-        });
-      });
-    };
-    fetchHistoricalComments();
-  }
-}, [location]);
+//   useEffect(() => {
+//     if (location.pathname === '/gallery') {
+//     const fetchHistoricalComments = async () => {
+//       const channel = Ably.channels.get("comments");
+//       channel.attach();
+//       channel.once("attached", () => {
+//         channel.history((err, page) => {
+//           if (!err) {
+//             const historicalComments = Array.from(page.items, (item) => item.data);
+//             setComments(historicalComments);
+//           }
+//         });
+//       });
+//     };
+//     fetchHistoricalComments();
+//   }
+// }, [location]);
 
-  const handleChange = (e) => {
-    if (e.target.name === 'comments') {
-      setComments(e.target.value);
-    } else if (e.target.name === 'commentator') {
-      setCommentator(e.target.value);
-    }
-  };
+  // const handleChange = (e) => {
+  //   if (e.target.name === 'comments') {
+  //     setComments(e.target.value);
+  //   } else if (e.target.name === 'commentator') {
+  //     setCommentator(e.target.value);
+  //   }
+  // };
 
   const handleImageClick = (image, index) => {
     console.log("Image clicked:", image);
@@ -47,8 +46,8 @@ const Gallery = () => {
       setEnlargedImage(null);
     } else {
       setEnlargedImage(image);
-      setComments('');
-      setCommentator('');
+      // setComments('');
+      // setCommentator('');
     }
   };
 
@@ -56,33 +55,33 @@ const Gallery = () => {
     setEnlargedImage(null);
   };
 
-  const addComment = async (commentText, commentatorName) => {
-    // e.preventDefault();
-    const comment = commentText.trim();
-    const name = commentatorName.trim();
-    // const comment = e.target.elements.comments.value.trim();
-    // const name = e.target.elements.commentator.value.trim();
-    const timestamp = Date.now();
+  // const addComment = async (commentText, commentatorName) => {
+  //   // e.preventDefault();
+  //   const comment = commentText.trim();
+  //   const name = commentatorName.trim();
+  //   // const comment = e.target.elements.comments.value.trim();
+  //   // const name = e.target.elements.commentator.value.trim();
+  //   const timestamp = Date.now();
 
-    const avatar = await (
-      await axios.get("https://dog.ceo/api/breeds/image/random")
-    ).data.message;
+  //   const avatar = await (
+  //     await axios.get("https://dog.ceo/api/breeds/image/random")
+  //   ).data.message;
 
-    if (name && comment) {
-      const commentObject = { name, comment, timestamp, avatar };
-      const channel = Ably.channels.get("comments");
-      channel.publish("add_comment", commentObject, (err) => {
-        if (err) {
-          console.log("Unable to publish message err = " + err.message);
-        }
-      });
-      setComments((prevComments) => [ commentObject, ...prevComments]);
-      // setComments('');
-      setCommentator('');
-      // e.target.elements.commentator.value = "";
-      // e.target.elements.comments.value = "";
-    }
-  };
+  //   if (name && comment) {
+  //     const commentObject = { name, comment, timestamp, avatar };
+  //     const channel = Ably.channels.get("comments");
+  //     channel.publish("add_comment", commentObject, (err) => {
+  //       if (err) {
+  //         console.log("Unable to publish message err = " + err.message);
+  //       }
+  //     });
+  //     setComments((prevComments) => [ commentObject, ...prevComments]);
+  //     // setComments('');
+  //     setCommentator('');
+  //     // e.target.elements.commentator.value = "";
+  //     // e.target.elements.comments.value = "";
+  //   }
+  // };
 
   return (
     <div>
@@ -112,11 +111,11 @@ const Gallery = () => {
           <div className='column is-half is-offset-one-quarter'>
             <h1 className="title">Please leave your feedback below</h1>
             {/* <form onSubmit={addComment}> */}
-            <form onSubmit={(e) => {
+            {/* <form onSubmit={(e) => {
               e.preventDefault();
-              addComment(e.target.elements.comments.value, e.target.elements.commentator.value);
-              e.target.elements.commentator.value = "";
-              e.target.elements.comments.value = "";
+              // addComment(e.target.elements.comments.value, e.target.elements.commentator.value);
+              // e.target.elements.commentator.value = "";
+              // e.target.elements.comments.value = "";
             }}>
               <div className="field">
                 <div className="control">
@@ -148,10 +147,10 @@ const Gallery = () => {
                   </button>
                 </div>
               </div>
-            </form>
+            </form> */}
           </div>
           <section className="containerComment">
-            <Comments comments={comments} />
+            <WedComments currentUserId="1" /> 
           </section>
         </div>
       )}
