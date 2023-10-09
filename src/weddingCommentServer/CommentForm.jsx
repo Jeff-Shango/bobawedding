@@ -9,18 +9,11 @@ const CommentForm = ({
   handleCancel }) => {
   const [text, setText] = useState(initialText);
   const isTextareaDisabled = text.length === 0;
-  const onSubmit = async (event) => {
-    event.preventDefault();
-    try {
-      const response = await axios.post('/comments', { text});
-      event.preventDefault()
-      handleSubmit(response.data);
-      handleSubmit(text)
-      setText('');
-    } catch (error) {
-      console.error('Error creating comment:', error);
-    }
-  };
+  const onSubmit = event => {
+    event.preventDefault()
+    handleSubmit(text);  
+    setText("");
+}
 
 
 
