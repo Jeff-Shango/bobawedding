@@ -1,4 +1,5 @@
 import React, { useState } from 'react'
+import axios from 'axios';
 
 const CommentForm = ({ 
   handleSubmit, 
@@ -8,11 +9,19 @@ const CommentForm = ({
   handleCancel }) => {
   const [text, setText] = useState(initialText);
   const isTextareaDisabled = text.length === 0;
-  const onSubmit = event => {
-    event.preventDefault()
-    handleSubmit(text);  
-    setText("");
-}
+  const onSubmit = async (event) => {
+    event.preventDefault();
+    try {
+      const response = await axios.post('/comments', { text});
+      handleSubmit(response.data);
+      setText('');
+    } catch (error) {
+      console.error('Error creating comment:', error);
+    }
+  };
+
+
+
   return (
     <form onSubmit={onSubmit}>
       <textarea className="comment-form-textarea" value={text} onChange={(e) => setText(e.target.value)}/>

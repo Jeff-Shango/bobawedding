@@ -46,10 +46,21 @@ export const getComments = async () => {
     };
   };
   
-  export const updateComment = async (text) => {
-    return { text };
-  };
+  export const updateComment = async (text, commentId) => {
+  try {
+    await axios.put(`/comments/${commentId}`, { text }); // Assuming your API endpoint is '/comments/:id'
+    // Update the comment in the frontend state if necessary
+  } catch (error) {
+    console.error('Error updating comment:', error);
+  }
+};
+
   
-  export const deleteComment = async () => {
-    return {};
-  };
+export const deleteComment = async (commentId) => {
+  try {
+    await axios.delete(`/comments/${commentId}`); // Assuming your API endpoint is '/comments/:id'
+    // Remove the comment from the frontend state if necessary
+  } catch (error) {
+    console.error('Error deleting comment:', error);
+  }
+};
