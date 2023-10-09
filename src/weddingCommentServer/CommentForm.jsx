@@ -13,7 +13,9 @@ const CommentForm = ({
     event.preventDefault();
     try {
       const response = await axios.post('/comments', { text});
+      event.preventDefault()
       handleSubmit(response.data);
+      handleSubmit(text)
       setText('');
     } catch (error) {
       console.error('Error creating comment:', error);
