@@ -1,11 +1,13 @@
 require('dotenv').config()
-const express = require('express')
+const express = require('express');
+const cors = require('cors')
 const commentsController = require('./controllers/comments')
 const bodyParser = require('body-parser');
 const mongoose = require('mongoose');
 const auth0Middleware = require('../../auth0');
 
-const app = express()
+const app = express();
+app.use(cors());
 
 app.use(bodyParser.json())
 app.use(bodyParser.urlencoded({ extended: true}))
