@@ -1,5 +1,4 @@
 const express = require("express");
-const mysql = require("mysql2");
 const cors = require("cors");
 const stripe = require("stripe")(process.env.SECRET_STRIPE);
 
@@ -11,21 +10,6 @@ const expressApp = express();
 const PORT = 3306;
 expressApp.use(cors());
 // expressApp.use(cors(corsOptions));
-
-const db = mysql.createConnection({
-    host: "localhost",
-    user: "JeffBoz",
-    port: PORT,
-    password: "Woodward20!",
-    database: "bozierWeddingDB"
-});
-
-// const db = mysql.createPool({
-//     host: "localhost",
-//     user: "JeffBoz",
-//     port: PORT,
-//     database: "boba_wedding"
-// })
 
 expressApp.use(express.json());
 

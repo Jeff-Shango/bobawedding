@@ -1,15 +1,16 @@
 require('dotenv').config()
-// const {connect} = require('./db')
 const express = require('express')
 const commentsController = require('./controllers/comments')
 const bodyParser = require('body-parser');
 const mongoose = require('mongoose');
+const auth0Middleware = require('./auth0');
 
 const app = express()
 
 app.use(bodyParser.json())
 app.use(bodyParser.urlencoded({ extended: true}))
 
+app.use(auth0Middleware)
 
 app.get("/", (_, res) => {
     res.send("What's good, API");

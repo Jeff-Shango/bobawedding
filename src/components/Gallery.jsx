@@ -51,13 +51,13 @@ const Gallery = () => {
           </div>
           <div className='column is-half is-offset-one-quarter'>
             <h1 className="title">Please leave your feedback below</h1>
-            {/* <form onSubmit={addComment}> */}
+            <form onSubmit={addComment}>
             {/* <form onSubmit={(e) => {
               e.preventDefault();
               // addComment(e.target.elements.comments.value, e.target.elements.commentator.value);
               // e.target.elements.commentator.value = "";
               // e.target.elements.comments.value = "";
-            }}>
+            }}> */}
               <div className="field">
                 <div className="control">
                   <input
@@ -88,7 +88,7 @@ const Gallery = () => {
                   </button>
                 </div>
               </div>
-            </form> */}
+            </form>
           </div>
           <section className="containerComment">
             <WedComments currentUserId="1" /> 

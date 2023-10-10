@@ -24,9 +24,13 @@ const WedComments = ({ currentUserId }) => {
     };
     const addComment = (text, parentId) => {
         console.log("addComment", text, parentId);
-        createCommentApi(text, parentId).then(comment => {
+        createCommentApi(text, parentId)
+        .then((comment) => {
             setBackendComments([comment, ...backendComments])
             setActiveComment(null)
+        })
+        .catch((error) => {
+            console.error('Error creating the comment, mane:')
         })
     };
     
