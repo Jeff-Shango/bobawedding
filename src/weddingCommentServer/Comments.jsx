@@ -1,6 +1,6 @@
-import React, { useEffect, useState } from 'react'
+import React, {  useState } from 'react'
 import { 
-    getComments as getCommentsApi, 
+    // getComments as getCommentsApi, 
     createComment as createCommentApi,
     deleteComment as deleteCommentApi,
     updateComment as updateCommentApi } from './api'
@@ -56,11 +56,11 @@ if (window.confirm('Sure about deleting this?')) {
         });
     };
 
-    useEffect(() => {
-    getCommentsApi().then((data) => {
-        setBackendComments(data);
-    });
-    }, []);
+    // useEffect(() => {
+    // getCommentsApi().then((data) => {
+    //     setBackendComments(data);
+    // });
+    // }, []);
   return (
     <div className='comments'>
         <h3 className="comments-title">Comments</h3>

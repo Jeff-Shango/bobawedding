@@ -91,7 +91,7 @@ const Gallery = () => {
             </form> */}
           </div>
           <section className="containerComment">
-            <WedComments currentUserId="1" /> 
+            <WedComments /> 
           </section>
         </div>
       )}
