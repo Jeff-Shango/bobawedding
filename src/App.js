@@ -9,7 +9,7 @@ import Schedule from "./components/Schedule.jsx";
 // import CartProvider from "./functions/CartContext.js";
 import Success from "./functions/Success.jsx";
 import Cancel from "./functions/Cancel.jsx";
-import authConfig from "./auth0.js";
+import auth0 from "./auth0.js";
 
 const { auth } = require('express-openid-connect')
 
@@ -34,7 +34,7 @@ function App() {
             <Route path="/cancel" element={<Cancel/>}/>
             <Route path="/success" element={<Success/>}/>
 
-            <Route path="/login" element={auth(authConfig)}/>
+            <Route path="/login" element={auth(auth0)}/>
           </Routes>
         </BrowserRouter>
 
