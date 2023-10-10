@@ -3,7 +3,7 @@ const express = require('express')
 const commentsController = require('./controllers/comments')
 const bodyParser = require('body-parser');
 const mongoose = require('mongoose');
-const auth0Middleware = require('./auth0');
+const auth0Middleware = require('../../auth0');
 
 const app = express()
 
