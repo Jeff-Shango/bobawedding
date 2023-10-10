@@ -22,6 +22,7 @@
     "express": "^4.18.2",
     "express-openid-connect": "^2.17.0",
     "firebase": "^10.4.0",
+    "http2": "^3.3.7",
     "mysql2": "^3.6.1",
     "nodemon": "^3.0.1",
     "nth-check": "^2.1.1",
