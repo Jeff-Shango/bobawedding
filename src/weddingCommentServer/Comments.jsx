@@ -86,7 +86,7 @@ useEffect(() => {
   const fetchComments = async () => {
     try {
       console.log("Sending GET request to fetch comments with imageId:", imageId);
-      const response = await axios.get(`https://bozierwedding.netlify.app/comments/${imageId}`, {
+      const response = await axios.get(`http://localhost:3012/comments/${imageId}`, {
         // Request body goes here, if you have any data to send
       });
 
@@ -135,7 +135,7 @@ useEffect(() => {
 
     const addComment = async (text, commentator) => {
         try {
-          const response = await fetch('https://bozierwedding.netlify.app/', {
+          const response = await fetch('http://localhost:3012/', {
             method: 'POST',
             headers: {
               'Content-Type': 'application/json',
@@ -157,7 +157,7 @@ useEffect(() => {
     
       const deleteComment = async (commentId) => {
         try {
-          const response = await fetch(`https://bozierwedding.netlify.app/${commentId}`, {
+          const response = await fetch(`http://localhost:3012/${commentId}`, {
             method: 'DELETE',
           });
           if (response.ok) {
@@ -175,7 +175,7 @@ useEffect(() => {
     
       const updateComment = async (text, commentId) => {
         try {
-          const response = await fetch(`https://bozierwedding.netlify.app/${commentId}`, {
+          const response = await fetch(`http://localhost:3012/${commentId}`, {
             method: 'PUT',
             headers: {
               'Content-Type': 'application/json',
