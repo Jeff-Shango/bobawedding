@@ -8,21 +8,29 @@ import WedComments from '../weddingCommentServer/Comments';
 import "./galleryStyles.css"
 
 const Gallery = () => {
-  const imgContainer = [img1, img2, img3];
+  // const imgContainer = [img1, img2, img3]
+  const imgContainer = [
+    { imageId: 'image1', image: img1, comments: [] },
+    { imageId: 'image2', image: img2, comments: [] },
+    { imageId: 'image3', image: img3, comments: [] }
+  ];
   const [enlargedImage, setEnlargedImage] = useState(null);
+  const [selectedImageId, setSelectedImageId] = useState(null);
 
   const handleImageClick = (image, index) => {
-    console.log("Image clicked:", image);
-    if (enlargedImage === image) {
+    console.log("Image clicked:", image.imageId);
+    setSelectedImageId(image.imageId)
+    if (enlargedImage === image.imageId) {
       setEnlargedImage(null);
     } else {
-      setEnlargedImage(image);
+      setEnlargedImage(image.imageId);
     }
   };
 
   const handleEnlargedImageClick = () => {
     setEnlargedImage(null);
   };
+  
 
   return (
     <div>
@@ -30,21 +38,23 @@ const Gallery = () => {
         <button className="galleryHomeBtn btn btn-primary">Go To Home</button>
       </Link>
       {imgContainer.map((image, index) => (
+        <div key={index}>
         <img
           id='galleryImg'
           key={index}
-          src={image}
-          alt={`${index + 1}`}
+          src={image.image}
+          alt={image.imageId}
           onClick={() => handleImageClick(image, index)}
-          className={enlargedImage === image ? 'enlarged' : ''}
+          className={enlargedImage === image.imageId ? 'enlarged' : ''}
         />
+        </div>
       ))}
       {enlargedImage && (
         <div className="enlarged-container">
           <div className="enlarged-image">
             <img
               id='enlargedImg'
-              src={enlargedImage}
+              src={imgContainer.find(img => img.imageId === enlargedImage).image}
               alt="Enlarged"
               onClick={handleEnlargedImageClick}
             />
@@ -91,7 +101,7 @@ const Gallery = () => {
             </form> */}
           </div>
           <section className="containerComment">
-            <WedComments /> 
+            <WedComments imageId={selectedImageId} /> 
           </section>
         </div>
       )}

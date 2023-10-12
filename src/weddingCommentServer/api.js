@@ -64,3 +64,4 @@ export const deleteComment = async (commentId) => {
     console.error('Error deleting comment:', error);
   }
 };
+

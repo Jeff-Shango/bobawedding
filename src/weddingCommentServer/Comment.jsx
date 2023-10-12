@@ -1,6 +1,6 @@
 import React from 'react'
 import jamaica from '../assets/jamaica.jpg'
-import "./api.js"
+// import "./api.js"
 import CommentForm from './CommentForm';
 
 const Comment = ({ 
@@ -13,11 +13,11 @@ const Comment = ({
     addComment, 
     setActiveComment, 
     parentId = null, }) => {
-  const fiveMinutes = 300000;
-  const timePassed = new Date() - new Date(comment.createdAt) > fiveMinutes;
-  const canReply = Boolean(currentUserId)
-  const canEdit = currentUserId === comment.userId && !timePassed;
-  const canDelete = currentUserId === comment.userId && !timePassed;
+  // const fiveMinutes = 300000;
+  // const timePassed = new Date() - new Date(comment.createdAt) > fiveMinutes;
+  // const canReply = Boolean(currentUserId)
+  // const canEdit = currentUserId === comment.userId && !timePassed;
+  // const canDelete = currentUserId === comment.userId && !timePassed;
   const createdAt = new Date(comment.createdAt).toLocaleDateString();
   const isReplying = 
     activeComment && 
@@ -35,9 +35,9 @@ const Comment = ({
         </div>
         <div className="comment-right-part">
             <div className="comment-content">
-                <div className="comment-author">{comment.username}</div>
+                <div className="comment-author">{comment.comment}</div>
                 <div>{createdAt}</div>
-                {!isEditing && <div className='comment-text'>{comment.body}</div>}
+                {!isEditing && <div className='comment-text'>{comment.commentator}</div>}
                 {isEditing && (
                   <CommentForm submitLabel="Update" hasCancelButton initialText={comment.body}
                   handleSubmit={(text) => updateComment(text, comment.id)} handleCancel={() => setActiveComment(null)}
@@ -46,9 +46,9 @@ const Comment = ({
             </div>
             <div className="comment-text">{comment.body}</div>
             <div className="comment-actions">
-              {canReply && <div className="comment-action" onClick={() => setActiveComment({ id: comment.id, type: "replying"})}>Reply</div>}
+              {/* {canReply && <div className="comment-action" onClick={() => setActiveComment({ id: comment.id, type: "replying"})}>Reply</div>}
               {canEdit && <div className="comment-action" onClick={() => setActiveComment({ id: comment.id, type: "editing"})}>Edit</div>}
-              {canDelete && <div className="comment-action" onClick={() => deleteComment(comment.id)}>Delete</div>}
+              {canDelete && <div className="comment-action" onClick={() => deleteComment(comment.id)}>Delete</div>} */}
             </div>
             {isReplying && (
               <CommentForm 
