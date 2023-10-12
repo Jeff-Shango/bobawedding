@@ -5,7 +5,7 @@ const Success = () => {
     <div>
         <h1>Thank you, We Appreciate and Love you!</h1>
 
-        <button className='btn btn-primary' onClick={() => window.open('http://localhost:3000/', "_parent")}>
+        <button className='btn btn-primary' onClick={() => window.open('http://bozierwedding.netlify.app/', "_parent")}>
             Go Back Home!
         </button>
         

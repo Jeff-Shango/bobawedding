@@ -9,7 +9,7 @@ const cors = require('cors');
 // app.use(cors());
 
 app.use(cors({
-    origin: 'http://localhost:3000',
+    origin: 'https://bozierwedding.netlify.app',
 }))
 
 app.use(cors());
