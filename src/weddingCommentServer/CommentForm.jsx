@@ -19,7 +19,7 @@ const CommentForm = ({
   
     try {
       // Make sure to replace 'YOUR_API_ENDPOINT' with the actual API endpoint where your MongoDB Atlas is hosted.
-      const response = await axios.post(`https://bozierwedding.netlify.app/comments/${imageId}`, {
+      const response = await axios.post(`http://localhost:3012/comments/${imageId}`, {
         comment,
         commentator,
       });

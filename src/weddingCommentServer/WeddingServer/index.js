@@ -8,9 +8,6 @@ app.use(express.json());
 const cors = require('cors');
 // app.use(cors());
 
-app.use(cors({
-    origin: 'https://bozierwedding.netlify.app',
-}))
 
 app.use(cors());
 
