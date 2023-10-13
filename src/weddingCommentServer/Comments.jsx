@@ -86,7 +86,7 @@ useEffect(() => {
   const fetchComments = async () => {
     try {
       console.log("Sending GET request to fetch comments with imageId:", imageId);
-      const response = await axios.get(`https://bozierwedding.netlify.app/comments/${imageId}`, {
+      const response = await axios.get(`http://localhost:3012/comments/${imageId}`, {
         // Request body goes here, if you have any data to send
       });
 
