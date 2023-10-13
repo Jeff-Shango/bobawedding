@@ -5,7 +5,7 @@ const connectionParams = {
     useUnifiedTopology: true,
 }
 
-const uri = `mongodb+srv://WeddingUser:${process.env.MONGO_PASS}@wedddingcluster.kzpprvp.mongodb.net/`
+const uri = `mongodb+srv://WeddingUser:${process.env.MONGO_PASS}@wedddingcluster.kzpprvp.mongodb.net/test`
 const connection = mongoose.connect(uri, connectionParams).then(() => console.log('Connected to the Cloud atlas ')).catch((err) => console.log(err))
 
 module.exports = connection
