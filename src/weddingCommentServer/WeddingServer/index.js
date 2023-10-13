@@ -19,7 +19,6 @@ app.post('/comments/:imageId', async (req, res) => {
     const { comment, commentator } = req.body;
     const { imageId } = req.params;
 
-app.use(auth0Middleware)
     try {
         let newComment;
         if (imageId === 'image1') {
