@@ -5,7 +5,10 @@ const CommentForm = ({
   handleSubmit, 
   submitLabel, 
   hasCancelButton = false, 
-  handleCancel }) => {
+  handleCancel,
+  imageId,
+  setBackendComments,
+  backendComments }) => {
   const [comment, setComment] = useState('');
   const [commentator, setCommentator] = useState('');
   // const isTextareaDisabled = text.length === 0;
@@ -15,18 +18,43 @@ const CommentForm = ({
     event.preventDefault();
   
     try {
-        const response = await axios.post('https://bozierwedding.netlify.app/comments/:imageId', { 
-          comment, 
-          commentator,
-         });
-
-         handleSubmit(response.data);
-         setComment('');
-         setCommentator('');
+      // Make sure to replace 'YOUR_API_ENDPOINT' with the actual API endpoint where your MongoDB Atlas is hosted.
+      const response = await axios.post(`https://bozierwedding.netlify.app/comments/${imageId}`, {
+        comment,
+        commentator,
+      });
+  
+      if (response.status === 200) {
+        // Assuming the response contains the newly created comment.
+        const newComment = response.data;
+        setBackendComments([...backendComments, newComment]);
+        setComment('');
+        setCommentator('');
+      } else {
+        console.error('Failed to create a comment');
+      }
     } catch (error) {
-        console.error('Error creating comment:', error);
+      console.error('Error creating comment:', error);
     }
-};
+  };
+  
+
+//   const onSubmit = async (event) => {
+//     event.preventDefault();
+  
+//     try {
+//         const response = await axios.post('https://bozierwedding.netlify.app/comments/:imageId', { 
+//           comment, 
+//           commentator,
+//          });
+
+//          handleSubmit(response.data);
+//          setComment('');
+//          setCommentator('');
+//     } catch (error) {
+//         console.error('Error creating comment:', error);
+//     }
+// };
 
 
   

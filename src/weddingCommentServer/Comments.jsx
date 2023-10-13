@@ -206,7 +206,13 @@ useEffect(() => {
     <div className='comments'>
         <h3 className="comments-title">Comments</h3>
         <div className="comment-form-title">Write Comment</div>
-        <CommentForm submitLabel="Write" handleSubmit={addComment} />
+        <CommentForm 
+          submitLabel="Write" 
+          handleSubmit={addComment} 
+          imageId={imageId}
+          setBackendComments={setBackendComments}
+          backendComments={backendComments}
+        />
         <div className="comments-container">
             {backendComments.map((comment) => (
                 <WedComment 
