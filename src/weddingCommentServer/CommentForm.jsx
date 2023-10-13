@@ -15,7 +15,7 @@ const CommentForm = ({
     event.preventDefault();
   
     try {
-        const response = await axios.post('https://bozierwedding.netlify.app/', { 
+        const response = await axios.post('https://bozierwedding.netlify.app/comments/:imageId', { 
           comment, 
           commentator,
          });
