@@ -8,6 +8,7 @@
         "mongodb": "^6.1.0",
         "mongoose": "^7.6.1"
     },
+    "main": "index.js",
     "scripts": {
         "start": "node index.js"
     },

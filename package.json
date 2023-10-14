@@ -45,7 +45,10 @@
     "npm": ">=7"
   },
   "scripts": {
-    "start": "concurrently \"cd src/weddingCommentServer/WeddingServer && npm start\" \"npm start\"",
+    "start": "react-scripts start",
+    "dev": "concurrently \"cd src/weddingCommentsServer/WeddingServer && npm start\" \"npm run start\"",
+    "client": "cd src && npm start",
+    "server": "cd src/weddingCommentServer/WeddingServer && npm start",
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject"
@@ -65,6 +68,7 @@
   "devDependencies": {
     "@babel/plugin-proposal-optional-chaining": "^7.21.0",
     "@babel/plugin-proposal-private-property-in-object": "^7.21.11",
+    "netlify-cli": "^16.7.0",
     "react-scripts": "^2.1.3"
   }
 }
