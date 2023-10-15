@@ -1,7 +1,6 @@
 import React from 'react'
 import { Chrono } from 'react-chrono'
 import "./schedule/scheduleStyling.css";
-import { Link } from "react-router-dom";
 
 const Schedule = () => {
   const items = [

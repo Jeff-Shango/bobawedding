@@ -1,7 +1,7 @@
 import React from "react"
 import './App.css';
 import Dashboard from './components/Dashboard.jsx';
-import { BrowserRouter, Routes, Route, useLocation } from "react-router-dom";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Gallery from "./components/Gallery.jsx";
 import Registry from "./components/Registry.jsx";
 import RSVP from "./components/RSVP.jsx";

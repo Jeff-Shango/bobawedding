@@ -3,7 +3,7 @@ import img1 from '../assets/imgA.jpg';
 import img2 from '../assets/imgB.jpg';
 import img3 from '../assets/imgC.jpg';
 import "../App.css";
-import { Link } from 'react-router-dom';
+// import { Link } from 'react-router-dom';
 import WedComments from '../weddingCommentServer/Comments';
 import "./galleryStyles.css"
 

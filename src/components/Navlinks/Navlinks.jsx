@@ -1,6 +1,5 @@
 import React, { useState } from 'react';
-import { useLocation } from 'react-router-dom';
-import { Navbar, Image, Container } from 'react-bootstrap';
+import { Navbar, Container } from 'react-bootstrap';
 // import navBrand from "../assets/logoSolo.png";
 import "./navlinks.css";
 import {AiOutlineHome} from 'react-icons/ai';
