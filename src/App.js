@@ -1,7 +1,7 @@
 import React from "react"
 import './App.css';
 import Dashboard from './components/Dashboard.jsx';
-import { BrowserRouter, Routes, Route } from "react-router-dom";
+import { BrowserRouter, Routes, Route, useLocation } from "react-router-dom";
 import Gallery from "./components/Gallery.jsx";
 import Registry from "./components/Registry.jsx";
 import RSVP from "./components/RSVP.jsx";
@@ -14,12 +14,15 @@ import WeddingParty from "./components/WeddingParty";
 
 
 function App() {
+
   
   return (
     // <CartProvider>
-      <div className="App">
-        <Navlinks/>
         <BrowserRouter>
+      <div className="App">
+          <Navlinks/>
+        {/* <Route 
+          element={<Navlinks isDashboard={isDashboard}/>}/> */}
           <Routes>
             <Route 
               path="/"
@@ -36,9 +39,9 @@ function App() {
             <Route path="/success" element={<Success/>}/>
             <Route path="/weddingParty" element={<WeddingParty/>}/>
           </Routes>
-        </BrowserRouter>
 
       </div>
+        </BrowserRouter>
     // </CartProvider>
   );
 }

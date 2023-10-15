@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { useLocation } from 'react-router-dom';
 import { Navbar, Image, Container } from 'react-bootstrap';
 // import navBrand from "../assets/logoSolo.png";
 import "./navlinks.css";
@@ -9,9 +10,15 @@ import {BsPersonFillAdd} from 'react-icons/bs'
 import {GiPapers} from 'react-icons/gi'
 
 const Navlinks = () => {
+
     const [activeNav, setActiveNav] = useState('#')
   return (
-    <Navbar collapseOnSelect expand="lg" variant='dark' className='navbarContainer'>
+    <Navbar 
+        collapseOnSelect  
+        variant='dark' 
+        className="navbarContainer"
+        >
+     {/* <Navbar collapseOnSelect expand="lg" variant='dark' className='navbarContainer'> */}
     <Container>
         <Navbar.Brand>
             <a href="/" id="logoLink">

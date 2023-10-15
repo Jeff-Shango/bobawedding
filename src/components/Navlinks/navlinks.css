@@ -82,7 +82,8 @@
 
     .navbarContainer {
         /* background-color: var(--color-bg); */
-        position: fixed;
+        /* position: fixed; */
+        
         top: 0;
     }
 }

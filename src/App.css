@@ -148,6 +148,8 @@ code {
 
   .text-shadow-pop-top {
     color: #E1B847;
+    font-size: 75px;
+    font-family: 'Herr Von Muellerhoff', cursive;
     /* -webkit-animation: text-shadow-pop-top 0.6s both;
             animation: text-shadow-pop-top 0.6s both; */
   }
