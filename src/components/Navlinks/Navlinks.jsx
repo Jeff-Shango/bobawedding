@@ -12,12 +12,12 @@ const Navlinks = () => {
 
     const [activeNav, setActiveNav] = useState('#')
   return (
-    <Navbar 
-        collapseOnSelect  
-        variant='dark' 
-        className="navbarContainer"
-        >
-     {/* <Navbar collapseOnSelect expand="lg" variant='dark' className='navbarContainer'> */}
+    // <Navbar 
+    //     collapseOnSelect  
+    //     variant='dark' 
+    //     className="navbarContainer"
+    //     >
+     <Navbar collapseOnSelect expand="lg" variant='dark' className='navbarContainer'>
     <Container>
         <Navbar.Brand>
             <a href="/" id="logoLink">
