@@ -1,25 +1,12 @@
 import React, { useEffect, useState } from 'react';
-import {Row, Col} from 'react-bootstrap';
-import { productsArray } from '../functions/stripeFunctions';
 // import { ProductCard } from '../functions/ProductCard.js';
 import './dashboard.css';
 import 'react-slideshow-image/dist/styles.css';
 import { Fade } from 'react-slideshow-image';
-import cashApp from '../assets/theBoziersCashApp.jpg';
 import img1 from '../assets/imgA.jpg';
 import img2 from '../assets/imgB.jpg';
 import img3 from '../assets/imgC.jpg';
 import { Link } from 'react-router-dom';
-import husband from '../assets/breakdownImgA.jpg';
-import wife from '../assets/ashAshin.jpg';
-import mc from '../assets/derekG.jpg'
-import bridesmaid from '../assets/bridesmaid.jpg';
-import brideMaid from '../assets/brideMaid.jpg';
-import partyPlanner from '../assets/partyPlanner.jpg';
-import bestMan from '../assets/bestMan.jpg';
-import groomsMen from '../assets/groomsMen.jpg'
-import groomsMan from '../assets/groomsMan.jpg'
-import groomsWoman from '../assets/groomsWoman.jpg'
 import { Chrono } from 'react-chrono';
 // import { NavbarComponent } from './NavbarComponent';
 
@@ -101,6 +88,7 @@ const CountdownTimer = ({ targetDate }) => {
   return (
     <div>
 
+    <h1 id="dashboardTitle" className='mainComp text-pop-up-top calendarSlot'>Friday, May 31, 2024</h1>
     <div className="clock">
       <div className="timeContainer">
       <label htmlFor="days">Days</label>
@@ -170,48 +158,52 @@ const Dashboard = () => {
     <div className='mainDashboard'>
       
 
-      <h1 className='text-shadow-pop-top'>SAVE THE DATE</h1>
+      <h1 className='text-shadow-pop-top'>Bozier Ever After</h1>
 
-      <CountdownTimer targetDate={targetDate} />
-      
-      <div className="timeMainContainer">
-        <label htmlFor="date" className='calendarLabel mainComp'>When:</label>
-        <h1 id="dashboardTitle" className='mainComp text-pop-up-top calendarSlot'>May 31, 2024</h1>
-
-        <label htmlFor="time" className='calendarLabel mainComp'>Time:</label>
-        <h1 id="dashboardTitle" className='mainComp text-pop-up-top calendarSlot'>6:30pm - 11:30pm</h1>
-      </div>
       {/* put below  */}
              {/* slideshow */}
        
              <div id="galleryContainer"/>
 
+
 <div id="dashboardSlideshow">
+<Link to="/gallery">
   <Fade>
     {fadeImages.map((fadeImage, index) => (
-      <div key={index}>
+      <div id='photoBox' key={index}>
         <img
-          style={{ height: '30rem', width: '30rem' }}
+          style={{ height: '20rem', width: '25rem' }}
           src={fadeImage.img}
           alt="slideshow"
         />
-        <h2 className='slideshowCaption'>{fadeImage.caption}</h2>
+        {/* <h2 className='slideshowCaption'>{fadeImage.caption}</h2> */}
       </div>
     ))}
   </Fade>
-  <Link to="/gallery">
-<button className='btn btn-primary'>Go to Gallery</button>
 </Link>
-</div>
+{/* <button className='btn btn-primary'>Go to Gallery</button> */}
+<div className="timeDivContainer">
+      <CountdownTimer className="countdown" targetDate={targetDate} />
+      
+      <div className="timeMainContainer">
+        {/* <label htmlFor="date" className='calendarLabel mainComp'>When:</label> */}
+        
 
+        {/* <label htmlFor="time" className='calendarLabel mainComp'>Time:</label> */}
+        {/* <h1 id="dashboardTitle" className='mainComp text-pop-up-top calendarSlot'>6:30pm - 11:30pm</h1> */}
+      </div>
+    </div>
+
+</div>
+    
 
       {/* put above */}
-      <Link to="/rsvp">
+      {/* <Link to="/rsvp">
         <button className='btn btn-primary'>RSVP</button>
-       </Link>
+       </Link> */}
 
       {/* events coming up/highlighted */}
-      <div className="dashEventContainer">
+      {/* <div className="dashEventContainer">
         <h3 className="mainComp" id='dashboardTitle'>Events Coming Up</h3>
         
         <div className="dashEvents">
@@ -229,7 +221,7 @@ const Dashboard = () => {
           </button>
         </Link>
 
-      </div>
+      </div> */}
 
       {/* end of events  */}
 
@@ -239,136 +231,7 @@ const Dashboard = () => {
       </div>
         {/* end of slideshow */}
 
-        {/* Wedding Team */}
 
-        <div className="wedTeamContainer">
-
-              {/* husband and Wife Section  */}
-              {/* Husband section */}
-          <div className="husContainer">
-            <label htmlFor="husSection" className="husSection mainComp">Husband<br/>Jeff Bozier, Jr</label>
-
-            <img className='husbandPic' src={husband} alt="husband" />
-          </div>
-          {/* end of husband section */}
-          
-          {/* Wife Section */}
-          <div className="wifeContainer">
-            <label htmlFor="WifeSection" className="wifeSection mainComp">Wife<br/>Ashley Cherie Barney</label>
-
-            <img className='wifePic' src={wife} alt="wife" />
-          </div>
-          {/* end of wife section */}
-          {/* end of wife and husband section */}
-
-          {/* Bridesmaid section */}
-          <div className="bridemaidContainer">
-          <label htmlFor="bridesmaidSection" className="bridesmaidSection mainComp">Bridesmaid<br/>Nia Hockaday</label>
-
-          <img className='bridesmaidPic' src={bridesmaid} alt="bridesmaid" />
-          </div>
-          {/* end of bridesmaid section */}
-
-
-          {/* Bridesmaid section */}
-          <div className="bridemaidContainer">
-          <label htmlFor="brideMaidSection" className="brideMaidSection mainComp">Maid of Honor<br/>Autumn Bruton</label>
-
-          <img className='brideMaidPic' src={brideMaid} alt="brideMaid" />
-          </div>
-          {/* end of bridesmaid section */}
-
-
-
-          {/* bestMan section */}
-          <div className="bestManContainer">
-          <label htmlFor="bestManSection" className="bestManSection mainComp">Best Man<br/>Chris Kiah</label>
-
-          <img className='bestManPic' src={bestMan} alt="bestMan" />
-          </div>
-          {/* end of bestMan section */}
-
-          {/* groomsWoman section */}
-          <div className="groomsWomanContainer">
-          <label htmlFor="groomsWomanSection" className="groomsWomanSection mainComp">Grooms Women<br/>Erica Settles</label>
-
-          <img className='groomsWomanPic' src={groomsWoman} alt="groomsWoman" />
-          </div>
-          {/* end of groomsMen section */}
-
-          {/* groomsMen section */}
-          <div className="groomsMenContainer">
-          <label htmlFor="groomsMenSection" className="groomsMenSection mainComp">Grooms Men<br/>Michael Wright</label>
-
-          <img className='groomsMenPic' src={groomsMen} alt="groomsMen" />
-          </div>
-          {/* end of groomsMen section */}
-
-          {/* groomsMen section */}
-          <div className="groomsMenContainer">
-          <label htmlFor="groomsMenSection" className="groomsMenSection mainComp">Grooms Men<br/>Michael James</label>
-
-          <img className='groomsMenPic' src={groomsMan} alt="groomsMen" />
-          </div>
-          {/* end of groomsMen section */}
-
-
-
-          {/* Master of Ceremony section */}
-          <div className="mcContainer">
-            <label htmlFor="mcSection" className="mcSection mainComp">Master of Ceremonies<br/>Derek Gillaspie</label>
-
-            <img className='mcPic' src={mc} alt="mc" />
-          </div>
-          {/* end of MC section */}
-
-          {/* Party Planner section */}
-          <div className="partyPlannerContainer">
-            <label htmlFor="partyPlannerSection" className="partyPlannerSection mainComp">Party Planner<br/>Eevee</label>
-
-            <img className='partyPlannerPic' src={partyPlanner} alt="partyPlanner" />
-          </div>
-          {/* end of partyPlanner section */}
-        </div>
-        {/* End of Wedding Team Section */}
-
-        {/* Registry Link Container */}
-
-        <div className="registryContainer">
-
-        <Link to="/registry">
-          <button className="cashAppTitle btn btn-primary">Click Hashtag for Registry</button>
-        </Link>
-          <div className="cashAppContainer">
-            <button src="https://cash.app/$TheBoziers" className='cashAppButton' onClick={() => window.open('https://cash.app/$TheBoziers', '_blank')}>
-            <img src={cashApp} alt="cashApp" />
-            </button>
-          </div>
-
-          <div className="zelleContainer">
-            <h2 align="center" className='p-3'>Quick Payments</h2>
-            <Row xs={2} md={3} className="g-4">
-              {productsArray.map((product, idx) => (
-                <Col align="center" key={idx} >
-                  {/* <ProductCard product={product}/> */}
-                </Col>
-              ))}
-              
-
-            </Row>
-          </div>
-          
-      {/* navbar */}
-      {/* <NavbarComponent></NavbarComponent> */}
-      {/* end of navbar */}
-
-        </div>
-        {/* End of Registry Portion */}
-
-        <iframe
-        id='script_myregistry_giftlist_iframe'
-        title="MyRegistry Gift List"
-      ></iframe>
         
 
         {/* container for other features  */}

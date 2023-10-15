@@ -34,9 +34,9 @@ const Gallery = () => {
 
   return (
     <div>
-      <Link to="/">
+      {/* <Link to="/">
         <button className="galleryHomeBtn btn btn-primary">Go To Home</button>
-      </Link>
+      </Link> */}
       {imgContainer.map((image, index) => (
         <div key={index}>
         <img

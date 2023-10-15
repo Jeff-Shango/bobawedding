@@ -9,6 +9,8 @@ import Schedule from "./components/Schedule.jsx";
 // import CartProvider from "./functions/CartContext.js";
 import Success from "./functions/Success.jsx";
 import Cancel from "./functions/Cancel.jsx";
+import Navlinks from "./components/Navlinks/Navlinks";
+import WeddingParty from "./components/WeddingParty";
 
 
 function App() {
@@ -16,6 +18,7 @@ function App() {
   return (
     // <CartProvider>
       <div className="App">
+        <Navlinks/>
         <BrowserRouter>
           <Routes>
             <Route 
@@ -31,6 +34,7 @@ function App() {
             <Route path="/schedule" element={<Schedule/>}/>
             <Route path="/cancel" element={<Cancel/>}/>
             <Route path="/success" element={<Success/>}/>
+            <Route path="/weddingParty" element={<WeddingParty/>}/>
           </Routes>
         </BrowserRouter>
 

@@ -119,9 +119,9 @@ const Schedule = () => {
   
   return (
     <div id='scheduleContainer'>
-        <Link to="/">
+        {/* <Link to="/">
           <button id='scheduleHmeBtn' className="galleryHomeBtn btn btn-primary">Go To Home</button>
-        </Link>
+        </Link> */}
       <Chrono
         className="my-timeline"
         items={items}        
