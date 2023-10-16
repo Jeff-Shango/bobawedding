@@ -115,6 +115,7 @@ code {
 .timeDivContainer {
   position: fixed;
   bottom: 0;
+  left: 20vh;
 }
 
 .timelineSection {
