@@ -163,24 +163,23 @@ const Dashboard = () => {
       {/* put below  */}
              {/* slideshow */}
        
-             <div id="galleryContainer"/>
+             {/* <div id="galleryContainer"/> */}
 
 
 <div id="dashboardSlideshow">
-<Link to="/gallery">
+{/* <Link to="/gallery">
   <Fade>
     {fadeImages.map((fadeImage, index) => (
       <div id='photoBox' key={index}>
         <img
-          style={{ height: '20rem', width: '25rem' }}
+          // style={{ height: '20rem', width: '25rem' }}
           src={fadeImage.img}
           alt="slideshow"
         />
-        {/* <h2 className='slideshowCaption'>{fadeImage.caption}</h2> */}
       </div>
     ))}
   </Fade>
-</Link>
+</Link> */}
 {/* <button className='btn btn-primary'>Go to Gallery</button> */}
 <div className="timeDivContainer">
       <CountdownTimer className="countdown" targetDate={targetDate} />

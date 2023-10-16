@@ -112,6 +112,12 @@ code {
   width: 30rem;
 }
 
+.timeDivContainer {
+  position: absolute;
+  bottom: 0;
+  right: 20vh;
+}
+
 .timelineSection {
   width: 30rem;
   height: fit-content;
@@ -148,6 +154,8 @@ code {
 
   .text-shadow-pop-top {
     color: #E1B847;
+    position: fixed;
+    top: 10px;
     font-size: 75px;
     font-family: 'Herr Von Muellerhoff', cursive;
     /* -webkit-animation: text-shadow-pop-top 0.6s both;
@@ -216,7 +224,8 @@ code {
   }
 
   .App {
-    width: var(--container-width-sm);
+    
+    /* width: var(--container-width-sm); */
     font-size: 12px;
     margin: auto;
   }
@@ -258,12 +267,47 @@ code {
   }
   
   .mainDashboard {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    animation: fadeImages 10s infinite;
+    -webkit-animation: fadeImages 10s infinite;
+}
+
+@keyframes fadeImages {
+  0% {
+    background-image: url('./assets/wedImgA.jpg');
+  }
+  20% {
+    background-image: url('./assets/wedImgA.jpg');
+  }
+  40% {
+    background-image: url('./assets/wedImgB.jpg');
+  }
+  60% {
+    background-image: url('./assets/wedImgB.jpg');
+  }
+  80% {
+    background-image: url('./assets/wedImgC.jpg');
+  }
+  100% {
+    background-image: url('./assets/wedImgC.jpg');
+  }
+
+}
+
+  /* .mainDashboard {
     height: fit-content;
     max-height: 100vh;
     overflow-y: scroll;
     background-size: cover;
     color: white;
-  }
+  } */
 
   .mainComp {
     font-size: large;
@@ -421,6 +465,11 @@ code {
   max-height: 8rem;
   height: fit-content;
 } */
+
+#photoBox img {
+  height: 20rem;
+  width: 25rem;
+}
 
 .registryContainer {
   margin-bottom: 1rem;
