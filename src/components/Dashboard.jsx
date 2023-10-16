@@ -2,11 +2,11 @@ import React, { useEffect, useState } from 'react';
 // import { ProductCard } from '../functions/ProductCard.js';
 import './dashboard.css';
 import 'react-slideshow-image/dist/styles.css';
-import { Fade } from 'react-slideshow-image';
+// import { Fade } from 'react-slideshow-image';
 import img1 from '../assets/imgA.jpg';
 import img2 from '../assets/imgB.jpg';
 import img3 from '../assets/imgC.jpg';
-import { Link } from 'react-router-dom';
+// import { Link } from 'react-router-dom';
 // import { Chrono } from 'react-chrono';
 // import { NavbarComponent } from './NavbarComponent';
 
@@ -139,20 +139,20 @@ const Dashboard = () => {
 
   const targetDate = new Date('May 31, 2024 18:30:00');
 
-  const fadeImages = [
-    {
-      img: img1,
-      caption: 'love you',
-    },
-    {
-      img: img2,
-      caption: 'beautiful lady',
-    },
-    {
-      img: img3,
-      caption: 'My Boo',
-    },
-  ];
+  // const fadeImages = [
+  //   {
+  //     img: img1,
+  //     caption: 'love you',
+  //   },
+  //   {
+  //     img: img2,
+  //     caption: 'beautiful lady',
+  //   },
+  //   {
+  //     img: img3,
+  //     caption: 'My Boo',
+  //   },
+  // ];
 
   return (
     <div className='mainDashboard'>
