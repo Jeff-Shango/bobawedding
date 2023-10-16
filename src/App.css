@@ -116,6 +116,7 @@ code {
   position: fixed;
   bottom: 0;
   left: 8vh;
+  font-family: 'Herr Von Muellerhoff', cursive;
 }
 
 .timelineSection {
@@ -239,6 +240,7 @@ code {
     border-right: 1px solid white;
     padding-right: 5px;
     color: black;
+    font-family: 'Herr Von Muellerhoff', cursive;
   }
 
   .timeContainer:first-child label {
