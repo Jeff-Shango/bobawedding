@@ -239,7 +239,7 @@ code {
   .timeContainer > label {
     border-right: 1px solid white;
     padding-right: 5px;
-    color: black;
+    color: var(--wedding-gold);
     font-family: 'Herr Von Muellerhoff', cursive;
   }
 
