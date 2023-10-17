@@ -200,6 +200,7 @@ code {
     width: fit-content;
     margin: auto;
     font-weight: bolder;
+    font-size: xx-large;
   }
 
   .husWifContainer,
@@ -239,18 +240,19 @@ code {
   .timeContainer > label {
     border-right: 1px solid white;
     padding-right: 5px;
-    color: var(--wedding-gold);
+    color: white;
+    font-size: xx-large;
     font-family: 'Herr Von Muellerhoff', cursive;
   }
 
   .timeContainer:first-child label {
     border-left: 1px solid white;
     padding-left: 5px;
-    color: black;
   }
 
   .timeContainer > div {
     color: #E1B847;
+    font-size: x-large;
     /* animation: text-pop-up-top 3s cubic-bezier(0.680, -0.550, 0.265, 1.550) alternate both;
     -webkit-animation: text-pop-up-top 3s cubic-bezier(0.680, -0.550, 0.265, 1.550) alternate both; */
 }
