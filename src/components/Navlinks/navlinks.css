@@ -268,11 +268,21 @@
       background-color: var(--wedding-gold); /* Change 'your-color' to your desired color */
   }
 
+  #dashNavCon {
+    background-color: lightgray;
+  }
+
   #dashLink{
     font-family: 'Herr Von Muellerhoff', cursive;
     font-size: medium;
-    color: aliceblue;
+    color: var(--wedding-gold);
     font-weight: bolder;
     margin: 6px;
   }  
+
+  #dashLink a {
+    text-transform: none;
+  }
+
+
   }

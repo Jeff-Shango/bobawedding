@@ -199,6 +199,11 @@ code {
     }
   }
   
+  #dashboardHeaderContainer {
+    position: absolute;
+    top: 6.5rem;
+  }
+
   
   #dashboardTitle {
     color: white;
