@@ -277,7 +277,7 @@
 
   #dashLink{
     font-family: 'Herr Von Muellerhoff', cursive;
-    font-size: medium;
+    font-size: small;
     color: var(--wedding-gold);
     font-weight: bolder;
     margin: 6px;
