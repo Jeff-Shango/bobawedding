@@ -164,7 +164,7 @@ const Dashboard = () => {
           <a href="/rsvp" id="dashLink"> RSVP</a>
           <a href="/schedule" id="dashLink"> SCHEDULE</a>
           <a href="/registry" id="dashLink">REGISTRY</a>
-          <a href="/weddingParty" id="dashLink">WEDDING PARTY</a>
+          <a href="/weddingParty" id="dashLink">TEAM</a>
         </div>
       </div>
 

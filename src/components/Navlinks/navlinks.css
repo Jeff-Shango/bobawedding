@@ -273,12 +273,17 @@
     font-size: 13px;
     color: var(--wedding-gold);
     font-weight: bolder;
-    margin: 10px;
-    backdrop-filter: blur(10px); /* Adjust the blur amount as needed */
-    background-color: rgba(0, 0, 0, 0.3); /* Adjust the background color and opacity as needed */
-    padding: 5px; /* Adjust padding as needed */
-    border-radius: 10px; /* Add rounded corners if desired */
-  }  
+    margin: 5px;
+    backdrop-filter: blur(10px);
+    /*Adjustthebluramountasneeded*/background-color: rgba(0, 0, 0, 0.3);
+    /*Adjustthebackgroundcolorandopacityasneeded*/padding: 5px;
+    /*Adjustpaddingasneeded*/border-radius: 10px;
+    /*Addroundedcornersifdesired*/letter-spacing: 3px;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    -ms-border-radius: 10px;
+    -o-border-radius: 10px;
+}  
 
   #dashLink a {
     text-transform: none;
