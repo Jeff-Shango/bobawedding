@@ -273,7 +273,7 @@
     font-size: 13px;
     color: var(--wedding-gold);
     font-weight: bolder;
-    margin: 5px;
+    margin: 2px;
     backdrop-filter: blur(10px);
     /*Adjustthebluramountasneeded*/background-color: rgba(0, 0, 0, 0.3);
     /*Adjustthebackgroundcolorandopacityasneeded*/padding: 5px;
