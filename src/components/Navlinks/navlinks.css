@@ -270,12 +270,12 @@
 
   #dashLink{
     font-family: 'Herr Von Muellerhoff', cursive;
-    font-size: small;
+    font-size: 13px;
     color: var(--wedding-gold);
     font-weight: bolder;
     margin: 10px;
     backdrop-filter: blur(10px); /* Adjust the blur amount as needed */
-    background-color: rgba(255, 255, 255, 0.7); /* Adjust the background color and opacity as needed */
+    background-color: rgba(0, 0, 0, 0.3); /* Adjust the background color and opacity as needed */
     padding: 5px; /* Adjust padding as needed */
     border-radius: 10px; /* Add rounded corners if desired */
   }  
