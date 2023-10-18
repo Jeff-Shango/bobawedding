@@ -134,7 +134,7 @@ code {
 
 /* small devices */
 @media screen and (max-width: 600px) {
-  .app {
+  .App {
     height: 100vh;
   }
 
@@ -238,8 +238,7 @@ code {
     
     /* width: var(--container-width-sm); */
     font-size: 12px;
-    margin: auto;
-    overflow: hidden;
+    /* margin: auto; */
   }
 
   .timeContainer {
@@ -282,7 +281,7 @@ code {
   
   .mainDashboard {
     position: relative;
-    height: 90vh;
+    min-height: 100vh;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -513,7 +512,7 @@ code {
 }
 
 .container {
-  height: 90vh;
+  height: 100vh;
 }
 
 
