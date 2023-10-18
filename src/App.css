@@ -139,7 +139,7 @@ code {
   }
 
   :root {
-    height: 100vh;
+    max-height: fit-content;
   }
 
 
@@ -285,7 +285,7 @@ code {
   
   .mainDashboard {
     position: relative;
-    min-height: 70vh;
+    height: 100vh;
     display: flex;
     flex-direction: column;
     align-items: center;
