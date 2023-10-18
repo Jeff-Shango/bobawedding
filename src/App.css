@@ -196,7 +196,7 @@ code {
   
   
   #dashboardTitle {
-    color: black;
+    color: white;
     width: fit-content;
     margin: auto;
     font-weight: bolder;
@@ -251,7 +251,7 @@ code {
   }
 
   .timeContainer > div {
-    color: #E1B847;
+    color: white;
     font-size: x-large;
     /* animation: text-pop-up-top 3s cubic-bezier(0.680, -0.550, 0.265, 1.550) alternate both;
     -webkit-animation: text-pop-up-top 3s cubic-bezier(0.680, -0.550, 0.265, 1.550) alternate both; */
@@ -343,7 +343,8 @@ code {
 
   .text-pop-up-top {
             z-index: 1;
-            -webkit-animation: text-pop-up-top 3s cubic-bezier(0.680, -0.550, 0.265, 1.550) alternate both;
+            color: white;
+            -webkit-animation:;
             animation: text-pop-up-top 3s cubic-bezier(0.680, -0.550, 0.265, 1.550) alternate both;
 }
 
@@ -372,7 +373,7 @@ code {
   }
   @keyframes text-pop-up-top {
     0% {
-      color: #E1B847;
+      color: white;
               -webkit-transform: translateY(0);
               transform: translateY(0);
               -webkit-transform-origin: 50% 50%;
@@ -384,7 +385,7 @@ code {
               -o-transform: translateY(0);
             }
             100% {
-              color: #E1B847;
+              color: white;
               font-size: x-large;
               -webkit-transform: translateY(-50px);
               transform: translateY(-50px);

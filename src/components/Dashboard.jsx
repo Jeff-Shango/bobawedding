@@ -1,6 +1,5 @@
 import React, { useEffect, useState } from 'react';
 // import { ProductCard } from '../functions/ProductCard.js';
-import './dashboard.css';
 import './Navlinks/navlinks.css'
 import 'react-slideshow-image/dist/styles.css';
 // import { Fade } from 'react-slideshow-image';
