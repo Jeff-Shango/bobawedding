@@ -281,6 +281,7 @@ code {
   }
   
   .mainDashboard {
+    position: relative;
     min-height: 100vh;
     display: flex;
     flex-direction: column;
@@ -509,6 +510,10 @@ code {
 }
 .user-name + .message-date {
   margin-left: 10px;
+}
+
+.container {
+  height: 100vh;
 }
 
 
