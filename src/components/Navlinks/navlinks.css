@@ -270,9 +270,9 @@
 
   #dashLink{
     font-family: 'Herr Von Muellerhoff', cursive;
-    font-size: large;
+    font-size: medium;
     color: aliceblue;
     font-weight: bold;
-    margin: 5px;
+    margin: 10px;
   }  
   }
