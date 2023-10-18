@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react';
 // import { ProductCard } from '../functions/ProductCard.js';
 import './dashboard.css';
+import './Navlinks/navlinks.css'
 import 'react-slideshow-image/dist/styles.css';
 // import { Fade } from 'react-slideshow-image';
 // import img1 from '../assets/imgA.jpg';
@@ -89,7 +90,7 @@ const CountdownTimer = ({ targetDate }) => {
     <div>
 
     <h1 id="dashboardTitle" className='mainComp text-pop-up-top calendarSlot'>Friday, May 31, 2024</h1>
-    <div className="clock">
+    <div className='clock'>
       <div className="timeContainer">
       <label htmlFor="days">Days</label>
       <div data-value="days">{formatNumber(timer.days)}</div>
@@ -157,8 +158,16 @@ const Dashboard = () => {
   return (
     <div className='mainDashboard'>
       
+      <div id="dashboardHeaderContainer">
+        <h1 className='text-shadow-pop-top'>Bozier Ever After</h1>
 
-      <h1 className='text-shadow-pop-top'>Bozier Ever After</h1>
+        <div id="dashNavCon">
+          <a href="/rsvp" id="dashLink"> RSVP</a>
+          <a href="/schedule" id="dashLink"> SCHEDULE</a>
+          <a href="/registry" id="dashLink">REGISTRY</a>
+          <a href="/weddingParty" id="dashLink">WEDDING PARTY</a>
+        </div>
+      </div>
 
       {/* put below  */}
              {/* slideshow */}

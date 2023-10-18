@@ -267,4 +267,12 @@
 .navbar-toggler.collapsed .navbar-toggler-icon {
       background-color: var(--wedding-gold); /* Change 'your-color' to your desired color */
   }
+
+  #dashLink{
+    font-family: 'Herr Von Muellerhoff', cursive;
+    font-size: large;
+    color: aliceblue;
+    font-weight: bold;
+    margin: 5px;
+  }  
   }
