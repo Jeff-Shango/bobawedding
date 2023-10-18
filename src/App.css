@@ -239,6 +239,7 @@ code {
     /* width: var(--container-width-sm); */
     font-size: 12px;
     margin: auto;
+    overflow: hidden;
   }
 
   .timeContainer {
@@ -513,7 +514,6 @@ code {
 
 .container {
   height: 90vh;
-  overflow: hidden;
 }
 
 
