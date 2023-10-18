@@ -138,6 +138,10 @@ code {
     height: 100vh;
   }
 
+  :root {
+    height: 100vh;
+  }
+
 
   .puff-out-hor { -webkit-animation:puff-out-hor .9s cubic-bezier(.165,.84,.44,1.000) both; animation:puff-out-hor .9s cubic-bezier(.165,.84,.44,1.000) both; }
 
