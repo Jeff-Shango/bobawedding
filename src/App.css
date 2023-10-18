@@ -113,10 +113,15 @@ code {
 }
 
 .timeDivContainer {
-  position: fixed;
-  bottom: 0;
-  right: 50%;
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
   font-family: 'Herr Von Muellerhoff', cursive;
+  -webkit-transform: translateX(-50%);
+  -moz-transform: translateX(-50%);
+  -ms-transform: translateX(-50%);
+  -o-transform: translateX(-50%);
 }
 
 .timelineSection {
@@ -463,7 +468,7 @@ code {
 }
 
 #dashboardSlideshow {
-    border: 2px solid black;
+    position: relative;
 }
 
 /* #photoBox {
