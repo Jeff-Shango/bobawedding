@@ -137,11 +137,7 @@ code {
   .app {
     height: 100vh;
   }
-  
-  #mainDiv {
-    border: 2px solid red;
-    position: relative;
-  }
+
 
   .puff-out-hor { -webkit-animation:puff-out-hor .9s cubic-bezier(.165,.84,.44,1.000) both; animation:puff-out-hor .9s cubic-bezier(.165,.84,.44,1.000) both; }
 
@@ -285,7 +281,6 @@ code {
   
   .mainDashboard {
     position: relative;
-    min-height: 100vh;
     display: flex;
     flex-direction: column;
     align-items: center;
