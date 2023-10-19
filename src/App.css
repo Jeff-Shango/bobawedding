@@ -303,8 +303,8 @@ code {
     background-size: cover;
     background-repeat: no-repeat;
     background-attachment: fixed;
-    animation: fadeImages 10s infinite;
-    -webkit-animation: fadeImages 10s infinite;
+    animation: fadeImages 6s infinite;
+    -webkit-animation: fadeImages 6s infinite;
 }
 
 @keyframes fadeImages {
