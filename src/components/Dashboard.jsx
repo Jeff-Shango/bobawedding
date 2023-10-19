@@ -89,7 +89,7 @@ const CountdownTimer = ({ targetDate }) => {
   return (
     <div>
 
-    <h1 id="dashboardTitle" className='mainComp text-pop-up-top calendarSlot'>Friday, May 31, 2024</h1>
+    <h1 id="dashboardTitle" className='mainComp  calendarSlot'>Friday, May 31, 2024</h1>
     <div className='clock'>
       <div className="timeContainer">
       <label htmlFor="days">Days</label>
@@ -166,7 +166,7 @@ const Dashboard = () => {
           <Link to="https://bozierwedding.netlify.app/rsvp" id="dashLink"> RSVP</Link>
           <Link to="https://bozierwedding.netlify.app/schedule" id="dashLink"> SCHEDULE</Link>
           <Link to="https://bozierwedding.netlify.app/registry" id="dashLink">REGISTRY</Link>
-          <Link to="https://bozierwedding.netlify.app/weddingParty" id="dashLink">TEAM</Link>
+          <Link to="https://bozierwedding.netlify.app/weddingParty" id="dashLink">WEDDING PARTY</Link>
         </div>
       </div>
 
