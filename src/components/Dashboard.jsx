@@ -158,6 +158,7 @@ const Dashboard = () => {
     <div className='mainDashboard'>
       
       <div id="dashboardHeaderContainer">
+        <h1 className="weddingNameTitle">Jeff & Ashley</h1>
         <h1 className='text-shadow-pop-top'>Bozier Ever After</h1>
 
         <div id="dashNavCon">

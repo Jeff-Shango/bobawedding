@@ -269,9 +269,9 @@
   }
 
   #dashLink{
-    font-family: 'Herr Von Muellerhoff', cursive;
+    font-family: 'Montez', cursive;
     font-size: 13px;
-    color: var(--wedding-gold);
+    color: white;
     font-weight: bolder;
     margin: 1px;
     backdrop-filter: blur(10px);
