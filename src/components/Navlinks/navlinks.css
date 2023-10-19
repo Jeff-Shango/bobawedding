@@ -289,3 +289,120 @@
 
 
   }
+
+/* small devices */
+/* orientation mode */
+  @media only screen and (max-width: 800px){
+    /* .navbarContainer {
+        height: 20vh;
+    } */
+    
+    .bellIcon {
+        color: white;
+    }
+
+    nav {
+        display: flex;
+    }
+
+    html {
+        background-color: var(--color-bg);
+    }
+
+    .App {
+        background-color: var(--color-bg);
+    }
+
+    #navLink {
+        /* font-size: 11px; */
+        /* padding: 2px; */
+        color: var(--wedding-gold);
+        background-color: transparent;
+        border-radius: 12px;
+        -webkit-border-radius: 12px;
+        -moz-border-radius: 12px;
+        -ms-border-radius: 12px;
+        -o-border-radius: 12px;
+        margin-right: .5rem;
+        width: fit-content;
+        height: fit-content;
+        font-weight: bold;
+        
+}
+
+    #navLink:active {
+        border-top: 1px solid white;
+        border-left: 1px solid white;
+        background-color: transparent;
+        cursor: progress;
+        border-right: none;
+        border-bottom: none;
+        border-radius: 12px;
+        -webkit-border-radius: 12px;
+        -moz-border-radius: 12px;
+        -ms-border-radius: 12px;
+        -o-border-radius: 12px;
+}
+
+    #linkItem {
+        color: #CCCCCC;
+        font-size: medium;
+    }
+
+    .outerContainer {
+        position: absolute;
+        left: 0;
+    }
+
+    .bellIcon {
+        width: max-content;
+        margin-bottom: 2rem;
+    }
+
+    .bellIcon, .joinButton {
+        height: 3rem;
+    }
+
+    .navItems {
+        font-size: 7;
+        float: right;
+        font-weight: bolder;
+    }
+
+    .navbarContainer {
+        background-color: var(--main-bg);
+        position: fixed;
+        top: 0;
+    }
+
+/* Change the color of the hamburger lines */
+.navbar-toggler-icon {
+    background-color: black; /* Change 'your-color' to your desired color */
+}
+
+/* If you want to change the color when the Navbar is in the collapsed state */
+.navbar-toggler.collapsed .navbar-toggler-icon {
+      background-color: var(--wedding-gold); /* Change 'your-color' to your desired color */
+  }
+
+
+  #dashLink{
+    font-family: 'Playfair Display', serif;
+    font-size: 7px;
+    color: white;
+    font-weight: bolder;
+    margin: 1px;
+    backdrop-filter: blur(10px);
+    /*Adjustthebluramountasneeded*/background-color: rgba(0, 0, 0, 0.3);
+    /*Adjustthebackgroundcolorandopacityasneeded*/padding: 5px;
+    /*Adjustpaddingasneeded*/border-radius: 10px;
+    /*Addroundedcornersifdesired*/letter-spacing: 3px;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    -ms-border-radius: 10px;
+    -o-border-radius: 10px;
+    text-decoration: none;
+}  
+
+
+  }
