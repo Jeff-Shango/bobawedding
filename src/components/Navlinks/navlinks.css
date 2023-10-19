@@ -271,7 +271,7 @@
 
   #dashLink{
     font-family: 'Playfair Display', serif;
-    font-size: 11px;
+    font-size: 9px;
     color: white;
     font-weight: bolder;
     margin: 1px;
@@ -284,6 +284,8 @@
     -moz-border-radius: 10px;
     -ms-border-radius: 10px;
     -o-border-radius: 10px;
+    text-decoration: none;
 }  
+
 
   }
