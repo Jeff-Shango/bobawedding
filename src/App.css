@@ -218,10 +218,9 @@ code {
   
   #dashboardTitle {
     color: white;
-    width: fit-content;
     margin: auto;
     font-weight: bolder;
-    font-size: large;
+    font-size: x-large;
   }
 
   .husWifContainer,
@@ -624,10 +623,9 @@ code {
   
   #dashboardTitle {
     color: white;
-    width: fit-content;
     margin: auto;
     font-weight: bolder;
-    font-size: large;
+    font-size: x-large;
   }
 
   .husWifContainer,
