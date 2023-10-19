@@ -143,8 +143,7 @@ code {
   }
 
   .weddingNameTitle {
-    font-family: 'Montez', cursive;
-
+    font-family: 'Playfair Display', serif;
     color: white;
     font-size: xx-large;
   }
@@ -254,7 +253,7 @@ code {
   }
 
   .timeContainer {
-    font-family: 'Poppins', sans-serif;
+    font-family: 'Playfair Display', serif;
     font-size: 10px;
   }
 
@@ -263,7 +262,7 @@ code {
     padding-right: 5px;
     color: white;
     font-size: xx-large;
-    font-family: 'Herr Von Muellerhoff', cursive;
+    font-family: 'Playfair Display', serif;
   }
 
   .timeContainer:first-child label {
@@ -475,13 +474,13 @@ code {
 }
 
 .clock div {
-  font-size: medium;
+  font-size: small;
 }
 
 .clock label {
     /* display: block; */
     text-align: center;
-    font-size: medium;
+    font-size: small;
 }
 
 #dashboardSlideshow {
