@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from 'react';
+import { Link } from 'react-router-dom';
 // import { ProductCard } from '../functions/ProductCard.js';
 import './Navlinks/navlinks.css'
 import 'react-slideshow-image/dist/styles.css';
