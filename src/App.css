@@ -524,7 +524,15 @@ code {
   height: 100vh;
 }
 
-
-
-/* id="dashboardTitle" className='mainComp text-pop-up-top calendarSlot'*/
+#bottomDash {
+  position: fixed;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: fit-content;
+  -webkit-transform: translateX(-50%);
+  -moz-transform: translateX(-50%);
+  -ms-transform: translateX(-50%);
+  -o-transform: translateX(-50%);
+}
 }
