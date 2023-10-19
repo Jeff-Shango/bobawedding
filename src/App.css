@@ -221,7 +221,7 @@ code {
     width: fit-content;
     margin: auto;
     font-weight: bolder;
-    font-size: xx-large;
+    font-size: large;
   }
 
   .husWifContainer,
@@ -473,13 +473,13 @@ code {
 }
 
 .clock div {
-  font-size: small;
+  font-size: smaller;
 }
 
 .clock label {
     /* display: block; */
     text-align: center;
-    font-size: small;
+    font-size: smaller;
 }
 
 #dashboardSlideshow {
@@ -627,7 +627,7 @@ code {
     width: fit-content;
     margin: auto;
     font-weight: bolder;
-    font-size: xx-large;
+    font-size: large;
   }
 
   .husWifContainer,
@@ -885,13 +885,13 @@ code {
 }
 
 .clock div {
-  font-size: small;
+  font-size: smaller;
 }
 
 .clock label {
     /* display: block; */
     text-align: center;
-    font-size: small;
+    font-size: smaller;
 }
 
 #dashboardSlideshow {

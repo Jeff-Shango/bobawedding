@@ -275,16 +275,16 @@
     color: white;
     font-weight: bolder;
     margin: 1px;
-    backdrop-filter: blur(10px);
-    /*Adjustthebluramountasneeded*/background-color: rgba(0, 0, 0, 0.3);
-    /*Adjustthebackgroundcolorandopacityasneeded*/padding: 5px;
-    /*Adjustpaddingasneeded*/border-radius: 10px;
-    /*Addroundedcornersifdesired*/letter-spacing: 3px;
+    padding: 5px;
+    letter-spacing: 3px;
+    text-decoration: none;
+    /* backdrop-filter: blur(10px);
+    background-color: rgba(0, 0, 0, 0.3);
+    border-radius: 10px;
     -webkit-border-radius: 10px;
     -moz-border-radius: 10px;
     -ms-border-radius: 10px;
-    -o-border-radius: 10px;
-    text-decoration: none;
+    -o-border-radius: 10px; */
 }  
 
 
@@ -392,16 +392,16 @@
     color: white;
     font-weight: bolder;
     margin: 1px;
-    backdrop-filter: blur(10px);
-    /*Adjustthebluramountasneeded*/background-color: rgba(0, 0, 0, 0.3);
-    /*Adjustthebackgroundcolorandopacityasneeded*/padding: 5px;
-    /*Adjustpaddingasneeded*/border-radius: 10px;
-    /*Addroundedcornersifdesired*/letter-spacing: 3px;
+    padding: 5px;
+    text-decoration: none;
+    letter-spacing: 3px;
+    /* backdrop-filter: blur(10px);
+    background-color: rgba(0, 0, 0, 0.3);
+    border-radius: 10px;
     -webkit-border-radius: 10px;
     -moz-border-radius: 10px;
     -ms-border-radius: 10px;
-    -o-border-radius: 10px;
-    text-decoration: none;
+    -o-border-radius: 10px; */
 }  
 
 
