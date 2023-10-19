@@ -706,38 +706,38 @@ code {
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: center;
+    justify-content: flex-start;
     background-size: cover;
     background-repeat: no-repeat;
     background-attachment: fixed;
     animation: fadeImages 6s infinite;
-    -webkit-animation:;
+    -webkit-animation: fadeImages 6s infinite;
 }
 
 @keyframes fadeImages {
   0% {
     background-image: url('./assets/wedImgA.jpg');
-    background-position: center;
+    background-position: center top;
   }
   20% {
     background-image: url('./assets/wedImgA.jpg');
-    background-position: center;
+    background-position: center top;
   }
   40% {
     background-image: url('./assets/wedImgB.jpg');
-    background-position: center;
+    background-position: center top;
   }
   60% {
     background-image: url('./assets/wedImgB.jpg');
-    background-position: center;
+    background-position: center top;
   }
   80% {
     background-image: url('./assets/wedImgC.jpg');
-    background-position: center;
+    background-position: center top;
   }
   100% {
     background-image: url('./assets/wedImgC.jpg');
-    background-position: center;
+    background-position: center top;
   }
 
 }
