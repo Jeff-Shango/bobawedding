@@ -2,10 +2,10 @@
     #rsvpPage {
         height: 100vh;
         overflow-y: scroll;
-        color: white;
+        color: var(--wedding-gold);
     }
 
-    .rsvpForm {
-        border: 2px solid black;
+    .rsvpP {
+        font-size: larger;
     }
 }

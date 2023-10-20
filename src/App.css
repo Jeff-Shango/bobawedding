@@ -7,7 +7,7 @@
 
   /* colors */
     --wedding-gold: #e1b847;
-    --main-bg: #f0ebcc;
+    --main-bg: white;
 }
 
 body {
@@ -155,7 +155,7 @@ code {
   @-webkit-keyframes puff-out-hor{0%{-webkit-transform:scaleX(1);transform:scaleX(1);-webkit-filter:blur(0);filter:blur(0);opacity:1}100%{-webkit-transform:scaleX(2);transform:scaleX(2);-webkit-filter:blur(4px);filter:blur(4px);opacity:0}}@keyframes puff-out-hor{0%{-webkit-transform:scaleX(1);transform:scaleX(1);-webkit-filter:blur(0);filter:blur(0);opacity:1}100%{-webkit-transform:scaleX(2);transform:scaleX(2);-webkit-filter:blur(4px);filter:blur(4px);opacity:0}}
 
   #root {
-    background-color: #f0ebcc;
+    background-color: var(--main-bg);
   }
 
 
@@ -561,7 +561,7 @@ code {
   @-webkit-keyframes puff-out-hor{0%{-webkit-transform:scaleX(1);transform:scaleX(1);-webkit-filter:blur(0);filter:blur(0);opacity:1}100%{-webkit-transform:scaleX(2);transform:scaleX(2);-webkit-filter:blur(4px);filter:blur(4px);opacity:0}}@keyframes puff-out-hor{0%{-webkit-transform:scaleX(1);transform:scaleX(1);-webkit-filter:blur(0);filter:blur(0);opacity:1}100%{-webkit-transform:scaleX(2);transform:scaleX(2);-webkit-filter:blur(4px);filter:blur(4px);opacity:0}}
 
   #root {
-    background-color: #f0ebcc;
+    background-color: var(--main-bg);
   }
 
 
