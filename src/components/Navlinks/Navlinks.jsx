@@ -23,7 +23,7 @@ const Navlinks = () => {
     //     className="navbarContainer"
     //     >
     <div>
-        {currentPath === 'https://bozierwedding.netlify.app/' ? null : (
+        {currentPath === '/' ? null : (
      <Navbar collapseOnSelect expand="lg" variant='dark' className='navbarContainer'>
     <Container>
         <Navbar.Brand>
@@ -54,12 +54,12 @@ const Navlinks = () => {
             <p id='linkItem'>Schedule</p>
         </a>
 
-        <a id='navLink' href="/weddingParty"  onClick={() => setActiveNav('weddingParty')} className={activeNav === 'weddingParty' ? 'active' : ''}>
+        <a id='navLink' href="https://bozierwedding.netlify.app/weddingParty"  onClick={() => setActiveNav('https://bozierwedding.netlify.app/weddingParty')} className={activeNav === 'https://bozierwedding.netlify.app/weddingParty' ? 'active' : ''}>
             <GiPapers/>
             <p id='linkItem'>Wedding Team</p>
         </a>
 
-        <a id='navLink' href="/registry"  onClick={() => setActiveNav('registry')} className={activeNav === 'registry' ? 'active' : ''}>
+        <a id='navLink' href="https://bozierwedding.netlify.app/registry"  onClick={() => setActiveNav('https://bozierwedding.netlify.app/registry')} className={activeNav === 'https://bozierwedding.netlify.app/registry' ? 'active' : ''}>
             <FaFileMedical/>
             <p id='linkItem'>Registry</p>
         </a>
