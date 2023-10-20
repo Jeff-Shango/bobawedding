@@ -23,7 +23,7 @@ const Navlinks = () => {
     //     className="navbarContainer"
     //     >
     <div>
-        {currentPath === '/' ? null : (
+        {currentPath === 'https://bozierwedding.netlify.app/' ? null : (
      <Navbar collapseOnSelect expand="lg" variant='dark' className='navbarContainer'>
     <Container>
         <Navbar.Brand>
@@ -34,7 +34,7 @@ const Navlinks = () => {
         <Navbar.Toggle aria-controls='responsive-navbar-nav' />
              <Navbar.Collapse id='responsive-navbar-nav'>
     <nav >
-        <a id='navLink' href="/"onClick={() => setActiveNav('#')} className={activeNav === '#' ? 'active' : ''}>
+        <a id='navLink' href="https://bozierwedding.netlify.app/"onClick={() => setActiveNav('#')} className={activeNav === '#' ? 'active' : ''}>
             <AiOutlineHome/>
             <p id='linkItem'>Home</p>
         </a>
@@ -44,12 +44,12 @@ const Navlinks = () => {
             <p id='linkItem'>sessions</p>
         </a> */}
 
-        <a id='navLink' href="/rsvp" onClick={() => setActiveNav('/rsvp')} className={activeNav === '/rsvp' ? 'active' : ''}>
+        <a id='navLink' href="https://bozierwedding.netlify.app/rsvp" onClick={() => setActiveNav('https://bozierwedding.netlify.app/rsvp')} className={activeNav === 'https://bozierwedding.netlify.app/rsvp' ? 'active' : ''}>
             <RiBoxingFill/>
             <p id='linkItem'>RSVP</p>
         </a>
 
-        <a id='navLink' href="/schedule"  onClick={() => setActiveNav('/schedule')} className={activeNav === '/schedule' ? 'active' : ''}>
+        <a id='navLink' href="https://bozierwedding.netlify.app/schedule"  onClick={() => setActiveNav('https://bozierwedding.netlify.app/schedule')} className={activeNav === 'https://bozierwedding.netlify.app/schedule' ? 'active' : ''}>
             <BsPersonFillAdd/>
             <p id='linkItem'>Schedule</p>
         </a>
