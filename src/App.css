@@ -627,6 +627,7 @@ code {
     margin: auto;
     font-weight: bolder;
     font-size: x-large;
+    width: max-content;
   }
 
   .husWifContainer,
