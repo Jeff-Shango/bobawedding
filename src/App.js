@@ -20,7 +20,7 @@ function App() {
     // <CartProvider>
         <BrowserRouter>
       <div className="App">
-          <Navlinks/>
+          {/* <Navlinks/> */}
         {/* <Route 
           element={<Navlinks isDashboard={isDashboard}/>}/> */}
           <Routes>

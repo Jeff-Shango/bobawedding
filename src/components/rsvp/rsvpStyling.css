@@ -1,8 +1,11 @@
 @media screen and (max-width: 600px) {
     #rsvpPage {
-        border: 2px solid blue;
         height: 100vh;
         overflow-y: scroll;
         color: white;
+    }
+
+    .rsvpForm {
+        border: 2px solid black;
     }
 }
