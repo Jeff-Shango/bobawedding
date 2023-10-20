@@ -9,7 +9,7 @@ import Schedule from "./components/Schedule.jsx";
 // import CartProvider from "./functions/CartContext.js";
 import Success from "./functions/Success.jsx";
 import Cancel from "./functions/Cancel.jsx";
-import Navlinks from "./components/Navlinks/Navlinks";
+// import Navlinks from "./components/Navlinks/Navlinks";
 import WeddingParty from "./components/WeddingParty";
 
 
