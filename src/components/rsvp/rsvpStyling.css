@@ -3,6 +3,7 @@
         height: 100vh;
         overflow-y: scroll;
         color: var(--wedding-gold);
+        font-family: var(--wedding-Str-Font);
     }
 
     .rsvpP {

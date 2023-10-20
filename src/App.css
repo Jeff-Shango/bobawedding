@@ -8,6 +8,10 @@
   /* colors */
     --wedding-gold: #e1b847;
     --main-bg: white;
+
+  /* font family */
+
+    --wedding-Str-Font: 'Playfair Display', serif;
 }
 
 body {
@@ -144,7 +148,7 @@ code {
   }
 
   .weddingNameTitle {
-    font-family: 'Playfair Display', serif;
+    font-family: var(--wedding-Str-Font);
     color: white;
     font-size: xx-large;
   }
@@ -254,7 +258,7 @@ code {
   }
 
   .timeContainer {
-    font-family: 'Playfair Display', serif;
+    font-family: var(--wedding-Str-Font);
     font-size: 10px;
   }
 
@@ -264,7 +268,7 @@ code {
     padding-right: 5px;
     color: white;
     font-size: xx-large;
-    font-family: 'Playfair Display', serif;
+    font-family: var(--wedding-Str-Font)
   }
 
   .timeContainer:first-child label {
@@ -550,7 +554,7 @@ code {
   }
 
   .weddingNameTitle {
-    font-family: 'Playfair Display', serif;
+    font-family: var(--wedding-Str-Font);
     color: white;
     font-size: xx-large;
   }
@@ -660,7 +664,7 @@ code {
   }
 
   .timeContainer {
-    font-family: 'Playfair Display', serif;
+    font-family: var(--wedding-Str-Font);
     font-size: 10px;
   }
 

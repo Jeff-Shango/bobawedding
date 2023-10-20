@@ -27,7 +27,7 @@ const RSVP = () => {
 
       <h1 className="rsvpTitle">RSVP</h1>
 
-      <h2 className="rsvpSubTitle">RSVP CutOff Date: 00/00/00</h2>
+      <h2 className="rsvpSubTitle">lOVE YOU SO MUCH, ASHLEY</h2>
 
       <p className="rsvpP">We warmly invite you to RSVP for The Bozier wedding! Please don't hesistate to contact either Ashley or Jeff if you have any questions or need assistance. We're looking forward to seeing all of you there and sharing this joyous occasion together!!</p>
 
