@@ -2,7 +2,8 @@ import React, { useRef } from 'react'
 import "./rsvp/rsvpStyling.css";
 import ReCAPTCHA from "react-google-recaptcha";
 import emailjs from 'emailjs-com';
-import { Link } from 'react-router-dom';
+import Navlinks from '../components/Navlinks/Navlinks.jsx'
+// import { Link } from 'react-router-dom';
 
 const RSVP = () => {
   const form = useRef();
@@ -21,9 +22,33 @@ const RSVP = () => {
 
   return (
     <div id='rsvpPage'>
+      <Navlinks/>
+      {/* <div id="linkContainer">
       <Link to="/">
         <button className='btn btn-primary'>Go Home</button>
       </Link>
+
+      <Link to="/gallery">
+        <button className='btn btn-primary'>Gallery</button>
+      </Link>
+
+      <Link to="/registry">
+        <button className='btn btn-primary'>Registry</button>
+      </Link>
+
+      <Link to="/rsvp">
+        <button className='btn btn-primary'>RSVP</button>
+      </Link>
+
+      <Link to="/schedule">
+        <button className='btn btn-primary'>Schedule</button>
+      </Link>
+
+      <Link to="/weddingParty">
+        <button className='btn btn-primary'>Wedding Party</button>
+      </Link>
+
+      </div> */}
 
       <h1 className="rsvpTitle">RSVP</h1>
 

@@ -176,9 +176,6 @@
 
 
 @media only screen and (max-width: 428px){
-    /* .navbarContainer {
-        height: 20vh;
-    } */
     
     .bellIcon {
         color: white;
@@ -254,13 +251,19 @@
 
     .navbarContainer {
         background-color: var(--main-bg);
-        position: fixed;
+        .navbarContainer {
+        height: 20vh;
+        border: 2px solid black;
+    }
+        position: relative;
         top: 0;
     }
 
 /* Change the color of the hamburger lines */
 .navbar-toggler-icon {
-    background-color: black; /* Change 'your-color' to your desired color */
+    background-color: var(--wedding-gold);
+    position: absolute;
+    left: 0; /* Change 'your-color' to your desired color */
 }
 
 /* If you want to change the color when the Navbar is in the collapsed state */
@@ -371,13 +374,19 @@
 
     .navbarContainer {
         background-color: var(--main-bg);
-        position: fixed;
+        .navbarContainer {
+        height: 20vh;
+        border: 2px solid black;
+    }
+        position: relative;
         top: 0;
     }
 
 /* Change the color of the hamburger lines */
 .navbar-toggler-icon {
-    background-color: black; /* Change 'your-color' to your desired color */
+    background-color: var(--wedding-gold);
+    position: absolute;
+    left: 0; /* Change 'your-color' to your desired color */
 }
 
 /* If you want to change the color when the Navbar is in the collapsed state */
