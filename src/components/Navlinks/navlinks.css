@@ -68,6 +68,9 @@
         background-color: black;
     }
     #mainNavContainer {
+        position: fixed;
+        top: 0;
+        right: 0;
     }
 
     .outerContainer {
@@ -166,6 +169,9 @@
         background-color: black;
     }
     #mainNavContainer {
+        position: fixed;
+        top: 0;
+        right: 0;
         background-color: var(--color-bg);
     }
 
@@ -260,6 +266,9 @@
         background-color: black;
     }
     #mainNavContainer {
+        position: fixed;
+        top: 0;
+        right: 0;
         background-color: var(--color-bg);
     }
 
@@ -392,6 +401,9 @@
         background-color: black;
     }
     #mainNavContainer {
+        position: fixed;
+        top: 0;
+        right: 0;
         background-color: var(--color-bg);
         height: 5vh;
     }
