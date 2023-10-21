@@ -60,9 +60,20 @@
         text-decoration: none;
     }
 
+    .responsive-navbar-nav {
+        border: 2px solid black;
+    }
+
+    .navContainer {
+        background-color: black;
+    }
+    #mainNavContainer {
+    }
+
     .outerContainer {
         position: absolute;
         left: 0;
+        border: 2px solid black;
     }
 
     .bellIcon {
@@ -147,9 +158,21 @@
         color: var(--wedding-gold);
     }
 
+    .responsive-navbar-nav {
+        border: 2px solid black;
+    }
+
+    .navContainer {
+        background-color: black;
+    }
+    #mainNavContainer {
+        background-color: var(--color-bg);
+    }
+
     .outerContainer {
         position: absolute;
         left: 0;
+        border: 2px solid black;
     }
 
     .bellIcon {
@@ -229,9 +252,21 @@
         font-size: medium;
     }
 
+    .responsive-navbar-nav {
+        border: 2px solid black;
+    }
+
+    .navContainer {
+        background-color: black;
+    }
+    #mainNavContainer {
+        background-color: var(--color-bg);
+    }
+
     .outerContainer {
         position: absolute;
         left: 0;
+        border: 2px solid black;
     }
 
     .bellIcon {
@@ -257,12 +292,6 @@
         top: 0;
     }
 
-        #responsive-navbar-nav {
-        position: absolute;
-        /* top: -10px; */
-        left: 5vh;
-    }
-
 /* Change the color of the hamburger lines */
 .navbar-toggler-icon {
     background-color: var(--wedding-gold);
@@ -278,7 +307,7 @@
   #dashLink{
     font-family: 'Playfair Display', serif;
     font-size: 7px;
-    color: white;
+    color: var(--wedding-gold);
     font-weight: bolder;
     margin: 1px;
     padding: 5px;
@@ -355,9 +384,22 @@
         font-size: medium;
     }
 
+    .responsive-navbar-nav {
+        border: 2px solid black;
+    }
+
+    .navContainer {
+        background-color: black;
+    }
+    #mainNavContainer {
+        background-color: var(--color-bg);
+        height: 5vh;
+    }
+
     .outerContainer {
         position: absolute;
         left: 0;
+        border: 2px solid black;
     }
 
     .bellIcon {
@@ -383,12 +425,6 @@
         top: 0;
     }
 
-        #responsive-navbar-nav {
-        position: absolute;
-        /* top: -10px; */
-        left: 5vh;
-    }
-
 /* Change the color of the hamburger lines */
 .navbar-toggler-icon {
     background-color: var(--wedding-gold);
@@ -404,7 +440,7 @@
   #dashLink{
     font-family: 'Playfair Display', serif;
     font-size: 7px;
-    color: white;
+    color: var(--wedding-gold);
     font-weight: bolder;
     margin: 1px;
     padding: 5px;

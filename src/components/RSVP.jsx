@@ -21,8 +21,9 @@ const RSVP = () => {
   };
 
   return (
-    <div id='rsvpPage'>
+    <>
       <Navlinks/>
+    <div id='rsvpPage'>
       {/* <div id="linkContainer">
       <Link to="/">
         <button className='btn btn-primary'>Go Home</button>
@@ -110,6 +111,7 @@ const RSVP = () => {
         <input type="submit" value="Submit" />
       </form>
     </div>
+    </>
   )
 }
 
