@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import React, { useState } from 'react';
 import { Navbar, Container } from 'react-bootstrap';
 // import navBrand from "../assets/logoSolo.png";
 import "./navlinks.css";
@@ -9,12 +9,12 @@ import {BsPersonFillAdd} from 'react-icons/bs'
 import {GiPapers} from 'react-icons/gi'
 
 const Navlinks = () => {
-    const [currentPath, setCurrentPath] = useState(window.location.pathname);
+    // const [currentPath, setCurrentPath] = useState(window.location.pathname);
     const [activeNav, setActiveNav] = useState('#')
 
-    useEffect(() => {
-        setCurrentPath(window.location.pathname)
-    }, []);
+    // useEffect(() => {
+    //     setCurrentPath(window.location.pathname)
+    // }, []);
 
   return (
     // <Navbar 
@@ -23,7 +23,7 @@ const Navlinks = () => {
     //     className="navbarContainer"
     //     >
     <div>
-        {currentPath === '/' ? null : (
+        {/* {currentPath === '/' ? null : ( */}
      <Navbar collapseOnSelect expand="lg" variant='dark' className='navbarContainer'>
     <Container>
         <Navbar.Brand>
@@ -67,7 +67,7 @@ const Navlinks = () => {
   </Navbar.Collapse>
   </Container>
   </Navbar>
-  )}
+  {/* )} */}
   </div>
       )
     }
