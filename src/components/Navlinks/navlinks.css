@@ -259,7 +259,7 @@
 
         #responsive-navbar-nav {
         position: absolute;
-        top: -10px;
+        /* top: -10px; */
         left: 5vh;
     }
 
@@ -377,7 +377,7 @@
 
     .navbarContainer {
         background-color: var(--main-bg);
-        display: none;
+        /* display: none; */
         height: 5vh;
         position: relative;
         top: 0;
@@ -385,7 +385,7 @@
 
         #responsive-navbar-nav {
         position: absolute;
-        top: -10px;
+        /* top: -10px; */
         left: 5vh;
     }
 
