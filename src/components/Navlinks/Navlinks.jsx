@@ -20,9 +20,6 @@ const Navlinks = () => {
           <Nav.Link id="dashLink" href="https://bozierwedding.netlify.app/">
             <AiOutlineHome /> Home
           </Nav.Link>
-          <Nav.Link id="dashLink" href="https://bozierwedding.netlify.app/rsvp">
-            <RiBoxingFill /> RSVP
-          </Nav.Link>
           <Nav.Link id="dashLink" href="https://bozierwedding.netlify.app/schedule">
             <BsPersonFillAdd /> Schedule
           </Nav.Link>
