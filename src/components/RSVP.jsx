@@ -72,7 +72,7 @@ const RSVP = () => {
         <input required type="tel" name="phone" id="formInput"  />
 
         {/* rsvp */}
-        <h3 className="rsvpFormSTitle">Are you Coming?</h3>
+        <h3 className="rsvpFormSTitle">RSVP</h3>
         <aside>
           Yes
             <input type="checkbox" name="checklistYes" id="formInput"/>
@@ -101,7 +101,7 @@ const RSVP = () => {
         </aside>
 
         {/* special details */}
-        <h3>Is there anything we need to make special note of?</h3>
+        <h3>Special Considerations</h3>
         <input type="text" name="specialNote" id="formInput" />
 
         {/* submit */}

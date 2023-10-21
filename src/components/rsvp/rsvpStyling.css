@@ -9,4 +9,27 @@
     .rsvpP {
         font-size: larger;
     }
+
+    #formInput {
+        margin: 5px;
+    }
+}
+
+@media only screen and (max-width: 800px){
+    #rsvpPage {
+        height: 100vh;
+        overflow-y: scroll;
+        color: var(--wedding-gold);
+        font-family: var(--wedding-Str-Font);
+    }
+
+    .rsvpP {
+        font-size: larger;
+    }
+
+    #formInput {
+        margin: 5px;
+    }
+
+
 }
