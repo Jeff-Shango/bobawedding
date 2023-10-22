@@ -1,6 +1,7 @@
 import React from 'react'
 import { Chrono } from 'react-chrono'
 import "./schedule/scheduleStyling.css";
+import Navlinks from './Navlinks/Navlinks';
 
 const Schedule = () => {
   const items = [
@@ -117,6 +118,8 @@ const Schedule = () => {
   } ];
   
   return (
+    <>
+    <Navlinks/>
     <div id='scheduleContainer'>
         {/* <Link to="/">
           <button id='scheduleHmeBtn' className="galleryHomeBtn btn btn-primary">Go To Home</button>
@@ -141,6 +144,7 @@ const Schedule = () => {
         }}
         />
       </div>
+        </>
   )
 }
 

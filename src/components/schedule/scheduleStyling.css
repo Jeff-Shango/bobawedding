@@ -1,4 +1,13 @@
-#scheduleContainer {
+/* small devices */
+/* orientation mode */
+@media screen and (max-width: 600px) {
+        
+.my-card, .my-card-media, .my-card-subtitle, .my-card-text, .my-card-title, .title {
+    font-family: var(--wedding-Str-Font);
+    text-align: center;
+}
+
+    #scheduleContainer {
     position: relative;
     height: 100vh;
 }
@@ -13,7 +22,7 @@
 }
 
 .my-timeline {
-    border: 2px solid green;
+    font-family: var(--wedding-Str-Font);
 }
 
 .my-controls {
@@ -22,10 +31,46 @@
 }
 
 .my-card {
-    border: 2px solid purple;    
 }
 
 .my-card-media {
-    border: 2px solid red;
 }
 
+}
+
+/* landscape mode */
+@media only screen and (max-width: 800px){
+    
+.my-card + 
+
+    #scheduleContainer {
+    position: relative;
+    height: 100vh;
+}
+
+#scheduleHmeBtn {
+    position: fixed;
+    left: 10px;
+    top: 5px;
+    max-width: 5rem;
+    padding: 2px 2px;
+    z-index: 2;
+}
+
+.my-timeline {
+    font-family: var(--wedding-Str-Font);
+}
+
+.my-controls {
+    border: 2px solid red;
+    position: fixed;
+}
+
+.my-card {
+    background-color: var(--);
+}
+
+.my-card-media {
+}
+
+}
