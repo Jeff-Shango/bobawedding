@@ -26,14 +26,15 @@
 
     #linkContainer {
         display: flex;
-        justify-content: space-around;
-        margin-top: 20px;
+        justify-content: center;
     }
 
     #linkContainer > aside {
         font-size: xx-large;
         display: flex;
         border-bottom: 1px solid var(--wedding-gold);
+        padding: auto;
+        margin: 1rem;
     }
 
 
@@ -80,14 +81,15 @@
 
     #linkContainer {
         display: flex;
-        justify-content: space-around;
-        margin-top: 20px;
+        justify-content: center;
     }
 
     #linkContainer > aside {
         font-size: xx-large;
         display: flex;
         border-bottom: 1px solid var(--wedding-gold);
+        padding: auto;
+        margin: 1rem;
     }
 
     #linkContainer a {
