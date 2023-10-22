@@ -6,12 +6,35 @@
         font-family: var(--wedding-Str-Font);
     }
 
+    .rsvpBox {
+        border: 2px solid black;
+    }
+
     .rsvpP {
         font-size: larger;
     }
 
     #formInput {
         margin: 5px;
+    }
+
+    #linkContainer {
+        display: flex;
+        justify-content: space-around;
+        margin-top: 20px;
+    }
+
+    #linkContainer a {
+        text-decoration: none;
+        color: var(--wedding-gold);
+        font-weight: bold;
+        margin: 0 5px;
+        font-family: var(--wedding-Str-Font);
+        font-size: larger;
+    }
+
+    #linkContainer a:hover {
+        text-decoration: underline;
     }
 }
 
@@ -23,12 +46,28 @@
         font-family: var(--wedding-Str-Font);
     }
 
+    .rsvpBox {
+        border: 2px solid black;
+    }
+
     .rsvpP {
         font-size: larger;
     }
 
     #formInput {
         margin: 5px;
+    }
+
+    #linkContainer {
+        display: flex;
+        justify-content: space-around;
+        margin-top: 20px;
+    }
+
+    #linkContainer a {
+        text-decoration: none;
+        color: var(--wedding-gold);
+        font-weight: bold;
     }
 
 

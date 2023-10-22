@@ -18,7 +18,7 @@ const Navlinks = () => {
         {/* Your logo or brand */}
       </Navbar.Brand>
       <Navbar.Toggle aria-controls="responsive-navbar-nav" />
-      <Navbar.Collapse id="responsive-navbar-nav">
+      <Navbar.Collapse id="responsive-navbar-nav navContainer">
         <Nav className="mr-auto navContainer">
           <Link id="dashLink" to="https://bozierwedding.netlify.app/">
             <AiOutlineHome /> Home

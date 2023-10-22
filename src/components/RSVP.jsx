@@ -50,14 +50,14 @@ const RSVP = () => {
       </Link>
 
       </div> */}
-
+<div>
       <h1 className="rsvpTitle">RSVP</h1>
 
       <h2 className="rsvpSubTitle">RSVP Due by:April 30, 2024</h2>
 
       <p className="rsvpP">We warmly invite you to RSVP for The Bozier wedding! Please don't hesistate to contact either Ashley or Jeff if you have any questions or need assistance. We're looking forward to seeing all of you there and sharing this joyous occasion together!!</p>
 
-      <form ref={form} className="rsvpForm" onSubmit={sendEmail} method="post">
+      <form ref={form} className="rsvpForm" onSubmit={sendEmail} method="post" >
         {/* enter name */}
         <h3 className="rsvpFormSTitle" >Name</h3>
         <input required type="text" name="name" id="formInput" placeholder='First'/>
@@ -73,7 +73,8 @@ const RSVP = () => {
 
         {/* rsvp */}
         <h3 className="rsvpFormSTitle">RSVP</h3>
-        <aside>
+        <div id='linkContainer'>
+        <aside >
           Yes
             <input type="checkbox" name="checklistYes" id="formInput"/>
         </aside>
@@ -82,9 +83,11 @@ const RSVP = () => {
           No
             <input type="checkbox" name="checklistNo" id="formInput"/>
         </aside>
+        </div>
 
         {/* food restrictions */}
         <h3 className="rsvpFormsTitle">Food options</h3>
+        <div id='linkContainer'>
         <aside>
           Vegan
           <input type="checkbox" name="vegan" id="formInput" />
@@ -99,6 +102,7 @@ const RSVP = () => {
           Fish
           <input type="checkbox" name='fish' id='formInput' />
         </aside>
+        </div>
 
         {/* special details */}
         <h3>Special Considerations</h3>
@@ -110,6 +114,7 @@ const RSVP = () => {
           sitekey="6LeIxAcTAAAAAJcZVRqyHh71UMIEGNQ_MXjiZKhI"/>
         <input type="submit" value="Submit" />
       </form>
+      </div> 
     </div>
     </>
   )

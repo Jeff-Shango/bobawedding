@@ -65,7 +65,7 @@
     }
 
     .navContainer {
-        background-color: black;
+        border: 2px solid black;
     }
     #mainNavContainer {
         position: fixed;
@@ -166,7 +166,7 @@
     }
 
     .navContainer {
-        background-color: black;
+        border: 2px solid black;
     }
     #mainNavContainer {
         position: fixed;
@@ -263,7 +263,7 @@
     }
 
     .navContainer {
-        background-color: black;
+        border: 2px solid black;
     }
     #mainNavContainer {
         position: fixed;
@@ -398,7 +398,7 @@
     }
 
     .navContainer {
-        background-color: black;
+        border: 2px solid black;
     }
     #mainNavContainer {
         position: fixed;
