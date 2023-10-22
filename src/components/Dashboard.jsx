@@ -89,7 +89,7 @@ const CountdownTimer = ({ targetDate }) => {
   return (
     <div id='bottomDash'>
 
-    <h1 id="dashboardTitle" className='mainComp  calendarSlot'>Friday, May 31, 2024</h1>
+    <h1 id="dashboardTitle" className='calendarSlot'>Friday, May 31, 2024</h1>
     <div className='clock'>
       <div className="timeContainer">
       <label htmlFor="days">Days</label>
