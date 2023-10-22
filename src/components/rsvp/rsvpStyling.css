@@ -1,4 +1,9 @@
 @media screen and (max-width: 600px) {
+
+    .rsvpTitle {
+        font-family: var(--wedding-gold);
+    }
+
     #rsvpPage {
         height: 100vh;
         overflow-y: scroll;
@@ -47,6 +52,11 @@
 }
 
 @media only screen and (max-width: 800px){
+
+    .rsvpTitle {
+        font-family: var(--wedding-gold);
+    }
+
     #rsvpPage {
         height: 100vh;
         overflow-y: scroll;
