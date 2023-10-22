@@ -319,7 +319,7 @@
   #dashLink{
     font-family: 'Playfair Display', serif;
     font-size: 7px;
-    color: var(--wedding-gold);
+    color: white;
     font-weight: bolder;
     margin: 1px;
     padding: 5px;
@@ -456,7 +456,7 @@
   #dashLink{
     font-family: 'Playfair Display', serif;
     font-size: 7px;
-    color: var(--wedding-gold);
+    color: white;
     font-weight: bolder;
     margin: 1px;
     padding: 5px;
