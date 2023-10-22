@@ -74,13 +74,17 @@ const RSVP = () => {
         {/* rsvp */}
         <h3 className="rsvpFormSTitle">RSVP</h3>
         <div id='linkContainer'>
-        <aside >
+        <aside>
+          <h3 id="rsvpText">
           Yes
+          </h3>
             <input type="checkbox" name="checklistYes" id="formInput"/>
         </aside>
 
         <aside>
+          <h3 id="rsvpText">
           No
+          </h3>
             <input type="checkbox" name="checklistNo" id="formInput"/>
         </aside>
         </div>
@@ -89,17 +93,23 @@ const RSVP = () => {
         <h3 className="rsvpFormsTitle">Food options</h3>
         <div id='linkContainer'>
         <aside>
+          <h3 id="rsvpText">
           Vegan
+          </h3>
           <input type="checkbox" name="vegan" id="formInput" />
         </aside>
 
         <aside>
+          <h3 id="rsvpText">
           Meat
+          </h3>
           <input type="checkbox" name="meat" id="formInput" />
         </aside>
 
         <aside>
+          <h3 id="rsvpText">
           Fish
+          </h3>
           <input type="checkbox" name='fish' id='formInput' />
         </aside>
         </div>
