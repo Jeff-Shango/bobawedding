@@ -452,8 +452,44 @@
       background-color: var(--wedding-gold); /* Change 'your-color' to your desired color */
   }
 
+  .dashLink{
+    font-family: 'Playfair Display', serif;
+    font-size: 9px;
+    color: var(--wedding-gold);
+    font-weight: bolder;
+    margin: 1px;
+    padding: 5px;
+    text-decoration: none;
+    letter-spacing: 3px;
+    /* backdrop-filter: blur(10px);
+    background-color: rgba(0, 0, 0, 0.3);
+    border-radius: 10px;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    -ms-border-radius: 10px;
+    -o-border-radius: 10px; */
+}  
 
-  #dashLink{
+#dashNavCon .dashLink{
+    font-family: 'Playfair Display', serif;
+    font-size: 9px;
+    color: white;
+    font-weight: bolder;
+    margin: 1px;
+    padding: 5px;
+    text-decoration: none;
+    letter-spacing: 3px;
+    /*backdrop-filter: blur(10px);
+    background-color: rgba(0, 0, 0, 0.3);
+    border-radius: 10px;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    -ms-border-radius: 10px;
+    -o-border-radius: 10px;
+    */
+}  
+
+#dashLink{
     font-family: 'Playfair Display', serif;
     font-size: 9px;
     color: var(--wedding-gold);
