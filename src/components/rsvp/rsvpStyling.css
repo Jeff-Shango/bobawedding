@@ -1,14 +1,15 @@
 @media screen and (max-width: 600px) {
 
     .rsvpTitle {
-        font-family: var(--wedding-gold);
+        font-family: var(--wedding-Cursive);
+        font-size: xx-large;
     }
 
     #rsvpPage {
         height: 100vh;
         overflow-y: scroll;
         color: var(--wedding-gold);
-        font-family: var(--wedding-Str-Font);
+        /* font-family: var(--wedding-Str-Font); */
     }
 
     .rsvpBox {
@@ -54,7 +55,8 @@
 @media only screen and (max-width: 800px){
 
     .rsvpTitle {
-        font-family: var(--wedding-gold);
+        font-family: var(--wedding-Cursive);
+        font-size: xx-large;
     }
 
     #rsvpPage {
