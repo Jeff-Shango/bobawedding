@@ -29,6 +29,8 @@
     /* border: 2px solid red; */
     width: 50vh;
     justify-content: center;
+    position: fixed;
+    top: 0;
 }
 
 .TimelineNavItem-sc-3apb8f9-1, .TimelineNavItem-sc-1apb8f9-1 {
@@ -72,6 +74,8 @@
     /* border: 2px solid red; */
     width: 50vh;
     justify-content: center;
+    position: fixed;
+    top: 0;
 }
 
 .TimelineNavItem-sc-3apb8f9-1, .TimelineNavItem-sc-1apb8f9-1 {
