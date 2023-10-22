@@ -132,14 +132,14 @@ const Schedule = () => {
         mode="VERTICAL_ALTERNATING"
         slideShow
         slideShowType="reveal"
-        slideShowDuration={2200}
+        slideShowDuration={200}
         classNames={{
           card: 'my-card',
           cardMedia: 'my-card-media',
           cardSubTitle: 'my-card-subtitle',
           cardText: 'my-card-text',
           cardTitle: 'my-card-title',
-          // controls: 'my-controls',
+          controls: 'my-controls',
           title: 'my-title',
         }}
         />
