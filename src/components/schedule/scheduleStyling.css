@@ -2,7 +2,7 @@
 /* orientation mode */
 @media screen and (max-width: 600px) {
         
-.my-card, .my-card-media, .my-card-subtitle, .my-card-text, .my-card-title, .title {
+.my-card, .my-card-media, .my-card-subtitle, .my-card-text, .my-card-title .title {
     font-family: var(--wedding-Str-Font);
     text-align: center;
 }
@@ -39,10 +39,42 @@
 }
 
 
-.my-card {
+.my-card-title {
+    border: 2px solid blue;
+    color: red;
+    font-size: xx-large;
+}
+
+.TimelineTitleWrapper-sc-1427v1d-3 > div{
+    color: var(--wedding-green);
+}
+
+
+
+.CardMediaHeader-sc-1yk7mm5-7 > h1 {
+    color: var(--wedding-green);
 }
 
 .my-card-media {
+}
+
+.TimelinePointWrapper-sc-12rz3g8-0::after, .TimelinePointWrapper-sc-12rz3g8-0::before {
+    border: var(--wedding-gold) 2px solid;
+}
+
+.Shape-sc-18iuiou-3 {
+    color: red;
+    background-color: red;
+    border: 2px solid red;
+    display: none;
+}
+
+.hdOTXE {
+    color: red;
+}
+
+.TitleWrapper-sc-13izrht-0 > div::before {
+    background-color: red;
 }
 
 }
@@ -83,12 +115,49 @@
     margin: auto;
 }
 
+.my-card-title {
+    border: 2px solid blue;
+    color: red;
+    font-size: xx-large;
+}
+
+.TimelineTitleWrapper-sc-1427v1d-3 > div{
+    color: var(--wedding-green);
+}
+
+.CardTitle-sc-d7qjm1-3 {
+    color: var(--wedding-green);
+}
+
 
 .my-card {
     background-color: var(--);
 }
 
+.CardMediaHeader-sc-1yk7mm5-7 > h1 {
+    color: var(--wedding-green);
+}
+
 .my-card-media {
+}
+
+.TimelinePointWrapper-sc-12rz3g8-0::after, .TimelinePointWrapper-sc-12rz3g8-0::before {
+    border: var(--wedding-gold) 2px solid;
+}
+
+.Shape-sc-18iuiou-3 {
+    color: red;
+    background-color: red;
+    border: 2px solid red;
+    display: none;
+}
+
+.hdOTXE {
+    color: red;
+}
+
+.TitleWrapper-sc-13izrht-0::after {
+    background-color: red;
 }
 
 }
