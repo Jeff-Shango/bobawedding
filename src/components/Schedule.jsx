@@ -19,7 +19,7 @@ const Schedule = () => {
     name: "First Sight",
     muted: true
   },
-  autoPlay: true,
+  autoPlay: false,
   controls: false
   },
   {
@@ -36,7 +36,7 @@ const Schedule = () => {
     name: "First Encouter",
     muted: true
   },
-  autoPlay: true,
+  autoPlay: false,
   controls: false
   },
   {
