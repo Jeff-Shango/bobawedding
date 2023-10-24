@@ -289,29 +289,132 @@ code {
     background-size: cover;
     background-repeat: no-repeat;
     background-attachment: fixed;
-    animation: fadeImages 6s infinite;
-    -webkit-animation: fadeImages 6s infinite;
+    animation: fadeImages 78s infinite;
+    -webkit-animation: fadeImages 78s infinite;
 }
 
 @keyframes fadeImages {
-  0% {
-    background-image: url('./assets/wedImgA.jpg');
-  }
-  20% {
-    background-image: url('./assets/wedImgA.jpg');
-  }
-  40% {
-    background-image: url('./assets/wedImgB.jpg');
-  }
-  60% {
-    background-image: url('./assets/wedImgB.jpg');
-  }
-  80% {
-    background-image: url('./assets/wedImgC.jpg');
-  }
-  100% {
-    background-image: url('./assets/wedImgC.jpg');
-  }
+ 0% {
+  background-image: url('./assets/imgA.jpg');
+ }
+ 4.76% {
+  background-image: url('./assets/imgA.jpg');
+ }
+ 9.52% {
+  background-image: url('./assets/imgB.jpg');
+ }
+ 14.28% {
+  background-image: url('./assets/imgB.jpg');
+ }
+ 19.04% {
+  background-image: url('./assets/imgC.jpg');
+ }
+ 23.8% {
+  background-image: url('./assets/imgC.jpg');
+ }
+ 28.56% {
+  background-image: url('./assets/imgD.jpg');
+ }
+ 33.32% {
+  background-image: url('./assets/imgD.jpg');
+ }
+ 38.08% {
+  background-image: url('./assets/imgE.jpg');
+ }
+ 42.84% {
+  background-image: url('./assets/imgE.jpg');
+ }
+ 47.6% {
+  background-image: url('./assets/imgF.jpg');
+ }
+ 52.36% {
+  background-image: url('./assets/imgF.jpg');
+ }
+ 57.12% {
+  background-image: url('./assets/imgG.jpg');
+ }
+ 61.88% {
+  background-image: url('./assets/imgG.jpg');
+ }
+ 66.64% {
+  background-image: url('./assets/imgH.jpg');
+ }
+ 71.4% {
+  background-image: url('./assets/imgH.jpg');
+ }
+ 76.16% {
+  background-image: url('./assets/imgJ.jpg');
+ }
+ 80.92% {
+  background-image: url('./assets/imgJ.jpg');
+ }
+ 85.68% {
+  background-image: url('./assets/imgK.jpg');
+ }
+ 90.44% {
+  background-image: url('./assets/imgK.jpg');
+ }
+ 95.2% {
+  background-image: url('./assets/imgL.jpg');
+ }
+ 99.96% {
+  background-image: url('./assets/imgL.jpg');
+ }
+ 104.72% {
+  background-image: url('./assets/imgM.jpg');
+ }
+ 109.48% {
+  background-image: url('./assets/imgM.jpg');
+ }
+ 114.24% {
+  background-image: url('./assets/imgN.jpg');
+ }
+ 119% {
+  background-image: url('./assets/imgN.jpg');
+ }
+ 123.76% {
+  background-image: url('./assets/imgO.jpg');
+ }
+ 128.52% {
+  background-image: url('./assets/imgO.jpg');
+ }
+ 133.28% {
+  background-image: url('./assets/imgP.jpg');
+ }
+ 138.04% {
+  background-image: url('./assets/imgP.jpg');
+ }
+ 142.8% {
+  background-image: url('./assets/imgQ.jpg');
+ }
+ 147.56% {
+  background-image: url('./assets/imgQ.jpg');
+ }
+ 152.32% {
+  background-image: url('./assets/imgR.jpg');
+ }
+ 157.08% {
+  background-image: url('./assets/imgR.jpg');
+ }
+ 161.84% {
+  background-image: url('./assets/imgS.jpg');
+ }
+ 166.6% {
+  background-image: url('./assets/imgS.jpg');
+ }
+ 171.36% {
+  background-image: url('./assets/imgT.jpg');
+ }
+ 176.12% {
+  background-image: url('./assets/imgT.jpg');
+ }
+ 180.88% {
+  background-image: url('./assets/imgU.jpg');
+ }
+ 185.64% {
+  background-image: url('./assets/imgU.jpg');
+ }
+
 
 }
 
@@ -674,34 +777,130 @@ code {
     background-size: cover;
     background-repeat: no-repeat;
     background-attachment: fixed;
-    animation: fadeImages 6s infinite;
-    -webkit-animation: fadeImages 6s infinite;
+    animation: fadeImages 78s infinite;
+    -webkit-animation: fadeImages 78s infinite;
 }
 
 @keyframes fadeImages {
   0% {
-    background-image: url('./assets/wedImgA.jpg');
-    background-position: center top;
+   background-image: url('./assets/imgA.jpg');
   }
-  20% {
-    background-image: url('./assets/wedImgA.jpg');
-    background-position: center top;
+  4.76% {
+   background-image: url('./assets/imgA.jpg');
   }
-  40% {
-    background-image: url('./assets/wedImgB.jpg');
-    background-position: center top;
+  9.52% {
+   background-image: url('./assets/imgB.jpg');
   }
-  60% {
-    background-image: url('./assets/wedImgB.jpg');
-    background-position: center top;
+  14.28% {
+   background-image: url('./assets/imgB.jpg');
   }
-  80% {
-    background-image: url('./assets/wedImgC.jpg');
-    background-position: center top;
+  19.04% {
+   background-image: url('./assets/imgC.jpg');
   }
-  100% {
-    background-image: url('./assets/wedImgC.jpg');
-    background-position: center top;
+  23.8% {
+   background-image: url('./assets/imgC.jpg');
+  }
+  28.56% {
+   background-image: url('./assets/imgD.jpg');
+  }
+  33.32% {
+   background-image: url('./assets/imgD.jpg');
+  }
+  38.08% {
+   background-image: url('./assets/imgE.jpg');
+  }
+  42.84% {
+   background-image: url('./assets/imgE.jpg');
+  }
+  47.6% {
+   background-image: url('./assets/imgF.jpg');
+  }
+  52.36% {
+   background-image: url('./assets/imgF.jpg');
+  }
+  57.12% {
+   background-image: url('./assets/imgG.jpg');
+  }
+  61.88% {
+   background-image: url('./assets/imgG.jpg');
+  }
+  66.64% {
+   background-image: url('./assets/imgH.jpg');
+  }
+  71.4% {
+   background-image: url('./assets/imgH.jpg');
+  }
+  76.16% {
+   background-image: url('./assets/imgJ.jpg');
+  }
+  80.92% {
+   background-image: url('./assets/imgJ.jpg');
+  }
+  85.68% {
+   background-image: url('./assets/imgK.jpg');
+  }
+  90.44% {
+   background-image: url('./assets/imgK.jpg');
+  }
+  95.2% {
+   background-image: url('./assets/imgL.jpg');
+  }
+  99.96% {
+   background-image: url('./assets/imgL.jpg');
+  }
+  104.72% {
+   background-image: url('./assets/imgM.jpg');
+  }
+  109.48% {
+   background-image: url('./assets/imgM.jpg');
+  }
+  114.24% {
+   background-image: url('./assets/imgN.jpg');
+  }
+  119% {
+   background-image: url('./assets/imgN.jpg');
+  }
+  123.76% {
+   background-image: url('./assets/imgO.jpg');
+  }
+  128.52% {
+   background-image: url('./assets/imgO.jpg');
+  }
+  133.28% {
+   background-image: url('./assets/imgP.jpg');
+  }
+  138.04% {
+   background-image: url('./assets/imgP.jpg');
+  }
+  142.8% {
+   background-image: url('./assets/imgQ.jpg');
+  }
+  147.56% {
+   background-image: url('./assets/imgQ.jpg');
+  }
+  152.32% {
+   background-image: url('./assets/imgR.jpg');
+  }
+  157.08% {
+   background-image: url('./assets/imgR.jpg');
+  }
+  161.84% {
+   background-image: url('./assets/imgS.jpg');
+  }
+  166.6% {
+   background-image: url('./assets/imgS.jpg');
+  }
+  171.36% {
+   background-image: url('./assets/imgT.jpg');
+  }
+  176.12% {
+   background-image: url('./assets/imgT.jpg');
+  }
+  180.88% {
+   background-image: url('./assets/imgU.jpg');
+  }
+  185.64% {
+   background-image: url('./assets/imgU.jpg');
   }
 
 }
