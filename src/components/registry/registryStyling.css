@@ -5,13 +5,18 @@
 #registryPageContainer {
     height: 100vh;
     overflow-y: scroll;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
 }
 
 .registryContainer {
     
 }
 .cashAppContainer {
-    
+ height: fit-content;
+ width: fit-content;
 }
 
 .cashAppButton {
@@ -27,16 +32,21 @@
 /* small devices */
 /* orientation mode */
 @media screen and (max-width: 800px) {
-    #registryPageContainer {
-        height: 100vh;
-        overflow-y: scroll;
-    }
-
+#registryPageContainer {
+    height: 100vh;
+    overflow-y: scroll;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+    
 .registryContainer {
     
 }
 .cashAppContainer {
-    
+ height: fit-content;
+ width: fit-content;
 }
 
 .cashAppButton {
