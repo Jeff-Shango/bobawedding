@@ -1,10 +1,9 @@
 import React, { useEffect } from 'react';
 import "./registry/registryStyling.css";
-import {Row, Col} from 'react-bootstrap';
-import { productsArray } from '../functions/stripeFunctions';
+// import {Row, Col} from 'react-bootstrap';
+// import { productsArray } from '../functions/stripeFunctions';
 import cashApp from '../assets/theBoziersCashApp.jpg';
-import { Link } from 'react-router-dom';
-
+import Navlinks from './Navlinks/Navlinks.jsx'
 
 const Registry = () => {
   
@@ -20,32 +19,32 @@ const Registry = () => {
 
 
   return (
+    <>
+    <Navlinks/>
     <div id='registryPageContainer'>
               {/* Registry Link Container */}
 
               <div className="registryContainer">
 
-<Link to="/registry">
-  <button className="cashAppTitle btn btn-primary">Click Hashtag for Registry</button>
-</Link>
+
   <div className="cashAppContainer">
     <button src="https://cash.app/$TheBoziers" className='cashAppButton' onClick={() => window.open('https://cash.app/$TheBoziers', '_blank')}>
     <img src={cashApp} alt="cashApp" />
     </button>
   </div>
 
-  <div className="zelleContainer">
+  {/* <div className="zelleContainer">
     <h2 align="center" className='p-3'>Quick Payments</h2>
     <Row xs={2} md={3} className="g-4">
       {productsArray.map((product, idx) => (
         <Col align="center" key={idx} >
-          {/* <ProductCard product={product}/> */}
+          <ProductCard product={product}/>
         </Col>
       ))}
       
 
     </Row>
-  </div>
+  </div> */}
   
 {/* navbar */}
 {/* <NavbarComponent></NavbarComponent> */}
@@ -61,6 +60,7 @@ title="MyRegistry Gift List"
 
 
     </div>
+    </>
   )
 }
 

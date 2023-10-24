@@ -1,4 +1,55 @@
+/* small devices */
+/* orientation mode */
+@media screen and (max-width: 600px) {
+
 #registryPageContainer {
     height: 100vh;
     overflow-y: scroll;
+}
+
+.registryContainer {
+    
+}
+.cashAppContainer {
+    
+}
+
+.cashAppButton {
+    
+}
+
+.zelleContainer {
+    
+}
+
+}
+
+/* small devices */
+/* orientation mode */
+@media screen and (max-width: 800px) {
+    #registryPageContainer {
+        height: 100vh;
+        overflow-y: scroll;
+    }
+
+.registryContainer {
+    
+}
+.cashAppContainer {
+    
+}
+
+.cashAppButton {
+    
+}
+
+.zelleContainer {
+    
+}
+
+.mrw_isMobile {
+    
+}
+
+
 }
