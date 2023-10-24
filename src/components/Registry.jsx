@@ -31,6 +31,7 @@ const Registry = () => {
     <button src="https://cash.app/$TheBoziers" className='cashAppButton' onClick={() => window.open('https://cash.app/$TheBoziers', '_blank')}>
     <img src={cashApp} alt="cashApp" />
     </button>
+    <aside id='registryAside'>Scan or Click QR code to send CashApp </aside>
   </div>
 
   {/* <div className="zelleContainer">
