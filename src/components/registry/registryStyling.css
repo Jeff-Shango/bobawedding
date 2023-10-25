@@ -3,20 +3,25 @@
 @media screen and (max-width: 600px) {
 
 #registryPageContainer {
-    height: 100vh;
+    height: 100%;
     overflow-y: scroll;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    font-family: var(--wedding-Str-Font);
 }
+
+#MR_GlobalWrapper {
+    border: 2px solid blue;
+}
+
 
 .registryContainer {
     
 }
 
 #registryAside {
-    border: 2px solid blue;
     font-size: large;
 }
 .cashAppContainer {
@@ -32,18 +37,26 @@
     
 }
 
+#script_myregistry_giftlist_iframe {
+    overflow-y: scroll;
+}
 }
 
 /* small devices */
 /* orientation mode */
 @media screen and (max-width: 800px) {
 #registryPageContainer {
-    height: 100vh;
+    height: 100%;
     overflow-y: scroll;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    font-family: var(--wedding-Str-Font);
+}
+
+#MR_GlobalWrapper {
+    border: 2px solid blue;
 }
     
 .registryContainer {
@@ -51,7 +64,6 @@
 }
 
 #registryAside {
-    border: 2px solid blue;
     font-size: large;
 }
 .cashAppContainer {
@@ -67,6 +79,9 @@
     
 }
 
+#script_myregistry_giftlist_iframe {
+    overflow-y: scroll;
+}
 .mrw_isMobile {
     
 }
