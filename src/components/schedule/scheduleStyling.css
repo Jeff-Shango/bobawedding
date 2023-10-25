@@ -48,6 +48,13 @@
     color: var(--wedding-green);
 }
 
+/* TitleWrapper-sc-13izrht-0 fhstIq timeline-item-title active my-title */
+
+.TimelineTitleWrapper-sc-1427v1d-3 > div.active {
+    color: var(--wedding-gold);
+    background-color: transparent;
+}
+
 
 
 .CardMediaHeader-sc-1yk7mm5-7 > h1 {
@@ -121,6 +128,13 @@
 
 .TimelineTitleWrapper-sc-1427v1d-3 > div{
     color: var(--wedding-green);
+}
+
+/* TitleWrapper-sc-13izrht-0 fhstIq timeline-item-title active my-title */
+
+.TimelineTitleWrapper-sc-1427v1d-3 > div.active {
+    color: var(wedd);
+    background-color: transparent;
 }
 
 .CardTitle-sc-d7qjm1-3 {
