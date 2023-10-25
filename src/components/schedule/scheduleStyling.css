@@ -38,6 +38,10 @@
     margin: auto;
 }
 
+.TimelineNavItem-sc-3apb8f9-1, .TimelineNavItem-sc-1apb8f9-1 > button {
+    background-color: var(--wedding-gold);
+}
+
 
 .my-card-title {
     color: red;
@@ -119,6 +123,10 @@
 .TimelineNavItem-sc-3apb8f9-1, .TimelineNavItem-sc-1apb8f9-1 {
     font-size: xx-large;
     margin: auto;
+}
+
+.TimelineNavItem-sc-3apb8f9-1, .TimelineNavItem-sc-1apb8f9-1 > button {
+    background-color: var();
 }
 
 .my-card-title {
