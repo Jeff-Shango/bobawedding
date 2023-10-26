@@ -7,6 +7,28 @@
     font-size: xx-large;
     font-family: var(--wedding-Cursive);
   }
+
+  #galleryDescript {
+    font-family: var(--wedding-Str-Font);
+  }
+
+  #galleryImg {
+    margin-top: 2.5rem;
+    border: none;
+    border-radius: 12px;
+    -webkit-border-radius: 12px;
+    -moz-border-radius: 12px;
+    -ms-border-radius: 12px;
+    -o-border-radius: 12px;
+}
+  #imgBox {
+    background-image: url('../assets/BlackWhiteClassicPaperBorder.png');
+    background-size: 27rem 25rem;
+    height: 25rem;
+    background-repeat: no-repeat;
+    margin-bottom: 2rem;
+    position: relative;
+  }
   .comments {
     margin-top: 20px;
   }
@@ -119,6 +141,24 @@
     letter-spacing: 3.5px;
     font-size: xx-large;
     font-family: var(--wedding-Cursive);
+  }
+
+  #galleryDescript {
+    font-family: var(--wedding-Str-Font);
+  }
+
+  #galleryImg {
+    margin-top: 2.5rem;
+    border: none;
+    border-radius: 12px;
+}
+  #imgBox {
+    background-image: url('../assets/BlackWhiteClassicPaperBorder.png');
+    background-size: 27rem 25rem;
+    height: 25rem;
+    background-repeat: no-repeat;
+    margin-bottom: 2rem;
+    position: relative;
   }
   .comments {
     margin-top: 20px;

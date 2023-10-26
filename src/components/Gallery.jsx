@@ -75,12 +75,13 @@ const Gallery = () => {
       <Navlinks/>
       <div className="galleryTitleContainer">
         <h1 id="galleryTitle">GALLERY</h1>
+        <h3 id="galleryDescript">CLICK THE IMAGE TO VIEW IT</h3>
       </div>
       {/* <Link to="/">
         <button className="galleryHomeBtn btn btn-primary">Go To Home</button>
       </Link> */}
       {imgContainer.map((image, index) => (
-        <div key={index}>
+        <div key={index} id='imgBox'>
         <img
           id='galleryImg'
           key={index}
