@@ -2,7 +2,7 @@ import React, { useEffect } from 'react';
 import "./registry/registryStyling.css";
 // import {Row, Col} from 'react-bootstrap';
 // import { productsArray } from '../functions/stripeFunctions';
-import cashApp from '../assets/theBoziersCashApp.jpg';
+import cashApp from '../assets/theBoziersCashApp.png';
 import Navlinks from './Navlinks/Navlinks.jsx'
 
 const Registry = () => {
