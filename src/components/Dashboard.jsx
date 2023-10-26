@@ -163,8 +163,9 @@ const Dashboard = () => {
         <h1 className='text-shadow-pop-top'>Bozier Ever After</h1>
 
         <div id="dashNavCon">
-          <Link to="https://bozierwedding.netlify.app/rsvp" id="dashLink" className='dashLink'> RSVP</Link>
-          <Link to="https://bozierwedding.netlify.app/schedule" id="dashLink" className='dashLink'> SCHEDULE</Link>
+          <Link to="https://bozierwedding.netlify.app/rsvp" id="dashLink" className='dashLink'>RSVP</Link>
+          <Link to="https://bozierwedding.netlify.app/gallery" id="dashLink" className='dashLink'>GALLERY</Link>
+          <Link to="https://bozierwedding.netlify.app/schedule" id="dashLink" className='dashLink'>SCHEDULE</Link>
           <Link to="https://bozierwedding.netlify.app/registry" id="dashLink" className='dashLink'>REGISTRY</Link>
           <Link to="https://bozierwedding.netlify.app/weddingParty" id="dashLink" className='dashLink'>WEDDING PARTY</Link>
         </div>
