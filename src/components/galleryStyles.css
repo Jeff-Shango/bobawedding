@@ -10,6 +10,7 @@
 
   #galleryDescript {
     font-family: var(--wedding-Str-Font);
+    font-size: large;
   }
 
   #galleryImg {
@@ -145,6 +146,7 @@
 
   #galleryDescript {
     font-family: var(--wedding-Str-Font);
+    font-size: large;
   }
 
   #galleryImg {
