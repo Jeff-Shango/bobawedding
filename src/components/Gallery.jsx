@@ -71,7 +71,7 @@ const Gallery = () => {
   
 
   return (
-    <div>
+    <div id='galleryBox'>
       <Navlinks/>
       <div className="galleryTitleContainer">
         <h1 id="galleryTitle">GALLERY</h1>
