@@ -130,8 +130,8 @@ const Schedule = () => {
         enableBreakPoint
         verticalBreakPoint={450}
         mode="VERTICAL_ALTERNATING"
-        // slideShow
-        // slideShowType="reveal"
+        slideShow
+        slideShowType="reveal"
         slideShowDuration={200}
         classNames={{
           card: 'my-card',
