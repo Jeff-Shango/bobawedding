@@ -316,15 +316,15 @@
   }
 
 
-  #dashLink{
+#dashLink{
     font-family: 'Playfair Display', serif;
     font-size: 5px;
     color: var(--wedding-gold);
     font-weight: bolder;
-    margin: 1px;
-    padding: 5px;
-    letter-spacing: 3px;
+    /* margin: 1px;
+    padding: 5px; */
     text-decoration: none;
+    /* letter-spacing: 3px; */
     /* backdrop-filter: blur(10px);
     background-color: rgba(0, 0, 0, 0.3);
     border-radius: 10px;
