@@ -7,12 +7,12 @@ const Schedule = () => {
   const items = [
     {
     title: "April 20, 2020",
-    cardTitle: "Initial Contact",
-    cardSubtitle:"Jeff slid into Ashley's DMs on OK Cupid!",
+    cardTitle: "First Contact",
+    cardSubtitle:"After both swiping right on OkCupid! The groom slid into the bride's DMs and they've been talking every day since.",
     cardDetailedText: "",
       media: {
     source: {
-      url: require("../assets/okCupidPic.mp4"),
+      url: require("../assets/okCupid.mp4"),
       type: "mp4"
     },
     type: "VIDEO",
@@ -24,16 +24,16 @@ const Schedule = () => {
   },
   {
     title: "May 31, 2020",
-    cardTitle: "Initial Sight",
-    cardSubtitle:"We first saw each other in person",
-    cardDetailedText: "Hung out around Parkville, MD ",
+    cardTitle: "First Meeting",
+    cardSubtitle:"After several texts, phone calls and FaceTimes, the bride and groom decided to meet in person. Pandemic dating encouraged the pair to have intimate dates where they got to know each other better.",
+    cardDetailedText: "",
     media: {
     source: {
-      url: require("../assets/ladyTrampVid.mp4"),
+      url: require("../assets/lakeMont.JPG"),
       type: "mp4"
     },
-    type: "VIDEO",
-    name: "First Encouter",
+    type: "IMAGE",
+    name: "First Meeting",
     muted: true
   },
   autoPlay: false,
@@ -41,9 +41,9 @@ const Schedule = () => {
   },
   {
     title: "November 4-6, 2020",
-    cardTitle: "First Bae-cation",
-    cardSubtitle:"Front Royal, VA",
-    cardDetailedText: "Both felt the need for a vacation from life, and both decided to go together!",
+    cardTitle: "First Baecation",
+    cardSubtitle:"The bride and groom traveled to a cabin in Front Royal, VA for their first couple getaway. They spent the long weekend relaxing, laughing and dancing around the idea of commitment.",
+    cardDetailedText: "",
     media: {
       source: {
         url: require("../assets/baecation.mp4"),
@@ -58,9 +58,9 @@ const Schedule = () => {
   },
   {
     title: "November 13, 2020",
-    cardTitle: "Become an official couple",
-    cardSubtitle:"Decide to stop playing games and make it official as a couple.",
-    cardDetailedText: "Wanting to make a pact that we were going to be each other's boyfriend and girlfriend.",
+    cardTitle: "Made it Official",
+    cardSubtitle:"The groom asked the bride if she wanted to be his \"woman,\" she giddily accepted. They immediately moved in together, and well...we're here, aren't we.",
+    cardDetailedText: "",
     media: {
       type: "IMAGE",
       source: {
@@ -72,19 +72,19 @@ const Schedule = () => {
     title: "April 17-18, 2021",
     cardTitle: "Myrtle Beach, South Carolina",
     cardSubtitle:"Weekend trip to Myrtle Beach, South Carolina.",
-    cardDetailedText: "This trip was where Jeff and Ashley almost talked each other into eloping and marrying then and there.",
+    cardDetailedText: "On the day the bride and groom were leaving the beach to drive back to Baltimore, they dared each other to elope. But alas, it was a Sunday and Google wasn't willing to indulge the couple's impulsivity that day.",
     media: {
-      type: "IMAGE",
+      type: "VIDEO",
       source: {
-        url: require("../assets/myrtleBeach.jpg")
+        url: require("../assets/myrtleBeach.mp4")
       }
     }
   },
   {
     title: "August 9-15, 2021",
     cardTitle: "Miami, Florida",
-    cardSubtitle:"Baecation to Florida.",
-    cardDetailedText: "Celebrating Ashley's birthday!",
+    cardSubtitle:"The COuple Decided to Make a Habit of Traveling Together",
+    cardDetailedText:"For the Bride's Birthday, the couple decided to spend a week in Miami, FL. They declared that they would travel annually during one of the weeks between their July and August birthdays.",
     media: {
       type: "VIDEO",
       source: {
