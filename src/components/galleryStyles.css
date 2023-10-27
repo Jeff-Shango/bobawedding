@@ -23,7 +23,7 @@
     -o-border-radius: 12px;
 }
   #imgBox {
-    background-image: url('../assets/BlackWhiteClassicPaperBorder.png');
+    background-image: url('../assets/BlackWhiteClassicPaperBorderB.png');
     background-size: 24rem 25rem;
     height: 25rem;
     background-repeat: no-repeat;
@@ -155,7 +155,7 @@
     border-radius: 12px;
 }
   #imgBox {
-    background-image: url('../assets/BlackWhiteClassicPaperBorder.png');
+    background-image: url('../assets/BlackWhiteClassicPaperBorderB.png');
     background-size: 24rem 25rem;
     height: 25rem;
     background-repeat: no-repeat;
