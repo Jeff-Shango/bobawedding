@@ -1,11 +1,3 @@
-import {AiOutlineHome} from 'react-icons/ai';
-import {FaFileMedical} from 'react-icons/fa'
-// import {RiBoxingFill} from 'react-icons/ri'
-import {BsPersonFillAdd} from 'react-icons/bs'
-import {GiPapers} from 'react-icons/gi'
-// import { AiOutlineHome, FaFileMedical } from 'react-icons/ai';
-// import { BsPersonFillAdd } from 'react-icons/bs';
-// import { GiPapers } from 'react-icons/gi';
 import React from 'react';
 import { Navbar, Nav } from 'react-bootstrap';
 import { Link } from 'react-router-dom'; // Import Link from React Router
@@ -21,19 +13,19 @@ const Navlinks = () => {
       <Navbar.Collapse id="responsive-navbar-nav navContainer">
         <Nav className="mr-auto navContainer">
           <Link id="dashLink" to="https://bozierwedding.netlify.app/">
-            <AiOutlineHome />Home
+            Home
           </Link>
           <Link id="dashLink" to="https://bozierwedding.netlify.app/gallery">
-            <AiOutlineHome />GALLERY
+            GALLERY
           </Link>
           <Link id="dashLink" to="https://bozierwedding.netlify.app/schedule">
-            <BsPersonFillAdd />SCHEDULE
+            SCHEDULE
           </Link>
           <Link id="dashLink" to="https://bozierwedding.netlify.app/weddingParty">
-            <GiPapers />WEDDING TEAM
+            WEDDING TEAM
           </Link>
           <Link id="dashLink" to="https://bozierwedding.netlify.app/registry">
-            <FaFileMedical />REGISTRY
+            REGISTRY
           </Link>
         </Nav>
       </Navbar.Collapse>
