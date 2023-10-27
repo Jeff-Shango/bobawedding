@@ -21,16 +21,19 @@ const Navlinks = () => {
       <Navbar.Collapse id="responsive-navbar-nav navContainer">
         <Nav className="mr-auto navContainer">
           <Link id="dashLink" to="https://bozierwedding.netlify.app/">
-            <AiOutlineHome /> Home
+            <AiOutlineHome />Home
+          </Link>
+          <Link id="dashLink" to="https://bozierwedding.netlify.app/gallery">
+            <AiOutlineHome />GALLERY
           </Link>
           <Link id="dashLink" to="https://bozierwedding.netlify.app/schedule">
-            <BsPersonFillAdd /> Schedule
+            <BsPersonFillAdd />SCHEDULE
           </Link>
           <Link id="dashLink" to="https://bozierwedding.netlify.app/weddingParty">
-            <GiPapers /> Wedding Team
+            <GiPapers />WEDDING TEAM
           </Link>
           <Link id="dashLink" to="https://bozierwedding.netlify.app/registry">
-            <FaFileMedical /> Registry
+            <FaFileMedical />REGISTRY
           </Link>
         </Nav>
       </Navbar.Collapse>
