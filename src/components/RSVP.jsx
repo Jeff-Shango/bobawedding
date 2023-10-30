@@ -50,7 +50,6 @@ const RSVP = () => {
       </Link>
 
       </div> */}
-<div>
       <h1 className="rsvpTitle">RSVP</h1>
 
       <h2 className="rsvpSubTitle">RSVP Due by:April 30, 2024</h2>
@@ -125,7 +124,6 @@ const RSVP = () => {
         <button type='submit' className='rsvpSubmit'>RSVP</button>
       </form>
       </div> 
-    </div>
     </>
   )
 }
