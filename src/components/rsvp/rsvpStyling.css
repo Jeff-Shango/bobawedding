@@ -48,6 +48,17 @@
         font-size: larger;
     }
 
+    .rsvpSubmit {
+        height: 1.5rem;
+        width: 5rem;
+        text-align: center;
+        justify-content: center;
+        border: none;
+        background: var(--wedding-gold);
+        padding: 1.5rem;
+        
+    }
+
     #linkContainer a:hover {
         text-decoration: underline;
     }
@@ -99,6 +110,12 @@
         margin: 0 5px;
         font-family: var(--wedding-Str-Font);
         font-size: larger;
+    }
+
+    .rsvpSubmit {
+        height: 1.5rem;
+        border: none;
+        box-shadow: 1rem blue;
     }
 
 

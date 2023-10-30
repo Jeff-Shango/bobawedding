@@ -11,6 +11,7 @@ import Success from "./functions/Success.jsx";
 import Cancel from "./functions/Cancel.jsx";
 // import Navlinks from "./components/Navlinks/Navlinks";
 import WeddingParty from "./components/WeddingParty";
+import Login from "./login/Login";
 
 
 function App() {
@@ -31,6 +32,7 @@ function App() {
                   <Dashboard/>
                 </div>
               }/>
+            <Route path="/login" element={<Login/>}/>
             <Route path="/gallery" element={<Gallery/>}/>
             <Route path="/registry" element={<Registry/>}/>
             <Route path="/rsvp" element={<RSVP/>}/>
