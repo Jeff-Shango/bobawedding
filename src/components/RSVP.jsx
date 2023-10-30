@@ -22,8 +22,8 @@ const RSVP = () => {
 
   return (
     <>
-      <Navlinks/>
     <div id='rsvpPage'>
+      <Navlinks/>
       {/* <div id="linkContainer">
       <Link to="/">
         <button className='btn btn-primary'>Go Home</button>
