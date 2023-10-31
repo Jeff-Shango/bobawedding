@@ -13,7 +13,10 @@ const Navlinks = () => {
       <Navbar.Collapse id="responsive-navbar-nav navContainer">
         <Nav className="mr-auto navContainer">
           <Link id="dashLink" to="https://bozierwedding.netlify.app/">
-            Home
+            HOME
+          </Link>
+          <Link id="dashLink" to="https://bozierwedding.netlify.app/rsvp">
+            RSVP
           </Link>
           <Link id="dashLink" to="https://bozierwedding.netlify.app/gallery">
             GALLERY
