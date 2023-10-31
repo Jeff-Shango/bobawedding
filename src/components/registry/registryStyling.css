@@ -17,6 +17,7 @@
 }
 
 .cashAppButton {
+    font-family: var(--wedding-Str-Font);
     background-color: var(--wedding-gold);
     text-decoration: none;
     color: black;
@@ -74,6 +75,7 @@
 }
 
 .cashAppButton {
+    font-family: var(--wedding-Str-Font);
     background-color: var(--wedding-gold);
     text-decoration: none;
     color: black;
