@@ -17,10 +17,15 @@
 }
 
 .cashAppButton {
-    border: 2px solid purple;
-    margin-top: 1rem;
-    background-color: var(--wedding-green);
+    background-color: var(--wedding-gold);
+    padding: .5rem;
+    font-weight: bold;
+    margin: .5rem 3rem;
     border-radius: 12px;
+    -webkit-border-radius: 12px;
+    -moz-border-radius: 12px;
+    -ms-border-radius: 12px;
+    -o-border-radius: 12px;
 }
 
 
@@ -67,8 +72,10 @@
 }
 
 .cashAppButton {
-    border: 2px solid purple;
-    margin-top: 1rem;
+    background-color: var(--wedding-gold);
+    padding: .5rem;
+    font-weight: bold;
+    margin: .5rem 3rem;
     border-radius: 12px;
     -webkit-border-radius: 12px;
     -moz-border-radius: 12px;

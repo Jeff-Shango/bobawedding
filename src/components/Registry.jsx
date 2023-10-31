@@ -29,13 +29,13 @@ const Registry = () => {
 
   <div className="cashAppContainer">
     <img src={cashApp} alt="cashApp" />
+    <aside id='registryAside'>Scan or click on the links</aside>
     <button src="https://cash.app/$TheBoziers" className='cashAppButton' onClick={() => window.open('https://cash.app/$TheBoziers', '_blank')}>
       Cash App
     </button>
-    <button src="https://cash.app/$TheBoziers" className='cashAppButton' onClick={() => window.open('https://cash.app/$TheBoziers', '_blank')}>
+    <button src="https://enroll.zellepay.com/qr-codes?data=eqwoglCJ0b" className='cashAppButton' onClick={() => window.open('https://enroll.zellepay.com/qr-codes?data=ewogICJ0b2tlbiIgOiAiNDEwNTcwODU3OCIsCiAgImFjdGlvbiIgOiAicGF5bWVudCIsCiAgIm5hbWUiIDogIkFTSExFWSIKfQ==', '_blank')}>
       Zelle
     </button>
-    <aside id='registryAside'>Scan or Click QR code to send CashApp </aside>
   </div>
 
   {/* <div className="zelleContainer">
