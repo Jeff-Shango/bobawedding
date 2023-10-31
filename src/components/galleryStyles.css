@@ -16,6 +16,7 @@
   #galleryImg {
     margin-top: 2.5rem;
     border: none;
+    margin-right: 1rem;
     border-radius: 12px;
     -webkit-border-radius: 12px;
     -moz-border-radius: 12px;
@@ -152,6 +153,7 @@
   #galleryImg {
     margin-top: 2.5rem;
     border: none;
+    margin-right: 1rem;
     border-radius: 12px;
     -webkit-border-radius: 12px;
     -moz-border-radius: 12px;
