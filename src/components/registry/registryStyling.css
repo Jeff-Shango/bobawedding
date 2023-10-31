@@ -16,6 +16,10 @@
     border: 2px solid blue;
 }
 
+.cashAppButton a {
+    text-decoration: none;
+}
+
 .cashAppButton {
     background-color: var(--wedding-gold);
     padding: .5rem;
@@ -69,6 +73,10 @@
 
 #MR_GlobalWrapper {
     border: 2px solid blue;
+}
+
+.cashAppButton a {
+    text-decoration: none;
 }
 
 .cashAppButton {
