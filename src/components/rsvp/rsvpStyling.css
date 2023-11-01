@@ -120,3 +120,61 @@
 
 
 }
+
+/* medium sizes */
+@media only screen and (max-width: 1600px){
+
+    .rsvpTitle {
+        font-family: var(--wedding-Cursive);
+        font-size: 40px;
+    }
+
+    #rsvpPage {
+        height: 100vh;
+        overflow-y: scroll;
+        color: var(--wedding-gold);
+        font-family: var(--wedding-Str-Font);
+    }
+
+    .rsvpBox {
+        border: 2px solid black;
+    }
+
+    .rsvpP {
+        font-size: larger;
+    }
+
+    #formInput {
+        margin: 5px;
+    }
+
+    #linkContainer {
+        display: flex;
+        justify-content: center;
+    }
+
+    #linkContainer > aside {
+        font-size: xx-large;
+        display: flex;
+        border-bottom: 1px solid var(--wedding-gold);
+        padding: auto;
+        margin: 1rem;
+    }
+
+    #linkContainer a {
+        text-decoration: none;
+        color: var(--wedding-gold);
+        font-weight: bold;
+        margin: 0 5px;
+        font-family: var(--wedding-Str-Font);
+        font-size: larger;
+    }
+
+    .rsvpSubmit {
+        height: 1.5rem;
+        border: none;
+        box-shadow: 1rem blue;
+    }
+
+
+}
