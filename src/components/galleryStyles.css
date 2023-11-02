@@ -279,7 +279,7 @@
 }
 
 /* medium devices */
-@media screen and (max-width: 1600px) {
+@media screen and (max-width: 1600px) and ( orientation: landscape){
 
   #galleryTitle {
     letter-spacing: 3.5px;
