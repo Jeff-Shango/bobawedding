@@ -295,7 +295,7 @@
   #galleryImg {
     margin-top: 2.5rem;
     border: none;
-    margin-right: 2rem;
+    margin-right: 22rem;
     border-radius: 12px;
     -webkit-border-radius: 12px;
     -moz-border-radius: 12px;
@@ -306,7 +306,7 @@
     background-image: url('../assets/BlackWhiteClassicPaperBorderB.png');
     background-size: 24rem 25rem;
     height: 25rem;
-    margin-left: 20rem;
+    margin-left: 10rem;
     background-repeat: no-repeat;
     margin-bottom: 2rem;
     position: relative;
