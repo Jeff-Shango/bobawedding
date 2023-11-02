@@ -118,3 +118,65 @@
 
 
 }
+
+/* medium devices */
+/* orientation mode */
+@media screen and (max-width: 1600px) {
+#registryPageContainer {
+    height: 100vh;
+    overflow-y: scroll;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    font-family: var(--wedding-Str-Font);
+}
+
+#MR_GlobalWrapper {
+    border: 2px solid blue;
+}
+
+.cashAppButton {
+    font-family: var(--wedding-Str-Font);
+    background-color: var(--wedding-gold);
+    text-decoration: none;
+    color: black;
+    padding: .5rem;
+    font-weight: bold;
+    margin: .5rem 3rem;
+    border-radius: 12px;
+    -webkit-border-radius: 12px;
+    -moz-border-radius: 12px;
+    -ms-border-radius: 12px;
+    -o-border-radius: 12px;
+}
+    
+.registryContainer {
+    
+}
+
+#registryAside {
+    font-size: large;
+}
+.cashAppContainer {
+ height: fit-content;
+ width: fit-content;
+}
+
+.cashAppButton {
+    
+}
+
+.zelleContainer {
+    
+}
+
+#script_myregistry_giftlist_iframe {
+    overflow-y: scroll;
+}
+.mrw_isMobile {
+    
+}
+
+
+}
