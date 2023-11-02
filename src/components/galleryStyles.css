@@ -200,7 +200,11 @@
     background: rgb(59, 130, 246);
     border-radius: 8px;
     color: white;
-  }
+    -webkit-border-radius: 8px;
+    -moz-border-radius: 8px;
+    -ms-border-radius: 8px;
+    -o-border-radius: 8px;
+}
   
   .comment-form-button:hover:enabled {
     cursor: pointer;
@@ -291,7 +295,7 @@
   #galleryImg {
     margin-top: 2.5rem;
     border: none;
-    margin-right: 25rem;
+    margin-right: 2rem;
     border-radius: 12px;
     -webkit-border-radius: 12px;
     -moz-border-radius: 12px;
@@ -302,7 +306,7 @@
     background-image: url('../assets/BlackWhiteClassicPaperBorderB.png');
     background-size: 24rem 25rem;
     height: 25rem;
-    margin-left: 25rem;
+    margin-left: 20rem;
     background-repeat: no-repeat;
     margin-bottom: 2rem;
     position: relative;
