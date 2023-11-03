@@ -427,7 +427,7 @@
 
 /* tablets (portrait) */
 
-@media screen and (max-width: 1600px) and ( orientation: portrait){
+@media screen and (max-width: 1600px) and ( orientation: portrait) and (min-height: 900px){
 
   #galleryTitle {
     letter-spacing: 3.5px;
