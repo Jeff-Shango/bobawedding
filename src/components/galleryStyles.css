@@ -136,7 +136,7 @@
   }
 }
 
-/* small devices / landscape  */
+/* small devices / landscape   edit this one*/
 @media screen and (max-width: 600px) and (orientation: landscape) {
 
   #galleryTitle {
