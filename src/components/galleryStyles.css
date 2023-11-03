@@ -137,7 +137,7 @@
 }
 
 /* small devices / landscape   edit this one*/
-@media screen and (max-width: 600px) and (orientation: landscape) {
+@media screen and (max-width: 850px) and (orientation: landscape) {
 
   #galleryTitle {
     letter-spacing: 3.5px;
