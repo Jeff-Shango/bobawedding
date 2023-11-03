@@ -89,11 +89,11 @@
         height: 3rem;
     }
 
-    .navItems {
+    /* .navItems {
         font-size: 7;
         float: right;
         font-weight: bolder;
-    }
+    } */
 
     .navbarContainer {
         /* background-color: var(--color-bg); */
@@ -192,11 +192,11 @@
         height: 3rem;
     }
 
-    .navItems {
+    /* .navItems {
         font-size: 7;
         float: right;
         font-weight: bolder;
-    }
+    } */
 
     .navbarContainer {
         /* background-color: var(--color-bg); */
@@ -290,11 +290,11 @@
         height: 3rem;
     }
 
-    .navItems {
+    /* .navItems {
         font-size: 7;
         float: right;
         font-weight: bolder;
-    }
+    } */
 
     .navbarContainer {
         background-color: var(--main-bg);
@@ -376,7 +376,7 @@
 
 /* small devices */
 /* orientation mode */
-  @media only screen and (max-width: 800px){
+  @media only screen and (max-width: 800px) and (orientation: landscape) {
     /* .navbarContainer {
         height: 20vh;
     } */
@@ -464,11 +464,11 @@
         height: 3rem;
     }
 
-    .navItems {
+    /* .navItems {
         font-size: 7;
         float: right;
         font-weight: bolder;
-    }
+    } */
 
     .navbarContainer {
         background-color: var(--main-bg);
@@ -512,18 +512,9 @@
     font-size: 5px;
     color: white;
     font-weight: bolder;
-    /* margin: 1px;
-    padding: 5px; */
-    text-decoration: none;
-    /* letter-spacing: 3px; */
-    /*backdrop-filter: blur(10px);
-    background-color: rgba(0, 0, 0, 0.3);
-    border-radius: 10px;
-    -webkit-border-radius: 10px;
-    -moz-border-radius: 10px;
-    -ms-border-radius: 10px;
-    -o-border-radius: 10px;
-    */
+    /*margin: 1px;
+    padding: 5px;
+    */text-decoration: none;
 }  
 
 #dashLink{
@@ -548,7 +539,7 @@
   }
 
   /* medium devices */
-@media only screen and (max-width: 1600px){
+@media only screen and (max-width: 1600px) and (min-height: 900px){
     /* .navbarContainer {
         height: 20vh;
     } */
@@ -636,11 +627,11 @@
         height: 3rem;
     }
 
-    .navItems {
+    /* .navItems {
         font-size: 7;
         float: right;
         font-weight: bolder;
-    }
+    } */
 
     .navbarContainer {
         background-color: var(--main-bg);
