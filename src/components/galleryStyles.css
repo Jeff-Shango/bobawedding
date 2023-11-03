@@ -1,6 +1,6 @@
 /* small devices */
 /* orientation mode */
-@media screen and (max-width: 600px) and (orientation: portrait) {
+@media screen and (max-aspect-ratio: 10/11) {
 
   #galleryTitle {
     letter-spacing: 3.5px;
@@ -137,7 +137,7 @@
 }
 
 /* small devices / landscape   edit this one*/
-@media screen and (max-width: 850px) and (orientation: landscape) {
+@media screen and (min-aspect-ratio: 10/11) {
 
   #galleryTitle {
     letter-spacing: 3.5px;
@@ -152,7 +152,7 @@
 
   #galleryImg {
     margin-top: 2.5rem;
-    border: none;
+    border: 20PX solid red;
     margin-right: 55%;
     border-radius: 12px;
     -webkit-border-radius: 12px;
@@ -276,7 +276,7 @@
 
 /* landscape mode */
 
-@media screen and (min-width: 601px) and ( max-width: 800px) and ( orientation: portrait){
+/* @media screen and (min-width: 601px) and ( max-width: 800px) and ( orientation: portrait){ */
 
   #galleryTitle {
     letter-spacing: 3.5px;
@@ -417,10 +417,10 @@
   .replies {
     margin-top: 20px;
   }
-}
+/* } */
 
 /* medium devices */
-@media screen and (min-width: 601px) and ( max-width: 800px) and ( orientation: landscape){
+/* @media screen and (min-width: 601px) and ( max-width: 800px) and ( orientation: landscape){ */
 
   #galleryTitle {
     letter-spacing: 3.5px;
@@ -561,7 +561,7 @@
   .replies {
     margin-top: 20px;
   }
-}
+/* } */
 
 /* tablets (portrait) */
 
