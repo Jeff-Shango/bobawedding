@@ -32,6 +32,12 @@ const WeddingParty = () => {
       <img src={groomsMen} alt="MikeW" className="sliderImg" />
       <img src={alise} alt="Alise" className="sliderImg" />
     </div>
+
+    <div className="stylingBox">
+      <p className="stylingBoxText">
+        #BozierEverAfter
+      </p>
+    </div>
   </div>
 
 </div>
