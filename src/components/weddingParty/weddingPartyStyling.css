@@ -1,9 +1,7 @@
 @media screen and (min-aspect-ratio: 10/11) {
-#weddingPartyPage {
-  background-color: ;
-}
 #wedTeamTitle {
   font-family: var(--wedding-Cursive);
+  color: var(--wedding-gold);
   font-size: 2rem;
 }
 
@@ -39,9 +37,6 @@
 }
 
 @media screen and (max-aspect-ratio: 10/11) {
-#weddingPartyPage {
-  background-color: ;
-}
 #wedTeamTitle {
   font-family: var(--wedding-Cursive);
   color: var(--wedding-gold);
