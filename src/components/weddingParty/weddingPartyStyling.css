@@ -1,17 +1,19 @@
 @media screen and (min-aspect-ratio: 10/11) {
 #weddingPartyPage {
   height: 100vh;
+  position: relative;
 }
 
   #wedTeamTitle {
   font-family: var(--wedding-Cursive);
   color: var(--wedding-gold);
-  font-size: 2rem;
+  font-size: 3.5rem;
 }
 
 .wedTeamContainer {
   font-family: var(--wedding-Str-Font);
-  margin-top: 25vh;
+  position: absolute;
+  top: 25vh;
 }
 
 .wedTopSlider {
@@ -70,17 +72,19 @@
 @media screen and (max-aspect-ratio: 10/11) {
 #weddingPartyPage {
   height: 100vh;
+  position: relative;
 }
 
   #wedTeamTitle {
   font-family: var(--wedding-Cursive);
   color: var(--wedding-gold);
-  font-size: 2rem;
+  font-size: 3.5rem;
 }
 
 .wedTeamContainer {
   font-family: var(--wedding-Str-Font);
-  margin-top: 25vh;
+  position: absolute;
+  top: 25vh;
 }
 
 .wedTopSlider {
