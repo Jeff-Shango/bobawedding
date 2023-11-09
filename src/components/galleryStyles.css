@@ -152,8 +152,8 @@
 
   #galleryImg {
     margin-top: 2.5rem;
-    border: 20PX solid red;
-    margin-right: 55%;
+    border: none;
+    margin-right: 40%;
     border-radius: 12px;
     -webkit-border-radius: 12px;
     -moz-border-radius: 12px;
@@ -167,7 +167,7 @@
     background-repeat: no-repeat;
     margin-bottom: 2rem;
     position: relative;
-    margin-left: 2rem;
+    margin-left: 13rem;
   }
   .comments {
     margin-top: 20px;
