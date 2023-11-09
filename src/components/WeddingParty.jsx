@@ -17,7 +17,7 @@ import "./weddingParty/weddingPartyStyling.css";
 
 const WeddingParty = () => {
   return (
-<div>
+<div id='weddingPartyPage'>
   <Navlinks/>
   <div className="wedTeamContainer">
   <h3 id="wedTeamTitle">The Wedding Party</h3>
