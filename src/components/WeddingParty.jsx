@@ -19,8 +19,8 @@ const WeddingParty = () => {
   return (
 <div>
   <Navlinks/>
-  <h3 id="wedTeamTitle">Wedding Party</h3>
   <div className="wedTeamContainer">
+  <h3 id="wedTeamTitle">The Wedding Party</h3>
     <div className="wedTopSlider">
       {/* <img src={wife} alt="Ashley" className="sliderImg" /> */}
       <img src={Autumn} alt="Autumn" className="sliderImg" />

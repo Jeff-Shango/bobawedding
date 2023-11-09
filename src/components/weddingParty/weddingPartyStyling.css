@@ -2,11 +2,12 @@
 #wedTeamTitle {
   font-family: var(--wedding-Cursive);
   color: var(--wedding-gold);
-  font-size: xx-large;
+  font-size: 2rem;
 }
 
 .wedTeamContainer {
   font-family: var(--wedding-Str-Font);
+  margin-top: 25vh;
 }
 
 .wedTopSlider {
@@ -16,7 +17,7 @@
 
 .sliderImg {
   height: 5rem;
-  margin: 1rem;
+  margin: .5rem;
 }
 
 .stylingBox {
@@ -39,11 +40,12 @@
 #wedTeamTitle {
   font-family: var(--wedding-Cursive);
   color: var(--wedding-gold);
-  font-size: xx-large;
+  font-size: 2rem;
 }
 
 .wedTeamContainer {
   font-family: var(--wedding-Str-Font);
+  margin-top: 25vh;
 }
 
 .wedTopSlider {
@@ -53,7 +55,7 @@
 
 .sliderImg {
   height: 5rem;
-  margin: 1rem;
+  margin: .5rem;
 }
 
 .stylingBox {
