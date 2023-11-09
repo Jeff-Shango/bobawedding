@@ -1,6 +1,5 @@
 @media screen and (min-aspect-ratio: 10/11) {
 #weddingPartyPage {
-  border: 2px solid blue;
   height: 100vh;
 }
 
@@ -25,10 +24,32 @@
   margin: .5rem;
 }
 
-.stylingBox {
+/* .stylingBox {
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
   height: 5rem;
   background-color: var(--wedding-gold);
   position: relative;
+  margin: 1rem 5rem;
+}
+
+.stylingBoxText {
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  color: white;
+  font-family: var(--wedding-Str-Font);
+} */
+.stylingBox {
+  display: flex;
+  justify-content: cemter;
+  align-items: flex-end;
+  height: 5rem;
+  background-color: var(--wedding-gold);
+  position: relative;
+  margin: 1rem 5rem;
 }
 
 .stylingBoxText {
@@ -36,14 +57,18 @@
   bottom: 0;
   left: 35%;
   color: white;
+  transform: translateX(-20%);
   font-family: var(--wedding-Str-Font);
+  -webkit-transform: translateX(-20%);
+  -moz-transform: translateX(-20%);
+  -ms-transform: translateX(-20%);
+  -o-transform: translateX(-20%);
 }
 
 }
 
 @media screen and (max-aspect-ratio: 10/11) {
 #weddingPartyPage {
-  border: 2px solid blue;
   height: 100vh;
 }
 
@@ -69,9 +94,13 @@
 }
 
 .stylingBox {
+  display: flex;
+  justify-content: cemter;
+  align-items: flex-end;
   height: 5rem;
   background-color: var(--wedding-gold);
   position: relative;
+  margin: 1rem 5rem;
 }
 
 .stylingBoxText {
@@ -79,6 +108,7 @@
   bottom: 0;
   left: 35%;
   color: white;
+  transform: translateX(-20%);
   font-family: var(--wedding-Str-Font);
 }
 
