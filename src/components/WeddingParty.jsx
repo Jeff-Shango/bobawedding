@@ -1,8 +1,8 @@
 import React from 'react'
-import husband from '../assets/breakdownImgA.jpg';
-import wife from '../assets/ashAshin.jpg';
-import mc from '../assets/derekG.jpg';
-import partyPlanner from '../assets/partyPlanner.jpg';
+// import husband from '../assets/breakdownImgA.jpg';
+// import wife from '../assets/ashAshin.jpg';
+// import mc from '../assets/derekG.jpg';
+// import partyPlanner from '../assets/partyPlanner.jpg';
 import bestMan from '../assets/bestMan.jpg';
 import groomsMen from '../assets/groomsMen.jpg';
 import groomsMan from '../assets/groomsMan.jpg';
@@ -22,7 +22,7 @@ const WeddingParty = () => {
   <h3 id="wedTeamTitle">Wedding Party</h3>
   <div className="wedTeamContainer">
     <div className="wedTopSlider">
-      <img src={wife} alt="Ashley" className="sliderImg" />
+      {/* <img src={wife} alt="Ashley" className="sliderImg" /> */}
       <img src={Autumn} alt="Autumn" className="sliderImg" />
       <img src={bestMan} alt="Chris" className="sliderImg" />
       <img src={nia} alt="Nia" className="sliderImg" />
