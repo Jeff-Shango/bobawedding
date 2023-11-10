@@ -17,6 +17,7 @@
   font-family: var(--wedding-Str-Font);
   position: absolute;
   top: 25vh;
+  left: 50%;
 }
 
 .wedTopSlider {
