@@ -104,7 +104,7 @@ const WeddingParty = () => {
   <h3 id="wedTeamTitle">The Wedding Party</h3>
   {showScrollMessage && (
     <div className="scrollMessage">
-      <p>Scroll to see the wedding party!</p>
+      <p>Scroll to see the wedding party!<br/>Click on the image for bio!</p>
     </div>
   )}
   <div className="wedTopSlider">
