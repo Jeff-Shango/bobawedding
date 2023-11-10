@@ -43,7 +43,7 @@
 .stylingBoxText {
   position: absolute;
   bottom: 0;
-  left: 35%;
+  left: 50%;
   color: white;
   transform: translateX(-20%);
   font-family: var(--wedding-Str-Font);
