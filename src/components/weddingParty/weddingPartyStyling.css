@@ -7,6 +7,22 @@
   overflow-y: hidden;
 }
 
+.scrollMessage {
+  position: absolute;
+  top: 0;
+  left: 5%;
+  border: 2px solid red;
+  height: 5rem;
+  max-height: auto;
+  width: fit-content;
+  font-size: x-large;
+  border-radius: 12px;
+  -webkit-border-radius: 12px;
+  -moz-border-radius: 12px;
+  -ms-border-radius: 12px;
+  -o-border-radius: 12px;
+}
+
   #wedTeamTitle {
   font-family: var(--wedding-Cursive);
   color: var(--wedding-gold);
@@ -80,6 +96,22 @@
   height: 100vh;
   position: relative;
   overflow-y: hidden;
+}
+
+.scrollMessage {
+  position: absolute;
+  top: 0;
+  left: 5%;
+  border: 2px solid red;
+  height: 5rem;
+  max-height: auto;
+  width: fit-content;
+  font-size: x-large;
+  border-radius: 12px;
+  -webkit-border-radius: 12px;
+  -moz-border-radius: 12px;
+  -ms-border-radius: 12px;
+  -o-border-radius: 12px;
 }
 
   #wedTeamTitle {
