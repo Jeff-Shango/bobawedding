@@ -4,6 +4,7 @@
 #weddingPartyPage {
   height: 100vh;
   position: relative;
+  overflow-y: hidden;
 }
 
   #wedTeamTitle {
@@ -77,6 +78,7 @@
 #weddingPartyPage {
   height: 100vh;
   position: relative;
+  overflow-y: hidden;
 }
 
   #wedTeamTitle {
