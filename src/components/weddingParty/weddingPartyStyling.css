@@ -16,8 +16,8 @@
 .wedTeamContainer {
   font-family: var(--wedding-Str-Font);
   position: absolute;
-  top: 15vh;
-  left: 2.5rem;
+  top: 10vh;
+  left: 2rem;
 }
 
 .wedTopSlider {
