@@ -89,7 +89,7 @@ const WeddingParty = () => {
   <Navlinks/>
   <div className="wedTeamContainer">
   <h3 id="wedTeamTitle">The Wedding Party</h3>
-    <div className="wedTopSlider">
+  <div className="wedTopSlider">
       {images.map((image, index) => (
         <img
           key={index} 
@@ -100,7 +100,7 @@ const WeddingParty = () => {
         />
       ))}
       </div>
-      {selectedImage !== null && (
+      {enlargedImage && (
         <div className="overlay" onClick={handleEnlargedImageClick}>
         <div className='largeImageContainer'>
           <img
