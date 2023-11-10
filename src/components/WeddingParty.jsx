@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useState, useEffect } from 'react'
 // import husband from '../assets/breakdownImgA.jpg';
 // import wife from '../assets/ashAshin.jpg';
 // import mc from '../assets/derekG.jpg';
@@ -24,8 +24,9 @@ import Navlinks from './Navlinks/Navlinks.jsx'
 import "./weddingParty/weddingPartyStyling.css";
 
 const WeddingParty = () => {
-  const [enlargedImage, setEnlargedImage] = useState(null)
+  const [enlargedImage, setEnlargedImage] = useState(null);
   const [selectedImage, setSelectedImage] = useState(null);
+  const [showScrollMessage, setShowScrollMessage] = useState(true);
 
   const images = [
     {
@@ -83,12 +84,29 @@ const WeddingParty = () => {
   const handleEnlargedImageClick = () => {
     setEnlargedImage(null);
   };
+
+  const handleTouch = () => {
+    setShowScrollMessage(false);
+  };
+
+  useEffect(() => {
+    window.addEventListener('touchstart', handleTouch);
+
+    return () => {
+      window.removeEventListener('touchstart', handleTouch);
+    };
+  }, []);
   
   return (
 <div id='weddingPartyPage'>
   <Navlinks/>
   <div className="wedTeamContainer">
   <h3 id="wedTeamTitle">The Wedding Party</h3>
+  {showScrollMessage && (
+    <div className="scrollMessage">
+      <p>Scroll to see the wedding party!</p>
+    </div>
+  )}
   <div className="wedTopSlider">
       {images.map((image, index) => (
         <img
