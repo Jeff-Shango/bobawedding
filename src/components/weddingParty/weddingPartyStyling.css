@@ -23,7 +23,7 @@
   -ms-border-radius: 12px;
   -o-border-radius: 12px;
 	-webkit-animation: shadow-drop-center 3s cubic-bezier(0.250, 0.460, 0.450, 0.940) infinite both;
-  animation: shadow-drop-center 3s cubic-bezier(0.250, 0.460, 0.450, 0.940) infinite both;
+  animation: shadow-drop-center 1s cubic-bezier(0.250, 0.460, 0.450, 0.940) infinite both;
 }
 
 @-webkit-keyframes shadow-drop-center {
@@ -44,6 +44,12 @@
   100% {
     -webkit-box-shadow: 0 0 20px 0px var(--wedding-gold);
             box-shadow: 0 0 20px 0px var(--wedding-gold);
+  }
+}
+
+@keyframes fade-out {
+  0% {
+    
   }
 }
 
@@ -138,8 +144,8 @@
   -moz-border-radius: 12px;
   -ms-border-radius: 12px;
   -o-border-radius: 12px;
-	-webkit-animation: shadow-drop-center 3s cubic-bezier(0.250, 0.460, 0.450, 0.940) infinite both;
-  animation: shadow-drop-center 3s cubic-bezier(0.250, 0.460, 0.450, 0.940) infinite both;
+  -webkit-animation: shadow-drop-center 2s cubic-bezier(0.250, 0.460, 0.450, 0.940) infinite both;
+  animation: shadow-drop-center 2s cubic-bezier(0.250, 0.460, 0.450, 0.940) infinite both;
 }
 
 @-webkit-keyframes shadow-drop-center {
@@ -160,6 +166,12 @@
   100% {
     -webkit-box-shadow: 0 0 20px 0px var(--wedding-gold);
             box-shadow: 0 0 20px 0px var(--wedding-gold);
+  }
+}
+
+@keyframes fade-out {
+  0% {
+    
   }
 }
 
