@@ -9,9 +9,10 @@
 
 .scrollMessage {
   position: absolute;
-  top: 0;
+  top: 5rem;
   left: 5%;
-  border: 2px solid red;
+  background-color: rgba(0, 0, 0, 0.6);
+  color: white;
   height: 5rem;
   max-height: auto;
   width: fit-content;
@@ -100,9 +101,10 @@
 
 .scrollMessage {
   position: absolute;
-  top: 0;
+  top: 5rem;
   left: 5%;
-  border: 2px solid red;
+  background-color: rgba(0, 0, 0, 0.6);
+  color: white;
   height: 5rem;
   max-height: auto;
   width: fit-content;
