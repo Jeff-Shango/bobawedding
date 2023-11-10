@@ -1,4 +1,6 @@
 @media screen and (min-aspect-ratio: 10/11) {
+
+
 #weddingPartyPage {
   height: 100vh;
   position: relative;
@@ -26,24 +28,6 @@
   margin: .5rem;
 }
 
-/* .stylingBox {
-  display: flex;
-  justify-content: center;
-  align-items: flex-end;
-  height: 5rem;
-  background-color: var(--wedding-gold);
-  position: relative;
-  margin: 1rem 5rem;
-}
-
-.stylingBoxText {
-  position: absolute;
-  bottom: 0;
-  left: 50%;
-  transform: translateX(-50%);
-  color: white;
-  font-family: var(--wedding-Str-Font);
-} */
 .stylingBox {
   display: flex;
   justify-content: cemter;
@@ -67,9 +51,28 @@
   -o-transform: translateX(-20%);
 }
 
+.overlay {
+  height: 100%;
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.6);
+  position: fixed;
+  top: 0;
+  left: 0;
+}
+
+.largeImage {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: fit-content;
+  height: fit-content;
+}
+
 }
 
 @media screen and (max-aspect-ratio: 10/11) {
+
+
 #weddingPartyPage {
   height: 100vh;
   position: relative;
@@ -114,6 +117,28 @@
   color: white;
   transform: translateX(-20%);
   font-family: var(--wedding-Str-Font);
+  -webkit-transform: translateX(-20%);
+  -moz-transform: translateX(-20%);
+  -ms-transform: translateX(-20%);
+  -o-transform: translateX(-20%);
 }
+
+.overlay {
+  height: 100%;
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.6);
+  position: fixed;
+  top: 0;
+  left: 0;
+}
+
+.largeImage {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: fit-content;
+  height: fit-content;
+}
+
 
 }
