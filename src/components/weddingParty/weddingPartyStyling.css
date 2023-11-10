@@ -45,12 +45,12 @@
   bottom: 0;
   left: 50%;
   color: white;
-  transform: translateX(-20%);
+  transform: translateX(-50%);
   font-family: var(--wedding-Str-Font);
-  -webkit-transform: translateX(-20%);
-  -moz-transform: translateX(-20%);
-  -ms-transform: translateX(-20%);
-  -o-transform: translateX(-20%);
+  -webkit-transform: translateX(-50%);
+  -moz-transform: translateX(-50%);
+  -ms-transform: translateX(-50%);
+  -o-transform: translateX(-50%);
 }
 
 .overlay {
