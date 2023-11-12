@@ -1,5 +1,4 @@
 import React, { useState, useEffect } from 'react';
-import $ from 'jquery';
 // import husband from '../assets/breakdownImgA.jpg';
 // import wife from '../assets/ashAshin.jpg';
 // import mc from '../assets/derekG.jpg';
@@ -102,12 +101,6 @@ const WeddingParty = () => {
 
   const handleTouch = () => {
     setShowScrollMessage(false);
-    $('.scrollMessage').addClass('rotate-scale-up-diag-1');
-
-    setTimeout(() => {
-        $('.scrollMessage').addClass('rotate-scale-up-diag-1');
-        setShowScrollMessage(false);
-    }, 5000);
   };
 
   useEffect(() => {
@@ -121,13 +114,13 @@ const WeddingParty = () => {
   return (
 <div id='weddingPartyPage'>
   <Navlinks/>
-  <div className="wedTeamContainer">
-  <h3 id="wedTeamTitle">The Wedding Party</h3>
   {showScrollMessage && (
     <div className="scrollMessage">
       <p>Scroll to see the wedding party!<br/>Click on the image for bio!</p>
     </div>
   )}
+  <div className="wedTeamContainer">
+  <h3 id="wedTeamTitle">The Wedding Party</h3>
   <div className="wedTopSlider">
       {images.map((image, index) => (
         <img
