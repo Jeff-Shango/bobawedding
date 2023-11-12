@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState } from 'react';
 // import husband from '../assets/breakdownImgA.jpg';
 // import wife from '../assets/ashAshin.jpg';
 // import mc from '../assets/derekG.jpg';
@@ -26,7 +26,7 @@ import "./weddingParty/weddingPartyStyling.css";
 const WeddingParty = () => {
   const [enlargedImage, setEnlargedImage] = useState(null);
   const [selectedImage, setSelectedImage] = useState(null);
-  const [showScrollMessage, setShowScrollMessage] = useState(true);
+  // const [showScrollMessage, setShowScrollMessage] = useState(true);
 
   const images = [
     {
@@ -99,26 +99,26 @@ const WeddingParty = () => {
   // };
   
 
-  const handleTouch = () => {
-    setShowScrollMessage(false);
-  };
+  // const handleTouch = () => {
+  //   setShowScrollMessage(false);
+  // };
 
-  useEffect(() => {
-    window.addEventListener('touchstart', handleTouch);
+  // useEffect(() => {
+  //   window.addEventListener('touchstart', handleTouch);
 
-    return () => {
-      window.removeEventListener('touchstart', handleTouch);
-    };
-  }, []);
+  //   return () => {
+  //     window.removeEventListener('touchstart', handleTouch);
+  //   };
+  // }, []);
   
   return (
 <div id='weddingPartyPage'>
   <Navlinks/>
-  {showScrollMessage && (
-    <div className="scrollMessage">
+  {/* {showScrollMessage && ( */}
+    {/* <div className="scrollMessage">
       <p>Scroll to see the wedding party!<br/>Click on the image for bio!</p>
-    </div>
-  )}
+    </div> */}
+  {/* )} */}
   <div className="wedTeamContainer">
   <h3 id="wedTeamTitle">The Wedding Party</h3>
   <div className="wedTopSlider">
@@ -156,6 +156,10 @@ const WeddingParty = () => {
       <img src={groomsMen} alt="MikeW" className="sliderImg" />
       <img src={alise} alt="Alise" className="sliderImg" /> */}
     <div className="stylingBox">
+    <p className='scrollMessage'>
+      Scroll to see the wedding party!<br/>
+      Click on the image for bio!
+    </p>
       <p className="stylingBoxText">
         #BozierEverAfter
       </p>
