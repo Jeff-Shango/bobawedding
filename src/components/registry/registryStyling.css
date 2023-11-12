@@ -1,6 +1,11 @@
 /* small devices */
 /* orientation mode */
-@media screen and (max-width: 600px) {
+@media screen and (min-aspect-ratio: 10/11) {
+
+    #moneyImg {
+        /* border: 2px solid red; */
+        height: 75vh;
+    }
 
 #registryPageContainer {
     height: 100vh;
@@ -59,7 +64,7 @@
 
 /* small devices */
 /* orientation mode */
-@media screen and (max-width: 800px) {
+@media screen and (max-aspect-ratio: 10/11) {
 #registryPageContainer {
     height: 100vh;
     overflow-y: scroll;

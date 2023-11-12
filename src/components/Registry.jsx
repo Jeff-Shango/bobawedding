@@ -28,7 +28,7 @@ const Registry = () => {
 
 
   <div className="cashAppContainer">
-    <img src={cashApp} alt="cashApp" />
+    <img id='moneyImg' src={cashApp} alt="cashApp" />
     <aside id='registryAside'>Scan or click on the links to donate or see registry</aside>
     <button src="https://cash.app/$TheBoziers" className='cashAppButton' onClick={() => window.open('https://cash.app/$TheBoziers', '_blank')}>
       Cash App
