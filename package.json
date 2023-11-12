@@ -26,6 +26,7 @@
     "firebase": "^10.4.0",
     "http2": "^3.3.7",
     "immer": "^10.0.3",
+    "jquery": "^3.7.1",
     "mongodb": "^6.1.0",
     "mongoose": "^7.6.2",
     "mysql2": "^3.6.1",
@@ -73,6 +74,7 @@
   "devDependencies": {
     "@babel/plugin-proposal-optional-chaining": "^7.21.0",
     "@babel/plugin-proposal-private-property-in-object": "^7.21.11",
+    "@types/jquery": "^3.5.27",
     "react-scripts": "^2.1.3"
   }
 }
