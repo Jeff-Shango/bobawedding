@@ -1,6 +1,6 @@
 /* small devices */
 /* orientation mode */
-@media screen and (max-width: 600px) {
+@media screen and (max-aspect-ratio: 10/11) {
         
 .my-card, .my-card-media, .my-card-subtitle, .my-card-text, .my-card-title .title {
     font-family: var(--wedding-Str-Font);
@@ -92,13 +92,19 @@
 }
 
 /* landscape mode */
-@media only screen and (max-width: 800px){
-    
+@media screen and (min-aspect-ratio: 10/11){
+
+.my-card, .my-card-media, .my-card-subtitle, .my-card-text, .my-card-title .title {
+    font-family: var(--wedding-Str-Font);
+    text-align: center;
+}
+
 .my-card + 
 
     #scheduleContainer {
     position: relative;
     height: 100vh;
+    border: 2px solid red;
 }
 
 

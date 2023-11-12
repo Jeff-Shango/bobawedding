@@ -22,7 +22,7 @@ const Navlinks = () => {
             GALLERY
           </Link>
           <Link id="dashLink" to="https://bozierwedding.netlify.app/schedule">
-            SCHEDULE
+            OUR lOVE STORY
           </Link>
           <Link id="dashLink" to="https://bozierwedding.netlify.app/weddingParty">
             WEDDING TEAM
