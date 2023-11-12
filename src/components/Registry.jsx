@@ -2,7 +2,8 @@ import React from 'react';
 import "./registry/registryStyling.css";
 // import {Row, Col} from 'react-bootstrap';
 // import { productsArray } from '../functions/stripeFunctions';
-import cashApp from '../assets/theBoziersCashApp.png';
+// import cashApp from '../assets/theBoziersCashApp.png';
+import bozierMoneyTag from '../assets/bozierMoneyTag.png';
 import Navlinks from './Navlinks/Navlinks.jsx'
 
 const Registry = () => {
@@ -29,7 +30,7 @@ const Registry = () => {
 
   <div className="cashAppContainer">
     <h3 className="registryDescriptionTop">Your presence on our special day means the world to us, and we are truly grateful for your love and support. If you are considering a gift, a contribution to our future together would be greatly appreciated.</h3>
-    <img id='moneyImg' src={cashApp} alt="cashApp" />
+    <img id='moneyImg' src={bozierMoneyTag} alt="cashApp" />
     <h3 className="registryDescriptionBottom">We understand that some of our guests may prefer to give traditional wedding gifts. In that case, please use the following links to acces our registry.</h3>
     <button src="https://cash.app/$TheBoziers" className='cashAppButton' onClick={() => window.open('https://cash.app/$TheBoziers', '_blank')}>
       Cash App
