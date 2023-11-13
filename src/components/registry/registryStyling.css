@@ -3,7 +3,7 @@
 @media screen and (min-aspect-ratio: 10/11) {
     .registryDescriptionTop,  .registryDescriptionBottom{
         font-family: var(--wedding-Str-Font);
-        font-size: x-large;
+        font-size: large;
     } 
 
     .registryDescriptionTop {
@@ -75,7 +75,7 @@
 @media screen and (max-aspect-ratio: 10/11) {
     .registryDescriptionTop,  .registryDescriptionBottom{
         font-family: var(--wedding-Str-Font);
-        font-size: x-large;
+        font-size: large;
     } 
 #registryPageContainer {
     height: 100vh;
@@ -141,7 +141,7 @@
 /* @media screen and (max-width: 1600px) {
     .registryDescriptionTop,  .registryDescriptionBottom{
         font-family: var(--wedding-Str-Font);
-        font-size: x-large;
+        font-size: large;
     } 
 #registryPageContainer {
     height: 100vh;
@@ -207,7 +207,7 @@
 /* @media screen and (max-width: 1600px) and (orientation: landscape) {
     .registryDescriptionTop,  .registryDescriptionBottom{
         font-family: var(--wedding-Str-Font);
-        font-size: x-large;
+        font-size: large;
     } 
     #registryPageContainer {
         height: 100vh;
