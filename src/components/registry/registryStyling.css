@@ -2,8 +2,12 @@
 /* orientation mode */
 @media screen and (min-aspect-ratio: 10/11) {
     .registryDescriptionTop,  .registryDescriptionBottom{
-        font-family: var(--wedding-Cursive);
+        font-family: var(--wedding-Str-Font);
     } 
+
+    .registryDescriptionTop {
+        margin-top: 5rem;
+    }
 
     #moneyImg {
         /* border: 2px solid red; */
@@ -69,7 +73,7 @@
 /* orientation mode */
 @media screen and (max-aspect-ratio: 10/11) {
     .registryDescriptionTop,  .registryDescriptionBottom{
-        font-family: var(--wedding-Cursive);
+        font-family: var(--wedding-Str-Font);
     } 
 #registryPageContainer {
     height: 100vh;
@@ -132,9 +136,9 @@
 
 /* medium devices */
 /* orientation mode */
-@media screen and (max-width: 1600px) {
+/* @media screen and (max-width: 1600px) {
     .registryDescriptionTop,  .registryDescriptionBottom{
-        font-family: var(--wedding-Cursive);
+        font-family: var(--wedding-Str-Font);
     } 
 #registryPageContainer {
     height: 100vh;
@@ -193,13 +197,13 @@
 }
 
 
-}
+} */
 
 /* medium devices */
 /* orientation mode */
-@media screen and (max-width: 1600px) and (orientation: landscape) {
+/* @media screen and (max-width: 1600px) and (orientation: landscape) {
     .registryDescriptionTop,  .registryDescriptionBottom{
-        font-family: var(--wedding-Cursive);
+        font-family: var(--wedding-Str-Font);
     } 
     #registryPageContainer {
         height: 100vh;
@@ -258,4 +262,4 @@
     }
     
     
-    }
+    } */
