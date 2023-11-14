@@ -49,15 +49,20 @@
     }
 
     .rsvpSubmit {
-        height: 1.5rem;
-        width: 5rem;
+        font-family: var(--wedding-Str-Font);
+        font-size: x-large;
+        height: fit-content;
+        width: fit-content;
         text-align: center;
-        justify-content: center;
         border: none;
         background: var(--wedding-gold);
-        padding: 1.5rem;
-        
-    }
+        padding: auto;
+        border-radius: 12px;
+        -webkit-border-radius: 12px;
+        -moz-border-radius: 12px;
+        -ms-border-radius: 12px;
+        -o-border-radius: 12px;
+}
 
     #linkContainer a:hover {
         text-decoration: underline;
@@ -113,10 +118,21 @@
     }
 
     .rsvpSubmit {
-        height: 1.5rem;
+        font-family: var(--wedding-Str-Font);
+        font-size: x-large;
+        border-radius: 12px;
+        height: fit-content;
+        width: fit-content;
+        text-align: center;
+        justify-content: center;
         border: none;
-        box-shadow: 1rem blue;
-    }
+        background: var(--wedding-gold);
+        padding: auto;
+        -webkit-border-radius: 12px;
+        -moz-border-radius: 12px;
+        -ms-border-radius: 12px;
+        -o-border-radius: 12px;
+}
 
 
 }
@@ -171,6 +187,9 @@
     }
 
     .rsvpSubmit {
+        font-family: var(--wedding-Str-Font);
+        font-size: x-large;
+        border-radius: 12px;
         height: 1.5rem;
         border: none;
         box-shadow: 1rem blue;
