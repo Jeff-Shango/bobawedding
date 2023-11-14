@@ -21,7 +21,6 @@ const RSVP = () => {
   };
 
   return (
-    <>
     <div id='rsvpPage'>
       <Navlinks/>
       {/* <div id="linkContainer">
@@ -57,18 +56,28 @@ const RSVP = () => {
       <h2 className="rsvpSubTitle">RSVP Due by:April 30, 2024</h2>
 
       <p className="rsvpP">We warmly invite you to RSVP for The Bozier wedding! Please don't hesistate to contact either Ashley or Jeff if you have any questions or need assistance. We're looking forward to seeing all of you there and sharing this joyous occasion together!!</p>
+        <div className="inputBox">
         {/* enter name */}
         <h3 className="rsvpFormSTitle" >Name</h3>
-        <input required type="text" name="name" id="formInput" placeholder='First'/>
-        <input  required type="text" name="lastName" id="formInput" placeholder='Last'/>
+        <div className="nameContainer">
+        <input required type="text" name="name" id="formInput"/>
+        <span id='firstN'>First</span>
+        <input  required type="text" name="lastName" id="formInput"/>
+        <span id='lastN'>Last</span>
+        </div>
+        </div>
 
+        <div className="inputBox">
         {/* enter email */}
         <h3 className="rsvpFormSTitle" >Email</h3>
         <input type="text" name="email" id="formInput" />
+        </div>
 
+        <div className="inputBox">
         {/* enter number */}
         <h3 className="rsvpFormSTitle">Phone</h3>
         <input required type="tel" name="phone" id="formInput"  />
+        </div>
 
         {/* rsvp */}
         <h3 className="rsvpFormSTitle">RSVP</h3>
@@ -127,7 +136,6 @@ const RSVP = () => {
         <button type='submit' className='rsvpSubmit'>RSVP</button>
       </form>
       </div> 
-    </>
   )
 }
 

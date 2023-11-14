@@ -1,4 +1,56 @@
 @media screen and (max-aspect-ratio: 10/11) {
+    .nameContainer {
+        display: flex;
+        flex-direction: row;
+    }
+
+    .nameContainer input {
+        margin-bottom: 10px; /* Adjust the margin as needed */
+    }
+
+    .inputBox {
+        position: relative;
+        width: 23rem;
+        margin-bottom: 10px;
+    }
+
+    .inputBox input {
+        width: 100%;
+        padding: 10px;
+        border: 1px solid rgba(255, 255, 255, 0.25);
+        background: #552583;
+        border-radius: 5px;
+        outline: none;
+        -webkit-border-radius: 5px;
+        -moz-border-radius: 5px;
+        -ms-border-radius: 5px;
+        -o-border-radius: 5px;
+        color: #FDB927;
+        font-size: 16px; /* Adjust the font size as needed */
+    }
+
+    .inputBox span {
+        position: absolute;
+        left: 10px; /* Adjust the left position as needed */
+        top: 50%;
+        padding: 0 5px;
+        pointer-events: none;
+        font-size: 16px; /* Adjust the font size as needed */
+        color: rgba(255, 255, 255, 0.25);
+        text-transform: uppercase;
+        transition: 0.5s;
+        transform: translateY(-50%);
+    }
+
+    .inputBox input:valid ~ span,
+    .inputBox input:focus ~ span {
+        color: #FDB927;
+        transform: translateX(0) translateY(-30px); /* Adjust the translateY value as needed */
+        font-size: 12px; /* Adjust the font size as needed */
+        background: #552583;
+        letter-spacing: 0.05em; /* Adjust the letter-spacing as needed */
+    }
+
 
     .rsvpTitle {
         font-family: var(--wedding-Cursive);
@@ -77,6 +129,53 @@
 }
 
 @media screen and (min-aspect-ratio: 10/11){
+    .nameContainer {
+        
+    }
+
+    .inputBox {
+  position: relative;
+  width: 100%;
+  margin-bottom: 10px;
+}
+
+.inputBox input {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid rgba(255, 255, 255, 0.25);
+  background: #552583;
+  border-radius: 5px;
+  outline: none;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  -ms-border-radius: 5px;
+  -o-border-radius: 5px;
+  color: #FDB927;
+  font-size: 16px; /* Adjust the font size as needed */
+}
+
+.inputBox span {
+  position: absolute;
+  left: 10px; /* Adjust the left position as needed */
+  top: 50%;
+  padding: 0 5px;
+  pointer-events: none;
+  font-size: 16px; /* Adjust the font size as needed */
+  color: rgba(255, 255, 255, 0.25);
+  text-transform: uppercase;
+  transition: 0.5s;
+  transform: translateY(-50%);
+}
+
+.inputBox input:valid ~ span,
+.inputBox input:focus ~ span {
+  color: #FDB927;
+  transform: translateX(0) translateY(-30px); /* Adjust the translateY value as needed */
+  font-size: 12px; /* Adjust the font size as needed */
+  background: #552583;
+  letter-spacing: 0.05em; /* Adjust the letter-spacing as needed */
+}
+
 
     .rsvpTitle {
         font-family: var(--wedding-Cursive);
