@@ -119,8 +119,11 @@ const RSVP = () => {
 
         {/* submit */}
         <br/>
-        <ReCAPTCHA
-          sitekey="6LeIxAcTAAAAAJcZVRqyHh71UMIEGNQ_MXjiZKhI"/>
+          <div className="captcha-container">
+            <ReCAPTCHA
+            id='captchaBox'
+              sitekey="6LeIxAcTAAAAAJcZVRqyHh71UMIEGNQ_MXjiZKhI"/>
+          </div>
         <button type='submit' className='rsvpSubmit'>RSVP</button>
       </form>
       </div> 

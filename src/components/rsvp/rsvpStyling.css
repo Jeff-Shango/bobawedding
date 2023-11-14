@@ -9,8 +9,15 @@
         height: 100%;
         overflow-y: scroll;
         color: var(--wedding-gold);
-        /* font-family: var(--wedding-Str-Font); */
+        font-family: var(--wedding-Str-Font);
     }
+
+    .captcha-container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
 
     .rsvpBox {
         border: 2px solid black;
@@ -83,6 +90,13 @@
         font-family: var(--wedding-Str-Font);
     }
 
+    .captcha-container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+
     .rsvpBox {
         border: 2px solid black;
     }
@@ -151,6 +165,11 @@
         color: var(--wedding-gold);
         font-family: var(--wedding-Str-Font);
     }
+
+    .captcha-container {
+
+    }
+
 
     .rsvpBox {
         border: 2px solid black;
