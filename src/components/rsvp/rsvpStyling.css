@@ -6,7 +6,7 @@
     }
 
     #rsvpPage { 
-        height: 100vh;
+        height: 100%;
         overflow-y: scroll;
         color: var(--wedding-gold);
         /* font-family: var(--wedding-Str-Font); */
@@ -64,7 +64,7 @@
     }
 }
 
-@media only screen and (min-aspect-ratio: 10/11){
+@media screen and (min-aspect-ratio: 10/11){
 
     .rsvpTitle {
         font-family: var(--wedding-Cursive);
@@ -72,7 +72,7 @@
     }
 
     #rsvpPage {
-        height: 100vh;
+        height: 100%;
         overflow-y: scroll;
         color: var(--wedding-gold);
         font-family: var(--wedding-Str-Font);
@@ -130,7 +130,7 @@
     }
 
     #rsvpPage {
-        height: 100vh;
+        height: 100%;
         overflow-y: scroll;
         color: var(--wedding-gold);
         font-family: var(--wedding-Str-Font);
