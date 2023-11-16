@@ -23,64 +23,59 @@ const RSVP = () => {
   return (
     <div id='rsvpPage'>
       <Navlinks/>
-      {/* <div id="linkContainer">
-      <Link to="/">
-        <button className='btn btn-primary'>Go Home</button>
-      </Link>
+      
+    <h1 className="rsvpTitle">RSVP</h1>
 
-      <Link to="/gallery">
-        <button className='btn btn-primary'>Gallery</button>
-      </Link>
+    <h2 className="rsvpSubTitle">RSVP Due by:April 30, 2024</h2>
 
-      <Link to="/registry">
-        <button className='btn btn-primary'>Registry</button>
-      </Link>
+    <p className="rsvpP">We warmly invite you to RSVP for The Bozier wedding! Please don't hesistate to contact either Ashley or Jeff if you have any questions or need assistance. We're looking forward to seeing all of you there and sharing this joyous occasion together!!</p>
 
-      <Link to="/rsvp">
-        <button className='btn btn-primary'>RSVP</button>
-      </Link>
+    <form method='post' className="rsvpForm" ref={form} onSubmit={sendEmail}>
+    
+      <div className="formNameContainer">
+        <div className="form">
+          <input type="text" name="text" autoComplete='off' required className='inputFName'/>
+            <label htmlFor="text" className="label-name labelFName">
+              <span className="content-name spanFName">
+                First Name
+              </span>
+            </label>
+        </div>
 
-      <Link to="/schedule">
-        <button className='btn btn-primary'>Schedule</button>
-      </Link>
-
-      <Link to="/weddingParty">
-        <button className='btn btn-primary'>Wedding Party</button>
-      </Link>
-
-      </div> */}
-
-      <form ref={form} className="rsvpForm" onSubmit={sendEmail} method="post" >
-      <h1 className="rsvpTitle">RSVP</h1>
-
-      <h2 className="rsvpSubTitle">RSVP Due by:April 30, 2024</h2>
-
-      <p className="rsvpP">We warmly invite you to RSVP for The Bozier wedding! Please don't hesistate to contact either Ashley or Jeff if you have any questions or need assistance. We're looking forward to seeing all of you there and sharing this joyous occasion together!!</p>
-        <div className="inputBox">
-        {/* enter name */}
-        <h3 className="rsvpFormSTitle" >Name</h3>
-        <div className="nameContainer">
-        <input required type="text" name="name" id="formInput"/>
-        <span id='firstN'>First</span>
-        <input  required type="text" name="lastName" id="formInput"/>
-        <span id='lastN'>Last</span>
+        <div className="form">
+          <input type="text" name="text" autoComplete='off' required className='inputLName' />
+          <label htmlFor="text" className="label-name labelLName">
+            <span className="content-name spanLName">
+              Last Name
+            </span>
+          </label>
         </div>
         </div>
 
-        <div className="inputBox">
-        {/* enter email */}
-        <h3 className="rsvpFormSTitle" >Email</h3>
-        <input type="text" name="email" id="formInput" />
+        <div className="formEmailContainer">
+          <div className="form">
+            <input type="text" name="text" autoComplete='off' required className='inputEmail' />
+            <label htmlFor="text" className="label-name labelEmail">
+              <span className="content-name spanEmail">
+                Email
+              </span>
+            </label>
+          </div>
         </div>
 
-        <div className="inputBox">
-        {/* enter number */}
-        <h3 className="rsvpFormSTitle">Phone</h3>
-        <input required type="tel" name="phone" id="formInput"  />
+        <div className="formPhoneContainer">
+        <div className="form">
+          <input type="tel" name="text" autoComplete='off' required className='inputPhone' />
+          <label htmlFor="text" className="label-name labelPhone">
+            <span className="content-name spanPhone">
+              Phone
+            </span>
+          </label>
+        </div>
         </div>
 
-        {/* rsvp */}
-        <h3 className="rsvpFormSTitle">RSVP</h3>
+         {/* rsvp */}
+         <h3 className="rsvpFormSTitle">RSVP</h3>
         <div id='linkContainer'>
         <aside>
           <h3 id="rsvpText">
@@ -126,15 +121,14 @@ const RSVP = () => {
         <h3>Special Considerations</h3>
         <input type="text" name="specialNote" id="formInput" />
 
-        {/* submit */}
-        <br/>
-          <div className="captcha-container">
+
+  <div className="captcha-container">
             <ReCAPTCHA
             id='captchaBox'
               sitekey="6LeIxAcTAAAAAJcZVRqyHh71UMIEGNQ_MXjiZKhI"/>
-          </div>
-        <button type='submit' className='rsvpSubmit'>RSVP</button>
-      </form>
+  </div>
+  <button type='submit' className='rsvpSubmit'>RSVP</button>
+  </form>
       </div> 
   )
 }
