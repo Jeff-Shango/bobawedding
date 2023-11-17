@@ -89,7 +89,11 @@
       .form input:focus + .label-name::after,
       .form input:valid + .label-name::after {
         transform: translateX(0%);
-      }
+        -webkit-transform: translateX(0%);
+        -moz-transform: translateX(0%);
+        -ms-transform: translateX(0%);
+        -o-transform: translateX(0%);
+}
 
     .rsvpTitle {
         font-family: var(--wedding-Cursive);
@@ -120,6 +124,14 @@
 
     #formInput {
         margin: 5px;
+    }
+
+    .rsvpFormSTitle {
+        font-size: 20px;
+    }
+
+    #rsvpText {
+        font-size: 14px;
     }
 
     #linkContainer {
