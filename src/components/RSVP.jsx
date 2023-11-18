@@ -75,7 +75,7 @@ const RSVP = () => {
         </div>
 
          {/* rsvp */}
-         <h3 className="rsvpFormSTitle">RSVP</h3>
+         <h3 className="rsvpFormsTitle">RSVP</h3>
         <div id='linkContainer'>
         <aside>
           <h3 id="rsvpText">
@@ -118,7 +118,7 @@ const RSVP = () => {
         </div>
 
         {/* special details */}
-        <h3>Special Considerations</h3>
+        <h3 classname="rsvpFormsTitle">Special Considerations</h3>
         <input type="text" name="specialNote" id="formInput" />
 
 
