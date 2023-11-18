@@ -181,46 +181,103 @@
 
 @media screen and (min-aspect-ratio: 10/11){
     .nameContainer {
-        
+        display: flex;
+        flex-direction: row;
+        position: relative;
+        height: 30px;
+        width: 30%;
+        overflow: hidden;
     }
 
-    .inputBox {
-  position: relative;
-  width: 100%;
-  margin-bottom: 10px;
+    .form {
+        display: flex;
+        justify-content: space-between;
+        width: 50%;
+        position: relative;
+        height: 60px;
+        overflow: hidden;
+      }
+
+      .formNameContainer {
+        display: flex;
+        justify-content: space-between;
+        margin-left: 50vh;
+      }
+
+      .formEmailContainer {
+        display: flex;
+        justify-content: center;
+        margin-left: 50vh;
+      }
+
+      .formPhoneContainer {
+        display: flex;
+        justify-content: center;
+        margin-left: 50vh;
+      }
+      
+      .form input {
+        font-family: var(--wedding-Str-Font);
+        width: 100%;
+        height: 100%;
+        color: var(--wedding-gold);
+        padding-top: 20px;
+        border: none;
+        background-color: var(--main-bg);
+      }
+      .form label {
+        font-family: var(--wedding-Str-Font);
+        position: absolute;
+        bottom: 0px;
+        left: 0px;
+        width: 9rem;
+        height: 100%;
+        pointer-events: none;
+        border-bottom: 1px solid var(--wedding-gold);
+      }
+      .form label::after {
+        content: "";
+        position: absolute;
+        bottom: -1px;
+        left: 0px;
+        width: 100%;
+        height: 100%;
+        border-bottom: 3px solid var(--wedding-gold);
+        transform: translateX(-100%);
+        transition: all 0.3s ease;
+        font-family: var(--wedding-Str-Font);
+      }
+      
+      .content-name {
+        position: absolute;
+        bottom: 0px;
+        left: 0px;
+        padding-bottom: 5px;
+        transition: all 0.3s ease;
+        color: var(--wedding-gold);
+      }
+      .form input:focus {
+        outline: none;
+      }
+      .form input:focus + .label-name .content-name,
+      .form input:valid + .label-name .content-name {
+        transform: translateY(-150%);
+        font-size: 14px;
+        left: 0px;
+        color: var(--wedding-gold);
+        -webkit-transform: translateY(-150%);
+        -moz-transform: translateY(-150%);
+        -ms-transform: translateY(-150%);
+        -o-transform: translateY(-150%);
 }
-
-.inputBox input {
-  width: 100%;
-  padding: 10px;
-  border: 1px solid rgba(255, 255, 255, 0.25);
-  background: #552583;
-  border-radius: 5px;
-  outline: none;
-  -webkit-border-radius: 5px;
-  -moz-border-radius: 5px;
-  -ms-border-radius: 5px;
-  -o-border-radius: 5px;
-  color: #FDB927;
-  font-size: 16px; /* Adjust the font size as needed */
+      .form input:focus + .label-name::after,
+      .form input:valid + .label-name::after {
+        transform: translateX(0%);
+        -webkit-transform: translateX(0%);
+        -moz-transform: translateX(0%);
+        -ms-transform: translateX(0%);
+        -o-transform: translateX(0%);
 }
-
-.inputBox span {
-  position: absolute;
-  left: 10px; /* Adjust the left position as needed */
-  top: 50%;
-  padding: 0 5px;
-  pointer-events: none;
-  font-size: 16px; /* Adjust the font size as needed */
-  color: rgba(255, 255, 255, 0.25);
-  text-transform: uppercase;
-  transition: 0.5s;
-  transform: translateY(-50%);
-}
-
-
-
-
 
     .rsvpTitle {
         font-family: var(--wedding-Cursive);
@@ -251,6 +308,14 @@
 
     #formInput {
         margin: 5px;
+    }
+
+    .rsvpFormsTitle {
+        font-size: 16px;
+    }
+
+    #rsvpText {
+        font-size: 14px;
     }
 
     #linkContainer {
