@@ -118,7 +118,7 @@ const RSVP = () => {
         </div>
 
         {/* special details */}
-        <h3 classname="rsvpFormsTitle">Special Considerations</h3>
+        <h3 className="rsvpFormsTitle">Special Considerations</h3>
         <input type="text" name="specialNote" id="formInput" />
 
 
