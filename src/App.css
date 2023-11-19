@@ -33,7 +33,7 @@ code {
 
 .App {
   text-align: center;
-
+  background-color: var(--main-bg);
 }
 
 .App-logo {
@@ -140,7 +140,7 @@ code {
 
 /* small devices */
 /* orientation mode */
-@media screen and (max-width: 600px) {
+@media screen and (max-aspect-ratio: 10/11) {
   .app {
     height: 100vh;
   }
@@ -668,7 +668,7 @@ code {
 
 /* small devices */
 /* orientation mode */
-@media screen and (max-width: 800px) {
+@media screen and (min-aspect-ratio: 10/11) {
   .app {
     height: 100vh;
   }
@@ -760,7 +760,6 @@ code {
 
 
   .App {
-    
     /* width: var(--container-width-sm); */
     font-size: 12px;
     margin: auto;
@@ -1153,6 +1152,7 @@ code {
 /* medium devices */
 @media screen and (max-width: 1100px) and (orientation: landscape) {
   .app {
+    border: 2px solid red;
     height: 100vh;
   }
 
@@ -2215,8 +2215,6 @@ code {
 
 
   .App {
-    background-color: var(--wedding-green);
-    border: 2px solid red;
     /* width: var(--container-width-sm); */
     font-size: 12px;
     margin: auto;
@@ -2632,11 +2630,9 @@ code {
 
 .container {
   height: 100vh;
-  border: 2px solid red;
   justify-content: center;
   align-items: center;
   display: flex;
-  background-color: var(--wedding-gold);
 }
 
 #bottomDash {
