@@ -10,8 +10,8 @@ import Schedule from "./components/Schedule.jsx";
 import Success from "./functions/Success.jsx";
 import Cancel from "./functions/Cancel.jsx";
 // import Navlinks from "./components/Navlinks/Navlinks";
-import WeddingParty from "./components/WeddingParty";
-import Login from "./login/Login";
+import WeddingParty from "./components/WeddingParty.jsx";
+import Login from "./login/Login.jsx";
 
 
 function App() {

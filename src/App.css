@@ -1148,8 +1148,8 @@ code {
 }
 
 /* medium devices */
-/* orientation mode */
-@media screen and (max-width: 1600px) and (min-height: 850px) and (orientation) {
+/* portrait mode */
+@media screen and (max-width: 1600px) and (min-height: 900px) and (orientation: portrait) {
   .app {
     height: 100vh;
   }
@@ -1680,9 +1680,9 @@ code {
 }
 }
 
-/* medium device */
+/* medium device */wwwwwwwwww
 /* landscape mode */
-@media screen and (max-width: 1600px) and (min-height: 850px) {
+@media screen and (min-width: 1000px) and (max-width: 1600px) and (min-height: 650px) and (max-height: 750px) and (orientation: landscape) {
   .app {
     height: 100vh;
   }
