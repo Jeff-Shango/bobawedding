@@ -2,6 +2,7 @@ import React from 'react';
 import { Navbar, Nav } from 'react-bootstrap';
 import { Link } from 'react-router-dom'; // Import Link from React Router
 import './navlinks.css';
+import '../../App.css'
 
 const Navlinks = () => {
   return (

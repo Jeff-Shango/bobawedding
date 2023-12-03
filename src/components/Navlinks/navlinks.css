@@ -115,19 +115,20 @@
 
 
     #navLink {
-        /*font-size: 11px;
-        *//*padding: 2px;
-        */color: var(--wedding-gold);
+        /* font-size: 11px; */
+        /* padding: 2px; */
+        color: var(--wedding-gold);
         background-color: transparent;
         border-radius: 12px;
         -webkit-border-radius: 12px;
         -moz-border-radius: 12px;
         -ms-border-radius: 12px;
         -o-border-radius: 12px;
-        margin-right: 4.5rem;
+        margin-right: .5rem;
         width: fit-content;
         height: fit-content;
         font-weight: bold;
+        
 }
 
     #navLink:active {
@@ -146,11 +147,7 @@
 
     #linkItem {
         color: #CCCCCC;
-        font-size: large;
-    }
-
-    #navLink #linkItem {
-        color: var(--wedding-gold);
+        font-size: medium;
     }
 
     .responsive-navbar-nav {
@@ -190,8 +187,10 @@
     } */
 
     .navbarContainer {
-        /* background-color: var(--color-bg); */
-        position: fixed;
+        background-color: var(--main-bg);
+        display: none;
+        height: 5vh;
+        position: relative;
         top: 0;
     }
 }
