@@ -139,8 +139,8 @@ code {
 }
 
 /* small devices */
-/* orientation mode */
-@media screen and (max-width: 400px) {
+/* portrait mode */
+@media screen and (max-width: 900px) and (max-height: 1000px) and (orientation: portrait) {
   .app {
     height: 100vh;
   }
@@ -666,8 +666,8 @@ code {
 }
 
 /* small devices */
-/* orientation mode */
-@media screen and (min-aspect-ratio: 10/11) {
+/* landscape mode */
+@media screen and (max-width: 800px) and (max-height: 400px) and (orientation: landscape) {
   .app {
     height: 100vh;
   }
@@ -1148,7 +1148,7 @@ code {
 
 /* medium devices */
 /* portrait mode */
-@media screen and (max-width: 1600px) and (min-height: 900px) and (orientation: portrait) {
+@media screen and (min-width: 700px) and (max-width: 1100px) and (max-height: 1000px) and (min-height: 800px) and (orientation: portrait) {
   .app {
     height: 100vh;
   }
@@ -1679,7 +1679,7 @@ code {
 }
 }
 
-/* medium device */wwwwwwwwww
+/* medium device */
 /* landscape mode */
 @media screen and (min-width: 1000px) and (max-width: 1600px) and (min-height: 650px) and (max-height: 750px) and (orientation: landscape) {
   .app {
