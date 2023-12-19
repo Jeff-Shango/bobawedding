@@ -619,6 +619,7 @@
   font-family: var(--wedding-Cursive);
   color: var(--wedding-gold);
   font-size: 3.5rem;
+  margin-top: 5rem;
 }
 
 .wedTeamContainer {
@@ -678,4 +679,175 @@
   width: 100vh;
   height: 100%;
 }
+}
+
+/* computer monitor */
+@media screen and (min-width: 1500px) and (max-width: 1700px) and (max-height: 1000px) and (min-height: 700px) {
+
+  #weddingPartyPage {
+    height: 100vh;
+    position: relative;
+    overflow-y: hidden;
+  }
+  
+  .rotate-scale-up-diag-1 {
+    -webkit-animation: rotate-scale-up-diag-1 0.7s linear both;
+            animation: rotate-scale-up-diag-1 0.7s linear both;
+  }
+  
+  @-webkit-keyframes rotate-scale-up-diag-1 {
+    0% {
+              -webkit-transform: scale(1) rotate3d(1, 1, 0, 0deg);
+              transform: scale(1) rotate3d(1, 1, 0, 0deg);
+              -moz-transform: scale(1) rotate3d(1, 1, 0, 0deg);
+              -ms-transform: scale(1) rotate3d(1, 1, 0, 0deg);
+              -o-transform: scale(1) rotate3d(1, 1, 0, 0deg);
+  }
+    50% {
+      -webkit-transform: scale(2) rotate3d(1, 1, 0, -180deg);
+              transform: scale(2) rotate3d(1, 1, 0, -180deg);
+    }
+    100% {
+      -webkit-transform: scale(1) rotate3d(1, 1, 0, -360deg);
+              transform: scale(1) rotate3d(1, 1, 0, -360deg);
+    }
+  }
+  
+  @keyframes rotate-scale-up-diag-1 {
+    0% {
+      -webkit-transform: scale(1) rotate3d(1, 1, 0, 0deg);
+              transform: scale(1) rotate3d(1, 1, 0, 0deg);
+    }
+    50% {
+      -webkit-transform: scale(2) rotate3d(1, 1, 0, -180deg);
+              transform: scale(2) rotate3d(1, 1, 0, -180deg);
+    }
+    100% {
+              -webkit-transform: scale(1) rotate3d(1, 1, 0, -360deg);
+              transform: scale(1) rotate3d(1, 1, 0, -360deg);
+              -moz-transform: scale(1) rotate3d(1, 1, 0, -360deg);
+              -ms-transform: scale(1) rotate3d(1, 1, 0, -360deg);
+              -o-transform: scale(1) rotate3d(1, 1, 0, -360deg);
+  }
+  }
+  
+  .scrollMessage {
+    position: absolute;
+    top: 0;
+    transform: translateX(100%);
+    font-family: var(--wedding-Str-Font);
+    color: white;
+    max-height: fit-content;
+    width: fit-content;
+    border-radius: 12px;
+    -webkit-border-radius: 12px;
+    -moz-border-radius: 12px;
+    -ms-border-radius: 12px;
+    -o-border-radius: 12px;
+    -webkit-transform: translateX(100%);
+    -moz-transform: translateX(100%);
+    -ms-transform: translateX(100%);
+    -o-transform: translateX(100%);
+  }
+  
+  @-webkit-keyframes shadow-drop-center {
+    0% {
+      -webkit-box-shadow: 0 0 0 0 rgba(0, 0, 0, 0);
+              box-shadow: 0 0 0 0 rgba(0, 0, 0, 0);
+              opacity: 0;
+    }
+    50% {
+      -webkit-box-shadow: 0 0 20px 0px var(--wedding-gold);
+              box-shadow: 0 0 20px 0px var(--wedding-gold);
+              opacity: 1;
+    }
+    100% {
+          -webkit-box-shadow: 0 0 20px 0px var(--wedding-gold);
+              box-shadow: 0 0 20px 0px var(--wedding-gold);
+              opacity: 0;
+    }
+  }
+  @keyframes shadow-drop-center {
+    0% {
+      -webkit-box-shadow: 0 0 0 0 rgba(0, 0, 0, 0);
+              box-shadow: 0 0 0 0 rgba(0, 0, 0, 0);
+              opacity: 0;
+    }
+    50% {
+      -webkit-box-shadow: 0 0 20px 0px var(--wedding-gold);
+              box-shadow: 0 0 20px 0px var(--wedding-gold);
+              opacity: 1;
+    }
+    100% {
+          -webkit-box-shadow: 0 0 20px 0px var(--wedding-gold);
+              box-shadow: 0 0 20px 0px var(--wedding-gold);
+              opacity: 0;
+    }
+  }
+  
+  
+    #wedTeamTitle {
+    font-family: var(--wedding-Cursive);
+    color: var(--wedding-gold);
+    font-size: 3.5rem;
+    margin-top: 5rem;
+  }
+  
+  .wedTeamContainer {
+    font-family: var(--wedding-Str-Font);
+    position: absolute;
+    top: 10vh;
+    left:60vh;
+  }
+  
+  .wedTopSlider {
+    display: flex;
+    overflow-x: hidden;
+  }
+  
+  .sliderImg {
+    height: 5rem;
+    margin: .5rem;
+  }
+  
+  .stylingBox {
+    display: flex;
+    justify-content: cemter;
+    align-items: flex-end;
+    height: 5rem;
+    background-color: var(--wedding-gold);
+    position: relative;
+    margin: 1rem 5rem;
+  }
+  
+  .stylingBoxText {
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    color: white;
+    transform: translateX(-50%);
+    font-family: var(--wedding-Str-Font);
+    -webkit-transform: translateX(-50%);
+    -moz-transform: translateX(-50%);
+    -ms-transform: translateX(-50%);
+    -o-transform: translateX(-50%);
+  }
+  
+  .overlay {
+    height: 100%;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.6);
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 6;
+  }
+  
+  .largeImage {
+    position: absolute;
+    top: 0;
+    left: 25%;
+    width: 100vh;
+    height: 100%;
+  }
 }

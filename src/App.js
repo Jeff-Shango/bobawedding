@@ -13,6 +13,7 @@ import Cancel from "./functions/Cancel.jsx";
 import WeddingParty from "./components/WeddingParty.jsx";
 import Login from "./login/Login.jsx";
 import Hotel from "./components/Hotel.jsx"
+import Accomodations from "./components/accomd/Accomodations.jsx";
 
 function App() {
   
@@ -41,6 +42,7 @@ function App() {
             <Route path="/success" element={<Success/>}/>
             <Route path="/weddingParty" element={<WeddingParty/>}/>
             <Route path="/hotel" element={<Hotel/>}/>
+            <Route path="/accomodations" element={<Accomodations/>}/>
           </Routes>
 
       </div>
