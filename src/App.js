@@ -41,7 +41,6 @@ function App() {
             <Route path="/cancel" element={<Cancel/>}/>
             <Route path="/success" element={<Success/>}/>
             <Route path="/weddingParty" element={<WeddingParty/>}/>
-            <Route path="/hotel" element={<Hotel/>}/>
             <Route path="/accomodations" element={<Accomodations/>}/>
           </Routes>
 
