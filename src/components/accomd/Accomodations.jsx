@@ -6,7 +6,7 @@ const Accomodations = () => {
 
   return (
     <div id='accomdPage'>
-      <a href={bozierLink} className="accomdLink" target="_blank" rel="noopener noreferrer">
+      <a href="https://www.hyatt.com/en-US/hotel/maryland/hyatt-place-baltimore-inner-harbor/bwizh?corp_id=G-BARN" className="accomdLink" target="_blank" rel="noopener noreferrer">
         BozierEverAfter
       </a>        
     </div>
