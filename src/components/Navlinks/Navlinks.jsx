@@ -31,6 +31,9 @@ const Navlinks = () => {
           <Link id="dashLink" to="https://bozierwedding.netlify.app/registry">
             REGISTRY
           </Link>
+          <Link id="dashLink" to="https://bozierwedding.netlify.app/accomodations">
+            ACCOMODATIONS
+          </Link>
         </Nav>
       </Navbar.Collapse>
     </Navbar>
