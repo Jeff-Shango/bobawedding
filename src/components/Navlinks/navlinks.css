@@ -387,9 +387,16 @@
     -o-border-radius: 10px; */
 }  
 
+#dashNavCon {
+    width: 55vh;
+    padding: 1rem;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+}
+
 #dashNavCon .dashLink{
     font-family: 'Playfair Display', serif;
-    font-size: 5px;
+    font-size: 8px;
     color: white;
     font-weight: bolder;
     /* margin: 1px;
