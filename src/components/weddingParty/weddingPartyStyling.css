@@ -161,7 +161,8 @@
     top: 0;
     left: 0;
     width: 50vh;
-    margin: 1rem;
+    margin-top: 2rem;
+    margin-left: 3vh;
     height: 100%;
   }
   
