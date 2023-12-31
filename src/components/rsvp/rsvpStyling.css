@@ -161,6 +161,14 @@
         font-size: larger;
     }
 
+    .bottomContainer {
+    }
+
+    .bottomContent {
+      display: inline;
+      font-size: medium;
+    }
+
     .rsvpSubmit {
         font-family: var(--wedding-Str-Font);
         font-size: x-large;
@@ -343,6 +351,14 @@
         margin: 0 5px;
         font-family: var(--wedding-Str-Font);
         font-size: larger;
+    }
+
+    .bottomContainer {
+      outline: 2px solid red;
+    }
+
+    .bottomContent {
+      font-size: medium;
     }
 
     .rsvpSubmit {
@@ -532,6 +548,14 @@
         font-size: larger;
     }
 
+    .bottomContainer {
+      outline: 2px solid red;
+    }
+
+    .bottomContent {
+      font-size: medium;
+    }
+
     .rsvpSubmit {
         font-family: var(--wedding-Str-Font);
         font-size: x-large;
@@ -717,6 +741,10 @@
     margin: 0 5px;
     font-family: var(--wedding-Str-Font);
     font-size: larger;
+}
+
+.bottomContainer {
+  border: 2px solid red;
 }
 
 .rsvpSubmit {
@@ -908,6 +936,10 @@
     margin: 0 5px;
     font-family: var(--wedding-Str-Font);
     font-size: larger;
+}
+
+.bottomContainer {
+  border: 2px solid red;
 }
 
 .rsvpSubmit {
