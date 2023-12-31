@@ -113,19 +113,19 @@
 #cashAppButtonA {
     position: absolute;
     top: 60vh;
-    left: 15vh;
+    left: 10vh;
 }
 
 #cashAppButtonB {
     position: absolute;
     top: 60vh;
-    right: 18vh;
+    right: 10vh;
 }
 
 #cashAppButtonC {
     position: absolute;
     top: 65vh;
-    left: 20vh;
+    left: 18vh;
 }
     
 .registryContainer {
