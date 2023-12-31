@@ -32,13 +32,13 @@ const Registry = () => {
     <h3 className="registryDescriptionTop">Your presence on our special day means the world to us, and we are truly grateful for your love and support. If you are considering a gift, a contribution to our future together would be greatly appreciated.</h3>
     <img id='moneyImg' src={bozierMoneyTag} alt="cashApp" />
     <h3 className="registryDescriptionBottom">We understand that some of our guests may prefer to give traditional wedding gifts. In that case, please use the following links to acces our registry.</h3>
-    <button src="https://cash.app/$TheBoziers" className='cashAppButton' onClick={() => window.open('https://cash.app/$TheBoziers', '_blank')}>
+    <button src="https://cash.app/$TheBoziers" className='cashAppButton' id='cashAppButtonA' onClick={() => window.open('https://cash.app/$TheBoziers', '_blank')}>
       Cash App
     </button>
-    <button src="https://enroll.zellepay.com/qr-codes?data=eqwoglCJ0b" className='cashAppButton' onClick={() => window.open('https://enroll.zellepay.com/qr-codes?data=ewogICJ0b2tlbiIgOiAiNDEwNTcwODU3OCIsCiAgImFjdGlvbiIgOiAicGF5bWVudCIsCiAgIm5hbWUiIDogIkFTSExFWSIKfQ==', '_blank')}>
+    <button src="https://enroll.zellepay.com/qr-codes?data=eqwoglCJ0b" className='cashAppButton' id='cashAppButtonB' onClick={() => window.open('https://enroll.zellepay.com/qr-codes?data=ewogICJ0b2tlbiIgOiAiNDEwNTcwODU3OCIsCiAgImFjdGlvbiIgOiAicGF5bWVudCIsCiAgIm5hbWUiIDogIkFTSExFWSIKfQ==', '_blank')}>
       Zelle
     </button>
-    <button src="https://www.myregistry.com/wedding-registry/jeff-bozier-and-ashley-barney-baltimore-md/3857459" className='cashAppButton' onClick={() => window.open('https://www.myregistry.com/wedding-registry/jeff-bozier-and-ashley-barney-baltimore-md/3857459', '_blank')}>
+    <button src="https://www.myregistry.com/wedding-registry/jeff-bozier-and-ashley-barney-baltimore-md/3857459" className='cashAppButton' id='cashAppButtonC' onClick={() => window.open('https://www.myregistry.com/wedding-registry/jeff-bozier-and-ashley-barney-baltimore-md/3857459', '_blank')}>
       Official Registry
     </button>
   </div>

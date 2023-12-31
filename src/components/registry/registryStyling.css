@@ -91,19 +91,41 @@
     border: 2px solid blue;
 }
 
+#moneyImg {
+    height: 50vh;
+}
+
 .cashAppButton {
     font-family: var(--wedding-Str-Font);
     background-color: var(--wedding-gold);
     text-decoration: none;
     color: black;
-    padding: .5rem;
+    /* padding: .5rem; */
     font-weight: bold;
-    margin: .5rem 3rem;
+    /* margin: .5rem 3rem; */
     border-radius: 12px;
     -webkit-border-radius: 12px;
     -moz-border-radius: 12px;
     -ms-border-radius: 12px;
     -o-border-radius: 12px;
+}
+
+#cashAppButtonA {
+    position: absolute;
+    top: 60vh;
+    left: 15vh;
+}
+
+#cashAppButtonB {
+    position: absolute;
+    top: 60vh;
+    right: 18vh;
+}
+
+#cashAppButtonC {
+    position: absolute;
+    top: 65vh;
+    left: 20vh;
 }
     
 .registryContainer {
