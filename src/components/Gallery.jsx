@@ -103,7 +103,7 @@ const Gallery = () => {
             />
           </div>
           <div className='column is-half is-offset-one-quarter'>
-            <h1 className="title">Please leave your feedback below</h1>
+            {/* <h1 className="title">Please leave your feedback below</h1> */}
             {/* <form onSubmit={addComment}> */}
             {/* <form onSubmit={(e) => {
               e.preventDefault();
@@ -143,9 +143,9 @@ const Gallery = () => {
               </div>
             </form> */}
           </div>
-          <section className="containerComment">
+          {/* <section className="containerComment">
             <WedComments imageId={selectedImageId} /> 
-          </section>
+          </section> */}
         </div>
       )}
     </div>

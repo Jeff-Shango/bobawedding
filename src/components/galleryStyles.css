@@ -1,11 +1,14 @@
-/* small devices */
-/* orientation mode */
-@media screen and (max-width: 900px) and (max-height: 1000px) and (orientation: portrait) {
+/* small devices portrait mode */
+@media only screen and (max-width: 400px) and (max-height: 800px) and (orientation: portrait) {
 
   #galleryTitle {
     letter-spacing: 3.5px;
     font-size: xx-large;
     font-family: var(--wedding-Cursive);
+  }
+
+  .enlarged-image {
+    margin: 2rem;
   }
 
   #galleryDescript {
@@ -23,6 +26,7 @@
     -ms-border-radius: 12px;
     -o-border-radius: 12px;
 }
+
   #imgBox {
     background-image: url('../assets/BlackWhiteClassicPaperBorderB.png');
     background-size: 24rem 25rem;
@@ -136,8 +140,8 @@
   }
 }
 
-/* small devices / landscape   edit this one*/
-@media screen and (max-width: 800px) and (max-height: 400px) and (orientation: landscape) {
+/* small devices landscape mode */
+@media only screen and (min-width: 625px) and (max-width: 800px) and (min-height: 300px) and (max-height: 450px) and (orientation: landscape) {
 
   #galleryTitle {
     letter-spacing: 3.5px;
@@ -274,8 +278,7 @@
   }
 }
 
-/* tablets (portrait) */
-
+/* medium devices portrait mode */
 @media screen and (min-width: 700px) and (max-width: 1100px) and (max-height: 1000px) and (min-height: 800px) and (orientation: portrait) {
 
   #galleryTitle {
@@ -418,9 +421,8 @@
   }
 }
 
-/* tablets (landscape) */
-
-@media screen and (min-width: 1000px) and (max-width: 1200px) and (min-height: 600px) {
+/* medium devices landscape mode */
+@media screen and (min-width: 1000px) and (max-height: 800px) and (orientation: landscape) {
 
   #galleryTitle {
     letter-spacing: 3.5px;
@@ -564,7 +566,7 @@
 }
 
 /* computer monitor */
-@media screen and (min-width: 1500px) and (max-width: 1700px) and (max-height: 1000px) and (min-height: 700px) {
+@media only screen and (min-width: 1500px) and (max-width: 1700px) and (max-height: 1000px) and (min-height: 700px) {
 
   #galleryTitle {
     letter-spacing: 3.5px;
