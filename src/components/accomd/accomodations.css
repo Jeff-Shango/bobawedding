@@ -75,26 +75,58 @@
 /* landscape mode */
 @media only screen and (min-width: 625px) and (max-width: 800px) and (min-height: 300px) and (max-height: 450px) and (orientation: landscape) {
     #accomdPage {
-        height: 100vh;
-        width: 35rem;
-        margin-left: auto;
-        margin-right: auto;
+        height: 100%;
+        width: 100%;
+        /* background: url('../../assets/accomodation.jpg'); */
+        /* background-position: center; */
+        background-size: cover;
+        background-position: center;
         background-repeat: no-repeat;
-        background: url('../../assets/accomodation.jpg');
-        background-size: 100% 100vh;
+    }
+
+    .accomdTopLayer, .accomdBottomLayer {
+        margin: 1.5rem;
+    }
+
+    .accomdTopTitle, .accomdBottomTitle {
+        font-family: var(--wedding-Cursive);
+        font-size: 10vh;
+    }
+
+    .accomdTopLayerContent, .accomdBottomLayerContent {
+        font-size: 15px;
+        font-family: var(--wedding-Str-Font);
     }
 
     .accomdLink {
         position: absolute;
-        bottom: 6.3rem;
-        right: 60.5vh;
-        font-size: 12px;
+        top: 1rem;
+        left: 4.5vh;
+        font-size: 15px;
         text-decoration: none;
         color: black;
         background-color: var(--wedding-gold);
         font-family: var(--wedding-Str-Font);
         animation: accomPulse 2s ease-in-out infinite;
         transform-origin: center center;
+        border-radius: 12px;
+        padding: 5px;
+    }
+
+    .topAccomdPic {
+        height: 10rem;
+        max-height: 100%;
+        background-image: url("../../assets/topAccomdPic.jpg");
+        background-size: cover;
+        background-position: center;
+    }
+
+    .bottomAccomdPic {
+        height: 30vh;
+        max-height: 100%;
+        background-image: url("../../assets/bottomAccomdPic.png");
+        background-size: cover;
+        background-position: center;
     }
 
     @keyframes accomPulse {
