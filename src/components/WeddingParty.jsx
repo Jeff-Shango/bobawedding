@@ -19,6 +19,8 @@ import alise from '../assets/Alise.jpg';
 import aliseBreak from '../assets/aliseBreak.png';
 import Autumn from '../assets/Autumn.jpg';
 import autumnBreak from '../assets/autumnBreak.png';
+import evie from '../assets/Evie.jpg';
+import evieDescript from '../assets/EvieDescript.png'
                                                                                    
 import Navlinks from './Navlinks/Navlinks.jsx'
 import "./weddingParty/weddingPartyStyling.css";
@@ -69,6 +71,11 @@ const WeddingParty = () => {
       alt: "Autumn",
       bio: autumnBreak,
     }, 
+    {
+      src: evie,
+      alt: "Evie",
+      bio: evieDescript,
+    },
   ];
 
   const handleImageClick = (index) => {
