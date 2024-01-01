@@ -2,10 +2,13 @@
 @media only screen and (max-width: 400px) and (max-height: 800px) and (orientation: portrait) {
 
   .largeImage {
+    outline: 2px solid green;
   }
 
   .largeImageContainer {
+    outline: 2px solid red;
     height: 50vh;
+    width: 100vh;
     position: relative;
     left: auto;
     right: auto;
