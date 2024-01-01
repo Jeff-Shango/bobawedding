@@ -7,13 +7,12 @@
   }
 
   .largeImageContainer {
-    outline: 2px solid red;
     height: 40vh;
-    width: 50vh;
+    width: 40vh;
     position: relative;
-    display: flex;
+    /* display: flex;
     justify-content: center;
-    align-items: center;
+    align-items: center; */
   }
 
   #weddingPartyPage {
