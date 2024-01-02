@@ -62,9 +62,9 @@ const Schedule = () => {
     cardSubtitle:"The groom asked the bride if she wanted to be his \"woman,\" she giddily accepted. They immediately moved in together, and well...we're here, aren't we.",
     cardDetailedText: "",
     media: {
-      type: "IMAGE",
+      type: "VIDEO",
       source: {
-        url: require("../assets/officialCouple.jpg")
+        url: require("../assets/BOBAOfficial.mp4")
       }
     }
   },
@@ -98,9 +98,9 @@ const Schedule = () => {
     cardSubtitle:"Weekend trip to Myrtle Beach, South Carolina.",
     cardDetailedText: "This trip was where Jeff and Ashley almost talked each other into eloping and marrying then and there.",
     media: {
-      type: "IMAGE",
+      type: "VIDEO",
       source: {
-        url: require("../assets/jamaica.jpg")
+        url: require("../assets/MontegoBayTrip.mp4")
       }
     }
   },
