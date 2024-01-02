@@ -71,7 +71,6 @@ const Schedule = () => {
   {
     title: "April 17-18, 2021",
     cardTitle: "Myrtle Beach, South Carolina",
-    cardSubtitle:"Weekend trip to Myrtle Beach, South Carolina.",
     cardDetailedText: "On the day the bride and groom were leaving the beach to drive back to Baltimore, they dared each other to elope. But alas, it was a Sunday and Google wasn't willing to indulge the couple's impulsivity that day.",
     media: {
       type: "VIDEO",
@@ -83,7 +82,6 @@ const Schedule = () => {
   {
     title: "August 9-15, 2021",
     cardTitle: "Miami, Florida",
-    cardSubtitle:"The COuple Decided to Make a Habit of Traveling Together",
     cardDetailedText:"For the Bride's Birthday, the couple decided to spend a week in Miami, FL. They declared that they would travel annually during one of the weeks between their July and August birthdays.",
     media: {
       type: "VIDEO",
@@ -95,7 +93,6 @@ const Schedule = () => {
   {
     title: "July 8-15, 2022",
     cardTitle: "Montego Bay, Jamaica",
-    cardSubtitle:"Weekend trip to Myrtle Beach, South Carolina.",
     cardDetailedText: "This trip was where Jeff and Ashley almost talked each other into eloping and marrying then and there.",
     media: {
       type: "VIDEO",
@@ -107,7 +104,6 @@ const Schedule = () => {
   {
     title: "April 21, 2023",
     cardTitle: "Jeff proposes!",
-    cardSubtitle:"Jeff surprises Ashley by popping the question!",
     cardDetailedText: "Having a student from Jeff's boxing classes, he had the person pose as a photographer at the community event they were going to at Carrol Park. As the photographer told us he wanted to give us a photoshoot, he prompted Ashley and Jeff to a spot where he proceeded to do a photoshoot. Instructing Ashley to step in front of Jeff, Jeff prepared himself by getting down on one knee and waiting for the photographer to tell Ashley to look at Jeff.",
     media: {
       type: "IMAGE",
