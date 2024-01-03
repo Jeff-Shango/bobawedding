@@ -592,6 +592,19 @@ code {
   -ms-transform: translateX(-50%);
   -o-transform: translateX(-50%);
 }
+
+.footer {
+  position: fixed;
+  letter-spacing: 1px;
+  font-family: var(--wedding-Cursive);
+  height: 1px;
+  bottom: 0;
+  right: 0;
+  background-color: transparent;
+  padding-bottom: 30px;
+  color: white;
+  font-size: smaller;
+}
 }
 
 /* small devices */

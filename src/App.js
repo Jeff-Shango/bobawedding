@@ -6,6 +6,7 @@ import Gallery from "./components/Gallery.jsx";
 import Registry from "./components/Registry.jsx";
 import RSVP from "./components/RSVP.jsx";
 import Schedule from "./components/Schedule.jsx";
+import footerImg from "./assets/logoSolo.png";
 // import CartProvider from "./functions/CartContext.js";
 import Success from "./functions/Success.jsx";
 import Cancel from "./functions/Cancel.jsx";
@@ -14,6 +15,8 @@ import WeddingParty from "./components/WeddingParty.jsx";
 import Login from "./login/Login.jsx";
 import Hotel from "./components/Hotel.jsx"
 import Accomodations from "./components/accomd/Accomodations.jsx";
+import 'bootstrap/dist/css/bootstrap.min.css';
+import 'bootstrap/dist/js/bootstrap.bundle.min.js';
 
 function App() {
   
@@ -43,7 +46,10 @@ function App() {
             <Route path="/weddingParty" element={<WeddingParty/>}/>
             <Route path="/accomodations" element={<Accomodations/>}/>
           </Routes>
+          <div className="footer">
+            © 2023 Jeff Bozier, Jr
 
+          </div>
       </div>
         </BrowserRouter>
     // </CartProvider>
