@@ -46,9 +46,6 @@ function App() {
             <Route path="/weddingParty" element={<WeddingParty/>}/>
             <Route path="/accomodations" element={<Accomodations/>}/>
           </Routes>
-          <div className="footer">
-            © 2023 Jeff Bozier, Jr
-          </div>
       </div>
         </BrowserRouter>
     // </CartProvider>

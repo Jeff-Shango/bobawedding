@@ -248,6 +248,9 @@ const Dashboard = () => {
         {/* container for other features  */}
 
       {/* end of feature container */}
+      <div className="footer">
+                    © 2023 Jeff Bozier, Jr
+                  </div>
     </div>
   );
 };
