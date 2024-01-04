@@ -48,7 +48,6 @@ function App() {
           </Routes>
           <div className="footer">
             © 2023 Jeff Bozier, Jr
-
           </div>
       </div>
         </BrowserRouter>
