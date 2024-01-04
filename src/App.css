@@ -594,11 +594,11 @@ code {
 }
 
 .footer {
-  position: fixed;
+  position: absolute;
   letter-spacing: 1px;
   font-family: var(--wedding-Cursive);
   height: 1px;
-  bottom: 0;
+  bottom: 0px;
   right: 0;
   background-color: transparent;
   padding-bottom: 30px;
