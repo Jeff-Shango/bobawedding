@@ -222,7 +222,7 @@
 #dashNavCon .dashLink{
     font-family: 'Playfair Display', serif;
     font-size: 7px;
-    color: white;
+    color: var(--wedding-gold);
     font-weight: bolder;
     /* margin: 1px;
     padding: 5px; */
@@ -396,7 +396,7 @@
 #dashNavCon .dashLink{
     font-family: 'Playfair Display', serif;
     font-size: 7px;
-    color: white;
+    color: var(--wedding-gold);
     font-weight: bolder;
     /* margin: 1px;
     padding: 5px; */
@@ -702,7 +702,7 @@
 #dashNavCon .dashLink{
     font-family: 'Playfair Display', serif;
     font-size: 15px;
-    color: white;
+    color: var(--wedding-gold);
     font-weight: bolder;
     /* margin: 1px;
     padding: 5px; */
@@ -875,7 +875,7 @@
 #dashNavCon .dashLink{
     font-family: 'Playfair Display', serif;
     font-size: 15px;
-    color: white;
+    color: var(--wedding-gold);
     font-weight: bolder;
     /* margin: 1px;
     padding: 5px; */

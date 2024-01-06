@@ -150,7 +150,7 @@ code {
 
   .weddingNameTitle {
     font-family: var(--wedding-Str-Font);
-    color: white;
+    color: var(--wedding-gold);
     font-size: xx-large;
   }
 
@@ -173,7 +173,7 @@ code {
   }
 
   .text-shadow-pop-top {
-    color: #E1B847;
+    color: white;
     /* position: fixed;
     top: 10px; */
     font-size: 75px;
@@ -286,8 +286,9 @@ code {
     background-size: cover;
     background-repeat: no-repeat;
     background-attachment: fixed;
-    animation: fadeImages 101s infinite;
-    -webkit-animation: fadeImages 101s infinite;
+    background-image: url("../src/assets/imgN.jpg");
+    /* animation: fadeImages 101s infinite;
+    -webkit-animation: fadeImages 101s infinite; */
 }
 
 @keyframes fadeImages {
@@ -620,7 +621,7 @@ code {
 
   .weddingNameTitle {
     font-family: var(--wedding-Str-Font);
-    color: white;
+    color: var(--wedding-gold);
     font-size: xx-large;
   }
 
@@ -644,7 +645,7 @@ code {
   }
 
   .text-shadow-pop-top {
-    color: #E1B847;
+    color: white;
     /* position: fixed;
     top: 10px; */
     font-size: 75px;
@@ -755,8 +756,9 @@ code {
     background-size: cover;
     background-repeat: no-repeat;
     background-attachment: fixed;
-    animation: fadeImages 101s infinite;
-    -webkit-animation: fadeImages 101s infinite;
+    background-image: url("../src/assets/imgN.jpg");
+    /* animation: fadeImages 101s infinite;
+    -webkit-animation: fadeImages 101s infinite; */
 }
 
 @keyframes fadeImages {
@@ -1086,7 +1088,7 @@ code {
 
   .weddingNameTitle {
     font-family: var(--wedding-Str-Font);
-    color: white;
+    color: var(--wedding-gold);
     font-size: xx-large;
   }
 
@@ -1110,7 +1112,7 @@ code {
   }
 
   .text-shadow-pop-top {
-    color: #E1B847;
+    color: white;
     /* position: fixed;
     top: 10px; */
     font-size: 75px;
@@ -1230,8 +1232,9 @@ code {
     background-size: 100% 100%;
     background-repeat: no-repeat;
     /* background-attachment: fixed; */
-    animation: fadeImages 101s infinite;
-    -webkit-animation: fadeImages 101s infinite;
+    background-image: url("../src/assets/imgN.jpg");
+    /* animation: fadeImages 101s infinite;
+    -webkit-animation: fadeImages 101s infinite; */
 }
 
 @keyframes fadeImages {
@@ -1564,7 +1567,7 @@ code {
 
   .weddingNameTitle {
     font-family: var(--wedding-Str-Font);
-    color: white;
+    color: var(--wedding-gold);
     font-size: xx-large;
   }
 
@@ -1588,7 +1591,7 @@ code {
   }
 
   .text-shadow-pop-top {
-    color: #E1B847;
+    color: white;
     /* position: fixed;
     top: 10px; */
     font-size: 75px;
@@ -1708,8 +1711,9 @@ code {
     background-size: 100% 100%;
     background-repeat: no-repeat;
     /* background-attachment: fixed; */
-    animation: fadeImages 101s infinite;
-    -webkit-animation: fadeImages 101s infinite;
+    background-image: url("../src/assets/imgN.jpg");
+    /* animation: fadeImages 101s infinite;
+    -webkit-animation: fadeImages 101s infinite; */
 }
 
 @keyframes fadeImages {
@@ -2041,7 +2045,7 @@ code {
 
   .weddingNameTitle {
     font-family: var(--wedding-Str-Font);
-    color: white;
+    color: var(--wedding-gold);
     font-size: xx-large;
   }
 
@@ -2065,7 +2069,7 @@ code {
   }
 
   .text-shadow-pop-top {
-    color: #E1B847;
+    color: white;
     /* position: fixed;
     top: 10px; */
     font-size: 75px;
@@ -2185,8 +2189,9 @@ code {
     background-size: 100% 100%;
     background-repeat: no-repeat;
     /* background-attachment: fixed; */
-    animation: fadeImages 101s infinite;
-    -webkit-animation: fadeImages 101s infinite;
+    background-image: url("../src/assets/imgN.jpg");
+    /* animation: fadeImages 101s infinite;
+    -webkit-animation: fadeImages 101s infinite; */
 }
 
 @keyframes fadeImages {
