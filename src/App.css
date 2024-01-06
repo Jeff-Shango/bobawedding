@@ -1705,7 +1705,7 @@ code {
     flex-direction: column;
     align-items: center;
     justify-content: flex-start;
-    /* background-size: 100% 100%; */
+    background-size: 100% 100%;
     background-repeat: no-repeat;
     /* background-attachment: fixed; */
     animation: fadeImages 101s infinite;
@@ -2182,7 +2182,7 @@ code {
     flex-direction: column;
     align-items: center;
     justify-content: flex-start;
-    /* background-size: 100% 100%; */
+    background-size: 100% 100%;
     background-repeat: no-repeat;
     /* background-attachment: fixed; */
     animation: fadeImages 101s infinite;
