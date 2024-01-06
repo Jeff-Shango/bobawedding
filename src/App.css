@@ -1058,6 +1058,19 @@ code {
   -ms-transform: translateX(-50%);
   -o-transform: translateX(-50%);
 }
+
+.footer {
+  position: absolute;
+  letter-spacing: 1px;
+  font-family: var(--wedding-Cursive);
+  height: 1px;
+  bottom: 0px;
+  right: -15px;
+  background-color: transparent;
+  padding-bottom: 30px;
+  color: white;
+  font-size: smaller;
+}
 }
 
 /* medium devices */
@@ -1214,7 +1227,7 @@ code {
     flex-direction: column;
     align-items: center;
     justify-content: flex-start;
-    /* background-size: 100% 100%; */
+    background-size: 100% 100%;
     background-repeat: no-repeat;
     /* background-attachment: fixed; */
     animation: fadeImages 101s infinite;
@@ -1522,6 +1535,19 @@ code {
   -moz-transform: translateX(-50%);
   -ms-transform: translateX(-50%);
   -o-transform: translateX(-50%);
+}
+
+.footer {
+  position: absolute;
+  letter-spacing: 1px;
+  font-family: var(--wedding-Cursive);
+  height: 1px;
+  bottom: 0px;
+  right: -15px;
+  background-color: transparent;
+  padding-bottom: 30px;
+  color: white;
+  font-size: smaller;
 }
 }
 
@@ -1988,6 +2014,19 @@ code {
   -ms-transform: translateX(-50%);
   -o-transform: translateX(-50%);
 }
+
+.footer {
+  position: absolute;
+  letter-spacing: 1px;
+  font-family: var(--wedding-Cursive);
+  height: 1px;
+  bottom: 0px;
+  right: -15px;
+  background-color: transparent;
+  padding-bottom: 30px;
+  color: white;
+  font-size: smaller;
+}
 }
 
 /* computer monitor */
@@ -2451,5 +2490,18 @@ code {
   -moz-transform: translateX(-50%);
   -ms-transform: translateX(-50%);
   -o-transform: translateX(-50%);
+}
+
+.footer {
+  position: absolute;
+  letter-spacing: 1px;
+  font-family: var(--wedding-Cursive);
+  height: 1px;
+  bottom: 0px;
+  right: -15px;
+  background-color: transparent;
+  padding-bottom: 30px;
+  color: white;
+  font-size: smaller;
 }
 }

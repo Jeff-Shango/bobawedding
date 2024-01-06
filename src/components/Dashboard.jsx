@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom';
 // import { ProductCard } from '../functions/ProductCard.js';
 import './Navlinks/navlinks.css'
 import 'react-slideshow-image/dist/styles.css';
+import '../App.css';
 // import { Fade } from 'react-slideshow-image';
 // import img1 from '../assets/imgA.jpg';
 // import img2 from '../assets/imgB.jpg';
