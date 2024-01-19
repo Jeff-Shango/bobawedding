@@ -4,6 +4,9 @@ import { Link } from 'react-router-dom';
 import './Navlinks/navlinks.css'
 import 'react-slideshow-image/dist/styles.css';
 import '../App.css';
+// import "../components/Navlinks/navlinks.css"
+import Navlinks from './Navlinks/Navlinks.jsx';
+// import "src/components/Navlinks/navlinks.css"
 // import { Fade } from 'react-slideshow-image';
 // import img1 from '../assets/imgA.jpg';
 // import img2 from '../assets/imgB.jpg';
@@ -89,7 +92,6 @@ const CountdownTimer = ({ targetDate }) => {
 
   return (
     <div id='bottomDash'>
-
     <h1 id="dashboardTitle" className='calendarSlot'>Friday, May 31, 2024</h1>
     <div className='clock'>
       <div className="timeContainer">
@@ -158,19 +160,19 @@ const Dashboard = () => {
 
   return (
     <div className='mainDashboard'>
-      
+      <Navlinks/>
       <div id="dashboardHeaderContainer">
         <h1 className="weddingNameTitle">Jeff & Ashley</h1>
         <h1 className='text-shadow-pop-top'>Bozier Ever After</h1>
 
-        <div id="dashNavCon">
+        {/* <div id="dashNavCon">
           <Link to="https://bozierwedding.netlify.app/rsvp" id="dashLink" className='dashLink'>RSVP</Link>
           <Link to="https://bozierwedding.netlify.app/gallery" id="dashLink" className='dashLink'>GALLERY</Link>
           <Link to="https://bozierwedding.netlify.app/schedule" id="dashLink" className='dashLink'>LOVE STORY</Link>
           <Link to="https://bozierwedding.netlify.app/registry" id="dashLink" className='dashLink'>REGISTRY</Link>
           <Link to="https://bozierwedding.netlify.app/weddingParty" id="dashLink" className='dashLink'>WEDDING PARTY</Link>
           <Link to="https://bozierwedding.netlify.app/accomodations" id="dashLink" className='dashLink'>ACCOMODATIONS</Link>
-        </div>
+        </div> */}
       </div>
 
       {/* put below  */}
