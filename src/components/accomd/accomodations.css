@@ -157,6 +157,20 @@
         background-size: 84vh 100vh;
     }
 
+    .accomdTopLayer, .accomdBottomLayer {
+        margin: 1.5rem;
+    }
+
+    .accomdTopTitle, .accomdBottomTitle {
+        font-family: var(--wedding-Cursive);
+        font-size: 10vh;
+    }
+
+    .accomdTopLayerContent, .accomdBottomLayerContent {
+        font-size: 15px;
+        font-family: var(--wedding-Str-Font);
+    }
+
     .accomdLink {
         position: absolute;
         bottom: 20.2rem;
@@ -199,6 +213,20 @@
         background-size: contain;
     }
 
+    .accomdTopLayer, .accomdBottomLayer {
+        margin: 1.5rem;
+    }
+
+    .accomdTopTitle, .accomdBottomTitle {
+        font-family: var(--wedding-Cursive);
+        font-size: 10vh;
+    }
+
+    .accomdTopLayerContent, .accomdBottomLayerContent {
+        font-size: 15px;
+        font-family: var(--wedding-Str-Font);
+    }
+
     .accomdLink {
         position: absolute;
         bottom: 14.3rem;
@@ -229,7 +257,7 @@
 }
 
 /* computer monitor */
-@media screen and (min-width: 1400px) and (max-width: 1700px) and (max-height: 1000px) and (min-height: 700px) {
+@media only screen and (min-width: 1400px) and (max-width: 1700px) and (max-height: 1000px) and (min-height: 700px) {
     #accomdPage {
         height: 100vh;
         width: 100vh;
@@ -237,6 +265,20 @@
         background-repeat: no-repeat;
         background: url('../../assets/accomodation.jpg');
         background-size: cover;
+    }
+
+    .accomdTopLayer, .accomdBottomLayer {
+        margin: 1.5rem;
+    }
+
+    .accomdTopTitle, .accomdBottomTitle {
+        font-family: var(--wedding-Cursive);
+        font-size: 10vh;
+    }
+
+    .accomdTopLayerContent, .accomdBottomLayerContent {
+        font-size: 15px;
+        font-family: var(--wedding-Str-Font);
     }
 
     .accomdLink {
