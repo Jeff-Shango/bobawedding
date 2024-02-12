@@ -44,6 +44,7 @@ const RSVP = () => {
 
         <div className="form">
           <input type="text" name="lastName" autoComplete='off' required className='inputLName' />
+          <input type="text" name="lastName" autoComplete='off' required className='inputLName' />
           <label htmlFor="text" className="label-name labelLName">
             <span className="content-name spanLName">
               Last Name
@@ -55,6 +56,7 @@ const RSVP = () => {
         <div className="formEmailContainer">
           <div className="form">
             <input type="text" name="email" autoComplete='off' required className='inputEmail' />
+            <input type="text" name="email" autoComplete='off' required className='inputEmail' />
             <label htmlFor="text" className="label-name labelEmail">
               <span className="content-name spanEmail">
                 Email
@@ -65,7 +67,7 @@ const RSVP = () => {
 
         <div className="formPhoneContainer">
         <div className="form">
-          <input type="tel" name="text" autoComplete='off' required className='inputPhone' />
+          <input type="tel" name="phone" autoComplete='off' required className='inputPhone' />
           <label htmlFor="text" className="label-name labelPhone">
             <span className="content-name spanPhone">
               Phone
