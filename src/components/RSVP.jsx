@@ -55,7 +55,6 @@ const RSVP = () => {
         <div className="formEmailContainer">
           <div className="form">
             <input type="text" name="email" autoComplete='off' required className='inputEmail' />
-            <input type="text" name="email" autoComplete='off' required className='inputEmail' />
             <label htmlFor="text" className="label-name labelEmail">
               <span className="content-name spanEmail">
                 Email
