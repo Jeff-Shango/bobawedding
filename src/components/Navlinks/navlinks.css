@@ -981,7 +981,7 @@
     #mainNavContainer {
         position: fixed;
         top: 55px;
-        right: 10rem;
+        right: 0;
         background-color: var(--color-bg);
     }
 
