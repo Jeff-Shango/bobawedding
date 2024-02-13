@@ -6,7 +6,7 @@ import '../../App.css'
 
 const Navlinks = () => {
   return (
-    <Navbar expand="lg" variant="dark" id="mainNavContainer">
+    <Navbar expand="" variant="dark" id="mainNavContainer">
       <Navbar.Brand to="/" id="logoLink" as={Link}>
         {/* Your logo or brand */}
       </Navbar.Brand>

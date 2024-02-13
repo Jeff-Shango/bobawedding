@@ -981,9 +981,8 @@
     #mainNavContainer {
         position: fixed;
         top: 55px;
-        right: 0;
+        right: 10rem;
         background-color: var(--color-bg);
-        height: 5vh;
     }
 
     .outerContainer {
@@ -1018,7 +1017,8 @@
 /* Change the color of the hamburger lines */
 .navbar-toggler-icon {
     background-color: var(--wedding-gold);
-     
+    font-size: xx-large;
+    border-radius: 10px;
 }
 
 /* If you want to change the color when the Navbar is in the collapsed state */
@@ -1065,7 +1065,7 @@
 
 #dashLink{
     font-family: 'Playfair Display', serif;
-    font-size: 10px;
+    font-size: 13px;
     color: var(--wedding-gold);
     font-weight: bolder;
     margin: 1px;
