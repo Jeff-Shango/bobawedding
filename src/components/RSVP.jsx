@@ -3,7 +3,6 @@ import "./rsvp/rsvpStyling.css";
 import ReCAPTCHA from "react-google-recaptcha";
 import emailjs from 'emailjs-com';
 import Navlinks from '../components/Navlinks/Navlinks.jsx'
-import guestList from '../../guestList.json';
 // import { Link } from 'react-router-dom';
 
 const RSVP = () => {
@@ -12,24 +11,11 @@ const RSVP = () => {
   const sendEmail = (e) => {
     e.preventDefault();
 
-    // Entered First Name, last name
-    const firstName = e.target.elements.name.value;
-    const lastName = e.target.elements.lastName.value;
-
-    const guest = guestList.find(entry => entry.firstName === firstName && entry.lastName === lastName);
-
-    if (guest) {
-      // custom message 
-      alert(`Hey ${firstName} ${lastName}, thanks for the RSVP!`);
-      emailjs.sendForm('service_98g590d', 'RSVP_Invite', form.current, 'mYD0XtrHqKMCCWhkE').then((result) => {
-        console.log(result.text);
-      }, (error) => {
-        console.log(error.text);
-      });
-    } else {
-      alert('Invalid name or password. Please check for details,')
-    }
-
+    emailjs.sendForm('service_98g590d', 'RSVP_Invite', form.current, 'mYD0XtrHqKMCCWhkE').then((result) => {
+      console.log(result.text);
+    }, (error) => {
+      console.log(error.text);
+    });
 
     e.target.reset()
   };
