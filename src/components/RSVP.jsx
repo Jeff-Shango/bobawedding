@@ -11,11 +11,24 @@ const RSVP = () => {
   const sendEmail = (e) => {
     e.preventDefault();
 
-    emailjs.sendForm('service_98g590d', 'RSVP_Invite', form.current, 'mYD0XtrHqKMCCWhkE').then((result) => {
-      console.log(result.text);
-    }, (error) => {
-      console.log(error.text);
-    });
+    // Entered First Name, last name
+    const firstName = e.target.elements.name.value;
+    const lastName = e.target.elements.lastName.value;
+
+    const guest = guestList.find(entry => entry.firstName === firstName && entry.lastName === lastName);
+
+    if (guest) {
+      // custom message 
+      alert(`Hey ${firstName} ${lastName}, thanks for the RSVP!`);
+      emailjs.sendForm('service_98g590d', 'RSVP_Invite', form.current, 'mYD0XtrHqKMCCWhkE').then((result) => {
+        console.log(result.text);
+      }, (error) => {
+        console.log(error.text);
+      });
+    } else {
+      alert('Invalid name or password. Please check for details,')
+    }
+
 
     e.target.reset()
   };
