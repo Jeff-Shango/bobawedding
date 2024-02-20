@@ -3,6 +3,7 @@ import "./rsvp/rsvpStyling.css";
 import ReCAPTCHA from "react-google-recaptcha";
 import emailjs from 'emailjs-com';
 import Navlinks from '../components/Navlinks/Navlinks.jsx'
+import guestList from '../../guestList.json';
 // import { Link } from 'react-router-dom';
 
 const RSVP = () => {
