@@ -37,7 +37,8 @@ const Accomodations = () => {
       
       <a href="https://www.hyatt.com/en-US/hotel/maryland/hyatt-place-baltimore-inner-harbor/bwizh?corp_id=G-BARN" className="accomdLink" target="_blank">
         BozierEverAfter
-      </a>        
+      </a>
+      {/* <h3>Click on the button above to </h3>         */}
     </div>
   );
 }
