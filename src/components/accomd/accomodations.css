@@ -27,6 +27,22 @@
 
     .accomdLink {
         position: absolute;
+        top: 65%;
+        left: 50%;
+        transform: translateX(-50%);
+        font-size: 15px;
+        text-decoration: none;
+        color: black;
+        background-color: var(--wedding-gold);
+        font-family: var(--wedding-Str-Font);
+        animation: accomPulse 2s ease-in-out infinite;
+        transform-origin: center center;
+        border-radius: 12px;
+        padding: 5px;
+    }
+
+    /* .accomdLink {
+        position: absolute;
         top: 1rem;
         left: 2.5vh;
         font-size: 15px;
@@ -38,7 +54,7 @@
         transform-origin: center center;
         border-radius: 12px;
         padding: 5px;
-    }
+    } */
 
     .topAccomdPic {
         height: 10vh;
@@ -103,6 +119,22 @@
 
     .accomdLink {
         position: absolute;
+        top: 65%;
+        left: 50%;
+        transform: translateX(-50%);
+        font-size: 15px;
+        text-decoration: none;
+        color: black;
+        background-color: var(--wedding-gold);
+        font-family: var(--wedding-Str-Font);
+        animation: accomPulse 2s ease-in-out infinite;
+        transform-origin: center center;
+        border-radius: 12px;
+        padding: 5px;
+    }
+
+    /* .accomdLink {
+        position: absolute;
         top: 1rem;
         left: 4.5vh;
         font-size: 15px;
@@ -114,7 +146,7 @@
         transform-origin: center center;
         border-radius: 12px;
         padding: 5px;
-    }
+    } */
 
     .topAccomdPic {
         height: 10rem;
