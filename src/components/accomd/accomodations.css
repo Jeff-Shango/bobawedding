@@ -26,9 +26,9 @@
     }
 
     .accomdLink {
-        position: absolute;
+        /* position: absolute;
         top: 65%;
-        left: 50%;
+        left: 50%; */
         transform: translateX(-50%);
         font-size: 15px;
         text-decoration: none;
@@ -118,9 +118,9 @@
     }
 
     .accomdLink {
-        position: absolute;
+        /* position: absolute;
         top: 65%;
-        left: 50%;
+        left: 50%; */
         transform: translateX(-50%);
         font-size: 15px;
         text-decoration: none;
