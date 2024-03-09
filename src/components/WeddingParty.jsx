@@ -4,23 +4,32 @@ import React, { useState } from 'react';
 // import mc from '../assets/derekG.jpg';
 // import partyPlanner from '../assets/partyPlanner.jpg';
 import chris from '../assets/bestMan.jpg';
-import chrisBreak from '../assets/chrisBreak.png';
+// import chrisBreak from '../assets/chrisBreak.png';
+import chrisBreak from '../assets/Chris.png';
 import mikeW from '../assets/groomsMen.jpg';
-import mikeWBreak from '../assets/mikeWBreak.png';
+// import mikeWBreak from '../assets/mikeWBreak.png';
+import mikeWBreak from '../assets/Mike.png';
 import mikeJ from '../assets/groomsMan.jpg';
-import mikeJBreak from '../assets/mikeJBreak.png';
+// import mikeJBreak from '../assets/mikeJBreak.png';
+import mikeJBreak from '../assets/MikeJ.png'
 import lauren from '../assets/lauren.jpg';
-import laurenBreak from '../assets/laurenBreak.png';
+// import laurenBreak from '../assets/laurenBreak.png';
+import laurenBreak from '../assets/Lauren.png';
 import nia from '../assets/Nia.jpg';
-import niaBreak from '../assets/niaBreak.png';
+// import niaBreak from '../assets/niaBreak.png';
+import niaBreak from '../assets/Nia.png';
 import marie from '../assets/Marie.jpg';
-import marieBreak from '../assets/marieBreak.png';
+// import marieBreak from '../assets/marieBreak.png';
+import marieBreak from '../assets/Maria.png';
 import alise from '../assets/Alise.jpg';
-import aliseBreak from '../assets/aliseBreak.png';
+// import aliseBreak from '../assets/aliseBreak.png';
+import aliseBreak from '../assets/Alise.png';
 import Autumn from '../assets/Autumn.jpg';
-import autumnBreak from '../assets/autumnBreak.png';
+// import autumnBreak from '../assets/autumnBreak.png';
+import autumnBreak from '../assets/Autumn.png';
 import evie from '../assets/Evie.jpg';
-import evieDescript from '../assets/EvieDescript.png'
+// import evieDescript from '../assets/EvieDescript.png'
+import evieDescript from '../assets/Evie.png'; 
                                                                                    
 import Navlinks from './Navlinks/Navlinks.jsx'
 import "./weddingParty/weddingPartyStyling.css";
