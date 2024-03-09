@@ -1719,8 +1719,9 @@ code {
     justify-content: flex-start;
     background-size: 100% 100%;
     background-repeat: no-repeat;
+    background-image: url("../src/assets/imgN_upscayl_4x_ultrasharp.png");
     /* background-attachment: fixed; */
-    background-image: url("../src/assets/imgN.jpg");
+    /* background-image: url("../src/assets/imgN.jpg"); */
     /* animation: fadeImages 101s infinite;
     -webkit-animation: fadeImages 101s infinite; */
 }
@@ -2048,6 +2049,16 @@ code {
     height: 100vh;
   }
 
+  .App {
+    /* width: var(--container-width-sm); */
+    font-size: 12px;
+    margin: auto;
+    /* background-image: url("../src/assets/imgN.jpg"); */
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    /* border: 5px solid red; */
+  }
+
   :root {
     max-height: fit-content;
   }
@@ -2139,13 +2150,6 @@ code {
     width: max-content;
   }
 
-
-  .App {
-    /* width: var(--container-width-sm); */
-    font-size: 12px;
-    margin: auto;
-  }
-
   .timeContainer {
     font-family: var(--wedding-Str-Font);
     font-size: 10px;
@@ -2191,14 +2195,15 @@ code {
     position: relative;
     height: 100vh;
     width: 100vh;
-    display: flex;
+    /* display: flex; */
     flex-direction: column;
     align-items: center;
     justify-content: flex-start;
-    background-size: 100% 100%;
+    /* background-size: 100% 100%; */
     background-repeat: no-repeat;
+    background-image: url("../src/assets/imgN_upscayl_4x_ultrasharp.png");
     /* background-attachment: fixed; */
-    background-image: url("../src/assets/imgN.jpg");
+    /* background-image: url("../src/assets/imgN.jpg"); */
     /* animation: fadeImages 101s infinite;
     -webkit-animation: fadeImages 101s infinite; */
 }
@@ -2518,4 +2523,5 @@ code {
   color: white;
   font-size: smaller;
 }
+
 }
