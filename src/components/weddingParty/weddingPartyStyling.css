@@ -856,16 +856,16 @@
     width: 100%;
     background-color: rgba(0, 0, 0, 0.6);
     position: fixed;
-    top: 0;
-    left: 0;
+    /* top: 0;
+    left: 0; */
     z-index: 6;
   }
   
   .largeImage {
     position: absolute;
-    top: 0;
-    left: 0;
-    width: 50vh;
+    /* top: 0;
+    left: 0; */
+    width: 100vh;
     margin: 1rem;
     height: 100%;
   }
