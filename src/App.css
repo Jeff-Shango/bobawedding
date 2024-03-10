@@ -124,7 +124,7 @@ code {
 
 .timeDivContainer {
   position: absolute;
-  bottom: 20vh;
+  bottom: 15vh;
   left: 50%;
   transform: translateX(-50%);
   font-family: 'Herr Von Muellerhoff', cursive;
