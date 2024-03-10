@@ -123,9 +123,8 @@ code {
 }
 
 .timeDivContainer {
-  /* position: absolute; */
-  position: relative;
-  /* bottom: 0; */
+  position: absolute;
+  bottom: 0vh;
   left: 50%;
   transform: translateX(-50%);
   font-family: 'Herr Von Muellerhoff', cursive;
@@ -139,7 +138,7 @@ code {
   width: 30rem;
   height: fit-content;
   margin: auto;
-  font-size: 20px;
+  font-size: 20px;  
 }
 
 /* small devices portrait mode */
