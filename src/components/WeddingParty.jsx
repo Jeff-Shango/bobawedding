@@ -44,46 +44,55 @@ const WeddingParty = () => {
       src: chris,
       alt: "Chris Kiah",
       bio: chrisBreak,
+      bioBreak:"Chris",
     },
     {
       src: mikeJ,
       alt: "MikeJ",
       bio: mikeJBreak,
+      bioBreak:"Mike James ",
     },
     {
       src: mikeW,
       alt: "MikeW",
       bio: mikeWBreak,
+      bioBreak:"Mike Wright",
     },
     {
       src: lauren,
       alt: "Lauren",
       bio: laurenBreak,
+      bioBreak:"Enter Bio Here",
     },
     {
       src: nia,
       alt: "Nia",
-      bio: niaBreak
+      bio: niaBreak,
+      bioBreak:"Enter Bio Here",
     },
     {
       src: marie,
       alt: "Marie",
       bio: marieBreak,
+      bioBreak:"Enter Bio Here",
     },
     {
       src: alise,
       alt: "Alise",
       bio: aliseBreak,
+      bioBreak:"Enter Bio Here",
     },
     {
       src: Autumn,
       alt: "Autumn",
       bio: autumnBreak,
+      bioBreak:"Enter Bio Here",
     }, 
     {
       src: evie,
       alt: "Evie",
       bio: evieDescript,
+      bioBreak:"Enter Bio Here",
     },
   ];
 
@@ -157,6 +166,12 @@ const WeddingParty = () => {
             className='largeImage'
             onClick={handleEnlargedImageClick}
           />
+          <h3 
+            className="photoBreakdown"
+            src={selectedImage.bioBreak}
+            alt={selectedImage.alt}
+            onClick={handleEnlargedImageClick}
+          >{selectedImage.bioBreak}</h3>
           </div>
           </div>
           
