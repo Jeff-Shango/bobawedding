@@ -10,6 +10,7 @@ html {
 
   /* colors */
     --wedding-gold: #e1b847;
+    --wedding-gold-background: rgba(255, 184, 71, .5);
     --wedding-green: #4a602a;
     --main-bg: #fffaeb;
 
