@@ -5,9 +5,11 @@
     
   .photoBreakdown {
     font-family: var(--wedding-Cursive);
+    font-size: x-large;
     background-color: white;
     border-radius: 12px;
     padding: 5px;
+    margin-left: 8%;
     /* position: absolute;
     bottom: 0; */
   }
