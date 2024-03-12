@@ -5,6 +5,8 @@
     
   .photoBreakdown {
     font-family: var(--wedding-Cursive);
+    position: absolute;
+    bottom: 0;
   }
   .largeImage {
     max-width: 100%;
@@ -178,6 +180,8 @@
   
   .photoBreakdown {
     font-family: var(--wedding-Cursive);
+    position: absolute;
+    bottom: 0;
   }
   .largeImage {
     position: absolute;
@@ -358,6 +362,8 @@
 
   .photoBreakdown {
     font-family: var(--wedding-Cursive);
+    position: absolute;
+    bottom: 0;
   }
 .largeImage {
   position: absolute;
@@ -534,6 +540,8 @@
 
   .photoBreakdown {
     font-family: var(--wedding-Cursive);
+    position: absolute;
+    bottom: 0;
   }
 .largeImage {
   position: absolute;
@@ -709,6 +717,8 @@
 
   .photoBreakdown {
     font-family: var(--wedding-Cursive);
+    position: absolute;
+    bottom: 0;
   }
 .largeImage {
   position: absolute;
@@ -884,8 +894,12 @@
   
   .photoBreakdown {
     font-family: var(--wedding-Cursive);
+    position: absolute;
+    bottom: 0;
+    width: 100vh;
+    margin-left: 25%
   }
-  
+
   .largeImage {
     /* position: absolute; */
     /* top: 0;
