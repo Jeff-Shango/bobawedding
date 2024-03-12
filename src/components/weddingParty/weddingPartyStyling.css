@@ -5,6 +5,9 @@
     
   .photoBreakdown {
     font-family: var(--wedding-Cursive);
+    background-color: white;
+    border-radius: 12px;
+    padding: 5px;
     /* position: absolute;
     bottom: 0; */
   }
