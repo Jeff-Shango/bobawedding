@@ -5,13 +5,18 @@
     
   .photoBreakdown {
     font-family: var(--wedding-Cursive);
-    position: absolute;
-    bottom: 0;
+    /* position: absolute;
+    bottom: 0; */
   }
+
   .largeImage {
     max-width: 100%;
-    max-height: 100%;
+    max-height: 50%;
   }
+  /* .largeImage {
+    max-width: 100%;
+    max-height: 100%;
+  } */
 
   .largeImageContainer {
     margin-top: 2rem;
