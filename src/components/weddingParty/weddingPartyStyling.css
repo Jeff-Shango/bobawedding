@@ -5,6 +5,7 @@
     
   .photoBreakdown {
     font-family: var(--wedding-Str-Font);
+    color: red;
     font-size: x-large;
     background-color: white;
     border-radius: 12px;
