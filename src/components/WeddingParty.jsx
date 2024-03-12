@@ -56,7 +56,7 @@ const WeddingParty = () => {
       src: mikeW,
       alt: "MikeW",
       bio: mikeWBreak,
-      bioBreak:"Mike Wright",
+      bioBreak:"The groom first met Mike in 2017 at a boxing event. The groom and Mike stood across the ring facing one another as opponents during the groom's first amateur boxing match. They've been friends ever since.",
     },
     {
       src: lauren,
@@ -74,13 +74,13 @@ const WeddingParty = () => {
       src: marie,
       alt: "Marie",
       bio: marieBreak,
-      bioBreak:"Marie has been one of the bride's best friends (another one) since they were ",
+      bioBreak:"Marie has been one of the bride's best friends (another one) since they were 14-years-old. They've maintained their friendship across schools, states, and continents.",
     },
     {
       src: alise,
       alt: "Alise",
       bio: aliseBreak,
-      bioBreak:"Enter Bio Here",
+      bioBreak:"The bride and Alise have been friends sicne their freshman year of high school. After 20 years of friendship, and a few international trips, it was only right that they moved into houses less than a half mile away from each other.",
     },
     {
       src: Autumn,
@@ -92,7 +92,7 @@ const WeddingParty = () => {
       src: evie,
       alt: "Evie",
       bio: evieDescript,
-      bioBreak:"Enter Bio Here",
+      bioBreak:"Evangela, known as 'Evie' to friends and family, was considered family far before her nuptials to the bride's maternal cousin in 2021. The bride and groom were ecstatic when Evie (pretty much) volunteered to act as the wedding coordinator. Evie informed the couple that she'd primarily planned and coordinated her own wedding after her initial coordinator left much to be desired. The bride and groom are eternally grateful for Evie's support with this process.",
     },
   ];
 

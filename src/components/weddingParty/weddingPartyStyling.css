@@ -862,11 +862,15 @@
   }
   
   .largeImage {
-    position: absolute;
+    /* position: absolute; */
     /* top: 0;
     left: 0; */
     width: 100vh;
     margin: 1rem;
     height: 100%;
+  }
+
+  .photoBreakdown {
+    font-family: var(--wedding-Cursive);
   }
 }
