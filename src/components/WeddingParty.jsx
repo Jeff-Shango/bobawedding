@@ -44,13 +44,13 @@ const WeddingParty = () => {
       src: chris,
       alt: "Chris Kiah",
       bio: chrisBreak,
-      bioBreak:"Chris",
+      bioBreak:"Chris is the groom's Best Man and best friend of 12+ years. Chris and the groom met at Morgan State University (MSU).",
     },
     {
       src: mikeJ,
       alt: "MikeJ",
       bio: mikeJBreak,
-      bioBreak:"Mike James ",
+      bioBreak:"The groom has also known Mike since their college years at MSU. The groom was very popular at Morgan.",
     },
     {
       src: mikeW,
@@ -62,19 +62,19 @@ const WeddingParty = () => {
       src: lauren,
       alt: "Lauren",
       bio: laurenBreak,
-      bioBreak:"Enter Bio Here",
+      bioBreak:"Lauren is the bride's cousin, birth mate (inside joke), and spirit sister (Yes. it's corny, you'll live). She and the bride grew up (mostly) together and are bonded beyond blood.",
     },
     {
       src: nia,
       alt: "Nia",
       bio: niaBreak,
-      bioBreak:"Enter Bio Here",
+      bioBreak:"Nia is the bride's younger cousin, whom the bride happily refers to as the 'sister her parents refused to give her.' As such, Nia had absolutely no choice in her role at the wedding, which she graciously accepted.",
     },
     {
       src: marie,
       alt: "Marie",
       bio: marieBreak,
-      bioBreak:"Enter Bio Here",
+      bioBreak:"Marie has been one of the bride's best friends (another one) since they were ",
     },
     {
       src: alise,
@@ -86,7 +86,7 @@ const WeddingParty = () => {
       src: Autumn,
       alt: "Autumn",
       bio: autumnBreak,
-      bioBreak:"Enter Bio Here",
+      bioBreak:"Autumn is one of the Bride's (many-says the groom) best friends. Autumn and the bride met at NYU and their bond was solidifed during a dorm party their sophomore year.",
     }, 
     {
       src: evie,
