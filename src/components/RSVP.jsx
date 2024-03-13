@@ -32,6 +32,23 @@ const RSVP = () => {
 
     <form method='post' className="rsvpForm" ref={form} onSubmit={sendEmail}>
     
+      {/* rsvp */}
+      <h3 className="rsvpFormsTitle">RSVP</h3>
+      <div id='linkContainer'>
+      <aside>
+        <h3 id="rsvpText">
+        Yes
+        </h3>
+          <input type="checkbox" name="checklistYes" id="formInput"/>
+      </aside>
+
+      <aside>
+        <h3 id="rsvpText">
+        No
+        </h3>
+          <input type="checkbox" name="checklistNo" id="formInput"/>
+      </aside>
+      </div>
       <div className="formNameContainer">
         <div className="form">
           <input type="text" name="name" autoComplete='off' required className='inputFName'/>
@@ -40,6 +57,13 @@ const RSVP = () => {
                 First Name
               </span>
             </label>
+
+          <input type="text" name="nameAdd" autoComplete='off' className='inputFNameAdd'/>
+            <label htmlFor="text" className="label-name labelFNameAdd">
+              <span className="content-name spanFNameAdd">
+                First Name (optional)
+              </span>
+            </label>  
         </div>
 
         <div className="form">
@@ -49,50 +73,57 @@ const RSVP = () => {
               Last Name
             </span>
           </label>
-        </div>
-        </div>
 
-        <div className="formEmailContainer">
-          <div className="form">
-            <input type="text" name="email" autoComplete='off' required className='inputEmail' />
-            <label htmlFor="text" className="label-name labelEmail">
-              <span className="content-name spanEmail">
-                Email
-              </span>
-            </label>
-          </div>
-        </div>
-
-        <div className="formPhoneContainer">
-        <div className="form">
-          <input type="tel" name="phone" autoComplete='off' required className='inputPhone' />
-          <label htmlFor="text" className="label-name labelPhone">
-            <span className="content-name spanPhone">
-              Phone
+          <input type="text" name="lastNameAdd" autoComplete='off' className='inputLNameAdd' />
+          <label htmlFor="text" className="label-name labelLNameAdd">
+            <span className="content-name spanLNameAdd">
+              Last Name (optional)
             </span>
           </label>
         </div>
         </div>
 
-         {/* rsvp */}
-         <h3 className="rsvpFormsTitle">RSVP</h3>
-        <div id='linkContainer'>
-        <aside>
-          <h3 id="rsvpText">
-          Yes
-          </h3>
-            <input type="checkbox" name="checklistYes" id="formInput"/>
-        </aside>
+        <div className="contactInformationContainer">
+          <div className="formEmailContainer">
+            <div className="form">
+              <input type="text" name="email" autoComplete='off' required className='inputEmail' />
+              <label htmlFor="text" className="label-name labelEmail">
+                <span className="content-name spanEmail">
+                  Email
+                </span>
+              </label>
 
-        <aside>
-          <h3 id="rsvpText">
-          No
-          </h3>
-            <input type="checkbox" name="checklistNo" id="formInput"/>
-        </aside>
+              <input type="text" name="emailAdd" autoComplete='off' className='inputEmailAdd' />
+              <label htmlFor="text" className="label-name labelEmail">
+                <span className="content-name spanEmail">
+                  Email (optional)
+                </span>
+              </label>
+            </div>
+          </div>
+        
+          <div className="formPhoneContainer">
+          <div className="form">
+            <input type="tel" name="phone" autoComplete='off' required className='inputPhone' />
+            <label htmlFor="text" className="label-name labelPhone">
+              <span className="content-name spanPhone">
+                Phone
+              </span>
+            </label>
+            
+            <input type="tel" name="phoneAdd" autoComplete='off' className='inputPhoneAdd' />
+            <label htmlFor="text" className="label-name labelPhoneAdd">
+              <span className="content-name spanPhoneAdd">
+                Phone
+              </span>
+            </label>
+          </div>
+          </div>
         </div>
 
+
         {/* food restrictions */}
+        <div className="foodRestricContainer">
         <h3 className="rsvpFormsTitle">Food options</h3>
         <div id='linkContainer'>
         <aside>
@@ -115,6 +146,32 @@ const RSVP = () => {
           </h3>
           <input type="checkbox" name='fish' id='formInput' />
         </aside>
+        </div>
+
+        
+        {/* optional guest food options */}
+        <div id="linkContainer">
+        <aside>
+          <h3 id="rsvpTextAdd">
+          Vegan
+          </h3>
+          <input type="checkbox" name="veganAdd" id="formInputAdd" />
+        </aside>
+
+        <aside>
+          <h3 id="rsvpTextAdd">
+          Meat
+          </h3>
+          <input type="checkbox" name="meatAdd" id="formInputAdd" />
+        </aside>
+
+        <aside>
+          <h3 id="rsvpTextAdd">
+          Fish
+          </h3>
+          <input type="checkbox" name='fishAdd' id='formInputAdd' />
+        </aside>
+        </div>
         </div>
 
         {/* special details */}

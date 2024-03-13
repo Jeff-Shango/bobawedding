@@ -24,11 +24,19 @@
       .formNameContainer {
         display: flex;
         justify-content: space-between;
+        margin-left: 13%;
+        /* margin-right: auto; */
       }
 
       .formEmailContainer {
         display: flex;
         justify-content: center;
+      }
+
+      .contactInformationContainer {
+        
+        margin-top: 1rem;
+        display: flex;
       }
 
       .formPhoneContainer {
@@ -135,8 +143,16 @@
         font-size: 16px;
     }
 
+    .foodRestricContainer {
+      
+    }
+
     #rsvpText {
         font-size: 14px;
+    }
+
+    #rsvpTextAdd {
+      font-size: 14px;
     }
 
     #linkContainer {
@@ -149,7 +165,9 @@
         display: flex;
         border-bottom: 1px solid var(--wedding-gold);
         padding: auto;
-        margin: 1rem;
+        margin: 2rem;
+        margin-top: .5rem;
+        margin-bottom: .5rem;
     }
 
 
