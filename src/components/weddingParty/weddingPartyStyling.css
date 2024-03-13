@@ -11,6 +11,7 @@
     border-radius: 12px;
     padding: 13px;
     font-weight: bolder;
+    margin-top: 1rem;
     /* position: absolute;
     bottom: 0; */
   }
@@ -26,9 +27,12 @@
   } */
 
   .largeImageContainer {
-    margin-top: 2rem;
     height: 55vh;
-    width: 45vh;
+    width: 50vh;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 50%;
+    margin-bottom: auto;
     position: relative;
     /* display: flex;
     justify-content: center;
