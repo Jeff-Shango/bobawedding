@@ -49,6 +49,8 @@ const RSVP = () => {
           <input type="checkbox" name="checklistNo" id="formInput"/>
       </aside>
       </div>
+
+      {/* form name container  */}
       <div className="formNameContainer">
         <div className="form">
           <input type="text" name="name" autoComplete='off' required className='inputFName'/>
@@ -58,12 +60,6 @@ const RSVP = () => {
               </span>
             </label>
 
-          <input type="text" name="nameAdd" autoComplete='off' className='inputFNameAdd'/>
-            <label htmlFor="text" className="label-name labelFNameAdd">
-              <span className="content-name spanFNameAdd">
-                First Name (optional)
-              </span>
-            </label>  
         </div>
 
         <div className="form">
@@ -74,15 +70,29 @@ const RSVP = () => {
             </span>
           </label>
 
-          <input type="text" name="lastNameAdd" autoComplete='off' className='inputLNameAdd' />
-          <label htmlFor="text" className="label-name labelLNameAdd">
-            <span className="content-name spanLNameAdd">
-              Last Name (optional)
-            </span>
-          </label>
         </div>
         </div>
 
+      <div className="formNameContainerOptional">
+        <div className="formOptional">
+        <input type="text" name="nameAdd" autoComplete='off' className='inputFNameAdd'/>
+          <label htmlFor="text" className="label-name-add labelFNameAdd">
+            <span className="content-name-add spanFNameAdd">
+              First Name (optional)
+            </span>
+          </label>
+        </div>  
+
+        <div className="formOptional">
+        <input type="text" name="lastNameAdd" autoComplete='off' className='inputLNameAdd' />
+        <label htmlFor="text" className="label-name-add labelLNameAdd">
+          <span className="content-name-add spanLNameAdd">
+            Last Name (optional)
+          </span>
+        </label>
+        </div>
+      </div>
+        
         <div className="contactInformationContainer">
           <div className="formEmailContainer">
             <div className="form">

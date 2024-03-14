@@ -21,7 +21,23 @@
         overflow: hidden;
       }
 
+      .formOptional {
+        display: flex;
+        justify-content: space-between;
+        width: 50%;
+        position: relative;
+        height: 60px;
+        overflow: hidden;
+      }
+
       .formNameContainer {
+        display: flex;
+        justify-content: space-between;
+        margin-left: 13%;
+        /* margin-right: auto; */
+      }
+
+      .formNameContainerOptional {
         display: flex;
         justify-content: space-between;
         margin-left: 13%;
@@ -32,7 +48,7 @@
         display: flex;
         justify-content: center;
       }
-
+ 
       .contactInformationContainer {
         
         margin-top: 1rem;
@@ -53,6 +69,17 @@
         border: none;
         background-color: var(--main-bg);
       }
+
+      .formOptional input {
+        font-family: var(--wedding-Str-Font);
+        width: 100%;
+        height: 100%;
+        color: var(--wedding-gold);
+        padding-top: 20px;
+        border: none;
+        background-color: var(--main-bg);
+      }
+
       .form label {
         font-family: var(--wedding-Str-Font);
         position: absolute;
@@ -63,7 +90,32 @@
         pointer-events: none;
         border-bottom: 1px solid var(--wedding-gold);
       }
+
+      .formOptional label {
+        font-family: var(--wedding-Str-Font);
+        position: absolute;
+        bottom: 0px;
+        left: 0px;
+        width: 9rem;
+        height: 100%;
+        pointer-events: none;
+        border-bottom: 1px solid var(--wedding-gold);
+      }
+
       .form label::after {
+        content: "";
+        position: absolute;
+        bottom: -1px;
+        left: 0px;
+        width: 100%;
+        height: 100%;
+        border-bottom: 3px solid var(--wedding-gold);
+        transform: translateX(-100%);
+        transition: all 0.3s ease;
+        font-family: var(--wedding-Str-Font);
+      }
+
+      .formOptional label::after {
         content: "";
         position: absolute;
         bottom: -1px;
@@ -84,9 +136,24 @@
         transition: all 0.3s ease;
         color: var(--wedding-gold);
       }
+
+      .content-name-add {
+        position: absolute;
+        bottom: 0px;
+        left: 0px;
+        padding-bottom: 5px;
+        transition: all 0.3s ease;
+        color: var(--wedding-gold);
+      }
+      
       .form input:focus {
         outline: none;
       }
+
+      .formOptional input:focus {
+        outline: none;
+      }
+
       .form input:focus + .label-name .content-name,
       .form input:valid + .label-name .content-name {
         transform: translateY(-150%);
@@ -97,7 +164,20 @@
         -moz-transform: translateY(-150%);
         -ms-transform: translateY(-150%);
         -o-transform: translateY(-150%);
-}
+      }
+
+      .formOptional input:focus + .label-name-add .content-name-add,
+      .formOptional input:valid + .label-name-add .content-name-add {
+        transform: translateY(-150%);
+        font-size: 14px;
+        left: 0px;
+        color: var(--wedding-gold);
+        -webkit-transform: translateY(-150%);
+        -moz-transform: translateY(-150%);
+        -ms-transform: translateY(-150%);
+        -o-transform: translateY(-150%);
+      }
+
       .form input:focus + .label-name::after,
       .form input:valid + .label-name::after {
         transform: translateX(0%);
@@ -105,8 +185,16 @@
         -moz-transform: translateX(0%);
         -ms-transform: translateX(0%);
         -o-transform: translateX(0%);
-}
+      }
 
+      .formOptional input:focus + .label-name-add::after,
+      .formOptional input:valid + .label-name-add::after {
+        transform: translateX(0%);
+        -webkit-transform: translateX(0%);
+        -moz-transform: translateX(0%);
+        -ms-transform: translateX(0%);
+        -o-transform: translateX(0%);
+      }
 
     .rsvpTitle {
         font-family: var(--wedding-Cursive);
@@ -658,19 +746,6 @@
   .form label::after {
     content: "";
     position: absolute;
-    bottom: -1px;
-    left: 0px;
-    width: 100%;
-    height: 100%;
-    border-bottom: 3px solid var(--wedding-gold);
-    transform: translateX(-100%);
-    transition: all 0.3s ease;
-    font-family: var(--wedding-Str-Font);
-  }
-  
-  .content-name {
-    position: absolute;
-    bottom: 0px;
     left: 0px;
     padding-bottom: 5px;
     transition: all 0.3s ease;
