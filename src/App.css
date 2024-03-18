@@ -632,7 +632,7 @@ code {
   .weddingNameTitle {
     font-family: var(--wedding-Str-Font);
     color: var(--wedding-gold);
-    font-size: xx-large;
+    font-size: large;
   }
 
 
@@ -658,7 +658,7 @@ code {
     color: white;
     /* position: fixed;
     top: 10px; */
-    font-size: 75px;
+    font-size: 45px;
     font-family: 'Herr Von Muellerhoff', cursive;
     /* -webkit-animation: text-shadow-pop-top 0.6s both;
             animation: text-shadow-pop-top 0.6s both; */
@@ -688,7 +688,7 @@ code {
       -webkit-transform: translateY(0);
               transform: translateY(0);
     }
-    100% {
+      100% {
       text-shadow: 0 -1px #555555, 0 -2px #555555, 0 -3px #555555, 0 -4px #555555, 0 -5px #555555, 0 -6px #555555, 0 -7px #555555, 0 -8px #555555;
       -webkit-transform: translateY(8px);
               transform: translateY(8px);
@@ -706,7 +706,7 @@ code {
     color: white;
     margin: auto;
     font-weight: bolder;
-    font-size: x-large;
+    font-size: large;
     width: max-content;
   }
 
@@ -763,9 +763,10 @@ code {
     flex-direction: column;
     align-items: center;
     justify-content: flex-start;
-    background-size: cover;
+    background-size: 100vh 100vh;
+    background-position: center;
     background-repeat: no-repeat;
-    background-attachment: fixed;
+    /* background-attachment: fixed; */
     background-image: url("../src/assets/imgN_upscayl_4x_ultrasharp.png");
     /* animation: fadeImages 101s infinite;
     -webkit-animation: fadeImages 101s infinite; */
