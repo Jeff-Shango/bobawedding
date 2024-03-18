@@ -1,4 +1,4 @@
-import React, { useRef } from 'react'
+import React, { useRef, useEffect } from 'react'
 import "./rsvp/rsvpStyling.css";
 import ReCAPTCHA from "react-google-recaptcha";
 import emailjs from 'emailjs-com';
@@ -7,6 +7,19 @@ import Navlinks from '../components/Navlinks/Navlinks.jsx'
 
 const RSVP = () => {
   const form = useRef();
+
+  useEffect(() => {
+    const rsvpPlusOneCheckbox = document.getElementById('rsvpPlusOne');
+    const additionalGuestFields = document.querySelector('.additional-guest-fields');
+
+    rsvpPlusOneCheckbox.addEventListener('change', () => {
+      if (rsvpPlusOneCheckbox.checked) {
+        additionalGuestFields.style.display = 'block';
+      } else {
+        additionalGuestFields.style.display = 'none';
+      }
+    });
+  }, []);
 
   const sendEmail = (e) => {
     e.preventDefault();
@@ -50,6 +63,12 @@ const RSVP = () => {
       </aside>
       </div>
 
+      {/* rsvp for another person feature field */}
+      <div className="plusOneContainer">
+        <input type="checkbox" id='rsvpPlusOne' />
+        <label htmlFor='rsvpPlusOne'>RSVP'ing for someone else?</label>
+      </div>
+
       {/* form name container  */}
       <div className="formNameContainer">
         <div className="form">
@@ -73,20 +92,20 @@ const RSVP = () => {
         </div>
         </div>
 
-      <div className="formNameContainerOptional">
-        <div className="formOptional">
-        <input type="text" name="nameAdd" autoComplete='off' className='inputFNameAdd'/>
-          <label htmlFor="text" className="label-name-add labelFNameAdd">
-            <span className="content-name-add spanFNameAdd">
+      <div className=" additional-guest-fields">
+        <div className="form">
+        <input type="text" name="nameAdd" autoComplete='off' required className='inputFName'/>
+          <label htmlFor="text" className="label-name labelFName">
+            <span className="content-name spanFName">
               First Name (optional)
             </span>
           </label>
         </div>  
 
-        <div className="formOptional">
-        <input type="text" name="lastNameAdd" autoComplete='off' className='inputLNameAdd' />
-        <label htmlFor="text" className="label-name-add labelLNameAdd">
-          <span className="content-name-add spanLNameAdd">
+        <div className="form">
+        <input type="text" name="lastNameAdd" autoComplete='off' required className='inputLName' />
+        <label htmlFor="text" className="label-name labelLName">
+          <span className="content-name spanLName">
             Last Name (optional)
           </span>
         </label>
