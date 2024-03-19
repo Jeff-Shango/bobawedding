@@ -14,6 +14,13 @@
 
     .additional-guest-fields {
       display: none;
+      /* justify-content: auto; */
+      /* width: auto; */
+      height: 20rem;
+      max-height: fit-content;
+      border: 2px solid red;
+      margin-left: 10%;
+      margin-right: 10%;
     }
 
     .form {

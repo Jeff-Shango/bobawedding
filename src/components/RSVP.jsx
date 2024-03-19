@@ -15,6 +15,7 @@ const RSVP = () => {
     rsvpPlusOneCheckbox.addEventListener('change', () => {
       if (rsvpPlusOneCheckbox.checked) {
         additionalGuestFields.style.display = 'block';
+        // additionalGuestFields.style.justifyContent = 'space-between';
       } else {
         additionalGuestFields.style.display = 'none';
       }
@@ -92,25 +93,6 @@ const RSVP = () => {
         </div>
         </div>
 
-      <div className=" additional-guest-fields">
-        <div className="form">
-        <input type="text" name="nameAdd" autoComplete='off' required className='inputFName'/>
-          <label htmlFor="text" className="label-name labelFName">
-            <span className="content-name spanFName">
-              First Name (optional)
-            </span>
-          </label>
-        </div>  
-
-        <div className="form">
-        <input type="text" name="lastNameAdd" autoComplete='off' required className='inputLName' />
-        <label htmlFor="text" className="label-name labelLName">
-          <span className="content-name spanLName">
-            Last Name (optional)
-          </span>
-        </label>
-        </div>
-      </div>
         
         <div className="contactInformationContainer">
           <div className="formEmailContainer">
@@ -122,16 +104,10 @@ const RSVP = () => {
                 </span>
               </label>
 
-              <input type="text" name="emailAdd" autoComplete='off' className='inputEmailAdd' />
-              <label htmlFor="text" className="label-name labelEmail">
-                <span className="content-name spanEmail">
-                  Email (optional)
-                </span>
-              </label>
             </div>
           </div>
         
-          <div className="formPhoneContainer">
+          <div className="formPhoneContainer ">
           <div className="form">
             <input type="tel" name="phone" autoComplete='off' required className='inputPhone' />
             <label htmlFor="text" className="label-name labelPhone">
@@ -140,12 +116,6 @@ const RSVP = () => {
               </span>
             </label>
             
-            <input type="tel" name="phoneAdd" autoComplete='off' className='inputPhoneAdd' />
-            <label htmlFor="text" className="label-name labelPhoneAdd">
-              <span className="content-name spanPhoneAdd">
-                Phone
-              </span>
-            </label>
           </div>
           </div>
         </div>
@@ -178,7 +148,56 @@ const RSVP = () => {
         </div>
 
         
-        {/* optional guest food options */}
+        </div>
+
+        {/* special details */}
+        <h3 className="rsvpFormsTitle">Special Considerations</h3>
+        <input type="text" name="specialNote" id="formInput" />
+
+        {/* plus 1/additional guest entries */}
+        <div className="extraPersonContainer">
+        <div className=" additional-guest-fields">
+          <div className="form">
+          <input type="text" name="nameAdd" autoComplete='off' required className='inputFName'/>
+            <label htmlFor="text" className="label-name labelFName">
+              <span className="content-name spanFName">
+                First Name (optional)
+              </span>
+            </label>
+          </div>  
+
+          <div className="form">
+          <input type="text" name="lastNameAdd" autoComplete='off' required className='inputLName' />
+          <label htmlFor="text" className="label-name labelLName">
+            <span className="content-name spanLName">
+              Last Name (optional)
+            </span>
+          </label>
+          </div>
+
+          <div className="contactInformationContainer">
+          <div className="formEmailContainer">
+            <div className="form">
+              <input type="text" name="emailAdd" autoComplete='off' required className='inputEmail' />
+              <label htmlFor="text" className="label-name labelEmail">
+                <span className="content-name spanEmail">
+                  Email (Optional)
+                </span>
+              </label>
+
+            </div>
+          </div>
+          </div>
+        
+          <div className="formPhoneContainer ">
+          <div className="form">
+            <input type="tel" name="phone" autoComplete='off' required className='inputPhone' />
+            <label htmlFor="text" className="label-name labelPhone">
+              <span className="content-name spanPhone">
+                Phone
+              </span>
+            </label>
+            
         <div id="linkContainer">
         <aside>
           <h3 id="rsvpTextAdd">
@@ -203,10 +222,28 @@ const RSVP = () => {
         </div>
         </div>
 
-        {/* special details */}
-        <h3 className="rsvpFormsTitle">Special Considerations</h3>
-        <input type="text" name="specialNote" id="formInput" />
+          {/* <div className="form">
+              <div className=" additional-guest-fields">
+                <input type="text" name="emailAdd" autoComplete='off' className='inputEmailAdd' />
+                <label htmlFor="text" className="label-name labelEmail">
+                  <span className="content-name spanEmail">
+                    Email (optional)
+                  </span>
+                </label>
+              </div>
+          </div>
 
+          <div className="form">
+            <input type="tel" name="phoneAdd" autoComplete='off' className='inputPhoneAdd' />
+            <label htmlFor="text" className="label-name labelPhoneAdd">
+              <span className="content-name spanPhoneAdd">
+                Phone (Optional)
+              </span>
+            </label>
+          </div> */}
+        </div>
+        </div>
+        </div>
 
   <div className="captcha-container">
             <ReCAPTCHA
