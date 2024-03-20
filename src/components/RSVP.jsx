@@ -157,16 +157,17 @@ const RSVP = () => {
         {/* plus 1/additional guest entries */}
         <div className="extraPersonContainer">
         <div className=" additional-guest-fields">
-          <div className="form">
+          <div className="formNameContainer">
+          <div className="form formAdd">
           <input type="text" name="nameAdd" autoComplete='off' required className='inputFName'/>
             <label htmlFor="text" className="label-name labelFName">
               <span className="content-name spanFName">
                 First Name (optional)
               </span>
             </label>
-          </div>  
+          </div>
 
-          <div className="form">
+          <div className="form formAdd">
           <input type="text" name="lastNameAdd" autoComplete='off' required className='inputLName' />
           <label htmlFor="text" className="label-name labelLName">
             <span className="content-name spanLName">
@@ -174,8 +175,9 @@ const RSVP = () => {
             </span>
           </label>
           </div>
+          </div>  
 
-          <div className="contactInformationContainer">
+          <div className="contactInformationContainerAdd">
           <div className="formEmailContainer">
             <div className="form">
               <input type="text" name="emailAdd" autoComplete='off' required className='inputEmail' />
@@ -189,7 +191,7 @@ const RSVP = () => {
           </div>
           </div>
         
-          <div className="formPhoneContainer ">
+          <div className="formPhoneContainerAdd">
           <div className="form">
             <input type="tel" name="phone" autoComplete='off' required className='inputPhone' />
             <label htmlFor="text" className="label-name labelPhone">
@@ -197,7 +199,9 @@ const RSVP = () => {
                 Phone
               </span>
             </label>
-            
+          </div>  
+          </div>
+
         <div id="linkContainer">
         <aside>
           <h3 id="rsvpTextAdd">
@@ -241,8 +245,7 @@ const RSVP = () => {
               </span>
             </label>
           </div> */}
-        </div>
-        </div>
+        {/* </div> */}
         </div>
 
   <div className="captcha-container">
