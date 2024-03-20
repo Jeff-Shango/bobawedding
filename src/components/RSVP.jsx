@@ -40,14 +40,20 @@ const RSVP = () => {
       
     <h1 className="rsvpTitle">RSVP</h1>
 
-    <h2 className="rsvpSubTitle">RSVP Due by:April 21, 2024</h2>
+    <h2 className="rsvpSubTitle">
+      BY:
+    </h2>
 
-    <p className="rsvpP">We warmly invite you to RSVP for The Bozier wedding! Please don't hesistate to contact either Ashley or Jeff if you have any questions or need assistance. We're looking forward to seeing all of you there and sharing this joyous occasion together!!</p>
+      <h2 className='rsvpDueDate'>
+        April 21, 2024
+      </h2>
+
+    {/* <p className="rsvpP">We warmly invite you to RSVP for The Bozier wedding! Please don't hesistate to contact either Ashley or Jeff if you have any questions or need assistance. We're looking forward to seeing all of you there and sharing this joyous occasion together!!</p> */}
 
     <form method='post' className="rsvpForm" ref={form} onSubmit={sendEmail}>
     
       {/* rsvp */}
-      <h3 className="rsvpFormsTitle">RSVP</h3>
+      {/* <h3 className="rsvpFormsTitle">RSVP</h3> */}
       <div id='linkContainer'>
       <aside>
         <h3 id="rsvpText">
@@ -162,7 +168,7 @@ const RSVP = () => {
           <input type="text" name="nameAdd" autoComplete='off' required className='inputFName'/>
             <label htmlFor="text" className="label-name labelFName">
               <span className="content-name spanFName">
-                First Name (optional)
+                First Name
               </span>
             </label>
           </div>
@@ -171,7 +177,7 @@ const RSVP = () => {
           <input type="text" name="lastNameAdd" autoComplete='off' required className='inputLName' />
           <label htmlFor="text" className="label-name labelLName">
             <span className="content-name spanLName">
-              Last Name (optional)
+              Last Name
             </span>
           </label>
           </div>
@@ -183,7 +189,7 @@ const RSVP = () => {
               <input type="text" name="emailAdd" autoComplete='off' required className='inputEmail' />
               <label htmlFor="text" className="label-name labelEmail">
                 <span className="content-name spanEmail">
-                  Email (Optional)
+                  Email
                 </span>
               </label>
 
@@ -191,11 +197,11 @@ const RSVP = () => {
           </div>
           </div>
         
-          <div className="formPhoneContainerAdd">
+          <div className="formPhoneContainer">
           <div className="form">
             <input type="tel" name="phone" autoComplete='off' required className='inputPhone' />
             <label htmlFor="text" className="label-name labelPhone">
-              <span className="content-name spanPhone">
+              <span className="content-name spanPhoneAdd">
                 Phone
               </span>
             </label>

@@ -859,7 +859,6 @@
 }
 
 .bottomContainer {
-  border: 2px solid red;
 }
 
 .rsvpSubmit {
@@ -883,8 +882,21 @@
 /* computer monitor */
 @media screen and (min-width: 1500px) and (max-width: 1700px) and (max-height: 1000px) and (min-height: 700px) {
 
+  .rsvpSubTitle {
+    margin-top: 1rem;
+    font-family: var(--wedding-Cursive);
+  }
+
+  .rsvpDueDate  {
+    margin-top: 1rem;
+  }
+
+  .additional-guest-fields {
+    display: none;
+  }
+
   .inputFName {
-    border: 2px solid red;
+    /* border: 2px solid red; */
   }
   
 
@@ -904,24 +916,34 @@
     position: relative;
     height: 60px;
     overflow: hidden;
+    margin-right: auto;
+    /* border: 2px solid blue; */
   }
 
   .formNameContainer {
+    font-size: large;
     display: flex;
-    justify-content: space-between;
-    margin-left: 60vh;
+    width: 46%;
+    margin-left: 30%;
+    padding-left: 5%;
+    /* justify-content: space-between; */
+    /* margin-left: 60vh; */
   }
 
   .formEmailContainer {
+    font-size: large;
     display: flex;
     justify-content: center;
     margin-left: 60vh;
+    padding-left: 12%;
   }
 
   .formPhoneContainer {
+    font-size: large;
     display: flex;
     justify-content: center;
     margin-left: 60vh;
+    padding-left: 12%;
     margin-bottom: 1rem;
   }
   
@@ -990,7 +1012,8 @@
 
 .rsvpTitle {
     font-family: var(--wedding-Cursive);
-    font-size: 40px;
+    font-size: 5rem;
+    margin-bottom: -1.5rem;
 }
 
 #rsvpPage {
@@ -1012,7 +1035,7 @@
 }
 
 .rsvpP {
-    font-size: larger;
+    font-size: x-large;
 }
 
 #formInput {
@@ -1020,15 +1043,17 @@
 }
 
 .rsvpForm {
-  height: 100vh;
+  border: 2px solid black;
+  margin-left: 5%;
+  margin-right: 5%;
 }
 
 .rsvpFormsTitle {
-    font-size: 16px;
+    font-size: large;
 }
 
 #rsvpText {
-    font-size: 14px;
+    font-size: large;
 }
 
 #linkContainer {
@@ -1054,7 +1079,8 @@
 }
 
 .bottomContainer {
-  border: 2px solid red;
+  margin-top: 5rem;
+  /* border: 2px solid red; */
 }
 
 .rsvpSubmit {
@@ -1073,4 +1099,5 @@
     -ms-border-radius: 12px;
     -o-border-radius: 12px;
 }
+
 }
