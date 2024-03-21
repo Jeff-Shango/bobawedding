@@ -12,6 +12,11 @@
         overflow: hidden;
     }
 
+    .rsvpSubTitle {
+      margin-top: 1rem;
+      font-family: var(--wedding-Cursive);
+    }
+
     .additional-guest-fields {
       display: none;
       /* justify-content: auto; */
@@ -45,6 +50,8 @@
         display: flex;
         justify-content: space-between;
         margin-left: 13%;
+        font-size: medium;
+        margin-top: 1rem;
         /* margin-right: auto; */
       }
 
@@ -59,6 +66,7 @@
       } */
 
       .formEmailContainer {
+        font-size: medium;
         display: flex;
         justify-content: center;
       }
@@ -72,11 +80,13 @@
       .formPhoneContainer {
         display: flex;
         justify-content: center;
+        font-size: medium;
       }
 
       .formPhoneContainerAdd {
         display: flex;
         justify-content: center;
+        border: 2px solid red;
       }
       
       .form input {
@@ -227,6 +237,10 @@
         font-family: var(--wedding-Str-Font);
     }
 
+    .xtraChecklistTitle {
+      font-size: medium;
+    }
+
     .captcha-container {
         display: flex;
         justify-content: center;
@@ -244,10 +258,13 @@
 
     #formInput {
         margin: 5px;
+        height: 1rem;
+        width: 1rem;
     }
 
     .rsvpFormsTitle {
-        font-size: 16px;
+        margin-top: 1rem;
+        font-size: medium;
     }
 
     .foodRestricContainer {
@@ -255,16 +272,22 @@
     }
 
     #rsvpText {
-        font-size: 14px;
+        font-size: large;
     }
 
     #rsvpTextAdd {
-      font-size: 14px;
+      font-size: large;
+      margin: 1rem;
     }
 
     #linkContainer {
         display: flex;
         justify-content: center;
+    }
+
+    #linkContainerAdd {
+      display: flex;
+      justify-content: center;
     }
 
     #linkContainer > aside {
@@ -315,6 +338,20 @@
     #linkContainer a:hover {
         text-decoration: underline;
     }
+
+    .extraPersonContainer {
+      overflow: hidden;
+    }
+
+    #formInputAdd {
+      color: var(--wedding-gold);
+      /* background-color: var(--wedding-gold); */
+      height: 1.5rem;
+      width: 1.5rem;
+    }
+
+
+
 }
 
 /* small devices  */

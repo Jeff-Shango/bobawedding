@@ -72,8 +72,8 @@ const RSVP = () => {
 
       {/* rsvp for another person feature field */}
       <div className="plusOneContainer">
+        <label htmlFor='rsvpPlusOne' className='xtraChecklistTitle'>RSVP'ing for someone else?</label>
         <input type="checkbox" id='rsvpPlusOne' />
-        <label htmlFor='rsvpPlusOne'>RSVP'ing for someone else?</label>
       </div>
 
       {/* form name container  */}
@@ -208,7 +208,7 @@ const RSVP = () => {
           </div>  
           </div>
 
-        <div id="linkContainer">
+        <div id="linkContainerAdd">
         <aside>
           <h3 id="rsvpTextAdd">
           Vegan
