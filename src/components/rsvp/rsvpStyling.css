@@ -261,6 +261,7 @@
         height: 1rem;
         width: 1rem;
     }
+    
 
     .rsvpFormsTitle {
         margin-top: 1rem;
@@ -340,6 +341,7 @@
     }
 
     .extraPersonContainer {
+      display: hidden;
       overflow: hidden;
     }
 
@@ -377,21 +379,24 @@
       }
 
       .formNameContainer {
+        font-size: medium;
         display: flex;
         justify-content: space-between;
-        margin-left: 50vh;
+        margin-left: 25%;
       }
 
       .formEmailContainer {
+        font-size: medium;
         display: flex;
         justify-content: center;
-        margin-left: 50vh;
+        margin-left: 25%;
       }
 
       .formPhoneContainer {
+        font-size: medium;
         display: flex;
         justify-content: center;
-        margin-left: 50vh;
+        margin-left: 25%;
       }
       
       .form input {
@@ -486,14 +491,28 @@
 
     #formInput {
         margin: 5px;
+        height: 1rem;
+        width: 1rem;
+    }
+
+    .xtraChecklistTitle {
+      font-size: medium;
+    }
+
+    #formInputAdd {
+      color: var(--wedding-gold);
+      /* background-color: var(--wedding-gold); */
+      height: 1.5rem;
+      width: 1.5rem;
     }
 
     .rsvpFormsTitle {
-        font-size: 16px;
-    }
+      margin-top: 1rem;
+      font-size: medium;
+  }
 
     #rsvpText {
-        font-size: 14px;
+        font-size: large;
     }
 
     #linkContainer {
@@ -518,8 +537,14 @@
         font-size: larger;
     }
 
-    .bottomContainer {
-      outline: 2px solid red;
+    #linkContainerAdd {
+      display: flex;
+      justify-content: center;
+    }
+
+    #rsvpTextAdd {
+      font-size: large;
+      margin: 1rem;
     }
 
     .bottomContent {
@@ -541,6 +566,10 @@
         -moz-border-radius: 12px;
         -ms-border-radius: 12px;
         -o-border-radius: 12px;
+}
+
+.extraPersonContainer {
+  display: hidden;
 }
 
 
