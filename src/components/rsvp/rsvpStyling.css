@@ -360,6 +360,11 @@
 /* landscape orientation */
 /* @media only screen and (min-width: 625px) and (max-width: 800px) and (min-height: 300px) and (max-height: 450px) and (orientation: landscape) { */
   @media only screen and (max-width: 1000px) and (max-height: 1000px) and (orientation: landscape) {
+    .rsvpSubTitle {
+      margin-top: 1rem;
+      font-family: var(--wedding-Cursive);
+    }
+
     .nameContainer {
         display: flex;
         flex-direction: row;
@@ -578,6 +583,11 @@
 /* medium sizes portrait */
 @media screen and (min-width: 700px) and (max-width: 1100px) and (max-height: 1000px) and (min-height: 800px) and (orientation: portrait) {
 
+  .rsvpSubTitle {
+    margin-top: 1rem;
+    font-family: var(--wedding-Cursive);
+  }
+
     .nameContainer {
         display: flex;
         flex-direction: row;
@@ -772,6 +782,11 @@
 
 /* medium sizes landscape */
 @media screen and (min-width: 1000px) and (max-height: 800px) and (orientation: landscape) {
+
+  .rsvpSubTitle {
+    margin-top: 1rem;
+    font-family: var(--wedding-Cursive);
+  }
 
   .nameContainer {
     display: flex;

@@ -2,6 +2,7 @@
 @media only screen and (max-width: 1000px) and (max-height: 1000px) and (orientation: portrait) {
 
   #galleryTitle {
+    color: var(--wedding-gold);
     letter-spacing: 3.5px;
     font-size: xx-large;
     font-family: var(--wedding-Cursive);
@@ -12,6 +13,7 @@
   }
 
   #galleryDescript {
+    color: var(--wedding-gold);
     font-family: var(--wedding-Str-Font);
     font-size: large;
   }
@@ -146,12 +148,14 @@
 @media only screen and (max-width: 1000px) and (max-height: 1000px) and (orientation: landscape) {
 
   #galleryTitle {
+    color: var(--wedding-gold);
     letter-spacing: 3.5px;
     font-size: xx-large;
     font-family: var(--wedding-Cursive);
   }
 
   #galleryDescript {
+    color: var(--wedding-gold);
     font-family: var(--wedding-Str-Font);
     font-size: large;
   }
@@ -284,12 +288,14 @@
 @media screen and (min-width: 700px) and (max-width: 1100px) and (max-height: 1000px) and (min-height: 800px) and (orientation: portrait) {
 
   #galleryTitle {
+    color: var(--wedding-gold);
     letter-spacing: 3.5px;
     font-size: xx-large;
     font-family: var(--wedding-Cursive);
   }
 
   #galleryDescript {
+    color: var(--wedding-gold);
     font-family: var(--wedding-Str-Font);
     font-size: large;
   }
@@ -427,12 +433,14 @@
 @media screen and (min-width: 1000px) and (max-height: 800px) and (orientation: landscape) {
 
   #galleryTitle {
+    color: var(--wedding-gold);
     letter-spacing: 3.5px;
     font-size: xx-large;
     font-family: var(--wedding-Cursive);
   }
 
   #galleryDescript {
+    color: var(--wedding-gold);
     font-family: var(--wedding-Str-Font);
     font-size: large;
   }
@@ -571,12 +579,14 @@
 @media only screen and (min-width: 1500px) and (max-width: 1700px) and (max-height: 1000px) and (min-height: 700px) {
 
   #galleryTitle {
+    color: var(--wedding-gold);
     letter-spacing: 3.5px;
     font-size: xx-large;
     font-family: var(--wedding-Cursive);
   }
 
   #galleryDescript {
+    color: var(--wedding-gold);
     font-family: var(--wedding-Str-Font);
     font-size: large;
   }
