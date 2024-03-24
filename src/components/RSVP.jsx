@@ -165,7 +165,7 @@ const RSVP = () => {
         <div className=" additional-guest-fields">
           <div className="formNameContainer">
           <div className="form formAdd">
-          <input type="text" name="nameAdd" autoComplete='off' required className='inputFName'/>
+          <input type="text" name="nameAdd" autoComplete='off'  className='inputFName'/>
             <label htmlFor="text" className="label-name labelFName">
               <span className="content-name spanFName">
                 First Name
@@ -174,7 +174,7 @@ const RSVP = () => {
           </div>
 
           <div className="form formAdd">
-          <input type="text" name="lastNameAdd" autoComplete='off' required className='inputLName' />
+          <input type="text" name="lastNameAdd" autoComplete='off'  className='inputLName' />
           <label htmlFor="text" className="label-name labelLName">
             <span className="content-name spanLName">
               Last Name
@@ -186,7 +186,7 @@ const RSVP = () => {
           <div className="contactInformationContainerAdd">
           <div className="formEmailContainer">
             <div className="form">
-              <input type="text" name="emailAdd" autoComplete='off' required className='inputEmail' />
+              <input type="text" name="emailAdd" autoComplete='off'  className='inputEmail' />
               <label htmlFor="text" className="label-name labelEmail">
                 <span className="content-name spanEmail">
                   Email
@@ -199,7 +199,7 @@ const RSVP = () => {
         
           <div className="formPhoneContainer">
           <div className="form">
-            <input type="tel" name="phone" autoComplete='off' required className='inputPhone' />
+            <input type="tel" name="phone" autoComplete='off'  className='inputPhone' />
             <label htmlFor="text" className="label-name labelPhone">
               <span className="content-name spanPhoneAdd">
                 Phone
