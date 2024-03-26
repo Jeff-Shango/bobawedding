@@ -73,7 +73,7 @@ const RSVP = () => {
       {/* rsvp for another person feature field */}
       <div className="plusOneContainer">
         <label htmlFor='rsvpPlusOne' className='xtraChecklistTitle'>RSVP'ing for someone else?</label>
-        <input type="checkbox" id='rsvpPlusOne' />
+        <input type="checkbox" id='rsvpPlusOne' name='checkboxExtra'/>
       </div>
 
       {/* form name container  */}
@@ -199,7 +199,7 @@ const RSVP = () => {
         
           <div className="formPhoneContainer">
           <div className="form">
-            <input type="tel" name="phone" autoComplete='off'  className='inputPhone' />
+            <input type="tel" name="phoneAdd" autoComplete='off'  className='inputPhone' />
             <label htmlFor="text" className="label-name labelPhone">
               <span className="content-name spanPhoneAdd">
                 Phone
@@ -230,6 +230,11 @@ const RSVP = () => {
           <input type="checkbox" name='fishAdd' id='formInputAdd' />
         </aside>
         </div>
+
+        {/* special details */}
+        <h3 className="rsvpFormsTitle">Special Considerations</h3>
+        <input type="text" name="specialNoteAdd" id="formInputAdd" />
+
         </div>
 
           {/* <div className="form">
