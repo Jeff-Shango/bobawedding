@@ -91,7 +91,7 @@ const Gallery = () => {
           className={enlargedImage === image.imageId ? 'enlarged' : ''}
         />
         </div>
-      ))}
+        ))}
       {enlargedImage && (
         <div className="enlarged-container">
           <div className="enlarged-image">

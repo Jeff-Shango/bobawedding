@@ -1,12 +1,16 @@
-import React, { useRef, useEffect } from 'react'
+import React, { useRef, useEffect, useState } from 'react'
 import "./rsvp/rsvpStyling.css";
 import ReCAPTCHA from "react-google-recaptcha";
 import emailjs from 'emailjs-com';
-import Navlinks from '../components/Navlinks/Navlinks.jsx'
-// import { Link } from 'react-router-dom';
+import Navlinks from '../components/Navlinks/Navlinks.jsx';
+import { useNavigate } from 'react-router-dom';
 
 const RSVP = () => {
+  const navigate = useNavigate();
   const form = useRef();
+    const [firstName, setFirstName] = useState("");
+    const [showSuccessPopup, setShowSuccessPopup] = useState(false);
+  // const history = useHistory();
 
   useEffect(() => {
     const rsvpPlusOneCheckbox = document.getElementById('rsvpPlusOne');
@@ -22,16 +26,31 @@ const RSVP = () => {
     });
   }, []);
 
+  // useEffect(() => {
+  //   const rsvpNotification = document.getElementById('success-popup');
+  //   rsvpNotification = useState(false);
+
+  //   if (rsvpNotification == true) {
+  //     rsvpNotification.style.display = 'block';
+  //   } else {
+  //     rsvpNotification.style.display = 'none';
+  //   }
+  // })
+
+    
   const sendEmail = (e) => {
     e.preventDefault();
 
     emailjs.sendForm('service_98g590d', 'RSVP_Invite', form.current, 'mYD0XtrHqKMCCWhkE').then((result) => {
       console.log(result.text);
-    }, (error) => {
+      setFirstName(e.target.elements.name.value);
+      })
+      .catch((error) => {
       console.log(error.text);
     });
 
-    e.target.reset()
+    navigate('/ThankYou');
+    // e.target.reset()
   };
 
   return (
@@ -157,8 +176,8 @@ const RSVP = () => {
         </div>
 
         {/* special details */}
-        <h3 className="rsvpFormsTitle">Special Considerations</h3>
-        <input type="text" name="specialNote" id="formInput" />
+        <h3 className="rsvpFormsTitle specialFormSection">Special Considerations</h3>
+        <input type="text" name="specialNote" id="formInputSpecial" />
 
         {/* plus 1/additional guest entries */}
         <div className="extraPersonContainer">
@@ -233,7 +252,7 @@ const RSVP = () => {
 
         {/* special details */}
         <h3 className="rsvpFormsTitle">Special Considerations</h3>
-        <input type="text" name="specialNoteAdd" id="formInputAdd" />
+        <input type="text" name="specialNoteAdd" id="formInputSpecial" />
 
         </div>
 
@@ -259,13 +278,32 @@ const RSVP = () => {
         {/* </div> */}
         </div>
 
-  <div className="captcha-container">
+  {/* <div className="captcha-container">
             <ReCAPTCHA
             id='captchaBox'
               sitekey="6LeIxAcTAAAAAJcZVRqyHh71UMIEGNQ_MXjiZKhI"/>
-  </div>
+  </div> */}
   <button type='submit' className='rsvpSubmit'>RSVP</button>
   </form>
+{/* Show success popup if showSuccessPopup state is true */}
+        {/* <div id="success-popup">
+          <p>Hello {firstName},</p>
+          <p>We thank you for sending in your RSVP! This is a big moment for us, and we are truly excited to be able to share this moment with our friends and family.</p>
+          <p>Please prepare to have fun with this moment in time to acknowledge our commitment to each other. We eagerly await to see YOU!!</p>
+          <p>-Jeff & (future) Ashley Bozier</p>
+        </div> */}
+
+
+  {/* Success popup */}
+  {/* {showSuccessPopup && (
+        <div id="success-popup">
+          <button onClick={handleCloseSuccessPopup}>Close</button>
+          <p>Hello {firstName},</p>
+          <p>We thank you for sending in your RSVP! This is a big moment for us, and we are truly excited to be able to share this moment with our friends and family.</p>
+          <p>Please prepare to have fun with this moment in time to acknowledge our commitment to each other. We eagerly await to see YOU!!</p>
+          <p>-Jeff & (future) Ashley Bozier</p>
+        </div>
+      )} */}
 
   <div className="bottomContainer">
     <h3 className='bottomContent'>

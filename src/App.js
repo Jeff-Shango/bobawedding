@@ -13,10 +13,11 @@ import Cancel from "./functions/Cancel.jsx";
 // import Navlinks from "./components/Navlinks/Navlinks";
 import WeddingParty from "./components/WeddingParty.jsx";
 import Login from "./login/Login.jsx";
-import Hotel from "./components/Hotel.jsx"
+import Hotel from "./components/Hotel.jsx";
 import Accomodations from "./components/accomd/Accomodations.jsx";
 import 'bootstrap/dist/css/bootstrap.min.css';
 import 'bootstrap/dist/js/bootstrap.bundle.min.js';
+import RsvpSuccess from "./components/rsvp/RsvpSuccess.jsx";
 
 function App() {
   
@@ -45,6 +46,7 @@ function App() {
             <Route path="/success" element={<Success/>}/>
             <Route path="/weddingParty" element={<WeddingParty/>}/>
             <Route path="/accomodations" element={<Accomodations/>}/>
+            <Route path="/ThankYou" element={<RsvpSuccess/>}/>
           </Routes>
       </div>
         </BrowserRouter>
