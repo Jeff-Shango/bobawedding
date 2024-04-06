@@ -52,10 +52,6 @@
 #registryAside {
     font-size: large;
 }
-.cashAppContainer {
- height: fit-content;
- width: fit-content;
-}
 
 .cashAppButton {
     
@@ -135,13 +131,10 @@
 #registryAside {
     font-size: large;
 }
-.cashAppContainer {
- height: fit-content;
- width: fit-content;
-}
 
 .cashAppButton {
-    
+    font-size: large;
+    margin: 7px;
 }
 
 .zelleContainer {
@@ -153,6 +146,14 @@
 }
 .mrw_isMobile {
     
+}
+
+.registryDescriptionTop {
+    margin-bottom: 50px;
+}
+
+.registryDescriptionBottom {
+    margin-top: 50px;
 }
 
 
@@ -289,4 +290,39 @@
 .mrw_isMobile {
     
 }
+}
+
+/* computer monitor */
+@media only screen and (min-width: 1400px) and (max-width: 1900px) and (max-height: 1000px) {
+    #moneyImg {
+    }
+
+    #registryPageContainer {
+        font-family: var(--wedding-Str-Font);
+        font-size: x-large;
+    }
+
+    .registryDescriptionBottom, .registryDescriptionTop {
+        font-size: xx-large;
+        padding-left: 25vh;
+        padding-right: 25vh;
+    }
+
+    .registryDescriptionTop {
+        padding-top: 20vh;
+    }
+
+    .registryDescriptionBottom {
+        padding-bottom: 20vh;
+    }
+
+    .cashAppContainer {
+        height: 100vh;
+        width: 100vh;
+    }
+
+    .cashAppButton {
+        margin-top: 10vh;
+        font-size: x-large;
+    }
 }
