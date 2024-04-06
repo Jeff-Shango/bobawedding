@@ -30,6 +30,8 @@ import autumnBreak from '../assets/Autumn.png';
 import evie from '../assets/Evie.jpg';
 // import evieDescript from '../assets/EvieDescript.png'
 import evieDescript from '../assets/Evie.png'; 
+import joel from "../assets/joel.png";
+import joelBreak from '../assets/joelBreak.png';
 
 import Navlinks from './Navlinks/Navlinks.jsx'
 import "./weddingParty/weddingPartyStyling.css";
@@ -87,6 +89,12 @@ const WeddingParty = () => {
       alt: "Marie",
       bio: marieBreak,
       bioBreak:"Marie has been one of the bride's best friends (another one) since they were 14-years-old. They've maintained their friendship across schools, states, and continents.",
+    },
+    {
+      src: joel,
+      alt: "Joel",
+      bio: joelBreak,
+      bioBreak:"Soon after moving to Pigtown in 2020, the groom became fast friends with their neighbor, Joel. Joel is the epitome of what you'd want in a neighbor and a friend. From grabbing amazon packages, taking care of each other's pets, DIY house projects and harnging out togeher, Joel is the homie.",
     },
     {
       src: alise,

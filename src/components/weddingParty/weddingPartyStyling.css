@@ -84,6 +84,7 @@
   }
   
   .scrollMessage {
+    font-size: small;
     position: absolute;
     top: 0;
     transform: translateX(15%);
@@ -91,11 +92,6 @@
     color: white;
     max-height: fit-content;
     width: fit-content;
-    border-radius: 12px;
-    -webkit-border-radius: 12px;
-    -moz-border-radius: 12px;
-    -ms-border-radius: 12px;
-    -o-border-radius: 12px;
     -webkit-transform: translateX(15%);
     -moz-transform: translateX(15%);
     -ms-transform: translateX(15%);
@@ -168,6 +164,7 @@
     background-color: var(--wedding-gold);
     position: relative;
     margin: 1rem 5rem;
+    width: 65%;
   }
   
   .stylingBoxText {
@@ -657,6 +654,7 @@
 }
 
 .scrollMessage {
+  display: none;
   position: absolute;
   top: 0;
   transform: translateX(100%);
@@ -750,6 +748,7 @@
   bottom: 0;
   left: 50%;
   color: white;
+  font-size: xx-large;
   transform: translateX(-50%);
   font-family: var(--wedding-Str-Font);
   -webkit-transform: translateX(-50%);
@@ -784,10 +783,11 @@
 }
 
 /* computer monitor */
-@media only screen and (min-width: 1500px) and (max-width: 1700px) and (max-height: 1000px) and (min-height: 700px) {
+@media only screen and (min-width: 1400px) and (max-width: 1700px) and (max-height: 1000px) and (min-height: 700px) {
 
   #weddingPartyPage {
     height: 100vh;
+    width: 100%;
     position: relative;
     overflow-y: hidden;
   }
@@ -834,6 +834,7 @@
   }
   
   .scrollMessage {
+    display: none;
     position: absolute;
     top: 0;
     transform: translateX(100%);
@@ -899,12 +900,14 @@
     font-family: var(--wedding-Str-Font);
     position: absolute;
     top: 10vh;
-    left:60vh;
+    width: 70%;
+    padding: 2%;
   }
   
   .wedTopSlider {
     display: flex;
     overflow-x: hidden;
+    margin-left: 6%;
   }
   
   .sliderImg {
@@ -927,6 +930,7 @@
     bottom: 0;
     left: 50%;
     color: white;
+    font-size: xx-large;
     transform: translateX(-50%);
     font-family: var(--wedding-Str-Font);
     -webkit-transform: translateX(-50%);
