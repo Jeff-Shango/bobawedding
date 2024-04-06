@@ -309,11 +309,14 @@
 }
 
 /* computer monitor */
-@media only screen and (min-width: 1400px) and (max-width: 1700px) and (max-height: 1000px) and (min-height: 700px) {
+@media only screen and (min-width: 1400px) and (max-width: 1900px) and (max-height: 1000px) {
     #accomdPage {
-        height: 100vh;
-        width: 100vh;
-        margin-left: 50vh;
+        height: 900px;
+        width: 1000px;
+        overflow-y: scroll;
+        /* width: 1400px; */
+        /* max-width: 100%; */
+        margin-left: 40vh;
         background-repeat: no-repeat;
         background: url('../../assets/accomodation.jpg');
         background-size: cover;
@@ -321,6 +324,11 @@
 
     .accomdTopLayer, .accomdBottomLayer {
         margin: 1.5rem;
+    }
+
+    .accomdBottomTitle {
+        position: absolute;
+        top: 0;
     }
 
     .accomdTopTitle, .accomdBottomTitle {
@@ -335,9 +343,11 @@
 
     .accomdLink {
         position: absolute;
-        bottom: 14.5rem;
-        right: 79vh;
-        font-size: 20px;
+        top: 14.5rem;
+        left: 0vh;
+        font-size: 45px;
+        border-radius: 12px;
+        padding: 5px;
         text-decoration: none;
         color: black;
         background-color: var(--wedding-gold);

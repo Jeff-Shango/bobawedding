@@ -18,7 +18,7 @@ const Accomodations = () => {
       </div>
 
       <div className="accomdBottomLayer">
-        <h1 className="accomdBottomTitle">Accomodations</h1>
+        {/* <h1 className="accomdBottomTitle">Accomodations</h1> */}
 
         {/* <h2 className="accomdBottomLayerContent">
           For your convenience, a block of rooms has been reserved at the Hyatt Place Baltimore Inner Harbor, about 30 minutes from the venue. Reservations will be made by individuals before April 30, 2024 by using our custom booking link: <u>BozierEverAfter</u>

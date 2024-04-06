@@ -5,6 +5,7 @@
     @media only screen and (max-width: 1000px) and (max-height: 1000px) and (orientation: portrait) {
 
     .rsvpForm {
+      overflow-x: hidden;
       overflow-y: scroll;      
     }
 
@@ -322,8 +323,7 @@
       margin: 1rem;
     }
 
-    #linkContainer {
-        display: flex;
+    #linkContainer {        display: flex;
         justify-content: center;
     }
 
@@ -356,6 +356,10 @@
     .bottomContainer {
     }
 
+    .bottomContentTop {
+      font-size: medium;
+      font-weight: bold;
+    }
     .bottomContent {
       display: inline;
       font-size: medium;
@@ -561,8 +565,7 @@
         font-size: large;
     }
 
-    #linkContainer {
-        display: flex;
+    #linkContainer {        display: flex;
         justify-content: center;
     }
 
@@ -593,6 +596,10 @@
       margin: 1rem;
     }
 
+    .bottomContentTop {
+      font-size: medium;
+      font-weight: bold;
+    }
     .bottomContent {
       font-size: medium;
     }
@@ -760,6 +767,7 @@
     }
 
     .rsvpForm {
+      overflow-x: hidden;
       height: 100vh;
     }
 
@@ -771,8 +779,7 @@
         font-size: 14px;
     }
 
-    #linkContainer {
-        display: flex;
+    #linkContainer {        display: flex;
         justify-content: center;
     }
 
@@ -797,6 +804,10 @@
       outline: 2px solid red;
     }
 
+    .bottomContentTop {
+      font-size: medium;
+      font-weight: bold;
+    }
     .bottomContent {
       font-size: medium;
     }
@@ -947,6 +958,7 @@
 }
 
 .rsvpForm {
+  overflow-x: hidden;
   height: 100vh;
 }
 
@@ -958,8 +970,7 @@
     font-size: 14px;
 }
 
-#linkContainer {
-    display: flex;
+#linkContainer {    display: flex;
     justify-content: center;
 }
 
@@ -1165,6 +1176,7 @@
 }
 
 .rsvpForm {
+  overflow-x: hidden;
   margin-left: 5%;
   margin-right: 5%;
 }
@@ -1178,8 +1190,7 @@
     font-size: large;
 }
 
-#linkContainer {
-    display: flex;
+#linkContainer {    display: flex;
     justify-content: center;
 }
 
