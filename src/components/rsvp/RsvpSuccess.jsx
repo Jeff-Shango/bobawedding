@@ -11,7 +11,7 @@ const RsvpSuccess = () => {
         </p>
         
         <p id='successContent'>
-            We thank you for sending in your RSVP! This is a big moment for us, and we are truly excited to be able to share this moment with our friends and family.
+          Thank you for your RSVP! We're thrilled you'll be joining us on our special day. Just a heads-up, this is a formal affair, so come dressed to impress. Feel free to embrace the Spring vibes and add a splash of color to your attire. Can't wait to celebrate with you!
         </p>
 
         <p id='successContent'>
