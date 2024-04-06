@@ -30,7 +30,7 @@ import autumnBreak from '../assets/Autumn.png';
 import evie from '../assets/Evie.jpg';
 // import evieDescript from '../assets/EvieDescript.png'
 import evieDescript from '../assets/Evie.png'; 
-                                                                                   
+
 import Navlinks from './Navlinks/Navlinks.jsx'
 import "./weddingParty/weddingPartyStyling.css";
 
@@ -38,13 +38,19 @@ const WeddingParty = () => {
   const [enlargedImage, setEnlargedImage] = useState(null);
   const [selectedImage, setSelectedImage] = useState(null);
   // const [showScrollMessage, setShowScrollMessage] = useState(true);
-
+  
   const images = [
     {
-      src: chris,
-      alt: "Chris Kiah",
-      bio: chrisBreak,
-      bioBreak:"Chris is the groom's Best Man and best friend of 12+ years. Chris and the groom met at Morgan State University (MSU).",
+      src: evie,
+      alt: "Evie",
+      bio: evieDescript,
+      bioBreak:"Evangela, known as 'Evie' to friends and family, was considered family far before her nuptials to the bride's maternal cousin in 2021. The bride and groom were ecstatic when Evie (pretty much) volunteered to act as the wedding coordinator. Evie informed the couple that she'd primarily planned and coordinated her own wedding after her initial coordinator left much to be desired. The bride and groom are eternally grateful for Evie's support with this process.",
+    },
+    {
+      src: nia,
+      alt: "Nia",
+      bio: niaBreak,
+      bioBreak:"Nia is the bride's younger cousin, whom the bride happily refers to as the 'sister her parents refused to give her.' As such, Nia had absolutely no choice in her role at the wedding, which she graciously accepted.",
     },
     {
       src: mikeJ,
@@ -52,6 +58,12 @@ const WeddingParty = () => {
       bio: mikeJBreak,
       bioBreak:"The groom has also known Mike since their college years at MSU. The groom was very popular at Morgan.",
     },
+    {
+      src: Autumn,
+      alt: "Autumn",
+      bio: autumnBreak,
+      bioBreak:"Autumn is one of the Bride's (many-says the groom) best friends. Autumn and the bride met at NYU and their bond was solidifed during a dorm party their sophomore year.",
+    }, 
     {
       src: mikeW,
       alt: "MikeW",
@@ -65,10 +77,10 @@ const WeddingParty = () => {
       bioBreak:"Lauren is the bride's cousin, birth mate (inside joke), and spirit sister (Yes. it's corny, you'll live). She and the bride grew up (mostly) together and are bonded beyond blood.",
     },
     {
-      src: nia,
-      alt: "Nia",
-      bio: niaBreak,
-      bioBreak:"Nia is the bride's younger cousin, whom the bride happily refers to as the 'sister her parents refused to give her.' As such, Nia had absolutely no choice in her role at the wedding, which she graciously accepted.",
+      src: chris,
+      alt: "Chris Kiah",
+      bio: chrisBreak,
+      bioBreak:"Chris is the groom's Best Man and best friend of 12+ years. Chris and the groom met at Morgan State University (MSU).",
     },
     {
       src: marie,
@@ -81,18 +93,6 @@ const WeddingParty = () => {
       alt: "Alise",
       bio: aliseBreak,
       bioBreak:"The bride and Alise have been friends sicne their freshman year of high school. After 20 years of friendship, and a few international trips, it was only right that they moved into houses less than a half mile away from each other.",
-    },
-    {
-      src: Autumn,
-      alt: "Autumn",
-      bio: autumnBreak,
-      bioBreak:"Autumn is one of the Bride's (many-says the groom) best friends. Autumn and the bride met at NYU and their bond was solidifed during a dorm party their sophomore year.",
-    }, 
-    {
-      src: evie,
-      alt: "Evie",
-      bio: evieDescript,
-      bioBreak:"Evangela, known as 'Evie' to friends and family, was considered family far before her nuptials to the bride's maternal cousin in 2021. The bride and groom were ecstatic when Evie (pretty much) volunteered to act as the wedding coordinator. Evie informed the couple that she'd primarily planned and coordinated her own wedding after her initial coordinator left much to be desired. The bride and groom are eternally grateful for Evie's support with this process.",
     },
   ];
 
