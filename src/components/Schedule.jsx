@@ -104,7 +104,7 @@ const Schedule = () => {
   {
     title: "April 21, 2023",
     cardTitle: "Jeff proposes!",
-    cardDetailedText: "Having a student from Jeff's boxing classes, he had the person pose as a photographer at the community event they were going to at Carrol Park. As the photographer told us he wanted to give us a photoshoot, he prompted Ashley and Jeff to a spot where he proceeded to do a photoshoot. Instructing Ashley to step in front of Jeff, Jeff prepared himself by getting down on one knee and waiting for the photographer to tell Ashley to look at Jeff.",
+    cardDetailedText: "The bride and groom planned to attend a local community event at Carroll Park. Unbeknownst to the bride, the groom had arranged for one of his friend's from his boxing class to pose as one of the event's photographers. The photographer then offered the couple a photoshoot and directed the bride and groom to a specific location. After instructing the bride to stand in front of the groom, the groom positioned himself on one knee, awaited the photographer's cue and when she turned around, there he was. The bride said she blacked out after that but recalls being incredibly happy. The groom said that the first words the bride uttered were, 'What the f**k dude,' which sounds on brand for the bride.",
     media: {
       type: "IMAGE",
       source: {
