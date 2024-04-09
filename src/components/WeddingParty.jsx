@@ -100,7 +100,7 @@ const WeddingParty = () => {
       src: alise,
       alt: "Alise",
       bio: aliseBreak,
-      bioBreak:"The bride and Alise have been friends sicne their freshman year of high school. After 20 years of friendship, and a few international trips, it was only right that they moved into houses less than a half mile away from each other.",
+      bioBreak:"The bride and Alise have been friends since their freshman year of high school. After 20 years of friendship, and a few international trips, it was only right that they moved into houses less than a half mile away from each other.",
     },
   ];
 
