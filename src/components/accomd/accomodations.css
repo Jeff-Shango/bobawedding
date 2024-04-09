@@ -46,8 +46,8 @@
         border-radius: 12px;
         padding: 5px;
         position: absolute;
-        bottom: 29%;
-        right: 7.5%;
+        top: 0;
+        left: 7.5%;
     }
 
     /* .accomdLink {
