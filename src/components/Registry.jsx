@@ -8,8 +8,8 @@ import Navlinks from './Navlinks/Navlinks.jsx'
 
 const Registry = () => {
   const [buttons, setButtons] = useState([
-    { label: 'Cash App', link: 'https://cash.app/$TheBoziers' },
-    { label: 'Zelle', link: 'https://enroll.zellepay.com/qr-codes?data=eqwoglCJ0b' },
+    // { label: 'Cash App', link: 'https://cash.app/$TheBoziers' },
+    { label: 'Future Fund', link: 'https://enroll.zellepay.com/qr-codes?data=eqwoglCJ0b' },
     { label: 'Official Registry', link: 'https://www.myregistry.com/wedding-registry/jeff-bozier-and-ashley-barney-baltimore-md/3857459' }
   ]);
 
