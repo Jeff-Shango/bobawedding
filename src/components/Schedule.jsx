@@ -109,7 +109,6 @@ const Schedule = () => {
       type: "IMAGE",
       source: {
         url: require("../assets/proposalPic.png")     
-        // url: require("../assets/proposal.jpg")
       }
     }
   } ];
