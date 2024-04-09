@@ -307,7 +307,7 @@ const RSVP = () => {
     </h3>
     
     <h3 className='bottomContent'>
-      **We respectfully request that <u>only</u> the individuals mentioned on the invitation join us, as we have limited space and regretfully cannot accommodate addiional guests. While we adore children, we have chose to keep our wedding an adults-only affair**
+      **We respectfully request that <u>only</u> the individuals mentioned on the invitation join us, as we have limited space and regretfully cannot accommodate additional guests. While we adore children, we have chosen to keep our wedding an adults-only affair**
     </h3>
   </div>
   <ReCAPTCHA

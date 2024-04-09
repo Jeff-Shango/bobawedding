@@ -2,7 +2,13 @@
 /* @media only screen and (max-width: 400px) and (max-height: 800px) and (orientation: portrait) { */
   @media only screen and (max-width: 1000px) and (max-height: 1000px) and (orientation: portrait) {
 
-    
+  
+   .photoBreakdownName {
+    font-size: xx-large;
+    color: white;
+    background-color: var(--wedding-gold-background);
+    border-radius: 12px;
+   } 
   .photoBreakdown {
     font-family: var(--wedding-Str-Font);
     color: white;
@@ -191,21 +197,7 @@
     z-index: 6;
   }
   
-/*   
-  .photoBreakdown {
-    font-family: var(--wedding-Str-Font);
-    position: absolute;
-    bottom: 0;
-  }
-  .largeImage {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 50vh;
-    margin-top: 2rem;
-    margin-left: 3vh;
-    height: 100%;
-  } */
+
   
   
   }
@@ -213,6 +205,12 @@
 /* small devices landscape mode */
 /* @media only screen and (min-width: 625px) and (max-width: 800px) and (min-height: 300px) and (max-height: 450px) and (orientation: landscape) { */
   /* @media only screen and (max-width: 400px) and (max-height: 800px) and (orientation: portrait) { */
+.photoBreakdownName {
+  font-size: xx-large;
+  color: white;
+  background-color: var(--wedding-gold-background);
+  border-radius: 12px;
+}
     @media only screen and (max-width: 1000px) and (max-height: 1000px) and (orientation: landscape) {
 .photoBreakdown {
     font-family: var(--wedding-Str-Font);
@@ -412,11 +410,7 @@
 }
 
 
-  /* .photoBreakdown {
-    font-family: var(--wedding-Cursive);
-    position: absolute;
-    bottom: 0;
-  } */
+
 .largeImage {
   position: absolute;
   top: 0;
@@ -589,6 +583,12 @@
   z-index: 6;
 }
 
+.photoBreakdownName {
+  font-size: xx-large;
+  color: white;
+  background-color: var(--wedding-gold-background);
+  border-radius: 12px;
+}
 
   .photoBreakdown {
     font-family: var(--wedding-Cursive);
@@ -768,6 +768,12 @@
   z-index: 6;
 }
 
+.photoBreakdownName {
+  font-size: xx-large;
+  color: white;
+  background-color: var(--wedding-gold-background);
+  border-radius: 12px;
+}
 
   .photoBreakdown {
     font-family: var(--wedding-Cursive);
@@ -950,6 +956,12 @@
     z-index: 6;
   }
   
+ .photoBreakdownName {
+  font-size: xx-large;
+  color: white;
+  background-color: var(--wedding-gold-background);
+  border-radius: 12px;
+ } 
   .photoBreakdown {
     width: 65%;
     position: fixed;
@@ -965,14 +977,6 @@
     bottom: 0; */
   }
   
-  /* .photoBreakdown {
-    font-family: var(--wedding-Cursive);
-    position: absolute;
-    bottom: 0;
-    width: 100vh;
-    margin-left: 25%;
-    z-index: 7;
-  } */
 
   .largeImage {
     /* position: absolute; */

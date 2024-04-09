@@ -43,60 +43,70 @@ const WeddingParty = () => {
   
   const images = [
     {
+      name: "Evie",
       src: evie,
       alt: "Evie",
       bio: evieDescript,
       bioBreak:"Evangela, known as 'Evie' to friends and family, was considered family far before her nuptials to the bride's maternal cousin in 2021. The bride and groom were ecstatic when Evie (pretty much) volunteered to act as the wedding coordinator. Evie informed the couple that she'd primarily planned and coordinated her own wedding after her initial coordinator left much to be desired. The bride and groom are eternally grateful for Evie's support with this process.",
     },
     {
+      name: "Nia",
       src: nia,
       alt: "Nia",
       bio: niaBreak,
       bioBreak:"Nia is the bride's younger cousin, whom the bride happily refers to as the 'sister her parents refused to give her.' As such, Nia had absolutely no choice in her role at the wedding, which she graciously accepted.",
     },
     {
+      name: "Mike J",
       src: mikeJ,
       alt: "MikeJ",
       bio: mikeJBreak,
       bioBreak:"Mike James is the groom's best man. The friends have known each other since their days at Morgan State University (MSU). The groom describes Mike as incredibly loyal and is happy to have him stand with him.",
     },
     {
+      name: "Autumn",
       src: Autumn,
       alt: "Autumn",
       bio: autumnBreak,
       bioBreak:"Autumn is one of the Bride's (many-says the groom) best friends. Autumn and the bride met at NYU and their bond was solidifed during a dorm party their sophomore year.",
     }, 
     {
+      name: "Mike W",
       src: mikeW,
       alt: "MikeW",
       bio: mikeWBreak,
       bioBreak:"The groom first met Mike in 2017 at a boxing event. The groom and Mike stood across the ring facing one another as opponents during the groom's first amateur boxing match. They've been friends ever since.",
     },
     {
+      name: "Lauren",
       src: lauren,
       alt: "Lauren",
       bio: laurenBreak,
       bioBreak:"Lauren is the bride's cousin, birth mate (inside joke), and spirit sister (Yes. it's corny, you'll live). She and the bride grew up (mostly) together and are bonded beyond blood.",
     },
     {
+      name: "Chris",
       src: chris,
       alt: "Chris Kiah",
       bio: chrisBreak,
       bioBreak:"The groom met his groomsmen Chris as suite mates at MSU about 12 years ago. Their shared interest in technology, anime, gaming and music have ensured that the pair have remained close friends.",
     },
     {
+      name: "Marie",
       src: marie,
       alt: "Marie",
       bio: marieBreak,
       bioBreak:"Marie has been one of the bride's best friends (another one) since they were 14-years-old. They've maintained their friendship across schools, states, and continents.",
     },
     {
+      name: "Joel",
       src: joel,
       alt: "Joel",
       bio: joelBreak,
       bioBreak:"Soon after moving to Pigtown in 2020, the groom became fast friends with their neighbor, Joel. Joel is the epitome of what you'd want in a neighbor and a friend. From grabbing amazon packages, taking care of each other's pets, DIY house projects and harnging out togeher, Joel is the homie.",
     },
     {
+      name: "Alise",
       src: alise,
       alt: "Alise",
       bio: aliseBreak,
@@ -168,6 +178,14 @@ const WeddingParty = () => {
       {enlargedImage && (
         <div className="overlay" onClick={handleEnlargedImageClick}>
         <div className='largeImageContainer'>
+          <h1 
+            className="photoBreakdownName"
+            src={selectedImage.name}
+            alt={selectedImage.alt}
+            onClick={handleEnlargedImageClick}
+          >
+            {selectedImage.name}
+          </h1>
           <img
             src={selectedImage.bio}
             alt={selectedImage.alt}
