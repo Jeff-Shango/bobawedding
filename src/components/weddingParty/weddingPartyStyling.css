@@ -12,6 +12,7 @@
     padding: 13px;
     font-weight: bolder;
     margin-top: 1rem;
+    overflow-y: scroll;
     /* position: absolute;
     bottom: 0; */
   }
