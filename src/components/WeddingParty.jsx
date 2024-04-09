@@ -43,6 +43,7 @@ const WeddingParty = () => {
   
   const images = [
     {
+      role: "Wedding Planner",
       name: "Evie",
       src: evie,
       alt: "Evie",
@@ -50,6 +51,7 @@ const WeddingParty = () => {
       bioBreak:"Evangela, known as 'Evie' to friends and family, was considered family far before her nuptials to the bride's maternal cousin in 2021. The bride and groom were ecstatic when Evie (pretty much) volunteered to act as the wedding coordinator. Evie informed the couple that she'd primarily planned and coordinated her own wedding after her initial coordinator left much to be desired. The bride and groom are eternally grateful for Evie's support with this process.",
     },
     {
+      role: "Maid of Honor",
       name: "Nia",
       src: nia,
       alt: "Nia",
@@ -57,6 +59,7 @@ const WeddingParty = () => {
       bioBreak:"Nia is the bride's younger cousin, whom the bride happily refers to as the 'sister her parents refused to give her.' As such, Nia had absolutely no choice in her role at the wedding, which she graciously accepted.",
     },
     {
+      role: "Best Man",
       name: "Mike J",
       src: mikeJ,
       alt: "MikeJ",
@@ -64,6 +67,7 @@ const WeddingParty = () => {
       bioBreak:"Mike James is the groom's best man. The friends have known each other since their days at Morgan State University (MSU). The groom describes Mike as incredibly loyal and is happy to have him stand with him.",
     },
     {
+      role: "Matron of Honor",
       name: "Autumn",
       src: Autumn,
       alt: "Autumn",
@@ -71,6 +75,7 @@ const WeddingParty = () => {
       bioBreak:"Autumn is one of the Bride's (many-says the groom) best friends. Autumn and the bride met at NYU and their bond was solidifed during a dorm party their sophomore year.",
     }, 
     {
+      role: "Groomsmen",
       name: "Mike W",
       src: mikeW,
       alt: "MikeW",
@@ -78,6 +83,7 @@ const WeddingParty = () => {
       bioBreak:"The groom first met Mike in 2017 at a boxing event. The groom and Mike stood across the ring facing one another as opponents during the groom's first amateur boxing match. They've been friends ever since.",
     },
     {
+      role: "Bridesmaid",
       name: "Lauren",
       src: lauren,
       alt: "Lauren",
@@ -85,6 +91,7 @@ const WeddingParty = () => {
       bioBreak:"Lauren is the bride's cousin, birth mate (inside joke), and spirit sister (Yes. it's corny, you'll live). She and the bride grew up (mostly) together and are bonded beyond blood.",
     },
     {
+      role: "Groomsmen",
       name: "Chris",
       src: chris,
       alt: "Chris Kiah",
@@ -92,6 +99,7 @@ const WeddingParty = () => {
       bioBreak:"The groom met his groomsmen Chris as suite mates at MSU about 12 years ago. Their shared interest in technology, anime, gaming and music have ensured that the pair have remained close friends.",
     },
     {
+      role: "Bridesmaid",
       name: "Marie",
       src: marie,
       alt: "Marie",
@@ -99,6 +107,7 @@ const WeddingParty = () => {
       bioBreak:"Marie has been one of the bride's best friends (another one) since they were 14-years-old. They've maintained their friendship across schools, states, and continents.",
     },
     {
+      role: "Groomsmen",
       name: "Joel",
       src: joel,
       alt: "Joel",
@@ -106,6 +115,7 @@ const WeddingParty = () => {
       bioBreak:"Soon after moving to Pigtown in 2020, the groom became fast friends with their neighbor, Joel. Joel is the epitome of what you'd want in a neighbor and a friend. From grabbing Amazon packages, taking care of each other's pets, DIY house projects and hanging out togeher, Joel is the homie.",
     },
     {
+      role: "Bridesmaid",
       name: "Alise",
       src: alise,
       alt: "Alise",
@@ -178,6 +188,12 @@ const WeddingParty = () => {
       {enlargedImage && (
         <div className="overlay" onClick={handleEnlargedImageClick}>
         <div className='largeImageContainer'>
+          <h1 
+            className="photoBreakdownTitle"
+            src={selectedImage.role}
+            alt={selectedImage.alt}>
+            {selectedImage.role}
+          </h1>
           <h1 
             className="photoBreakdownName"
             src={selectedImage.name}

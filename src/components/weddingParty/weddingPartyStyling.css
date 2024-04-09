@@ -3,6 +3,13 @@
   @media only screen and (max-width: 1000px) and (max-height: 1000px) and (orientation: portrait) {
 
   
+    .photoBreakdownTitle {
+      font-size: xx-large;
+      color: white;
+      background-color: var(--wedding-gold-background);
+      border-radius: 12px;
+    }
+
    .photoBreakdownName {
     font-size: xx-large;
     color: white;
@@ -204,6 +211,13 @@
 
 /* small devices landscape mode */
 /* @media only screen and (min-width: 625px) and (max-width: 800px) and (min-height: 300px) and (max-height: 450px) and (orientation: landscape) { */
+
+  .photoBreakdownTitle {
+    font-size: xx-large;
+    color: white;
+    background-color: var(--wedding-gold-background);
+    border-radius: 12px;
+  }
   /* @media only screen and (max-width: 400px) and (max-height: 800px) and (orientation: portrait) { */
 .photoBreakdownName {
   font-size: xx-large;
@@ -583,6 +597,13 @@
   z-index: 6;
 }
 
+.photoBreakdownTitle {
+  font-size: xx-large;
+  color: white;
+  background-color: var(--wedding-gold-background);
+  border-radius: 12px;
+}
+
 .photoBreakdownName {
   font-size: xx-large;
   color: white;
@@ -766,6 +787,13 @@
   top: 0;
   left: 0;
   z-index: 6;
+}
+
+.photoBreakdownTitle {
+  font-size: xx-large;
+  color: white;
+  background-color: var(--wedding-gold-background);
+  border-radius: 12px;
 }
 
 .photoBreakdownName {
@@ -954,6 +982,13 @@
     /* top: 0;
     left: 0; */
     z-index: 6;
+  }
+ 
+  .photoBreakdownTitle {
+    font-size: xx-large;
+    color: white;
+    background-color: var(--wedding-gold-background);
+    border-radius: 12px;
   }
   
  .photoBreakdownName {
