@@ -950,15 +950,29 @@
     z-index: 6;
   }
   
-  
   .photoBreakdown {
+    width: 65%;
+    position: fixed;
+    left: 20%;
+    font-family: var(--wedding-Str-Font);
+    color: white;
+    font-size: xx-large;
+    background-color: var(--wedding-gold-background);
+    border-radius: 12px;
+    font-weight: bolder;
+    overflow-y: scroll;
+    /* position: absolute;
+    bottom: 0; */
+  }
+  
+  /* .photoBreakdown {
     font-family: var(--wedding-Cursive);
     position: absolute;
     bottom: 0;
     width: 100vh;
     margin-left: 25%;
     z-index: 7;
-  }
+  } */
 
   .largeImage {
     /* position: absolute; */
