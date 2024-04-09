@@ -101,7 +101,7 @@
 /* landscape mode */
 /* @media only screen and (min-width: 625px) and (max-width: 800px) and (min-height: 300px) and (max-height: 450px) and (orientation: landscape) { */
     /* @media only screen and (min-width: 900px) and (max-height: 400px) and (orientation: landscape) { */
-        @media only screen and (max-width: 1000px) and (max-height: 1000px) and (orientation: landscape) {
+        @media only screen and (max-width: 2000px) and (max-height: 1000px) and (orientation: landscape) {
             #accomdPage {
                 height: 100vh;
                 background: url('../../assets/accomodation.jpg');
