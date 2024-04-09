@@ -8,6 +8,10 @@
     text-align: center;
 }
 
+.TimelineNavWrapper-sc-1apb8f9-0 .hmcNwJ .timeline-controls .my-controls {
+    
+}
+
 
 
     #scheduleContainer {
@@ -75,11 +79,11 @@
 }
 
 .my-card-media {
-    outline: 2px solid blue;
+    /* outline: 2px solid blue; */
 }
 
 .card-media-wrapper {
-    outline: 2px solid blue;
+    /* outline: 2px solid blue; */
 }
 
 
@@ -198,11 +202,11 @@
 }
 
 .my-card-media {
-    outline: 2px solid blue;
+    /* outline: 2px solid blue; */
 }
 
 .card-media-wrapper {
-    outline: 2px solid blue;
+    /* outline: 2px solid blue; */
 }
 
 .MediaWrapper-sc-1yk7mm5-0 {
@@ -307,15 +311,15 @@
     }
     
     .my-card-media {
-        outline: 2px solid blue;
+        /* outline: 2px solid blue; */
     }
     
     .card-media-wrapper {
-        outline: 2px solid blue;
+        /* outline: 2px solid blue; */
     }
     
     .MediaWrapper-sc-1yk7mm5-0 {
-        outline: 2px solid red;
+        /* outline: 2px solid red; */
         height: 20rem;
     }
     
@@ -421,11 +425,11 @@
     }
     
     .my-card-media {
-        outline: 2px solid blue;
+        /* outline: 2px solid blue; */
     }
     
     .card-media-wrapper {
-        outline: 2px solid blue;
+        /* outline: 2px solid blue; */
     }
     
     .MediaWrapper-sc-1yk7mm5-0 {

@@ -108,7 +108,7 @@ const Schedule = () => {
     media: {
       type: "IMAGE",
       source: {
-        url: require("../assets/joel.png")     
+        url: require("../assets/proposalPic.png")     
         // url: require("../assets/proposal.jpg")
       }
     }
