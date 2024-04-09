@@ -27,6 +27,7 @@ const Registry = () => {
   return (
     <>
     <Navlinks/>
+
     {/* <div id='registryPageContainer'> */}
     <div id='registryPageContainer' style={{ backgroundImage: `url(${bozierMoneyTag})` }}>
         {/* Description */}
@@ -53,7 +54,7 @@ const Registry = () => {
         </div>
 
     {/* <img id='moneyImg' src={bozierMoneyTag} alt="cashApp" /> */}
-    <h3 className="registryDescriptionBottom">We understand that some of our guests may prefer to give traditional wedding gifts. In that case, please use the following links to acces our registry.</h3>
+    <h3 className="registryDescriptionBottom">We understand that some of our guests may prefer to give traditional wedding gifts. In that case, please use the above link to access our registry.</h3>
 
     
     {/* <button src="https://cash.app/$TheBoziers" className='cashAppButton' id='cashAppButtonA' onClick={() => window.open('https://cash.app/$TheBoziers', '_blank')}>
