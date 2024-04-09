@@ -281,11 +281,6 @@ const RSVP = () => {
   {/* <div className="captcha-container">
             
   </div> */}
-  <ReCAPTCHA
-            id='captchaBox'
-              sitekey="6LeIxAcTAAAAAJcZVRqyHh71UMIEGNQ_MXjiZKhI"/>
-  <button type='submit' className='rsvpSubmit'>RSVP</button>
-  </form>
 {/* Show success popup if showSuccessPopup state is true */}
         {/* <div id="success-popup">
           <p>Hello {firstName},</p>
@@ -297,14 +292,14 @@ const RSVP = () => {
 
   {/* Success popup */}
   {/* {showSuccessPopup && (
-        <div id="success-popup">
-          <button onClick={handleCloseSuccessPopup}>Close</button>
-          <p>Hello {firstName},</p>
-          <p>We thank you for sending in your RSVP! This is a big moment for us, and we are truly excited to be able to share this moment with our friends and family.</p>
-          <p>Please prepare to have fun with this moment in time to acknowledge our commitment to each other. We eagerly await to see YOU!!</p>
-          <p>-Jeff & (future) Ashley Bozier</p>
-        </div>
-      )} */}
+    <div id="success-popup">
+    <button onClick={handleCloseSuccessPopup}>Close</button>
+    <p>Hello {firstName},</p>
+    <p>We thank you for sending in your RSVP! This is a big moment for us, and we are truly excited to be able to share this moment with our friends and family.</p>
+    <p>Please prepare to have fun with this moment in time to acknowledge our commitment to each other. We eagerly await to see YOU!!</p>
+    <p>-Jeff & (future) Ashley Bozier</p>
+    </div>
+  )} */}
 
   <div className="bottomContainer">
     <h3 className="bottomContentTop">
@@ -315,6 +310,11 @@ const RSVP = () => {
       **We respectfully request that <u>only</u> the individuals mentioned on the invitation join us, as we have limited space and regretfully cannot accommodate addiional guests. While we adore children, we have chose to keep our wedding an adults-only affair**
     </h3>
   </div>
+  <ReCAPTCHA
+            id='captchaBox'
+              sitekey="6LeIxAcTAAAAAJcZVRqyHh71UMIEGNQ_MXjiZKhI"/>
+  </form>
+  <button type='submit' className='rsvpSubmit'>RSVP</button>
       </div> 
   )
 }
