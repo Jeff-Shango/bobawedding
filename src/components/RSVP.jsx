@@ -279,10 +279,11 @@ const RSVP = () => {
         </div>
 
   {/* <div className="captcha-container">
-            <ReCAPTCHA
+            
+  </div> */}
+  <ReCAPTCHA
             id='captchaBox'
               sitekey="6LeIxAcTAAAAAJcZVRqyHh71UMIEGNQ_MXjiZKhI"/>
-  </div> */}
   <button type='submit' className='rsvpSubmit'>RSVP</button>
   </form>
 {/* Show success popup if showSuccessPopup state is true */}

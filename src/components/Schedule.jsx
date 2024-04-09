@@ -93,7 +93,7 @@ const Schedule = () => {
   {
     title: "July 8-15, 2022",
     cardTitle: "Montego Bay, Jamaica",
-    cardDetailedText: "For the groom's 30th birthday, the bride organized a special trip to Jamaica, the birthday place of his favorite musician, Bob Marley. It was there third birthday celebration as a couple and their first international trip together.",
+    cardDetailedText: "For the groom's 30th birthday, the bride organized a special trip to Jamaica, the birthday place of his favorite musician, Bob Marley. It was their third birthday celebration as a couple and their first international trip together.",
     media: {
       type: "VIDEO",
       source: {

@@ -8,6 +8,8 @@
     text-align: center;
 }
 
+
+
     #scheduleContainer {
     position: relative;
     height: 100vh;
@@ -69,6 +71,19 @@
 }
 
 .my-card-media {
+    outline: 2px solid red;
+}
+
+.my-card-media {
+    outline: 2px solid blue;
+}
+
+.card-media-wrapper {
+    outline: 2px solid blue;
+}
+
+.MediaWrapper-sc-1yk7mm5-0 {
+    outline: 2px solid red;
 }
 
 .TimelinePointWrapper-sc-12rz3g8-0::after, .TimelinePointWrapper-sc-12rz3g8-0::before {
@@ -171,6 +186,19 @@
 }
 
 .my-card-media {
+    outline: 2px solid red;
+}
+
+.my-card-media {
+    outline: 2px solid blue;
+}
+
+.card-media-wrapper {
+    outline: 2px solid blue;
+}
+
+.MediaWrapper-sc-1yk7mm5-0 {
+    outline: 2px solid red;
 }
 
 .TimelinePointWrapper-sc-12rz3g8-0::after, .TimelinePointWrapper-sc-12rz3g8-0::before {
@@ -193,3 +221,230 @@
 }
 
 }
+
+/* medium sizes landscape */
+@media screen and (min-width: 1000px) and (max-height: 800px) and (orientation: landscape) {
+    .my-card, .my-card-media, .my-card-subtitle, .my-card-text, .my-card-title .title {
+        font-family: var(--wedding-Str-Font);
+        text-align: center;
+    }
+    
+    .my-card + 
+    
+        #scheduleContainer {
+        position: relative;
+        height: 100vh;
+        border: 2px solid red;
+    }
+    
+    
+    
+    #scheduleHmeBtn {
+        position: fixed;
+        left: 10px;
+        top: 5px;
+        max-width: 5rem;
+        padding: 2px 2px;
+        z-index: 2;
+    }
+    
+    .my-timeline {
+        font-family: var(--wedding-Str-Font);
+    }
+    
+    .my-controls {
+        /* border: 2px solid red; */
+        width: 50vh;
+        justify-content: center;
+        position: fixed;
+        bottom: 0;
+    }
+    
+    .TimelineNavItem-sc-3apb8f9-1, .TimelineNavItem-sc-1apb8f9-1 {
+        font-size: xx-large;
+        margin: auto;
+    }
+    
+    .TimelineNavItem-sc-3apb8f9-1, .TimelineNavItem-sc-1apb8f9-1 > button {
+        background-color: var(--wedding-gold);
+    }
+    
+    .my-card-title {
+        color: red;
+        font-size: xx-large;
+    }
+    
+    .TimelineTitleWrapper-sc-1427v1d-3 > div{
+        color: var(--wedding-green);
+    }
+    
+    /* TitleWrapper-sc-13izrht-0 fhstIq timeline-item-title active my-title */
+    
+    .TimelineTitleWrapper-sc-1427v1d-3 > div.active {
+        color: var(wedd);
+        background-color: transparent;
+    }
+    
+    .CardTitle-sc-d7qjm1-3 {
+        color: var(--wedding-green);
+    }
+    
+    
+    .my-card {
+        background-color: var(--);
+    }
+    
+    .CardMediaHeader-sc-1yk7mm5-7 > h1 {
+        color: var(--wedding-green);
+    }
+    
+    .my-card-media {
+        outline: 2px solid blue;
+    }
+    
+    .my-card-media {
+        outline: 2px solid blue;
+    }
+    
+    .card-media-wrapper {
+        outline: 2px solid blue;
+    }
+    
+    .MediaWrapper-sc-1yk7mm5-0 {
+        outline: 2px solid blue;
+        height: 20rem;
+    }
+    
+    .TimelinePointWrapper-sc-12rz3g8-0::after, .TimelinePointWrapper-sc-12rz3g8-0::before {
+        border: var(--wedding-gold) 2px solid;
+    }
+    
+    .Shape-sc-18iuiou-3 {
+        color: red;
+        background-color: red;
+        border: 2px solid red;
+        display: none;
+    }
+    
+    .hdOTXE {
+        color: red;
+    }
+    
+    .TitleWrapper-sc-13izrht-0::after {
+        background-color: red;
+    }
+    
+    }
+
+    /* computer monitor */
+@media screen and (min-width: 1500px) and (max-width: 1700px) and (max-height: 1000px) and (min-height: 700px) {
+    .my-card, .my-card-media, .my-card-subtitle, .my-card-text, .my-card-title .title {
+        font-family: var(--wedding-Str-Font);
+        text-align: center;
+    }
+    
+    .my-card + 
+    
+        #scheduleContainer {
+        position: relative;
+        height: 100vh;
+        border: 2px solid red;
+    }
+    
+    
+    
+    #scheduleHmeBtn {
+        position: fixed;
+        left: 10px;
+        top: 5px;
+        max-width: 5rem;
+        padding: 2px 2px;
+        z-index: 2;
+    }
+    
+    .my-timeline {
+        font-family: var(--wedding-Str-Font);
+    }
+    
+    .my-controls {
+        /* border: 2px solid red; */
+        width: 50vh;
+        justify-content: center;
+        position: fixed;
+        bottom: 0;
+    }
+    
+    .TimelineNavItem-sc-3apb8f9-1, .TimelineNavItem-sc-1apb8f9-1 {
+        font-size: xx-large;
+        margin: auto;
+    }
+    
+    .TimelineNavItem-sc-3apb8f9-1, .TimelineNavItem-sc-1apb8f9-1 > button {
+        background-color: var(--wedding-gold);
+    }
+    
+    .my-card-title {
+        color: red;
+        font-size: xx-large;
+    }
+    
+    .TimelineTitleWrapper-sc-1427v1d-3 > div{
+        color: var(--wedding-green);
+    }
+    
+    /* TitleWrapper-sc-13izrht-0 fhstIq timeline-item-title active my-title */
+    
+    .TimelineTitleWrapper-sc-1427v1d-3 > div.active {
+        color: var(wedd);
+        background-color: transparent;
+    }
+    
+    .CardTitle-sc-d7qjm1-3 {
+        color: var(--wedding-green);
+    }
+    
+    
+    .my-card {
+        background-color: var(--);
+    }
+    
+    .CardMediaHeader-sc-1yk7mm5-7 > h1 {
+        color: var(--wedding-green);
+    }
+    
+    .my-card-media {
+        outline: 2px solid red;
+    }
+    
+    .my-card-media {
+        outline: 2px solid blue;
+    }
+    
+    .card-media-wrapper {
+        outline: 2px solid blue;
+    }
+    
+    .MediaWrapper-sc-1yk7mm5-0 {
+        outline: 2px solid red;
+    }
+    
+    .TimelinePointWrapper-sc-12rz3g8-0::after, .TimelinePointWrapper-sc-12rz3g8-0::before {
+        border: var(--wedding-gold) 2px solid;
+    }
+    
+    .Shape-sc-18iuiou-3 {
+        color: red;
+        background-color: red;
+        border: 2px solid red;
+        display: none;
+    }
+    
+    .hdOTXE {
+        color: red;
+    }
+    
+    .TitleWrapper-sc-13izrht-0::after {
+        background-color: red;
+    }
+    
+    }
