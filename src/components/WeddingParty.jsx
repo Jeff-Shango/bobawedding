@@ -103,7 +103,7 @@ const WeddingParty = () => {
       src: joel,
       alt: "Joel",
       bio: joelBreak,
-      bioBreak:"Soon after moving to Pigtown in 2020, the groom became fast friends with their neighbor, Joel. Joel is the epitome of what you'd want in a neighbor and a friend. From grabbing amazon packages, taking care of each other's pets, DIY house projects and harnging out togeher, Joel is the homie.",
+      bioBreak:"Soon after moving to Pigtown in 2020, the groom became fast friends with their neighbor, Joel. Joel is the epitome of what you'd want in a neighbor and a friend. From grabbing Amazon packages, taking care of each other's pets, DIY house projects and hanging out togeher, Joel is the homie.",
     },
     {
       name: "Alise",
