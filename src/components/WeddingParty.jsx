@@ -58,7 +58,7 @@ const WeddingParty = () => {
       src: mikeJ,
       alt: "MikeJ",
       bio: mikeJBreak,
-      bioBreak:"The groom has also known Mike since their college years at MSU. The groom was very popular at Morgan.",
+      bioBreak:"Mike James is the groom's best man. The friends have known each other since their days at Morgan State University (MSU). The groom describes Mike as incredibly loyal and is happy to have him stand with him.",
     },
     {
       src: Autumn,
@@ -82,7 +82,7 @@ const WeddingParty = () => {
       src: chris,
       alt: "Chris Kiah",
       bio: chrisBreak,
-      bioBreak:"Chris is the groom's Best Man and best friend of 12+ years. Chris and the groom met at Morgan State University (MSU).",
+      bioBreak:"The groom met his groomsmen Chris as suite mates at MSU about 12 years ago. Their shared interest in technology, anime, gaming and music have ensured that the pair have remained close friends.",
     },
     {
       src: marie,
