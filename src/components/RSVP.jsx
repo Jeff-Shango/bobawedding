@@ -307,7 +307,7 @@ const RSVP = () => {
 
   <div className="bottomContainer">
     <h3 className="bottomContentTop">
-      **This will be an open bar event, please your transporation accordingly and drink responsibly**
+      **This will be an open bar event, please coordinate your transporation accordingly and drink responsibly**
     </h3>
     
     <h3 className='bottomContent'>
