@@ -313,8 +313,8 @@ const RSVP = () => {
   <ReCAPTCHA
             id='captchaBox'
               sitekey="6LeIxAcTAAAAAJcZVRqyHh71UMIEGNQ_MXjiZKhI"/>
-  </form>
   <button type='submit' className='rsvpSubmit'>RSVP</button>
+  </form>
       </div> 
   )
 }
