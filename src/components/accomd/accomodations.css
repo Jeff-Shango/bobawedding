@@ -342,6 +342,7 @@
     }
 
     .accomdLink {
+        width: fit-content;
         position: absolute;
         top: 14.5rem;
         left: 0vh;
