@@ -191,7 +191,8 @@ const WeddingParty = () => {
           <h1 
             className="photoBreakdownTitle"
             src={selectedImage.role}
-            alt={selectedImage.alt}>
+            alt={selectedImage.alt}
+            >
             {selectedImage.role}
           </h1>
           <h1 
