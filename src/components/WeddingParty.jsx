@@ -20,7 +20,7 @@ import nia from '../assets/Nia.jpg';
 import niaBreak from '../assets/Nia.png';
 import marie from '../assets/Marie.jpg';
 // import marieBreak from '../assets/marieBreak.png';
-import marieBreak from '../assets/Maria.png';
+import marieBreak from '../assets/Marie.png';
 import alise from '../assets/Alise.jpg';
 // import aliseBreak from '../assets/aliseBreak.png';
 import aliseBreak from '../assets/Alise.png';
