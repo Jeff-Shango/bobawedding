@@ -188,7 +188,7 @@ const WeddingParty = () => {
       {enlargedImage && (
         <div className="overlay" onClick={handleEnlargedImageClick}>
         <div className='largeImageContainer'>
-          <h1 
+          {/* <h1 
             className="photoBreakdownTitle"
             src={selectedImage.role}
             alt={selectedImage.alt}
@@ -202,7 +202,7 @@ const WeddingParty = () => {
             onClick={handleEnlargedImageClick}
           >
             {selectedImage.name}
-          </h1>
+          </h1> */}
           <img
             src={selectedImage.bio}
             alt={selectedImage.alt}
