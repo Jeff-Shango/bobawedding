@@ -16,9 +16,9 @@ const Navlinks = () => {
           <Link id="dashLink" to="https://bozierwedding.netlify.app/">
             HOME
           </Link>
-          <Link id="dashLink" to="https://bozierwedding.netlify.app/rsvp">
+          {/* <Link id="dashLink" to="https://bozierwedding.netlify.app/rsvp">
             RSVP
-          </Link>
+          </Link> */}
           <Link id="dashLink" to="https://bozierwedding.netlify.app/gallery">
             GALLERY
           </Link>
