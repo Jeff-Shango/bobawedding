@@ -92,7 +92,7 @@ const CountdownTimer = ({ targetDate }) => {
 
   return (
     <div id='bottomDash'>
-    <h1 id="dashboardTitle" className='calendarSlot'>Friday, May 31, 2024</h1>
+    <h1 id="dashboardTitle" className='calendarSlot'>Friday, May 31, 2024<br/>Time: 6:00 PM<br/>Location: <br/><span style={{ fontFamily: 'Arial, sans-serif' }}>2042 Knollview Ave, Pasadena, MD 21122</span></h1>
     <div className='clock'>
       <div className="timeContainer">
       <label htmlFor="days">Days</label>
@@ -164,8 +164,8 @@ const Dashboard = () => {
       <div id="dashboardHeaderContainer">
         <h1 className="weddingNameTitle">Jeff & Ashley</h1>
         <h1 className='text-shadow-pop-top'>Bozier Ever After</h1>
-        <h1 className='text-shadow-pop-top'>2042 KNOLLVIEW AVE, PASADENA, MD 21122</h1>
-        <h1 className='text-shadow-pop-top'>TIME: 6:00 PM</h1>
+        {/* <h1 className='text-shadow-pop-top'>2042 KNOLLVIEW AVE, PASADENA, MD 21122</h1>
+        <h1 className='text-shadow-pop-top'>TIME: 6:00 PM</h1> */}
         
 
         {/* <div id="dashNavCon">
