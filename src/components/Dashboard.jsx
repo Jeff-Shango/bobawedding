@@ -164,6 +164,9 @@ const Dashboard = () => {
       <div id="dashboardHeaderContainer">
         <h1 className="weddingNameTitle">Jeff & Ashley</h1>
         <h1 className='text-shadow-pop-top'>Bozier Ever After</h1>
+        <h1 className='text-shadow-pop-top'>2042 KNOLLVIEW AVE, PASADENA, MD 21122</h1>
+        <h1 className='text-shadow-pop-top'>TIME: 6:00 PM</h1>
+        
 
         {/* <div id="dashNavCon">
           <Link to="https://bozierwedding.netlify.app/rsvp" id="dashLink" className='dashLink'>RSVP</Link>
