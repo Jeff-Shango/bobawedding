@@ -93,6 +93,8 @@ const CountdownTimer = ({ targetDate }) => {
   return (
     <div id='bottomDash'>
     <h1 id="dashboardTitle" className='calendarSlot'>Friday, May 31, 2024<br/>Time: 6:00 PM<br/>Location: <br/><span style={{ fontFamily: 'Arial, sans-serif', fontSize: '18px' }}>2042 Knollview Ave, Pasadena, MD 21122</span></h1>
+
+    <h1 style={{ fontFamily: 'Arial, sans-serif', fontSize: '18px', color:'white' }}>Please keep in mind that you'll be traveling during rush hour and give yourself plenty of time to arrive at the venue! Ceremony will begin promptly @ 6pm</h1>
     <div className='clock'>
       <div className="timeContainer">
       <label htmlFor="days">Days</label>
